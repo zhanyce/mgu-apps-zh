@@ -24,6 +24,7 @@ https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json
 | 路径 | 内容 |
 | --- | --- |
 | [data/apps.json](data/apps.json) | 分类、中文名称与说明、原项目、对应源码、输入包和校验值 |
+| [translations/](translations/) | 以应用 ID 保存的设置项译文，重建时同步更新车机文字、运行时词典并检查中文字形 |
 | [data/tools.json](data/tools.json) | 运行组件、最低依赖版本和下载地址 |
 | [packages/](packages/) · [icons/](icons/) | 本源发布的中文安装包和应用图标 |
 | [tools/build.py](tools/build.py) | 校验输入包，整理界面资源，生成目录和应用索引 |
@@ -34,7 +35,7 @@ https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json
 python3 tools/build.py check
 ```
 
-修改商店分类、标题或组件说明后，用 `python3 tools/build.py index` 更新索引。应用界面和包内元数据的改动需要重建，发新版时应同时递增对应应用的 `version`。首次重建通过 curl 下载校验值匹配的输入包，后续复用本地缓存。
+修改商店分类、标题或组件说明后，用 `python3 tools/build.py index` 更新索引。修订已有设置项时，可参照 [暖机助手译文](translations/warmup.json) 填写车机字符串 ID、英文原文、设置键和新译文。修改应用界面或包内元数据，需要递增对应应用的 `version` 并重建。首次重建通过 curl 下载校验值匹配的输入包，后续复用本地缓存。
 
 ```sh
 python3 tools/build.py rebuild
@@ -45,6 +46,6 @@ python3 tools/build.py check
 
 ## 来源与许可
 
-本仓库原创的目录说明和构建工具使用 [MIT 许可证](LICENSE)。应用、字体和运行组件适用各自的许可证。中文界面沿用社区译文，界面和商店列表已移除翻译推广文字；作者信息、版权声明及第三方许可随包保留。[许可证目录](licenses/) · [中文发行包来源](https://github.com/JackieZ123430/MGU-CN-XIAOBAI)
+本仓库原创的目录说明和构建工具使用 [MIT 许可证](LICENSE)。应用、字体和运行组件适用各自的许可证。中文界面沿用社区译文，界面和商店列表已移除翻译推广文字。作者信息、版权声明及第三方许可随包保留。[许可证目录](licenses/) · [中文发行包来源](https://github.com/JackieZ123430/MGU-CN-XIAOBAI)
 
 每个重建包的 `SOURCE.json` 记录对应源码、修改说明、输入包地址和 SHA-256。Freedoom 所用 WebAssembly 引擎的对应源码和构建脚本也随仓库提供。[Doom 引擎源码](sources/doomgeneric.tar.gz)

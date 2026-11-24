@@ -15,10 +15,10 @@
 | [绿灯提醒](https://github.com/alexp50/bmw-apps) | 根据前视摄像头识别的信号灯状态提示起步。 | `0.2.503` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [M-Copilot](https://github.com/hexlay/idrive7-custom-apps) | 在行车界面查看驾驶提示与车辆状态。 | `1.0.3702` | [源码](https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4) |
 | [泊车距离](https://github.com/alexp50/bmw-apps) | 显示泊车雷达距离、转向轨迹和车身姿态。 | `0.1.803` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
-| [换挡提示](https://github.com/cauliflowermossgrape/idrive7-apps) | 显示当前转速和挡位，在设定转速提示换挡。 | `2.0.4502` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
+| [换挡提示](https://github.com/cauliflowermossgrape/idrive7-apps) | 显示当前转速和挡位，在设定转速提示换挡。 | `2.0.4503` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [行程电脑](https://github.com/alexp50/bmw-apps) | 汇总行程、油耗和燃油费用，显示海拔与续航。 | `1.0.4` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/42f3a2c58ec098d26b2e4f25ab1687b8533e66ea) |
 | [加减速计时](https://github.com/giuseppesalatino-boop/mgu-apps) | 使用 DSC 加速度信号补偿坡度影响。 | `1.0.2` | [源码](https://github.com/JackieZ123430/mgu-apps/tree/aff3a09776b9acbef9177decacea73e62583a982) |
-| [暖机助手](https://github.com/cauliflowermossgrape/idrive7-apps) | 根据机油和冷却液温度估算暖机时间。 | `1.9.2` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
+| [暖机助手](https://github.com/cauliflowermossgrape/idrive7-apps) | 根据机油和冷却液温度估算暖机时间。 | `1.9.3` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 
 ## 诊断
 

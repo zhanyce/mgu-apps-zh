@@ -1,0 +1,7 @@
+{
+  "SID_WARMUP_SET_COOLDOWN": {
+    "source": "Turbo cool-down after hard driving",
+    "setting": "cooldown",
+    "text": "高负荷行驶后的涡轮冷却提醒"
+  }
+}

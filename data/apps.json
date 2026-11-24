@@ -1320,7 +1320,7 @@
       "sha256": "e1a0d682ffc21377008be66fca309c39b8adcc71fba10f3f98e2f82e5b870dce",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/redline%402.0.4501.tgz"
     },
-    "version": "2.0.4502",
+    "version": "2.0.4503",
     "mguHmi": [
       "ID7"
     ],
@@ -1856,7 +1856,7 @@
       "sha256": "3e55bc08e288ba5d730aeaa3f298f41acfef5c7642967fab501137e39233eb51",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/warmup%401.9.1.tgz"
     },
-    "version": "1.9.2",
+    "version": "1.9.3",
     "mguHmi": [
       "ID7"
     ],

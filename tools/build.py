@@ -142,6 +142,39 @@ def clean_script(name, data, app_id):
     return "".join(lines).encode()
 
 
+def translate_settings(files, prefix, translations):
+    kit = prefix + "javascript/kit/"
+    locale = json.loads(files[kit + "locale.json"][0])
+    dictionary = json.loads(files[kit + "locales/zh-CN.json"][0])
+    tsv_path = kit + "locales/zh-CN.tsv"
+    rows = files[tsv_path][0].decode().splitlines()
+    spec = json.loads(files[kit + "app-spec.json"][0])
+    settings = {opt["key"]: opt for opt in spec["settings"]}
+    bundles = {name: json.loads(data) for name, (data, _) in files.items()
+               if "/texts/" in name and name.endswith(".json")}
+    chinese = bundles[prefix + "rhmiData/variantGroups/Common/texts/zh_CN.json"]
+    fonts = json.loads(files[kit + "fonts/cjk.json"][0])["sizes"]
+    for sid, edit in translations.items():
+        english, label = edit["source"], edit["text"]
+        old = locale["strings"][english]
+        setting = settings[edit["setting"]]
+        if old != chinese[sid] or old != dictionary[english] or old != setting["label"]:
+            raise ValueError(f"{sid} 的上游译文发生变化，请核对后重建")
+        for size in fonts:
+            if any(str(ord(ch)) not in size["glyphs"] for ch in label if ord(ch) > 127):
+                raise ValueError(f"{sid} 的字库缺少译文中的字形")
+        setting["label"] = dictionary[english] = locale["strings"][english] = label
+        index = rows.index(english + "\t" + old)
+        rows[index] = english + "\t" + label
+        for bundle in bundles.values():
+            if bundle.get(sid) == old:
+                bundle[sid] = label
+    for name, obj in {**bundles, kit + "locale.json": locale, kit + "locales/zh-CN.json": dictionary,
+                      kit + "app-spec.json": spec}.items():
+        files[name] = (encode(obj), files[name][1])
+    files[tsv_path] = (("\n".join(rows) + "\n").encode(), files[tsv_path][1])
+
+
 def rebuild(app, cache):
     files = unpack(acquire(app["base"], cache))
     old_name = app["base"]["name"][:-4]
@@ -190,6 +223,11 @@ def rebuild(app, cache):
     if app.get("additionalSources"):
         source["additionalSources"] = app["additionalSources"]
     source["changes"] = "2026-11-24：更新中文应用说明，移除界面中的翻译推广文字。"
+    translation_file = Path("translations") / (app["id"] + ".json")
+    if (ROOT / translation_file).is_file():
+        translate_settings(files, prefix, read_json(ROOT / translation_file))
+        source["translations"] = translation_file.as_posix()
+        source["changes"] += " 修订设置项的中文译文。"
     files[prefix + "SOURCE.json"] = (encode(source), 0o644)
     notices = {app["notice"]}
     if "translationNotice" in app:

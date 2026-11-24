@@ -1201,7 +1201,7 @@
       "title": "换挡提示",
       "description": "显示当前转速和挡位，在设定转速提示换挡。",
       "author": "cauliflowermossgrape",
-      "version": "2.0.4502",
+      "version": "2.0.4503",
       "mguHmi": [
         "ID7"
       ],
@@ -1212,10 +1212,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "redline@2.0.4502.tgz",
-        "url": "packages/redline@2.0.4502.tgz",
-        "size": 1257055,
-        "sha256": "7bf60a1560b6d6ece59a23a301792bc9de41e62c16a8b25794dc53ee91edfa2c"
+        "name": "redline@2.0.4503.tgz",
+        "url": "packages/redline@2.0.4503.tgz",
+        "size": 1257117,
+        "sha256": "51eec8d2283b7e8a39e911b9d9e8c0844928c14f7c5706695d1f14219737252b"
       },
       "icon": "icons/redline.png",
       "iconSha256": "9c2a029af517d3542604f40a56189c0ecb59d580ba9968ee63fddde35c02cf1d"
@@ -1682,7 +1682,7 @@
       "title": "暖机助手",
       "description": "根据机油和冷却液温度估算暖机时间。",
       "author": "cauliflowermossgrape",
-      "version": "1.9.2",
+      "version": "1.9.3",
       "mguHmi": [
         "ID7"
       ],
@@ -1693,10 +1693,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "warmup@1.9.2.tgz",
-        "url": "packages/warmup@1.9.2.tgz",
-        "size": 1043974,
-        "sha256": "bd12b290de1298380f02634fbfc87b328af6255941d6c1335d27a4fc783f1a51"
+        "name": "warmup@1.9.3.tgz",
+        "url": "packages/warmup@1.9.3.tgz",
+        "size": 1044031,
+        "sha256": "0c967661c4caf0920a1c8c9fdb5b1032b035b84bf520d330fe541c342565cdc7"
       },
       "icon": "icons/warmup.png",
       "iconSha256": "712aa342b103c39b3be8879ba071d0d0294620bd3e5abbc8e5bbc7ea67ee15e5"

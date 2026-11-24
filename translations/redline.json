@@ -1,0 +1,7 @@
+{
+  "SID_REDLINE_SET_LEARNREDLINE": {
+    "source": "Learn redline from the limiter",
+    "setting": "learnRedline",
+    "text": "根据断油转速学习红线转速"
+  }
+}
