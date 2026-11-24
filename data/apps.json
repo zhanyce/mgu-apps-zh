@@ -1,0 +1,1951 @@
+[
+  {
+    "id": "adam_mtrack",
+    "category": "座舱",
+    "title": "M Track 仪表",
+    "description": "在兼容仪表上显示 M Track 风格布局，默认关闭覆盖显示。",
+    "author": "pinguinooo",
+    "project": "https://github.com/pinguinooo/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip",
+    "base": {
+      "name": "adam_mtrack@0.1.701.tgz",
+      "size": 900919,
+      "sha256": "9a246f629b6e4b6fbd897e6c18cd64c73b784ea3f1777dee06b1782ed3f9fe32",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/adam_mtrack%400.1.701.tgz"
+    },
+    "version": "0.1.702",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.5.1",
+      "mgu-deploy": "0.8.27"
+    },
+    "license": "MIT",
+    "notice": "pinguinooo--idrive7-apps.txt"
+  },
+  {
+    "id": "adam_shiftlights",
+    "category": "驾驶",
+    "title": "换挡灯",
+    "description": "按驾驶模式和发动机温度设置换挡提醒。",
+    "author": "pinguinooo",
+    "project": "https://github.com/pinguinooo/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip",
+    "base": {
+      "name": "adam_shiftlights@0.4.501.tgz",
+      "size": 863767,
+      "sha256": "257cb6fd756dbcff9ff7f0d5396d4746f1b4acaf995cfcf5793047716e7cbdea",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/adam_shiftlights%400.4.501.tgz"
+    },
+    "version": "0.4.502",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.5.1",
+      "mgu-deploy": "0.8.27"
+    },
+    "license": "MIT",
+    "notice": "pinguinooo--idrive7-apps.txt"
+  },
+  {
+    "id": "adam_vitals",
+    "category": "诊断",
+    "title": "动力仪表",
+    "description": "同时查看油温、变速箱温度、增压与挡位。",
+    "author": "pinguinooo",
+    "project": "https://github.com/pinguinooo/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip",
+    "base": {
+      "name": "adam_vitals@0.2.1.tgz",
+      "size": 836756,
+      "sha256": "b8a76931d67e9b82b610dff2dafda5fbb2e1bcdecf9ced28b4fb09c8f64acbbf",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/adam_vitals%400.2.1.tgz"
+    },
+    "version": "0.2.2",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "pinguinooo--idrive7-apps.txt"
+  },
+  {
+    "id": "adas_feature_probe",
+    "category": "诊断",
+    "title": "驾驶辅助状态",
+    "description": "读取驾驶辅助功能的可用状态与控制单元反馈。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "adas_feature_probe@0.1.2.tgz",
+      "size": 714537,
+      "sha256": "5b858d7a572fdf8ba7a7d3a47d73ba1a0be506d736ac2f9ebeebd4948b10e43a",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/adas_feature_probe%400.1.2.tgz"
+    },
+    "version": "0.1.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "ambient_config",
+    "category": "座舱",
+    "title": "氛围灯设置",
+    "description": "按驾驶模式选择车内氛围灯颜色和效果。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "ambient_config@2.7.1301.tgz",
+      "size": 1091079,
+      "sha256": "4449a9a9004ce69f5b92f5561bc1951b9b027fcd6a792b902ac56a949654030e",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/ambient_config%402.7.1301.tgz"
+    },
+    "version": "2.7.1302",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "ambient_studio_full",
+    "category": "座舱",
+    "title": "氛围灯工作室",
+    "description": "在全屏界面编辑驾驶模式配色和灯光提醒。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "ambient_studio_full@0.1.502.tgz",
+      "size": 960043,
+      "sha256": "aa4cf45cb6d61cecac86d169d9bdef716ddf2703f00942cedfd7ff1a90018db3",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/ambient_studio_full%400.1.502.tgz"
+    },
+    "version": "0.1.503",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "aref_carcare",
+    "category": "出行",
+    "title": "养护记录",
+    "description": "记录车辆养护项目和周期，在首页查看提醒。",
+    "author": "arefahmad",
+    "project": "https://github.com/arefahmad/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6",
+    "base": {
+      "name": "aref_carcare@0.2.302.tgz",
+      "size": 1242780,
+      "sha256": "9b4bfff866cbf91801535f64af233b100b70a91a0e1bbe1307640b907c654ae3",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/aref_carcare%400.2.302.tgz"
+    },
+    "version": "0.2.303",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "arefahmad--idrive7-apps.txt"
+  },
+  {
+    "id": "aref_carlyrics",
+    "category": "娱乐",
+    "title": "车载歌词",
+    "description": "根据当前播放的曲目获取并显示歌词。",
+    "author": "arefahmad",
+    "project": "https://github.com/arefahmad/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6",
+    "base": {
+      "name": "aref_carlyrics@0.5.702.tgz",
+      "size": 1492801,
+      "sha256": "bde74df1e6378ad0b205651636676fadde39aa25fc2c97fac998a613c172d443",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/aref_carlyrics%400.5.702.tgz"
+    },
+    "version": "0.5.703",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "mgu-uplink": "0.7.3"
+    },
+    "license": "MIT",
+    "notice": "arefahmad--idrive7-apps.txt"
+  },
+  {
+    "id": "aref_carwatch",
+    "category": "诊断",
+    "title": "行车监测",
+    "description": "记录行程、故障和发动机失火事件。",
+    "author": "arefahmad",
+    "project": "https://github.com/arefahmad/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6",
+    "base": {
+      "name": "aref_carwatch@0.1.302.tgz",
+      "size": 1261584,
+      "sha256": "d176accbf54be8979e42be4ceaa035784847349f599f833b201dcd5518997b7e",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/aref_carwatch%400.1.302.tgz"
+    },
+    "version": "0.1.303",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "arefahmad--idrive7-apps.txt"
+  },
+  {
+    "id": "aref_eta",
+    "category": "出行",
+    "title": "预计到达时间",
+    "description": "在车机组件查看 Apple Maps 的预计到达时间。",
+    "author": "arefahmad",
+    "project": "https://github.com/arefahmad/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6",
+    "base": {
+      "name": "aref_eta@1.20.102.tgz",
+      "size": 1782671,
+      "sha256": "268ecab4a34756694894886c0d0ad585de915e982014cdba22527a1e7b906b27",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/aref_eta%401.20.102.tgz"
+    },
+    "version": "1.20.103",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.4.2",
+      "mgu-uplink": "0.7.3"
+    },
+    "license": "MIT",
+    "notice": "arefahmad--idrive7-apps.txt"
+  },
+  {
+    "id": "aref_explorer",
+    "category": "诊断",
+    "title": "车机接口目录",
+    "description": "浏览车机公开的导航、媒体、空调和车身服务。",
+    "author": "arefahmad",
+    "project": "https://github.com/arefahmad/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "aref_explorer@0.2.402.tgz",
+      "size": 1094522,
+      "sha256": "53f2f7778c7b58cc7138942c221f5f8f4a5d20e02e646cbef3e2b52a47f8ab71",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/aref_explorer%400.2.402.tgz"
+    },
+    "version": "0.2.403",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "arefahmad--idrive7-apps.txt"
+  },
+  {
+    "id": "aref_tires",
+    "category": "诊断",
+    "title": "轮胎设置",
+    "description": "查看已识别轮胎和目标压力，配置变更受驻车条件限制。",
+    "author": "arefahmad",
+    "project": "https://github.com/arefahmad/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "aref_tires@0.2.102.tgz",
+      "size": 1342656,
+      "sha256": "a11a178f527b5096f9322ed3fb9c52955948558ecd56029e190385b4bdf70d75",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/aref_tires%400.2.102.tgz"
+    },
+    "version": "0.2.103",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "arefahmad--idrive7-apps.txt"
+  },
+  {
+    "id": "benspa_vitals",
+    "category": "诊断",
+    "title": "Mon Vitals",
+    "description": "集中显示发动机温度、增压与底盘数据。",
+    "author": "benspa900",
+    "project": "https://github.com/benspa900/mon-vitals-idrive7",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "benspa_vitals@0.9.602.tgz",
+      "size": 824221,
+      "sha256": "39c5c25d25b7fec293e9539668ce0fa4e8fffbe4efe5596301ed8144356e4bc6",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/benspa_vitals%400.9.602.tgz"
+    },
+    "version": "0.9.603",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "benspa900--mon-vitals-idrive7.txt"
+  },
+  {
+    "id": "boostline_cn",
+    "category": "诊断",
+    "title": "增压仪表",
+    "description": "查看 ECU 的增压和发动机实时参数。",
+    "author": "giuseppesalatino-boop",
+    "project": "https://github.com/giuseppesalatino-boop/mgu-apps",
+    "source": "https://github.com/JackieZ123430/mgu-apps/tree/aff3a09776b9acbef9177decacea73e62583a982",
+    "base": {
+      "name": "boostline_cn@1.0.101.tgz",
+      "size": 1046121,
+      "sha256": "42da63ede26f952653487e5b661e8d432fc047a10ad4e64b24acf7ee7e5c5105",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/boostline_cn%401.0.101.tgz"
+    },
+    "version": "1.0.102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "mgu-deploy": "0.8.19"
+    },
+    "license": "MIT",
+    "notice": "giuseppesalatino-boop--mgu-apps.txt"
+  },
+  {
+    "id": "brake_test",
+    "category": "驾驶",
+    "title": "制动测试",
+    "description": "记录制动距离、峰值减速度和连续制动表现。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "brake_test@1.5.2101.tgz",
+      "size": 1059207,
+      "sha256": "0cab3d5ef6ed0a117ed140a9c03862aa70495b19252f3eb31853510fd39cb7d7",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/brake_test%401.5.2101.tgz"
+    },
+    "version": "1.5.2102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "car_vitals",
+    "category": "诊断",
+    "title": "车辆仪表",
+    "description": "查看发动机、进气、燃油和底盘的实时读数。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "car_vitals@2.27.901.tgz",
+      "size": 1091418,
+      "sha256": "d3d31fc222ddec38fe0fa35c7ceeb6f760189127bafa6af1398668769e70a0f8",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/car_vitals%402.27.901.tgz"
+    },
+    "version": "2.27.902",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "cluster_lyrics",
+    "category": "娱乐",
+    "title": "仪表歌词",
+    "description": "根据 Spotify 曲目获取同步歌词，在兼容仪表中显示。",
+    "author": "NamelsMissing",
+    "project": "https://github.com/NamelsMissing/mgu-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/namels-source.zip",
+    "base": {
+      "name": "cluster_lyrics@0.1.401.tgz",
+      "size": 1051234,
+      "sha256": "a9532d4a857621a17f96b4353f226580a0b784351394f897304bf88cbb7d6006",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/cluster_lyrics%400.1.401.tgz"
+    },
+    "version": "0.1.402",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.6",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.4.0",
+      "mgu-uplink": "0.7.3",
+      "mgu-deploy": "0.8.27"
+    },
+    "license": "GPL-3.0",
+    "notice": "NamelsMissing--mgu-apps.txt"
+  },
+  {
+    "id": "cluster_nav_card",
+    "category": "出行",
+    "title": "仪表导航卡片",
+    "description": "在兼容仪表上查看下一转向、车道和距离。",
+    "author": "tjmodsss",
+    "project": "https://github.com/tjmodsss/tjm-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "cluster_nav_card@0.9.202.tgz",
+      "size": 885012,
+      "sha256": "e0fc753a31d71dfe554c004c89e0b95516d192c13ffe1f5ae25f65c8fc640fda",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/cluster_nav_card%400.9.202.tgz"
+    },
+    "version": "0.9.203",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.5.0"
+    },
+    "license": "MIT",
+    "notice": "tjmodsss--tjm-apps.txt"
+  },
+  {
+    "id": "cluster_themes",
+    "category": "座舱",
+    "title": "仪表主题",
+    "description": "选择仪表布局、配色和换挡提示样式。",
+    "author": "bimmer-lab",
+    "project": "https://github.com/bimmer-lab/apps",
+    "source": "https://github.com/JackieZ123430/bimmer-lab-apps-cn/tree/e9a96c470b9389b827bfc9662e4b37103e36e22d",
+    "base": {
+      "name": "cluster_themes@0.19.1.tgz",
+      "size": 2632038,
+      "sha256": "e4951de49d24b16a6227ac9bab6c1445d844bd8faa9bb11d07e6d0dd668a1ee9",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/cluster_themes%400.19.1.tgz"
+    },
+    "version": "0.19.2",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "cluster-render": "0.5.1"
+    },
+    "license": "MIT",
+    "notice": "bimmer-lab--apps.txt"
+  },
+  {
+    "id": "dimon_battery",
+    "category": "诊断",
+    "title": "12 V 电池",
+    "description": "查看低压电池的电压、电流、温度与荷电状态。",
+    "author": "DimonPrograms",
+    "project": "https://github.com/DimonPrograms/dimonprograms-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "dimon_battery@1.0.2.tgz",
+      "size": 754468,
+      "sha256": "cedad8c011979864db03b3aecca94362d387faeb44065b920525710db65d289f",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/dimon_battery%401.0.2.tgz"
+    },
+    "version": "1.0.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "DimonPrograms--dimonprograms-apps.txt"
+  },
+  {
+    "id": "dimon_track_mode",
+    "category": "驾驶",
+    "title": "赛道计圈",
+    "description": "在封闭赛道记录圈速、分段成绩和实时差值。",
+    "author": "DimonPrograms",
+    "project": "https://github.com/DimonPrograms/dimonprograms-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "dimon_track_mode@1.0.2.tgz",
+      "size": 752772,
+      "sha256": "7da9c216b1f0be7c74ab7086a35e17fc211162222a8797f16705ccfb7d3179a4",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/dimon_track_mode%401.0.2.tgz"
+    },
+    "version": "1.0.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "DimonPrograms--dimonprograms-apps.txt"
+  },
+  {
+    "id": "dk_backgammon",
+    "category": "娱乐",
+    "title": "西洋双陆棋",
+    "description": "选择长局或短局，进行本地双人或人机对局。",
+    "author": "mistergahan",
+    "project": "https://github.com/mistergahan/mgu-backgammon",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "dk_backgammon@0.1.102.tgz",
+      "size": 24009,
+      "sha256": "de07a07d7f6ec5a855b279f4413fe2d16982d20bce3aea3aca80f609675dc644",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/dk_backgammon%400.1.102.tgz"
+    },
+    "version": "0.1.103",
+    "mguHmi": [
+      "ID7"
+    ],
+    "build": "unit",
+    "uninstallable": true,
+    "requires": {
+      "mgu-deploy": "0.8.27"
+    },
+    "license": "GPL-3.0",
+    "notice": "mistergahan--mgu-backgammon.txt"
+  },
+  {
+    "id": "doom",
+    "category": "娱乐",
+    "title": "Freedoom",
+    "description": "使用 iDrive 旋钮操控游戏，支持存档。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "doom@1.7.2201.tgz",
+      "size": 12044205,
+      "sha256": "f04c2abf9ef78b17b81c28eead25e39e38311eaa66f58b7f509bc202db49cf23",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/doom%401.7.2201.tgz"
+    },
+    "version": "1.7.2202",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "GPL-2.0",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "dpf_id7_cn",
+    "category": "诊断",
+    "title": "DPF 仪表",
+    "description": "查看柴油颗粒捕集器再生状态和相关发动机读数。",
+    "author": "giuseppesalatino-boop",
+    "project": "https://github.com/giuseppesalatino-boop/mgu-apps",
+    "source": "https://github.com/JackieZ123430/mgu-apps/tree/aff3a09776b9acbef9177decacea73e62583a982",
+    "base": {
+      "name": "dpf_id7_cn@1.1.101.tgz",
+      "size": 939758,
+      "sha256": "d732bfb0312925072c1d13a60a39f6a618417c7bdafac0f95035539eb2c39df7",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/dpf_id7_cn%401.1.101.tgz"
+    },
+    "version": "1.1.102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "mgu-deploy": "0.8.19"
+    },
+    "license": "MIT",
+    "notice": "giuseppesalatino-boop--mgu-apps.txt"
+  },
+  {
+    "id": "dpf_monitor",
+    "category": "诊断",
+    "title": "柴油颗粒捕集器",
+    "description": "查看颗粒捕集器的积碳、压差、温度和再生记录。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "dpf_monitor@0.4.2.tgz",
+      "size": 960927,
+      "sha256": "603138e3e31709e12808e315119c6c4f090ea1baa2b3d31c635f6001d5ba042c",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/dpf_monitor%400.4.2.tgz"
+    },
+    "version": "0.4.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "draggy",
+    "category": "驾驶",
+    "title": "加速计时",
+    "description": "记录分段加速用时和四分之一英里成绩。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "draggy@2.6.1.tgz",
+      "size": 1060221,
+      "sha256": "14d86c18022d38f2e2b66abb6009121600a728ae9da6696a130b2fee591add6d",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/draggy%402.6.1.tgz"
+    },
+    "version": "2.6.2",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "drive_hud_full",
+    "category": "座舱",
+    "title": "HUD 显示设置",
+    "description": "配置抬头显示中的导航提示、挡位与暖机信息。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "drive_hud_full@0.1.602.tgz",
+      "size": 955274,
+      "sha256": "0767c320ab013700925b0cbbb96497009406f913730c820db6e7b3e160f15a0f",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/drive_hud_full%400.1.602.tgz"
+    },
+    "version": "0.1.603",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.3.10"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "dtc_scanner",
+    "category": "诊断",
+    "title": "故障码",
+    "description": "读取控制单元故障记录和车辆检查信息，可执行清除操作。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "dtc_scanner@2.9.802.tgz",
+      "size": 6616632,
+      "sha256": "84d84de141ea6c1f0516fd3e32369360ca123eebce76995709270b7b67d0fe78",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/dtc_scanner%402.9.802.tgz"
+    },
+    "version": "2.9.803",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "dyno",
+    "category": "驾驶",
+    "title": "虚拟马力机",
+    "description": "根据行驶数据估算功率和扭矩，绘制输出曲线。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "dyno@1.6.301.tgz",
+      "size": 1055665,
+      "sha256": "a7d2a4da07110115de1fd1b4d72434fec9cfc7f93e03e07a5102af143b00868c",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/dyno%401.6.301.tgz"
+    },
+    "version": "1.6.302",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "edrive",
+    "category": "诊断",
+    "title": "eDrive 仪表",
+    "description": "查看电驱系统、动力电池和能量流数据。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/8b2c940a85f5158f04dafd912891c9ac79c31c7c",
+    "base": {
+      "name": "edrive@2.11.2.tgz",
+      "size": 1150096,
+      "sha256": "e491e65866e6aea58b5942542473f97dd311714b1a5c7b8a54f00bcf7d4fb254",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/edrive%402.11.2.tgz"
+    },
+    "version": "2.11.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "mgu-deploy": "0.3.2",
+      "idrive7-renderd": "2.1.15"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "eldrive",
+    "category": "诊断",
+    "title": "elDrive 充电仪表",
+    "description": "查看纯电车型的电量、续航、充电记录和低压电池状态。",
+    "author": "beele",
+    "project": "https://github.com/beele/eldrive",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "eldrive@1.1.2.tgz",
+      "size": 908125,
+      "sha256": "926a02882f127ca382f5294c1c94f5a7bd97db0da85fb0f8595922c1736e1dc5",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/eldrive%401.1.2.tgz"
+    },
+    "version": "1.1.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "beele--eldrive.txt"
+  },
+  {
+    "id": "f44_traffic_diag",
+    "category": "诊断",
+    "title": "F44 交通标志诊断",
+    "description": "检查本车交通标志和信号灯识别接口。",
+    "author": "benspa900",
+    "project": "https://github.com/benspa900/mon-vitals-idrive7",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "f44_traffic_diag@0.1.2.tgz",
+      "size": 759971,
+      "sha256": "f1760d9d30ef02d5deadb62fe7b7efa83b2ead491ce414ce66117537c5269426",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/f44_traffic_diag%400.1.2.tgz"
+    },
+    "version": "0.1.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "benspa900--mon-vitals-idrive7.txt"
+  },
+  {
+    "id": "front_camera_cluster",
+    "category": "座舱",
+    "title": "仪表摄像头",
+    "description": "在兼容仪表中查看夜视或泊车摄像头画面。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "front_camera_cluster@0.2.102.tgz",
+      "size": 952436,
+      "sha256": "7bf533bea6aaa42c034f71391b48f21c945a9110e755c963de77900c5936e1d8",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/front_camera_cluster%400.2.102.tgz"
+    },
+    "version": "0.2.103",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "front-camera-cluster-helper": "0.2.1"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "g21_wheelheat",
+    "category": "座舱",
+    "title": "G21 加热控制",
+    "description": "查看方向盘与座椅加热状态，配置兼容设备。",
+    "author": "NamelsMissing",
+    "project": "https://github.com/NamelsMissing/mgu-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/namels-source.zip",
+    "base": {
+      "name": "g21_wheelheat@0.5.401.tgz",
+      "size": 898633,
+      "sha256": "285b984acfaf38bcfd8962b2d7e4532d3643732ec2491ea6f6ae54038e07a545",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/g21_wheelheat%400.5.401.tgz"
+    },
+    "version": "0.5.402",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.6",
+      "mgu-inputgate": "1.0.0",
+      "mgu-deploy": "0.8.27"
+    },
+    "license": "GPL-3.0",
+    "notice": "NamelsMissing--mgu-apps.txt"
+  },
+  {
+    "id": "gforce",
+    "category": "驾驶",
+    "title": "加速度仪",
+    "description": "显示纵向和横向加速度，记录峰值。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "gforce@1.6.2201.tgz",
+      "size": 1058509,
+      "sha256": "bdd21bc91b586f22d10bdfff6e5080f625c7750dee8de3f1d3364bf41eacc2f7",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/gforce%401.6.2201.tgz"
+    },
+    "version": "1.6.2202",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "gif_home",
+    "category": "娱乐",
+    "title": "GIF 首页组件",
+    "description": "将自选 GIF 动画显示在首页。",
+    "author": "NamelsMissing",
+    "project": "https://github.com/NamelsMissing/mgu-apps",
+    "source": "https://github.com/JackieZ123430/namelsmissing-mgu-apps-cn/tree/659245da1b57fa0b44f06001513212d520dd6be0",
+    "base": {
+      "name": "gif_home@0.3.102.tgz",
+      "size": 1816951,
+      "sha256": "3369b11cb6dab5d088d99bcceed76b261674bab14c3940e159f0034eacea414a",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/gif_home%400.3.102.tgz"
+    },
+    "version": "0.3.103",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "GPL-3.0",
+    "notice": "NamelsMissing--mgu-apps.txt"
+  },
+  {
+    "id": "green_light_alert",
+    "category": "驾驶",
+    "title": "绿灯提醒",
+    "description": "根据前视摄像头识别的信号灯状态提示起步。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "green_light_alert@0.2.502.tgz",
+      "size": 960544,
+      "sha256": "fa96408f574795aef734e1f8399735c8fd04b3939af3f80a2fc17cb51c50397a",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/green_light_alert%400.2.502.tgz"
+    },
+    "version": "0.2.503",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "hotspot_studio",
+    "category": "系统",
+    "title": "车载热点",
+    "description": "管理车机热点、网络代理和限时 ENET 转发。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "hotspot_studio@0.1.502.tgz",
+      "size": 973057,
+      "sha256": "ce0d74c4a7a5c79ae6020c371453c7eef321d6ab843ef50f7adc96dc86b81a9e",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/hotspot_studio%400.1.502.tgz"
+    },
+    "version": "0.1.503",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "hotspot-studio-helper": "0.1.7"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "idrive_hud_widgets",
+    "category": "座舱",
+    "title": "HUD 小组件",
+    "description": "在兼容的抬头显示器中组合挡位、温度与换挡灯。",
+    "author": "bimmer-lab",
+    "project": "https://github.com/bimmer-lab/apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/hud-source.zip",
+    "base": {
+      "name": "idrive_hud_widgets@0.15.801.tgz",
+      "size": 1860324,
+      "sha256": "e70bcf5021420f3a77c0c288ba7f21f041dc96179b1b64bfe2fb8776150553b3",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/idrive_hud_widgets%400.15.801.tgz"
+    },
+    "version": "0.15.802",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.6",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.5.1"
+    },
+    "license": "MIT",
+    "notice": "bimmer-lab--apps.txt"
+  },
+  {
+    "id": "idv7lol",
+    "category": "座舱",
+    "title": "idv7lol 仪表",
+    "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
+    "author": "ALMSTRA",
+    "project": "https://github.com/ALMSTRA/idv7lol",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/idv7lol-zh-cn-2026-11-23/idv7lol-zh-cn-source.zip",
+    "base": {
+      "name": "idv7lol@0.2.1901.tgz",
+      "size": 2252659,
+      "sha256": "db22e9d9774eb7faaae19e9ac8a6cb9857d4f989e233913542e21657d5311524",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/idv7lol-zh-cn-2026-11-23/idv7lol%400.2.1901.tgz"
+    },
+    "version": "0.2.1902",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "cluster-render": "0.6.9",
+      "mgu-deploy": "0.8.27"
+    },
+    "license": "GPL-3.0",
+    "notice": "ALMSTRA--idv7lol.txt"
+  },
+  {
+    "id": "jap_ridetube",
+    "category": "娱乐",
+    "title": "RideTube",
+    "description": "浏览 YouTube 频道和视频，默认在驻车时显示画面。",
+    "author": "JustAnotherPU",
+    "project": "https://github.com/JustAnotherPU/ridetube",
+    "source": "https://github.com/JackieZ123430/ridetube-cn/tree/6d19c89c85ac5b3be7cfe86c2f523f211607e434",
+    "base": {
+      "name": "jap_ridetube@0.4.502.tgz",
+      "size": 3434521,
+      "sha256": "98170cb12fb04fa871bbeb707b09b97cab899cc6dfe9ce106863ad69e571a64d",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/jap_ridetube%400.4.502.tgz"
+    },
+    "version": "0.4.503",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "jap-ridetube-d": "0.4.2",
+      "mgu-render": "0.6.11",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "GPL-3.0",
+    "notice": "JustAnotherPU--ridetube.txt"
+  },
+  {
+    "id": "jap_sysmon",
+    "category": "系统",
+    "title": "资源监视器",
+    "description": "查看处理器、交换空间、图形频率和应用内存用量。",
+    "author": "JustAnotherPU",
+    "project": "https://github.com/JustAnotherPU/mgu-apps",
+    "source": "https://github.com/JustAnotherPU/mgu-apps/tree/e69a71330b09650c4d21f51af63068799de88ba9",
+    "base": {
+      "name": "jap_sysmon@1.0.604.tgz",
+      "size": 1228198,
+      "sha256": "3aa96b88ac8e75a7c0825e94c4fddc4d5376725ff0e3881b09c63ce45be66263",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/hexlay-review-2026-11-23/jap_sysmon%401.0.604.tgz"
+    },
+    "version": "1.0.605",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "mgu-render": "0.6.11",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "JustAnotherPU--mgu-apps.txt"
+  },
+  {
+    "id": "live_adjustments",
+    "category": "诊断",
+    "title": "发动机配置",
+    "description": "查看并调整兼容发动机标定提供的参数。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "live_adjustments@0.9.1001.tgz",
+      "size": 1241799,
+      "sha256": "67643c9c54e8d6380ee71c1d4cee179676ed1f1dced3770f39bbff309fb5d141",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/live_adjustments%400.9.1001.tgz"
+    },
+    "version": "0.9.1002",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "live_data",
+    "category": "诊断",
+    "title": "实时数据",
+    "description": "从车辆信号中选择需要观察的数据。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/8b2c940a85f5158f04dafd912891c9ac79c31c7c",
+    "base": {
+      "name": "live_data@1.0.1802.tgz",
+      "size": 1136384,
+      "sha256": "b612c5e5b539c6074d274cd334e11ff2d3a2268ed1a5ebd64d70c1430be43905",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/live_data%401.0.1802.tgz"
+    },
+    "version": "1.0.1803",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "mgu-deploy": "0.3.2",
+      "idrive7-renderd": "2.1.18",
+      "mgu-inputgate": "1.1.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "m_copilot",
+    "category": "驾驶",
+    "title": "M-Copilot",
+    "description": "在行车界面查看驾驶提示与车辆状态。",
+    "author": "hexlay",
+    "project": "https://github.com/hexlay/idrive7-custom-apps",
+    "source": "https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4",
+    "base": {
+      "name": "m_copilot@1.0.3701.tgz",
+      "size": 4583355,
+      "sha256": "0ab8ae6c90611b70710925576fa8f3f4d94af895c6b30d668dee28f30bc724a2",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/hexlay-review-2026-11-23/m_copilot%401.0.3701.tgz"
+    },
+    "version": "1.0.3702",
+    "mguHmi": [
+      "ID7"
+    ],
+    "additionalSources": [
+      "https://github.com/hexlay/idrive7-custom-apps/tree/e8bfc9236a56a3cf38009c14aa53e46a98cacca6"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "mgu-uplink": "0.7.3"
+    },
+    "license": "GPL-3.0",
+    "notice": "hexlay--idrive7-custom-apps.txt"
+  },
+  {
+    "id": "mgu_browser",
+    "category": "系统",
+    "title": "车机浏览器",
+    "description": "用 iDrive 浏览网页，管理书签和历史记录。",
+    "author": "pllanaio",
+    "project": "https://github.com/pllanaio/mgu-browser",
+    "source": "https://github.com/JackieZ123430/mgu-browser/tree/fcbd6f70341636f3eaa493c363c67c70eeb3f71f",
+    "base": {
+      "name": "mgu_browser@0.16.102.tgz",
+      "size": 2122320,
+      "sha256": "8f29a6cf9ed1eea63ace46fb825095876e58c2e0f2e3e4826469547d8d72694a",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/mgu_browser%400.16.102.tgz"
+    },
+    "version": "0.16.103",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "mgu-browser": "0.16.1",
+      "mgu-browser-engine": "0.1.0",
+      "mgu-uplink": "0.7.3",
+      "mgu-render": "0.6.11",
+      "mgu-deploy": "0.7.17"
+    },
+    "license": "MIT",
+    "notice": "pllanaio--mgu-browser.txt"
+  },
+  {
+    "id": "parking_clearance",
+    "category": "驾驶",
+    "title": "泊车距离",
+    "description": "显示泊车雷达距离、转向轨迹和车身姿态。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "parking_clearance@0.1.802.tgz",
+      "size": 1182520,
+      "sha256": "a03522875be80f04d8cd9f1fc7cabdb7b50c887d0c76ca139d24f81ac4210f59",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/parking_clearance%400.1.802.tgz"
+    },
+    "version": "0.1.803",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "ram_mic_calibration",
+    "category": "诊断",
+    "title": "RAM 麦克风校准",
+    "description": "查看 RAM01 状态并执行麦克风校准。",
+    "author": "JackieZ123430",
+    "project": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/tree/32ac73b03aa86201083f188d619c9955f96a602d",
+    "base": {
+      "name": "ram_mic_calibration@0.4.0.tgz",
+      "url": "https://raw.githubusercontent.com/JackieZ123430/MGU-CN-XIAOBAI/32ac73b03aa86201083f188d619c9955f96a602d/packages/ram_mic_calibration@0.4.0.tgz",
+      "size": 942118,
+      "sha256": "5afc4a8551f4938c24b4f182afe841cc0b637a1f5d4cc156a831223bd98d31f0"
+    },
+    "version": "0.4.1",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "license": "MIT",
+    "notice": "JackieZ123430--MGU-CN-XIAOBAI.txt"
+  },
+  {
+    "id": "rear_comfort",
+    "category": "座舱",
+    "title": "后排舒适控制",
+    "description": "操作兼容 G12 后排座椅、空调与遮阳设备。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "rear_comfort@0.5.602.tgz",
+      "size": 5499019,
+      "sha256": "b9deea9f98404dd3607d34a44cf3196c968f219e042326e220b0cebc53f8c472",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/rear_comfort%400.5.602.tgz"
+    },
+    "version": "0.5.603",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "redline",
+    "category": "驾驶",
+    "title": "换挡提示",
+    "description": "显示当前转速和挡位，在设定转速提示换挡。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "redline@2.0.4501.tgz",
+      "size": 1268853,
+      "sha256": "e1a0d682ffc21377008be66fca309c39b8adcc71fba10f3f98e2f82e5b870dce",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/redline%402.0.4501.tgz"
+    },
+    "version": "2.0.4502",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "ride_height",
+    "category": "座舱",
+    "title": "空气悬架",
+    "description": "查看并调整兼容车辆的空气悬架高度。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "ride_height@0.6.2.tgz",
+      "size": 955499,
+      "sha256": "0416199933c89146b3c14fe2a7ff9eb832933d67ffbde5b4cf27ce29e47ebed4",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/ride_height%400.6.2.tgz"
+    },
+    "version": "0.6.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "road_trip_computer",
+    "category": "驾驶",
+    "title": "行程电脑",
+    "description": "汇总行程、油耗和燃油费用，显示海拔与续航。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/42f3a2c58ec098d26b2e4f25ab1687b8533e66ea",
+    "base": {
+      "name": "road_trip_computer@1.0.3.tgz",
+      "size": 1060364,
+      "sha256": "c9c34f9336f2f3079e72369d5cc0fa756b110350bc592c6f8a5ffa16bcabff92",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/road_trip_computer%401.0.3.tgz"
+    },
+    "version": "1.0.4",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "robertn_store",
+    "category": "系统",
+    "title": "MGU Store",
+    "description": "管理软件源，安装和更新车机应用与组件。",
+    "author": "robertnisipeanu",
+    "project": "https://github.com/robertnisipeanu/mgu-store",
+    "source": "https://github.com/robertnisipeanu/mgu-store/tree/robertn_store@0.9.41",
+    "base": {
+      "name": "robertn_store@0.9.41.tgz",
+      "size": 4340030,
+      "sha256": "d2ae95ab835792b566830326c72923483cd199bb9f590d15e0e7fe5f45fdac8e",
+      "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.41/robertn_store%400.9.41.tgz"
+    },
+    "version": "0.9.41",
+    "mguHmi": [
+      "ID7",
+      "ID8"
+    ],
+    "build": "unit",
+    "requires": {
+      "mgu-deploy": "0.8.12",
+      "mgu-updater": "0.8.28",
+      "mgu-render": "0.3.1"
+    },
+    "external": true,
+    "license": "GPL-3.0"
+  },
+  {
+    "id": "rubenrios_gearhud",
+    "category": "座舱",
+    "title": "HUD 挡位显示",
+    "description": "在仪表和抬头显示中区分常规、运动及手动挡位。",
+    "author": "RubenRios",
+    "project": "https://github.com/RubenRios/GearHUD",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip",
+    "base": {
+      "name": "rubenrios_gearhud@1.0.2.tgz",
+      "size": 764015,
+      "sha256": "107584bebc437922f7d1863505f4ff56bd42e4e50ee3524445744489e54a3324",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/rubenrios_gearhud%401.0.2.tgz"
+    },
+    "version": "1.0.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.6.0"
+    },
+    "license": "MIT",
+    "notice": "RubenRios--GearHUD.txt"
+  },
+  {
+    "id": "service",
+    "category": "诊断",
+    "title": "保养信息",
+    "description": "查看车辆的保养项目和到期状态。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "service@1.6.301.tgz",
+      "size": 1058055,
+      "sha256": "84ddbdea54f0873ac5dc89f264500cdc940f48b02ee9a6d47732853d0f1484b5",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/service%401.6.301.tgz"
+    },
+    "version": "1.6.302",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "speed_limit",
+    "category": "出行",
+    "title": "格鲁吉亚限速提示",
+    "description": "使用格鲁吉亚地区的数据提示道路限速。",
+    "author": "hexlay",
+    "project": "https://github.com/hexlay/idrive7-custom-apps",
+    "source": "https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4",
+    "base": {
+      "name": "speed_limit@1.0.1001.tgz",
+      "size": 10110459,
+      "sha256": "7c7238d1cf030b765f1de3a63b61f9d2320c5cb3b88484de6ba65669859c42f3",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/hexlay-review-2026-11-23/speed_limit%401.0.1001.tgz"
+    },
+    "version": "1.0.1002",
+    "mguHmi": [
+      "ID7"
+    ],
+    "additionalSources": [
+      "https://github.com/hexlay/idrive7-custom-apps/tree/e8bfc9236a56a3cf38009c14aa53e46a98cacca6"
+    ],
+    "uninstallable": true,
+    "license": "GPL-3.0",
+    "notice": "hexlay--idrive7-custom-apps.txt"
+  },
+  {
+    "id": "spotify",
+    "category": "娱乐",
+    "title": "Spotify Connect",
+    "description": "与手机上的 Spotify 配对，在车机查看曲目和播放设备。",
+    "author": "hexlay",
+    "project": "https://github.com/hexlay/idrive7-custom-apps",
+    "source": "https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4",
+    "base": {
+      "name": "spotify@1.0.3401.tgz",
+      "size": 1620929,
+      "sha256": "a7d30eaac5c4b1e016c6942b42b4047648d10174cd39c166baf1b484b8272532",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/hexlay-review-2026-11-23/spotify%401.0.3401.tgz"
+    },
+    "version": "1.0.3402",
+    "mguHmi": [
+      "ID7"
+    ],
+    "additionalSources": [
+      "https://github.com/hexlay/idrive7-custom-apps/tree/e8bfc9236a56a3cf38009c14aa53e46a98cacca6"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "mgu-uplink": "0.7.3"
+    },
+    "license": "GPL-3.0",
+    "notice": "hexlay--idrive7-custom-apps.txt"
+  },
+  {
+    "id": "spritmonitor",
+    "category": "出行",
+    "title": "加油记录",
+    "description": "记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。",
+    "author": "dzooky",
+    "project": "https://github.com/dzooky/bmrmodz",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/fuel-source.zip",
+    "base": {
+      "name": "spritmonitor@0.1.4502.tgz",
+      "size": 2901589,
+      "sha256": "12e726256e9c8f2a7c5b3e4a1a49a2ba7c46660bc17c6f12d14e9c8617250c7c",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/spritmonitor%400.1.4502.tgz"
+    },
+    "version": "0.1.4503",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.19",
+      "mgu-inputgate": "1.2.1",
+      "mgu-uplink": "0.7.3"
+    },
+    "license": "MIT",
+    "notice": "dzooky--bmrmodz.txt"
+  },
+  {
+    "id": "start_stop_insight",
+    "category": "诊断",
+    "title": "自动启停记录",
+    "description": "查看自动启停受限原因与近期记录。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "start_stop_insight@0.1.302.tgz",
+      "size": 955551,
+      "sha256": "28533c3f104ebf6c879b300b2f2b603c97afcbf0c1255f0708a38e83c58966a9",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/start_stop_insight%400.1.302.tgz"
+    },
+    "version": "0.1.303",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "telemetry_studio",
+    "category": "诊断",
+    "title": "车辆遥测",
+    "description": "按系统查看动力、热管理、空调和底盘数据。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "telemetry_studio@0.2.2.tgz",
+      "size": 986662,
+      "sha256": "77d8edbd175d039030110b4070c939c580f2188605375d4d92e526ad86ee71a5",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/telemetry_studio%400.2.2.tgz"
+    },
+    "version": "0.2.3",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "true_time_cn",
+    "category": "驾驶",
+    "title": "加减速计时",
+    "description": "使用 DSC 加速度信号补偿坡度影响。",
+    "author": "giuseppesalatino-boop",
+    "project": "https://github.com/giuseppesalatino-boop/mgu-apps",
+    "source": "https://github.com/JackieZ123430/mgu-apps/tree/aff3a09776b9acbef9177decacea73e62583a982",
+    "base": {
+      "name": "true_time_cn@1.0.1.tgz",
+      "size": 953265,
+      "sha256": "9ffee15dc8f8b8055b7103a840580e6a9ef8d310cf80fb96a572d032a2c2005b",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/true_time_cn%401.0.1.tgz"
+    },
+    "version": "1.0.2",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "mgu-deploy": "0.8.19"
+    },
+    "license": "MIT",
+    "notice": "giuseppesalatino-boop--mgu-apps.txt"
+  },
+  {
+    "id": "tyrewatch",
+    "category": "诊断",
+    "title": "胎压仪表",
+    "description": "对照四轮胎压、胎温和目标压力。",
+    "author": "suhailpatel",
+    "project": "https://github.com/suhailpatel/id7-apps",
+    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/tyre-source.zip",
+    "base": {
+      "name": "tyrewatch@0.1.501.tgz",
+      "size": 847551,
+      "sha256": "b0d80991bda03c723aa2c23e6d126d544aa226806c8fb0ee7807660489d54e24",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/tyrewatch%400.1.501.tgz"
+    },
+    "version": "0.1.502",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.6",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "suhailpatel--id7-apps.txt"
+  },
+  {
+    "id": "vehicle_health",
+    "category": "诊断",
+    "title": "车辆健康",
+    "description": "汇总轮胎、油液、保养和故障状态。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "vehicle_health@0.1.902.tgz",
+      "size": 956941,
+      "sha256": "88a8d3cd3eeecdb6e95befcd7b216f06cec82b05334180556b352f6e1152848a",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/vehicle_health%400.1.902.tgz"
+    },
+    "version": "0.1.903",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "vehicle_network",
+    "category": "系统",
+    "title": "车载网络",
+    "description": "查看车机网络接口、车辆网络设备和 IPv4 配置。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "vehicle_network@0.1.302.tgz",
+      "size": 959942,
+      "sha256": "be1104d1ef3d0539749d8f779c9115790170569e0b82c191fed1b063338946b5",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/vehicle_network%400.1.302.tgz"
+    },
+    "version": "0.1.303",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "vehicle-network-observer": "0.1.2"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "vizualyse_cast",
+    "category": "娱乐",
+    "title": "Vizualyse 投屏",
+    "description": "将手机选择的流媒体投送到兼容车载屏幕。",
+    "author": "Vizualyse",
+    "project": "https://github.com/Vizualyse/idrive-apps",
+    "source": "https://github.com/JackieZ123430/vizualyse-idrive-apps-cn/tree/f9183801aeeb9fc09c16bd9566ce8b65fe8a644a",
+    "base": {
+      "name": "vizualyse_cast@0.4.101.tgz",
+      "size": 54060,
+      "sha256": "7ee3836c35be03864e12eabf8651099cabcd358213d44c44aeaaf7845292f5c6",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/vizualyse_cast%400.4.101.tgz"
+    },
+    "version": "0.4.102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "build": "unit",
+    "uninstallable": true,
+    "requires": {
+      "vizualyse-cast": "0.4.1"
+    },
+    "license": "GPL-3.0",
+    "notice": "Vizualyse--idrive-apps.txt",
+    "translationNotice": "JackieZ123430--vizualyse-idrive-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "vizualyse_chromium",
+    "category": "系统",
+    "title": "Vizualyse Chromium",
+    "description": "在车机中使用 Chromium 浏览器。",
+    "author": "Vizualyse",
+    "project": "https://github.com/Vizualyse/idrive-apps",
+    "source": "https://github.com/JackieZ123430/vizualyse-idrive-apps-cn/tree/f9183801aeeb9fc09c16bd9566ce8b65fe8a644a",
+    "base": {
+      "name": "vizualyse_chromium@0.3.101.tgz",
+      "size": 56294,
+      "sha256": "f28449d3c490703dc8c3cb5b8d669f1cf6f93a7a55c33fffebad5db2302d0a55",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/vizualyse_chromium%400.3.101.tgz"
+    },
+    "version": "0.3.102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "build": "unit",
+    "uninstallable": true,
+    "requires": {
+      "vizualyse-chromium": "0.3.1"
+    },
+    "license": "GPL-3.0",
+    "notice": "Vizualyse--idrive-apps.txt",
+    "translationNotice": "JackieZ123430--vizualyse-idrive-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "vizualyse_cluster",
+    "category": "座舱",
+    "title": "Vizualyse 仪表",
+    "description": "在兼容仪表上应用自定义主题。",
+    "author": "Vizualyse",
+    "project": "https://github.com/Vizualyse/idrive-apps",
+    "source": "https://github.com/JackieZ123430/vizualyse-idrive-apps-cn/tree/f9183801aeeb9fc09c16bd9566ce8b65fe8a644a",
+    "base": {
+      "name": "vizualyse_cluster@0.3.101.tgz",
+      "size": 44851,
+      "sha256": "c7a9218a6157fffefc7b2769e768c85a72610815433d266f266060098b511dc3",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/vizualyse_cluster%400.3.101.tgz"
+    },
+    "version": "0.3.102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "build": "unit",
+    "uninstallable": true,
+    "requires": {
+      "vizualyse-cluster": "0.4.1"
+    },
+    "license": "GPL-3.0",
+    "notice": "Vizualyse--idrive-apps.txt",
+    "translationNotice": "JackieZ123430--vizualyse-idrive-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "vizualyse_moonlight",
+    "category": "娱乐",
+    "title": "Moonlight 串流",
+    "description": "驻车时连接运行 Sunshine 的电脑进行串流。",
+    "author": "Vizualyse",
+    "project": "https://github.com/Vizualyse/idrive-apps",
+    "source": "https://github.com/JackieZ123430/vizualyse-idrive-apps-cn/tree/f9183801aeeb9fc09c16bd9566ce8b65fe8a644a",
+    "base": {
+      "name": "vizualyse_moonlight@0.3.101.tgz",
+      "size": 52643,
+      "sha256": "07a6166b0a4e52ccd33f76e737b7d4785245fb5979eb0dbebfbaae2be99460c7",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/vizualyse_moonlight%400.3.101.tgz"
+    },
+    "version": "0.3.102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "build": "unit",
+    "uninstallable": true,
+    "requires": {
+      "vizualyse-moonlight": "0.3.1"
+    },
+    "license": "GPL-3.0",
+    "notice": "Vizualyse--idrive-apps.txt",
+    "translationNotice": "JackieZ123430--vizualyse-idrive-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "vizualyse_steam",
+    "category": "娱乐",
+    "title": "Steam 客户端",
+    "description": "在兼容车机上启动 Steam 环境。",
+    "author": "Vizualyse",
+    "project": "https://github.com/Vizualyse/idrive-apps",
+    "source": "https://github.com/JackieZ123430/vizualyse-idrive-apps-cn/tree/f9183801aeeb9fc09c16bd9566ce8b65fe8a644a",
+    "base": {
+      "name": "vizualyse_steam@0.2.101.tgz",
+      "size": 53712,
+      "sha256": "8351300519f998dfd01d1e4114b57e01adfa477075371a5b98055be1375b44f5",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/vizualyse_steam%400.2.101.tgz"
+    },
+    "version": "0.2.102",
+    "mguHmi": [
+      "ID7"
+    ],
+    "build": "unit",
+    "uninstallable": true,
+    "requires": {
+      "vizualyse-steam": "0.4.0"
+    },
+    "license": "GPL-3.0",
+    "notice": "Vizualyse--idrive-apps.txt",
+    "translationNotice": "JackieZ123430--vizualyse-idrive-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "warmup",
+    "category": "驾驶",
+    "title": "暖机助手",
+    "description": "根据机油和冷却液温度估算暖机时间。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "warmup@1.9.1.tgz",
+      "size": 1053873,
+      "sha256": "3e55bc08e288ba5d730aeaa3f298f41acfef5c7642967fab501137e39233eb51",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/warmup%401.9.1.tgz"
+    },
+    "version": "1.9.2",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "xdrive_studio",
+    "category": "诊断",
+    "title": "xDrive 仪表",
+    "description": "观察扭矩分配、车轮滑差和分动箱状态。",
+    "author": "alexp50",
+    "project": "https://github.com/alexp50/bmw-apps",
+    "source": "https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3",
+    "base": {
+      "name": "xdrive_studio@0.1.502.tgz",
+      "size": 1087716,
+      "sha256": "a75632ff7819cf9b4e3f23c8812d13b14b3e2ad852a1e8cc7268a5f69228520e",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/xdrive_studio%400.1.502.tgz"
+    },
+    "version": "0.1.503",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "alexp50--bmw-apps.txt"
+  },
+  {
+    "id": "xiaobai_sys_monitor",
+    "category": "系统",
+    "title": "系统监视器",
+    "description": "显示 CPU、内存、温度和进程信息。",
+    "author": "hexlay",
+    "project": "https://github.com/hexlay/idrive7-system-monitor",
+    "source": "https://github.com/hexlay/idrive7-system-monitor/tree/ace9212e61dc26c0fda2f70a70ca39b1d6b40f2c",
+    "base": {
+      "name": "xiaobai_sys_monitor@1.0.805.tgz",
+      "size": 1099630,
+      "sha256": "73ed03c7cb8dea9882b9122972bc627e6c9d703e9f5211085748ae7c6aeef0ab",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/hexlay-review-2026-11-23/xiaobai_sys_monitor%401.0.805.tgz"
+    },
+    "version": "1.0.806",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "GPL-3.0",
+    "notice": "hexlay--idrive7-system-monitor.txt"
+  },
+  {
+    "id": "zf8hp",
+    "category": "诊断",
+    "title": "ZF 8HP 变速箱",
+    "description": "查看兼容 8HP 变速箱的数据与可用设置。",
+    "author": "cauliflowermossgrape",
+    "project": "https://github.com/cauliflowermossgrape/idrive7-apps",
+    "source": "https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543",
+    "base": {
+      "name": "zf8hp@1.5.801.tgz",
+      "size": 1049326,
+      "sha256": "d29b25c53a13a1296abd51fc7a41a17fb2a807ed73ac9cbfa0354b9ca729270a",
+      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/zf8hp%401.5.801.tgz"
+    },
+    "version": "1.5.802",
+    "mguHmi": [
+      "ID7"
+    ],
+    "uninstallable": true,
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "license": "MIT",
+    "notice": "cauliflowermossgrape--idrive7-apps.txt",
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  }
+]

@@ -1,0 +1,2216 @@
+{
+  "schema": 2,
+  "components": [
+    {
+      "id": "adam_mtrack",
+      "title": "M Track 仪表",
+      "description": "在兼容仪表上显示 M Track 风格布局，默认关闭覆盖显示。",
+      "author": "pinguinooo",
+      "version": "0.1.702",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.1",
+        "mgu-deploy": "0.8.27"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "adam_mtrack@0.1.702.tgz",
+        "url": "packages/adam_mtrack@0.1.702.tgz",
+        "size": 891239,
+        "sha256": "c2c33aaad18f04f91890b6182a7659937158be19b64122215b07fe4db61d122e"
+      },
+      "icon": "icons/adam_mtrack.png",
+      "iconSha256": "a892973274d3c9c006e82903eb9ef5f5509eaba5d627ce25728c827f0cc8227d"
+    },
+    {
+      "id": "adam_shiftlights",
+      "title": "换挡灯",
+      "description": "按驾驶模式和发动机温度设置换挡提醒。",
+      "author": "pinguinooo",
+      "version": "0.4.502",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.1",
+        "mgu-deploy": "0.8.27"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "adam_shiftlights@0.4.502.tgz",
+        "url": "packages/adam_shiftlights@0.4.502.tgz",
+        "size": 852738,
+        "sha256": "bb1cacd16829ad6f567f50faf02faf7379129a244660aa565f050b0e6b66ac3b"
+      },
+      "icon": "icons/adam_shiftlights.png",
+      "iconSha256": "b7a24c813d07b4e4f0aadf82d58bb86ea00cb185f63c7fb748aeacdec4752d12"
+    },
+    {
+      "id": "adam_vitals",
+      "title": "动力仪表",
+      "description": "同时查看油温、变速箱温度、增压与挡位。",
+      "author": "pinguinooo",
+      "version": "0.2.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "adam_vitals@0.2.2.tgz",
+        "url": "packages/adam_vitals@0.2.2.tgz",
+        "size": 827656,
+        "sha256": "7433810df5eab73b3195bb574690e3ec1cb1cf76d6d891719f8b23203670d28f"
+      },
+      "icon": "icons/adam_vitals.png",
+      "iconSha256": "c06845cb5113ee6071e4303461ede61840194c263a1cfebc0c356196c5117242"
+    },
+    {
+      "id": "adas_feature_probe",
+      "title": "驾驶辅助状态",
+      "description": "读取驾驶辅助功能的可用状态与控制单元反馈。",
+      "author": "alexp50",
+      "version": "0.1.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "adas_feature_probe@0.1.3.tgz",
+        "url": "packages/adas_feature_probe@0.1.3.tgz",
+        "size": 706412,
+        "sha256": "98f4b02800f2138f41b424258100e6d9013251db9a959d8d4698ebf83cfc8ee9"
+      },
+      "icon": "icons/adas_feature_probe.png",
+      "iconSha256": "81d062a41d853e7aa1421a36da42095103b5a7db38373303c4f217590e0f3560"
+    },
+    {
+      "id": "ambient_config",
+      "title": "氛围灯设置",
+      "description": "按驾驶模式选择车内氛围灯颜色和效果。",
+      "author": "cauliflowermossgrape",
+      "version": "2.7.1302",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "ambient_config@2.7.1302.tgz",
+        "url": "packages/ambient_config@2.7.1302.tgz",
+        "size": 1080921,
+        "sha256": "4139b41d4c26ce798478d63d38c7c7dd2963a22fda0ac60556d02078410f13f8"
+      },
+      "icon": "icons/ambient_config.png",
+      "iconSha256": "046f958dadf3ce68ab125af79222db291c6f3a419f1de1805df2922941bb0d16"
+    },
+    {
+      "id": "ambient_studio_full",
+      "title": "氛围灯工作室",
+      "description": "在全屏界面编辑驾驶模式配色和灯光提醒。",
+      "author": "alexp50",
+      "version": "0.1.503",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "ambient_studio_full@0.1.503.tgz",
+        "url": "packages/ambient_studio_full@0.1.503.tgz",
+        "size": 947768,
+        "sha256": "4fcbd83c16c987f1b93539332f5dc268cdf631e0789842ed169c8228ceed0e1e"
+      },
+      "icon": "icons/ambient_studio_full.png",
+      "iconSha256": "c296c5f480b6140ea1fcff60052f96a21a2aa81ee5ad133896941619ef067fd0"
+    },
+    {
+      "id": "aref_carcare",
+      "title": "养护记录",
+      "description": "记录车辆养护项目和周期，在首页查看提醒。",
+      "author": "arefahmad",
+      "version": "0.2.303",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "aref_carcare@0.2.303.tgz",
+        "url": "packages/aref_carcare@0.2.303.tgz",
+        "size": 1227400,
+        "sha256": "d38e4d7328f166380ffdf5f36ce7d530cbf22c3d55ae5ca98deee8d9ea41de1a"
+      },
+      "icon": "icons/aref_carcare.png",
+      "iconSha256": "d0243aa67d712e69c0bc3eff91fb14c775853b97b4139e0b2a05ec36c48e22c6"
+    },
+    {
+      "id": "aref_carlyrics",
+      "title": "车载歌词",
+      "description": "根据当前播放的曲目获取并显示歌词。",
+      "author": "arefahmad",
+      "version": "0.5.703",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-uplink": "0.7.3"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "aref_carlyrics@0.5.703.tgz",
+        "url": "packages/aref_carlyrics@0.5.703.tgz",
+        "size": 1475072,
+        "sha256": "c45a0f0b84b4f123d37d1e2d43a47aea43b62d48f46138bc0fe232df2de65845"
+      },
+      "icon": "icons/aref_carlyrics.png",
+      "iconSha256": "fb6816d4d705ae5e66f33a1837e7c840aa9f02f5939ebdc59054b2c13ee88284"
+    },
+    {
+      "id": "aref_carwatch",
+      "title": "行车监测",
+      "description": "记录行程、故障和发动机失火事件。",
+      "author": "arefahmad",
+      "version": "0.1.303",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "aref_carwatch@0.1.303.tgz",
+        "url": "packages/aref_carwatch@0.1.303.tgz",
+        "size": 1245377,
+        "sha256": "d6d8a6ec87042da06f744f2fb107278d5bce9b0590e4f42c9675686d662d9431"
+      },
+      "icon": "icons/aref_carwatch.png",
+      "iconSha256": "f690384973ba07e8d7fb46b3b63ed5d8b882069b32143cce897f537fc3ebd8d2"
+    },
+    {
+      "id": "aref_eta",
+      "title": "预计到达时间",
+      "description": "在车机组件查看 Apple Maps 的预计到达时间。",
+      "author": "arefahmad",
+      "version": "1.20.103",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.2",
+        "mgu-uplink": "0.7.3"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "aref_eta@1.20.103.tgz",
+        "url": "packages/aref_eta@1.20.103.tgz",
+        "size": 1765614,
+        "sha256": "b61bed3f4415d1f00ccef543d7dfc167088140a4ec31c7d7443ae6d395923ab5"
+      },
+      "icon": "icons/aref_eta.png",
+      "iconSha256": "996092ac45fa680c763e4fbc824e1b03d35c317cbf086c59a56eb9c4e5ae896b"
+    },
+    {
+      "id": "aref_explorer",
+      "title": "车机接口目录",
+      "description": "浏览车机公开的导航、媒体、空调和车身服务。",
+      "author": "arefahmad",
+      "version": "0.2.403",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "aref_explorer@0.2.403.tgz",
+        "url": "packages/aref_explorer@0.2.403.tgz",
+        "size": 1081583,
+        "sha256": "6c27fda07400ac78418caa42f04a06f4fb8c47a67c20ddf118410503fa91ca28"
+      },
+      "icon": "icons/aref_explorer.png",
+      "iconSha256": "d11046b1300c438c040fa052b54c9cb4d9997086f3f9d1346ee31c080ea9edb3"
+    },
+    {
+      "id": "aref_tires",
+      "title": "轮胎设置",
+      "description": "查看已识别轮胎和目标压力，配置变更受驻车条件限制。",
+      "author": "arefahmad",
+      "version": "0.2.103",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "aref_tires@0.2.103.tgz",
+        "url": "packages/aref_tires@0.2.103.tgz",
+        "size": 1327935,
+        "sha256": "d004a09ad8be7b147797a713ce8465653dd0e7b2ef3379eaa07479845a593403"
+      },
+      "icon": "icons/aref_tires.png",
+      "iconSha256": "d2f066a74d26cc854b5561a1fb6408be6edce9bbdf969af598944bae9f7185ac"
+    },
+    {
+      "id": "benspa_vitals",
+      "title": "Mon Vitals",
+      "description": "集中显示发动机温度、增压与底盘数据。",
+      "author": "benspa900",
+      "version": "0.9.603",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "benspa_vitals@0.9.603.tgz",
+        "url": "packages/benspa_vitals@0.9.603.tgz",
+        "size": 814612,
+        "sha256": "2fc48333f74fc327ac04eb51ca872f353b44cf81097f0c5fa16e4941c04cd09f"
+      },
+      "icon": "icons/benspa_vitals.png",
+      "iconSha256": "f4ed2c2cf8f3c7dce5929aadeade8989449e8e5389568e05c0c4f42f1daef37d"
+    },
+    {
+      "id": "boostline_cn",
+      "title": "增压仪表",
+      "description": "查看 ECU 的增压和发动机实时参数。",
+      "author": "giuseppesalatino-boop",
+      "version": "1.0.102",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.19"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "boostline_cn@1.0.102.tgz",
+        "url": "packages/boostline_cn@1.0.102.tgz",
+        "size": 1035784,
+        "sha256": "b3ba183b68beaa0872c05366ae67ea146e9a032b9c0c77e8c698543f697a77fc"
+      },
+      "icon": "icons/boostline_cn.png",
+      "iconSha256": "a28363ef5fd88739200f6d7b40e9f5da36421fa0f4db1b279c420bc2f5e8d01d"
+    },
+    {
+      "id": "brake_test",
+      "title": "制动测试",
+      "description": "记录制动距离、峰值减速度和连续制动表现。",
+      "author": "cauliflowermossgrape",
+      "version": "1.5.2102",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "brake_test@1.5.2102.tgz",
+        "url": "packages/brake_test@1.5.2102.tgz",
+        "size": 1049580,
+        "sha256": "0cdb58aa59f9102318d36ecfd3215dc8eb1b912265c1a0fd24c3438c7c927246"
+      },
+      "icon": "icons/brake_test.png",
+      "iconSha256": "c0d9bd3d5ec1b16c99ba947e5568a1867d50720aff80e2eefafab21a481b7e7f"
+    },
+    {
+      "id": "car_vitals",
+      "title": "车辆仪表",
+      "description": "查看发动机、进气、燃油和底盘的实时读数。",
+      "author": "cauliflowermossgrape",
+      "version": "2.27.902",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "car_vitals@2.27.902.tgz",
+        "url": "packages/car_vitals@2.27.902.tgz",
+        "size": 1081017,
+        "sha256": "54fedba8426b56114221baad550ccce08491e9eb439f3a37f08b721a8dfc7dfe"
+      },
+      "icon": "icons/car_vitals.png",
+      "iconSha256": "f4ed2c2cf8f3c7dce5929aadeade8989449e8e5389568e05c0c4f42f1daef37d"
+    },
+    {
+      "id": "cluster_lyrics",
+      "title": "仪表歌词",
+      "description": "根据 Spotify 曲目获取同步歌词，在兼容仪表中显示。",
+      "author": "NamelsMissing",
+      "version": "0.1.402",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-deploy": "0.8.27"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "cluster_lyrics@0.1.402.tgz",
+        "url": "packages/cluster_lyrics@0.1.402.tgz",
+        "size": 1047694,
+        "sha256": "f5ee716402fb1cf560f4bba9ab549368496477da0314d7dea61a83328810dc0f"
+      },
+      "icon": "icons/cluster_lyrics.png",
+      "iconSha256": "cba99ac848e408d10289b24e82e79380de96c5a26a9852944b2d9cdddf2c93cf"
+    },
+    {
+      "id": "cluster_nav_card",
+      "title": "仪表导航卡片",
+      "description": "在兼容仪表上查看下一转向、车道和距离。",
+      "author": "tjmodsss",
+      "version": "0.9.203",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "cluster_nav_card@0.9.203.tgz",
+        "url": "packages/cluster_nav_card@0.9.203.tgz",
+        "size": 875956,
+        "sha256": "527d7da71fa9f6ed2f0a3cf57929e122b05a0b00a175039e3429cdfd48dd5d96"
+      },
+      "icon": "icons/cluster_nav_card.png",
+      "iconSha256": "60e90af1451d5be3bac7097d9e50d3b5af4a3b961d2370baffeb3a442e3c8d04"
+    },
+    {
+      "id": "cluster_themes",
+      "title": "仪表主题",
+      "description": "选择仪表布局、配色和换挡提示样式。",
+      "author": "bimmer-lab",
+      "version": "0.19.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "cluster-render": "0.5.1"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "cluster_themes@0.19.2.tgz",
+        "url": "packages/cluster_themes@0.19.2.tgz",
+        "size": 2621333,
+        "sha256": "7bf02400595f047704ab6ed7a718928d47399e4565bc52b23a0cab9972571a46"
+      },
+      "icon": "icons/cluster_themes.png",
+      "iconSha256": "01689a8688cafb36e95954753f93d7f3f1070ee9d99352756007decae6f4c6c8"
+    },
+    {
+      "id": "dimon_battery",
+      "title": "12 V 电池",
+      "description": "查看低压电池的电压、电流、温度与荷电状态。",
+      "author": "DimonPrograms",
+      "version": "1.0.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "dimon_battery@1.0.3.tgz",
+        "url": "packages/dimon_battery@1.0.3.tgz",
+        "size": 745624,
+        "sha256": "7325e586a4d9593a9db110e8695a4c5c5fb0696607524fe2481ca33e3b72de24"
+      },
+      "icon": "icons/dimon_battery.png",
+      "iconSha256": "61c7070e56226fddec285d9e4ce697702b20232065822ff154685224a653f33b"
+    },
+    {
+      "id": "dimon_track_mode",
+      "title": "赛道计圈",
+      "description": "在封闭赛道记录圈速、分段成绩和实时差值。",
+      "author": "DimonPrograms",
+      "version": "1.0.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "dimon_track_mode@1.0.3.tgz",
+        "url": "packages/dimon_track_mode@1.0.3.tgz",
+        "size": 744201,
+        "sha256": "d3d8fbee8f5be1a1e6af2accd888c7336bea4f6be1fe6ca09eb5657043380a00"
+      },
+      "icon": "icons/dimon_track_mode.png",
+      "iconSha256": "cf17bba5286f9c96b10284952de891d585e46e9898ba1f8acdd81fbae4dbc5e3"
+    },
+    {
+      "id": "dk_backgammon",
+      "title": "西洋双陆棋",
+      "description": "选择长局或短局，进行本地双人或人机对局。",
+      "author": "mistergahan",
+      "version": "0.1.103",
+      "build": "unit",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "mgu-deploy": "0.8.27"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "dk_backgammon@0.1.103.tgz",
+        "url": "packages/dk_backgammon@0.1.103.tgz",
+        "size": 35502,
+        "sha256": "7ee20ea4f4332a7fc041e290437173bdc808e11da6d898aebb3d300655f3bd56"
+      },
+      "icon": "icons/dk_backgammon.png",
+      "iconSha256": "5d658ccfa2060c91fa1bd3a294ab58dc82ea2efcf4f43b5d0ccc5fbb5570a724"
+    },
+    {
+      "id": "doom",
+      "title": "Freedoom",
+      "description": "使用 iDrive 旋钮操控游戏，支持存档。",
+      "author": "cauliflowermossgrape",
+      "version": "1.7.2202",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "doom@1.7.2202.tgz",
+        "url": "packages/doom@1.7.2202.tgz",
+        "size": 12007991,
+        "sha256": "7605a7384e9e9f30ff9e9ae628f65e4e612f35fa4fe822c0309824110d98b1fa"
+      },
+      "icon": "icons/doom.png",
+      "iconSha256": "4e1059afa6ca3023f873d2d2c7c44843d959b9bd16d4c905da2a3dd05f2a37f2"
+    },
+    {
+      "id": "dpf_id7_cn",
+      "title": "DPF 仪表",
+      "description": "查看柴油颗粒捕集器再生状态和相关发动机读数。",
+      "author": "giuseppesalatino-boop",
+      "version": "1.1.102",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.19"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "dpf_id7_cn@1.1.102.tgz",
+        "url": "packages/dpf_id7_cn@1.1.102.tgz",
+        "size": 929320,
+        "sha256": "c165276c2b0acb12f0a4fdae655dff10613ff01e95316a9412bb645f0f8b9647"
+      },
+      "icon": "icons/dpf_id7_cn.png",
+      "iconSha256": "1b04ede8508990d493ee764333350bd7268aa304af3cbd25faf58a3cc61a0bce"
+    },
+    {
+      "id": "dpf_monitor",
+      "title": "柴油颗粒捕集器",
+      "description": "查看颗粒捕集器的积碳、压差、温度和再生记录。",
+      "author": "alexp50",
+      "version": "0.4.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "dpf_monitor@0.4.3.tgz",
+        "url": "packages/dpf_monitor@0.4.3.tgz",
+        "size": 949433,
+        "sha256": "725b5b51f0c42be4ac8c122addd149254f97718928645572d4a2d4cdebd6714d"
+      },
+      "icon": "icons/dpf_monitor.png",
+      "iconSha256": "099d5a112273728088a29750269cb30bf9060c08ea7c3ecaa6b2fb8645847977"
+    },
+    {
+      "id": "draggy",
+      "title": "加速计时",
+      "description": "记录分段加速用时和四分之一英里成绩。",
+      "author": "cauliflowermossgrape",
+      "version": "2.6.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "draggy@2.6.2.tgz",
+        "url": "packages/draggy@2.6.2.tgz",
+        "size": 1050486,
+        "sha256": "d270d57ef26ad1a79cbce51e03b460f6eddd07da8f5b058fda0992813080d91b"
+      },
+      "icon": "icons/draggy.png",
+      "iconSha256": "4d57c4caa4dff86649f7395796c8fbd05eeac035efba6df067f95dd0cf6f160b"
+    },
+    {
+      "id": "drive_hud_full",
+      "title": "HUD 显示设置",
+      "description": "配置抬头显示中的导航提示、挡位与暖机信息。",
+      "author": "alexp50",
+      "version": "0.1.603",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.3.10"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "drive_hud_full@0.1.603.tgz",
+        "url": "packages/drive_hud_full@0.1.603.tgz",
+        "size": 943957,
+        "sha256": "2c80973a8105ab98f3d11ab907f4c521c3d87ca52f50e166b9905f9fe8344939"
+      },
+      "icon": "icons/drive_hud_full.png",
+      "iconSha256": "0126b1337d6c0c7660a8aaa9bd50aa8e6c9982e27ac3001f018bbcb08cf34c6b"
+    },
+    {
+      "id": "dtc_scanner",
+      "title": "故障码",
+      "description": "读取控制单元故障记录和车辆检查信息，可执行清除操作。",
+      "author": "cauliflowermossgrape",
+      "version": "2.9.803",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "dtc_scanner@2.9.803.tgz",
+        "url": "packages/dtc_scanner@2.9.803.tgz",
+        "size": 6603616,
+        "sha256": "66cdcc03916544ef7e5906d5886fd8975523ac77409ccba619a010c3ede750fb"
+      },
+      "icon": "icons/dtc_scanner.png",
+      "iconSha256": "e32af9aae088f38d40d312aaff61f7e51b14835924b01328039b461d84192171"
+    },
+    {
+      "id": "dyno",
+      "title": "虚拟马力机",
+      "description": "根据行驶数据估算功率和扭矩，绘制输出曲线。",
+      "author": "cauliflowermossgrape",
+      "version": "1.6.302",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "dyno@1.6.302.tgz",
+        "url": "packages/dyno@1.6.302.tgz",
+        "size": 1044849,
+        "sha256": "9bdefce3fada605f1f9ebade2115bd5325b5872232f6799cf3f463b8a03b2892"
+      },
+      "icon": "icons/dyno.png",
+      "iconSha256": "18ba9e4356b444f2362ce1dc137cec038cfcfeb17f099f203acc4106401f74eb"
+    },
+    {
+      "id": "edrive",
+      "title": "eDrive 仪表",
+      "description": "查看电驱系统、动力电池和能量流数据。",
+      "author": "cauliflowermossgrape",
+      "version": "2.11.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "mgu-deploy": "0.3.2",
+        "idrive7-renderd": "2.1.15"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "edrive@2.11.3.tgz",
+        "url": "packages/edrive@2.11.3.tgz",
+        "size": 1141174,
+        "sha256": "187be7173ad907112b7a5842e7ac38dbf22f3c2fd3e22276f70f0751d4da4c46"
+      },
+      "icon": "icons/edrive.png",
+      "iconSha256": "5869ea41c3c995e8f085e2761277db3e5f5040b6042ad50ad185d9b3b52a824a"
+    },
+    {
+      "id": "eldrive",
+      "title": "elDrive 充电仪表",
+      "description": "查看纯电车型的电量、续航、充电记录和低压电池状态。",
+      "author": "beele",
+      "version": "1.1.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "eldrive@1.1.3.tgz",
+        "url": "packages/eldrive@1.1.3.tgz",
+        "size": 899794,
+        "sha256": "be43565aa7838f42d6665c2a1ffb529ce030a1df3eb7eb3339fa1397990aec7b"
+      },
+      "icon": "icons/eldrive.png",
+      "iconSha256": "5869ea41c3c995e8f085e2761277db3e5f5040b6042ad50ad185d9b3b52a824a"
+    },
+    {
+      "id": "f44_traffic_diag",
+      "title": "F44 交通标志诊断",
+      "description": "检查本车交通标志和信号灯识别接口。",
+      "author": "benspa900",
+      "version": "0.1.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "f44_traffic_diag@0.1.3.tgz",
+        "url": "packages/f44_traffic_diag@0.1.3.tgz",
+        "size": 753054,
+        "sha256": "42e646ff59418e436e38d9b2049426335719b8180a22e14de9e980bb6b75a7b5"
+      },
+      "icon": "icons/f44_traffic_diag.png",
+      "iconSha256": "f4ed2c2cf8f3c7dce5929aadeade8989449e8e5389568e05c0c4f42f1daef37d"
+    },
+    {
+      "id": "front_camera_cluster",
+      "title": "仪表摄像头",
+      "description": "在兼容仪表中查看夜视或泊车摄像头画面。",
+      "author": "alexp50",
+      "version": "0.2.103",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "front-camera-cluster-helper": "0.2.1"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "front_camera_cluster@0.2.103.tgz",
+        "url": "packages/front_camera_cluster@0.2.103.tgz",
+        "size": 940082,
+        "sha256": "d7e4fbd0ee00c262549e776b5f5a56e64267326b443459a4244d5204911baaa5"
+      },
+      "icon": "icons/front_camera_cluster.png",
+      "iconSha256": "0e8ce500fa378cfbc9fcd5b86bf73d74fb5fba91ea889887ab1f548938e312e5"
+    },
+    {
+      "id": "g21_wheelheat",
+      "title": "G21 加热控制",
+      "description": "查看方向盘与座椅加热状态，配置兼容设备。",
+      "author": "NamelsMissing",
+      "version": "0.5.402",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.27"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "g21_wheelheat@0.5.402.tgz",
+        "url": "packages/g21_wheelheat@0.5.402.tgz",
+        "size": 899095,
+        "sha256": "b678d92c619c25d37f15e78b1aaff821d55c722b12db201dcf8c018e1b921243"
+      },
+      "icon": "icons/g21_wheelheat.png",
+      "iconSha256": "569519333b5bf0ffb283d9b2e3612c0a96a89ee260253635838a4b0f52f081ed"
+    },
+    {
+      "id": "gforce",
+      "title": "加速度仪",
+      "description": "显示纵向和横向加速度，记录峰值。",
+      "author": "cauliflowermossgrape",
+      "version": "1.6.2202",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "gforce@1.6.2202.tgz",
+        "url": "packages/gforce@1.6.2202.tgz",
+        "size": 1048074,
+        "sha256": "115eda3099be6334208a5f55daf934ba592fe850bc7dcd128dc4541c43c14610"
+      },
+      "icon": "icons/gforce.png",
+      "iconSha256": "89e9e46537580ac2ae0048720e39ac9a175c1c44f286c4f1d7fc1e1828e79318"
+    },
+    {
+      "id": "gif_home",
+      "title": "GIF 首页组件",
+      "description": "将自选 GIF 动画显示在首页。",
+      "author": "NamelsMissing",
+      "version": "0.3.103",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "gif_home@0.3.103.tgz",
+        "url": "packages/gif_home@0.3.103.tgz",
+        "size": 1819046,
+        "sha256": "49829c3a1fb94e5782a95d359f6b829e44afa7dffa9920d4895c084d6154262f"
+      },
+      "icon": "icons/gif_home.png",
+      "iconSha256": "7755e9ef92b42bb00f387bcc0f33743ee333f1cc4ddfbe9f0e647a0a2f669e80"
+    },
+    {
+      "id": "green_light_alert",
+      "title": "绿灯提醒",
+      "description": "根据前视摄像头识别的信号灯状态提示起步。",
+      "author": "alexp50",
+      "version": "0.2.503",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "green_light_alert@0.2.503.tgz",
+        "url": "packages/green_light_alert@0.2.503.tgz",
+        "size": 948477,
+        "sha256": "27728b94e0430a4c6da452bee3bd474d823a9ffd582b09675d1ae3209cb73fd5"
+      },
+      "icon": "icons/green_light_alert.png",
+      "iconSha256": "74cf497bc02ecd3bfd6cb84bc2ee46efe7d42f4e4d2a4fd16ff569fcc267bb45"
+    },
+    {
+      "id": "hotspot_studio",
+      "title": "车载热点",
+      "description": "管理车机热点、网络代理和限时 ENET 转发。",
+      "author": "alexp50",
+      "version": "0.1.503",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "hotspot-studio-helper": "0.1.7"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "hotspot_studio@0.1.503.tgz",
+        "url": "packages/hotspot_studio@0.1.503.tgz",
+        "size": 959839,
+        "sha256": "fc516228638d30e21feb11d9387903d445463477b14c5ec4f6b94f8503486a7f"
+      },
+      "icon": "icons/hotspot_studio.png",
+      "iconSha256": "47ab652dd92b4ae2aea8d2501b38ebb148d5be9548a5b35635ebed3232e16365"
+    },
+    {
+      "id": "idrive_hud_widgets",
+      "title": "HUD 小组件",
+      "description": "在兼容的抬头显示器中组合挡位、温度与换挡灯。",
+      "author": "bimmer-lab",
+      "version": "0.15.802",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.1"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "idrive_hud_widgets@0.15.802.tgz",
+        "url": "packages/idrive_hud_widgets@0.15.802.tgz",
+        "size": 1853603,
+        "sha256": "94c899713bfbf2f701e985c966a33af623dfc7afbd125216da3bbcde0a05a0ee"
+      },
+      "icon": "icons/idrive_hud_widgets.png",
+      "iconSha256": "dbb8176088bc89d90ea9fbb8e0c4b6f7c79107bb53fb786ecc366a10c52ca476"
+    },
+    {
+      "id": "idv7lol",
+      "title": "idv7lol 仪表",
+      "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
+      "author": "ALMSTRA",
+      "version": "0.2.1902",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "cluster-render": "0.6.9",
+        "mgu-deploy": "0.8.27"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "idv7lol@0.2.1902.tgz",
+        "url": "packages/idv7lol@0.2.1902.tgz",
+        "size": 2257079,
+        "sha256": "9a98da3c899ac46ca72a7d52a9576702b419b3a5feabb597f8ecbb538f8b02c7"
+      },
+      "icon": "icons/idv7lol.png",
+      "iconSha256": "bd5998c4316a0de0488888fcf66b0cfda5e08adf180c3394d033e0151309c7e6"
+    },
+    {
+      "id": "jap_ridetube",
+      "title": "RideTube",
+      "description": "浏览 YouTube 频道和视频，默认在驻车时显示画面。",
+      "author": "JustAnotherPU",
+      "version": "0.4.503",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "jap-ridetube-d": "0.4.2",
+        "mgu-render": "0.6.11",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "jap_ridetube@0.4.503.tgz",
+        "url": "packages/jap_ridetube@0.4.503.tgz",
+        "size": 3389333,
+        "sha256": "e7b2fcab0c1ec2c682dbeb1476ef4dbe8f39d3046c488db5ea14100d14a075ba"
+      },
+      "icon": "icons/jap_ridetube.png",
+      "iconSha256": "afbf63c28de964d4f249f062bdbddf853fe1e676cc8d62f59028ea0f1c6a9876"
+    },
+    {
+      "id": "jap_sysmon",
+      "title": "资源监视器",
+      "description": "查看处理器、交换空间、图形频率和应用内存用量。",
+      "author": "JustAnotherPU",
+      "version": "1.0.605",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "mgu-render": "0.6.11",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "jap_sysmon@1.0.605.tgz",
+        "url": "packages/jap_sysmon@1.0.605.tgz",
+        "size": 1211822,
+        "sha256": "29866b6722ff699f774ff07f7b293657a8dab1ed2516781d2f30e6aa3ec5bf19"
+      },
+      "icon": "icons/jap_sysmon.png",
+      "iconSha256": "a18bce2ddb06421caa29fcdd3fff0599819956e41eb7c9231f8e0adf653e16ef"
+    },
+    {
+      "id": "live_adjustments",
+      "title": "发动机配置",
+      "description": "查看并调整兼容发动机标定提供的参数。",
+      "author": "cauliflowermossgrape",
+      "version": "0.9.1002",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "live_adjustments@0.9.1002.tgz",
+        "url": "packages/live_adjustments@0.9.1002.tgz",
+        "size": 1229200,
+        "sha256": "68205efe4a56ece50edc09d42c655b62bf7f1090fe920be61eeb165f6cd2ae7f"
+      },
+      "icon": "icons/live_adjustments.png",
+      "iconSha256": "a274ebbeb1cda6ed3e5af20cccaa6c4877ebd2e515880d20f81fa874606400c5"
+    },
+    {
+      "id": "live_data",
+      "title": "实时数据",
+      "description": "从车辆信号中选择需要观察的数据。",
+      "author": "cauliflowermossgrape",
+      "version": "1.0.1803",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "mgu-deploy": "0.3.2",
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "live_data@1.0.1803.tgz",
+        "url": "packages/live_data@1.0.1803.tgz",
+        "size": 1127244,
+        "sha256": "1b03f985eba6ae17b5ff9b90225c7a42007b7cedd63e8a99106284a7fbf91db1"
+      },
+      "icon": "icons/live_data.png",
+      "iconSha256": "27a70f2f4fd94b447938d83ee479ec8060c0d4d5d9ac65e978f14fe273b17c7d"
+    },
+    {
+      "id": "m_copilot",
+      "title": "M-Copilot",
+      "description": "在行车界面查看驾驶提示与车辆状态。",
+      "author": "hexlay",
+      "version": "1.0.3702",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-uplink": "0.7.3"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "m_copilot@1.0.3702.tgz",
+        "url": "packages/m_copilot@1.0.3702.tgz",
+        "size": 4579088,
+        "sha256": "bd9ad6b0587a00ea778e95297367544913df59520f91583dc716dca66eb32a18"
+      },
+      "icon": "icons/m_copilot.png",
+      "iconSha256": "886356a7110724cae40039e51226177f53c1c37b76bab92e86ac1305db09aa9e"
+    },
+    {
+      "id": "mgu_browser",
+      "title": "车机浏览器",
+      "description": "用 iDrive 浏览网页，管理书签和历史记录。",
+      "author": "pllanaio",
+      "version": "0.16.103",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "mgu-browser": "0.16.1",
+        "mgu-browser-engine": "0.1.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-render": "0.6.11",
+        "mgu-deploy": "0.7.17"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "mgu_browser@0.16.103.tgz",
+        "url": "packages/mgu_browser@0.16.103.tgz",
+        "size": 2095523,
+        "sha256": "66c87df47d24a0427a31abb39cdd8cc044c5ae62537f832820066d07c2adb2a1"
+      },
+      "icon": "icons/mgu_browser.png",
+      "iconSha256": "40d92041e555c851ec0adf0bdabc93082eb7c31e5b525a60350da11ace9c9721"
+    },
+    {
+      "id": "parking_clearance",
+      "title": "泊车距离",
+      "description": "显示泊车雷达距离、转向轨迹和车身姿态。",
+      "author": "alexp50",
+      "version": "0.1.803",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "parking_clearance@0.1.803.tgz",
+        "url": "packages/parking_clearance@0.1.803.tgz",
+        "size": 1171301,
+        "sha256": "9faffb123886ef4da4f8697c7ef8db229dae06ca4483c929df73c0570247e655"
+      },
+      "icon": "icons/parking_clearance.png",
+      "iconSha256": "4debd25a4ff305e2fd7a3bf6944b1ccbe17f50cc0c538d707fe64cfe19da633a"
+    },
+    {
+      "id": "ram_mic_calibration",
+      "title": "RAM 麦克风校准",
+      "description": "查看 RAM01 状态并执行麦克风校准。",
+      "author": "JackieZ123430",
+      "version": "0.4.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "ram_mic_calibration@0.4.1.tgz",
+        "url": "packages/ram_mic_calibration@0.4.1.tgz",
+        "size": 926040,
+        "sha256": "ca417cd8847fb9fad46f000ea99300bd1ca8df412854e2f05b5b401cf7897de7"
+      },
+      "icon": "icons/ram_mic_calibration.png",
+      "iconSha256": "75246d4f553e331e644c962ad414f1501951d41952e6c004e919f962f85955db"
+    },
+    {
+      "id": "rear_comfort",
+      "title": "后排舒适控制",
+      "description": "操作兼容 G12 后排座椅、空调与遮阳设备。",
+      "author": "alexp50",
+      "version": "0.5.603",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "rear_comfort@0.5.603.tgz",
+        "url": "packages/rear_comfort@0.5.603.tgz",
+        "size": 5490363,
+        "sha256": "fa0c039fa44405d7c64eba62c5c2fd204d52bfa8219e24d761e3475fd21fc200"
+      },
+      "icon": "icons/rear_comfort.png",
+      "iconSha256": "1e4729deebc48e40735de3ed7ae9c6eea046f1f93a4fc6df1931889c2a2ac1af"
+    },
+    {
+      "id": "redline",
+      "title": "换挡提示",
+      "description": "显示当前转速和挡位，在设定转速提示换挡。",
+      "author": "cauliflowermossgrape",
+      "version": "2.0.4502",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "redline@2.0.4502.tgz",
+        "url": "packages/redline@2.0.4502.tgz",
+        "size": 1257055,
+        "sha256": "7bf60a1560b6d6ece59a23a301792bc9de41e62c16a8b25794dc53ee91edfa2c"
+      },
+      "icon": "icons/redline.png",
+      "iconSha256": "9c2a029af517d3542604f40a56189c0ecb59d580ba9968ee63fddde35c02cf1d"
+    },
+    {
+      "id": "ride_height",
+      "title": "空气悬架",
+      "description": "查看并调整兼容车辆的空气悬架高度。",
+      "author": "alexp50",
+      "version": "0.6.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "ride_height@0.6.3.tgz",
+        "url": "packages/ride_height@0.6.3.tgz",
+        "size": 943545,
+        "sha256": "0580e790ff16a79437982964435d0d9d1f360b7e3706b27c9a489fc2548fd968"
+      },
+      "icon": "icons/ride_height.png",
+      "iconSha256": "732083e3f98a7888e05b598f8f9fe9324255c3cd559a8cf5be4362c5271b7af1"
+    },
+    {
+      "id": "road_trip_computer",
+      "title": "行程电脑",
+      "description": "汇总行程、油耗和燃油费用，显示海拔与续航。",
+      "author": "alexp50",
+      "version": "1.0.4",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "road_trip_computer@1.0.4.tgz",
+        "url": "packages/road_trip_computer@1.0.4.tgz",
+        "size": 1050819,
+        "sha256": "99e009098a907931d38d73c766e5d59a7309f418b227869fcdcdab2b0c52caad"
+      },
+      "icon": "icons/road_trip_computer.png",
+      "iconSha256": "6148be6ea376d61b6cc00e6aabcd09abd7d7a840f6948704b42af14af1704eb8"
+    },
+    {
+      "id": "robertn_store",
+      "title": "MGU Store",
+      "description": "管理软件源，安装和更新车机应用与组件。",
+      "author": "robertnisipeanu",
+      "version": "0.9.41",
+      "build": "unit",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "requires": {
+        "mgu-deploy": "0.8.12",
+        "mgu-updater": "0.8.28",
+        "mgu-render": "0.3.1"
+      },
+      "kind": "app",
+      "artifact": {
+        "name": "robertn_store@0.9.41.tgz",
+        "size": 4340030,
+        "sha256": "d2ae95ab835792b566830326c72923483cd199bb9f590d15e0e7fe5f45fdac8e",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.41/robertn_store%400.9.41.tgz"
+      }
+    },
+    {
+      "id": "rubenrios_gearhud",
+      "title": "HUD 挡位显示",
+      "description": "在仪表和抬头显示中区分常规、运动及手动挡位。",
+      "author": "RubenRios",
+      "version": "1.0.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.6.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "rubenrios_gearhud@1.0.3.tgz",
+        "url": "packages/rubenrios_gearhud@1.0.3.tgz",
+        "size": 754475,
+        "sha256": "b497269d0d2253396b4fcc0e9fe5a358cf3195c2a76c1922e5cfbb359cef6cdf"
+      },
+      "icon": "icons/rubenrios_gearhud.png",
+      "iconSha256": "3d5c7639632779c5507f9f5f747621c4ec7470b298a859fa718191e8b2081d80"
+    },
+    {
+      "id": "service",
+      "title": "保养信息",
+      "description": "查看车辆的保养项目和到期状态。",
+      "author": "cauliflowermossgrape",
+      "version": "1.6.302",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "service@1.6.302.tgz",
+        "url": "packages/service@1.6.302.tgz",
+        "size": 1048697,
+        "sha256": "23fab1ece4c877b2b6bc126719b82774f124a9a508c76795e02f038cbe279051"
+      },
+      "icon": "icons/service.png",
+      "iconSha256": "606928ba45bd2f212eb81d87a5ae8ff4fc9d0129c6973e0d70a51ef861179ee9"
+    },
+    {
+      "id": "speed_limit",
+      "title": "格鲁吉亚限速提示",
+      "description": "使用格鲁吉亚地区的数据提示道路限速。",
+      "author": "hexlay",
+      "version": "1.0.1002",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "speed_limit@1.0.1002.tgz",
+        "url": "packages/speed_limit@1.0.1002.tgz",
+        "size": 10078521,
+        "sha256": "4ab4f70d089ce5b0d93d46a10cfc7880513d90b984115930264d196d5d968205"
+      },
+      "icon": "icons/speed_limit.png",
+      "iconSha256": "20d1cc5de55ec00dcbfe02298e04fb69f79e1dcbffeb6b87243e3892b5c547ad"
+    },
+    {
+      "id": "spotify",
+      "title": "Spotify Connect",
+      "description": "与手机上的 Spotify 配对，在车机查看曲目和播放设备。",
+      "author": "hexlay",
+      "version": "1.0.3402",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-uplink": "0.7.3"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "spotify@1.0.3402.tgz",
+        "url": "packages/spotify@1.0.3402.tgz",
+        "size": 1606114,
+        "sha256": "be8a9433c7e18effaa95799ac0459d0c86c4a1a43c1150b8ff79c13089c6137c"
+      },
+      "icon": "icons/spotify.png",
+      "iconSha256": "7e7e06848570f5ae181d497ee276a92e636ec4c7129228b52525503a6a2869c9"
+    },
+    {
+      "id": "spritmonitor",
+      "title": "加油记录",
+      "description": "记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。",
+      "author": "dzooky",
+      "version": "0.1.4503",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.19",
+        "mgu-inputgate": "1.2.1",
+        "mgu-uplink": "0.7.3"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "spritmonitor@0.1.4503.tgz",
+        "url": "packages/spritmonitor@0.1.4503.tgz",
+        "size": 2879951,
+        "sha256": "36039027d051f7ee38fd946d33f4d974a4afc0f4a2c3e1ee3211d200add9ee69"
+      },
+      "icon": "icons/spritmonitor.png",
+      "iconSha256": "354429fcd0a7ace65ef40aa38adcad66bfa8a3e4df02f91be55099acb59423df"
+    },
+    {
+      "id": "start_stop_insight",
+      "title": "自动启停记录",
+      "description": "查看自动启停受限原因与近期记录。",
+      "author": "alexp50",
+      "version": "0.1.303",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "start_stop_insight@0.1.303.tgz",
+        "url": "packages/start_stop_insight@0.1.303.tgz",
+        "size": 943402,
+        "sha256": "698abcfd004ad3ca4f1a0e7969c76cda5d90c5820a2eb90971818e2ff20264bf"
+      },
+      "icon": "icons/start_stop_insight.png",
+      "iconSha256": "064b605ea22d7c81f66a6a1cb3507fa231a83662c79a98e85bc094227dd379d0"
+    },
+    {
+      "id": "telemetry_studio",
+      "title": "车辆遥测",
+      "description": "按系统查看动力、热管理、空调和底盘数据。",
+      "author": "alexp50",
+      "version": "0.2.3",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "telemetry_studio@0.2.3.tgz",
+        "url": "packages/telemetry_studio@0.2.3.tgz",
+        "size": 974971,
+        "sha256": "814b3e61bdcc2e5856ad0f5d737b2234a0e231831f8fb7617cd409fe888c7681"
+      },
+      "icon": "icons/telemetry_studio.png",
+      "iconSha256": "10fe4e83ea4e7a2c7bdc72a649ac56210850c0c3ab5b9a4889229b648f129e08"
+    },
+    {
+      "id": "true_time_cn",
+      "title": "加减速计时",
+      "description": "使用 DSC 加速度信号补偿坡度影响。",
+      "author": "giuseppesalatino-boop",
+      "version": "1.0.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.19"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "true_time_cn@1.0.2.tgz",
+        "url": "packages/true_time_cn@1.0.2.tgz",
+        "size": 942294,
+        "sha256": "48bd53a40d433a11ee59aa1a8df03f9d4019a985c4615dc2a1920271e61e9ffd"
+      },
+      "icon": "icons/true_time_cn.png",
+      "iconSha256": "6b59b9acd542e7fe1a3c892ac9178a2566c82379b2498bc7f647648fb753f06b"
+    },
+    {
+      "id": "tyrewatch",
+      "title": "胎压仪表",
+      "description": "对照四轮胎压、胎温和目标压力。",
+      "author": "suhailpatel",
+      "version": "0.1.502",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "tyrewatch@0.1.502.tgz",
+        "url": "packages/tyrewatch@0.1.502.tgz",
+        "size": 835869,
+        "sha256": "30cfaf21fd90daed388150c672b5c22702f2d2e48911030c7595f11a8da81f6f"
+      },
+      "icon": "icons/tyrewatch.png",
+      "iconSha256": "5fa2a6d50948cc7af99b5c7fa7091b7e24bf1c7fc788a6f8b25194cc9524f91b"
+    },
+    {
+      "id": "vehicle_health",
+      "title": "车辆健康",
+      "description": "汇总轮胎、油液、保养和故障状态。",
+      "author": "alexp50",
+      "version": "0.1.903",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "vehicle_health@0.1.903.tgz",
+        "url": "packages/vehicle_health@0.1.903.tgz",
+        "size": 944306,
+        "sha256": "31bd432f27749622e415336d0d8d4324b92491b95c67ef303fe4b2ed04cdc9b3"
+      },
+      "icon": "icons/vehicle_health.png",
+      "iconSha256": "937c1b44f7062fcf39f7312468925b0c97eccb5e8242f60fed6a81f1d779683a"
+    },
+    {
+      "id": "vehicle_network",
+      "title": "车载网络",
+      "description": "查看车机网络接口、车辆网络设备和 IPv4 配置。",
+      "author": "alexp50",
+      "version": "0.1.303",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "vehicle-network-observer": "0.1.2"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "vehicle_network@0.1.303.tgz",
+        "url": "packages/vehicle_network@0.1.303.tgz",
+        "size": 947370,
+        "sha256": "c07ec524811e3d7026510ba3f7fd1f1ccc904c3f92351770a1b9e5e4531af0d5"
+      },
+      "icon": "icons/vehicle_network.png",
+      "iconSha256": "fee355d9e52e81331470c91aaf021c10158b42a03b1bd56be124ec053fb2067a"
+    },
+    {
+      "id": "vizualyse_cast",
+      "title": "Vizualyse 投屏",
+      "description": "将手机选择的流媒体投送到兼容车载屏幕。",
+      "author": "Vizualyse",
+      "version": "0.4.102",
+      "build": "unit",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "vizualyse-cast": "0.4.1"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "vizualyse_cast@0.4.102.tgz",
+        "url": "packages/vizualyse_cast@0.4.102.tgz",
+        "size": 65917,
+        "sha256": "84b017c013fdb7b517aeb09c327a54a915584f17a4f4ebd54852507a25b95d43"
+      },
+      "icon": "icons/vizualyse_cast.png",
+      "iconSha256": "81082c46e08a7a06bd0a3c30efe9efd308cb6072db641fb4cdf98e26f5777c69"
+    },
+    {
+      "id": "vizualyse_chromium",
+      "title": "Vizualyse Chromium",
+      "description": "在车机中使用 Chromium 浏览器。",
+      "author": "Vizualyse",
+      "version": "0.3.102",
+      "build": "unit",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "vizualyse-chromium": "0.3.1"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "vizualyse_chromium@0.3.102.tgz",
+        "url": "packages/vizualyse_chromium@0.3.102.tgz",
+        "size": 68023,
+        "sha256": "51a5456d2172f602f1321aec0a286f8e2c3fba423f0e1c85d8b29440bb7039a0"
+      },
+      "icon": "icons/vizualyse_chromium.png",
+      "iconSha256": "37f8a379c9af3d15f0487f78af453904d243b30d01972f87f1e3d98e76a8ad13"
+    },
+    {
+      "id": "vizualyse_cluster",
+      "title": "Vizualyse 仪表",
+      "description": "在兼容仪表上应用自定义主题。",
+      "author": "Vizualyse",
+      "version": "0.3.102",
+      "build": "unit",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "vizualyse-cluster": "0.4.1"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "vizualyse_cluster@0.3.102.tgz",
+        "url": "packages/vizualyse_cluster@0.3.102.tgz",
+        "size": 56880,
+        "sha256": "f12db988de15e20606fdafcbfe990bf08c63858693190fdca064b4d52dde8c8a"
+      },
+      "icon": "icons/vizualyse_cluster.png",
+      "iconSha256": "6ad214cbd2fff3641a7aca37b1c0bf7158b47cc2c8af2f6de19aa09cb53f53db"
+    },
+    {
+      "id": "vizualyse_moonlight",
+      "title": "Moonlight 串流",
+      "description": "驻车时连接运行 Sunshine 的电脑进行串流。",
+      "author": "Vizualyse",
+      "version": "0.3.102",
+      "build": "unit",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "vizualyse-moonlight": "0.3.1"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "vizualyse_moonlight@0.3.102.tgz",
+        "url": "packages/vizualyse_moonlight@0.3.102.tgz",
+        "size": 64450,
+        "sha256": "a5fa56a4c56a7830068c9a9da9779470bab3ebf2f9c3958dd006d4373e815c9b"
+      },
+      "icon": "icons/vizualyse_moonlight.png",
+      "iconSha256": "50adb549ef8e03b20378dd8b786c6874d0c378a0d0a8b84e8628ec4768cdf20c"
+    },
+    {
+      "id": "vizualyse_steam",
+      "title": "Steam 客户端",
+      "description": "在兼容车机上启动 Steam 环境。",
+      "author": "Vizualyse",
+      "version": "0.2.102",
+      "build": "unit",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "vizualyse-steam": "0.4.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "vizualyse_steam@0.2.102.tgz",
+        "url": "packages/vizualyse_steam@0.2.102.tgz",
+        "size": 65542,
+        "sha256": "9c740e90ff78408aafd6098e1749111a10488527dc9b61bce799736b0bd46cc5"
+      },
+      "icon": "icons/vizualyse_steam.png",
+      "iconSha256": "148499d00a9daf821edad0a6d5d1b9417e8fe62250df9e01cdae8deb2f6809f6"
+    },
+    {
+      "id": "warmup",
+      "title": "暖机助手",
+      "description": "根据机油和冷却液温度估算暖机时间。",
+      "author": "cauliflowermossgrape",
+      "version": "1.9.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "warmup@1.9.2.tgz",
+        "url": "packages/warmup@1.9.2.tgz",
+        "size": 1043974,
+        "sha256": "bd12b290de1298380f02634fbfc87b328af6255941d6c1335d27a4fc783f1a51"
+      },
+      "icon": "icons/warmup.png",
+      "iconSha256": "712aa342b103c39b3be8879ba071d0d0294620bd3e5abbc8e5bbc7ea67ee15e5"
+    },
+    {
+      "id": "xdrive_studio",
+      "title": "xDrive 仪表",
+      "description": "观察扭矩分配、车轮滑差和分动箱状态。",
+      "author": "alexp50",
+      "version": "0.1.503",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "xdrive_studio@0.1.503.tgz",
+        "url": "packages/xdrive_studio@0.1.503.tgz",
+        "size": 1075392,
+        "sha256": "a23217867e22e09135c4afeccd6bead27ee402d6a37a4c50aceaab851816acb1"
+      },
+      "icon": "icons/xdrive_studio.png",
+      "iconSha256": "c9e4fe60e30aeb0398010bdee628d43a38676d9a22236e6c998fcff04a937185"
+    },
+    {
+      "id": "xiaobai_sys_monitor",
+      "title": "系统监视器",
+      "description": "显示 CPU、内存、温度和进程信息。",
+      "author": "hexlay",
+      "version": "1.0.806",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "xiaobai_sys_monitor@1.0.806.tgz",
+        "url": "packages/xiaobai_sys_monitor@1.0.806.tgz",
+        "size": 1097268,
+        "sha256": "9b453982f0e9bec63e148790d9f4684b878a0531decead0428e70bf4a5760c24"
+      },
+      "icon": "icons/xiaobai_sys_monitor.png",
+      "iconSha256": "a3a0906965d10d5f4d6c47ac0c8629a4bdc4c7367c03c52ae7664416ba12d516"
+    },
+    {
+      "id": "zf8hp",
+      "title": "ZF 8HP 变速箱",
+      "description": "查看兼容 8HP 变速箱的数据与可用设置。",
+      "author": "cauliflowermossgrape",
+      "version": "1.5.802",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "artifact": {
+        "name": "zf8hp@1.5.802.tgz",
+        "url": "packages/zf8hp@1.5.802.tgz",
+        "size": 1040723,
+        "sha256": "ada598ce67129ce1373f57c5258734471e0cf9e36ca4519508085d82703088f9"
+      },
+      "icon": "icons/zf8hp.png",
+      "iconSha256": "5bdfb5f5579ee5f14be0120e06e9c8feafd0db6a3940421bf7ab44d0005aa1b0"
+    },
+    {
+      "id": "cluster-render",
+      "kind": "tool",
+      "title": "仪表与 HUD 渲染器",
+      "version": "0.6.9",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.4.0"
+      },
+      "description": "在兼容的仪表和 HUD 上绘制图像。",
+      "artifact": {
+        "name": "cluster-render@0.6.9.tgz",
+        "size": 10442325,
+        "sha256": "68e537c06ad0c6a8cc86e0cb21d364f6f1705715538e2dcc75dcf8bc54eaff7d",
+        "url": "https://github.com/robertnisipeanu/idrive-apps/releases/download/cluster-render%400.6.9/cluster-render%400.6.9.tgz"
+      }
+    },
+    {
+      "id": "front-camera-cluster-helper",
+      "kind": "tool",
+      "title": "仪表夜视与摄像头后台",
+      "version": "0.2.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.11",
+        "cluster-render": "0.3.10"
+      },
+      "description": "连接摄像头画面与仪表。",
+      "artifact": {
+        "name": "front-camera-cluster-helper@0.2.1.tgz",
+        "size": 4006,
+        "sha256": "394076ef83aa204b6902ee20afe9a839f19f67296a6c8b530885df6ae1e07dd4",
+        "url": "https://github.com/alexp50/bmw-apps/releases/download/front-camera-cluster-helper@0.2.1/front-camera-cluster-helper@0.2.1.tgz"
+      }
+    },
+    {
+      "id": "hotspot-studio-helper",
+      "kind": "tool",
+      "title": "热点工作室后台",
+      "version": "0.1.7",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.11",
+        "mgu-python": "1.0.2",
+        "mgu-uplink": "0.7.3"
+      },
+      "description": "管理热点连接及代理服务。",
+      "artifact": {
+        "name": "hotspot-studio-helper@0.1.7.tgz",
+        "size": 9437,
+        "sha256": "a2350a9d330008649f3cbe948f48d018be3a97f5cf179a5ab0305b1198ab135a",
+        "url": "https://github.com/alexp50/bmw-apps/releases/download/hotspot-studio-helper@0.1.7/hotspot-studio-helper@0.1.7.tgz"
+      }
+    },
+    {
+      "id": "idrive7-renderd",
+      "kind": "tool",
+      "title": "应用 GPU 渲染器",
+      "version": "2.1.19",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "optional": true,
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.6.1"
+      },
+      "mguProvides": "renderer",
+      "description": "为车机应用绘制实时图形。",
+      "artifact": {
+        "name": "idrive7-renderd@2.1.19.tgz",
+        "size": 96247,
+        "sha256": "49a7095cf26718e58ab73ed002cb5bce5bc58e7f1741a30204c0a4604995c866",
+        "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/idrive7-renderd%402.1.19.tgz"
+      }
+    },
+    {
+      "id": "jap-node22",
+      "kind": "tool",
+      "title": "Node.js 22 运行组件",
+      "version": "22.23.4",
+      "mguHmi": [
+        "ID7"
+      ],
+      "optional": true,
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0"
+      },
+      "description": "为 RideTube 提供 Node.js 运行环境。",
+      "artifact": {
+        "name": "jap-node22@22.23.4.tgz",
+        "size": 49203293,
+        "sha256": "c62a8e2a3803b858b4d1020cb19746c8bd9ae8b753145f80c5adf7d781692743",
+        "url": "https://github.com/JustAnotherPU/ridetube/releases/download/catalog/jap-node22@22.23.4.tgz"
+      }
+    },
+    {
+      "id": "jap-ridetube-d",
+      "kind": "tool",
+      "title": "RideTube 后台",
+      "version": "0.4.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.2",
+        "jap-node22": "22.23.4",
+        "mgu-render": "0.6.11"
+      },
+      "description": "为 RideTube 提供视频服务。",
+      "artifact": {
+        "name": "jap-ridetube-d@0.4.2.tgz",
+        "size": 8830027,
+        "sha256": "e538a99b7fb54109bd24b2d9e2df38f71408372c31ae8a37fb14404ab2d4c43d",
+        "url": "https://github.com/JustAnotherPU/ridetube/releases/download/catalog/jap-ridetube-d@0.4.2.tgz"
+      }
+    },
+    {
+      "id": "mgu-browser",
+      "kind": "tool",
+      "title": "浏览器运行组件",
+      "version": "0.16.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-browser-engine": "0.1.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-deploy": "0.7.17"
+      },
+      "description": "启动并管理车机浏览器。",
+      "artifact": {
+        "name": "mgu-browser@0.16.1.tgz",
+        "size": 406404,
+        "sha256": "dac91634fe5ff877913b66add4205895a86f90800d48e8a9897c6cd75cf157aa",
+        "url": "https://github.com/pllanaio/mgu-browser/releases/download/v0.16.1/mgu-browser%400.16.1.tgz"
+      }
+    },
+    {
+      "id": "mgu-browser-engine",
+      "kind": "tool",
+      "title": "Chromium 浏览器引擎",
+      "version": "0.1.0",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.17"
+      },
+      "description": "提供 Chromium 浏览器内核。",
+      "artifact": {
+        "name": "mgu-browser-engine@0.1.0.tgz",
+        "size": 181048639,
+        "sha256": "0b6a73c964354214262d01f2d9bec2d0ab253cac8d27de04708912e804ef0874",
+        "url": "https://github.com/pllanaio/mgu-browser/releases/download/v0.10.0/mgu-browser-engine%400.1.0.tgz"
+      }
+    },
+    {
+      "id": "mgu-deploy",
+      "kind": "tool",
+      "title": "安装部署组件",
+      "version": "0.8.27",
+      "description": "在车机上准备和安装软件包。",
+      "artifact": {
+        "name": "mgu-deploy@0.8.27.tgz",
+        "size": 168362,
+        "sha256": "57797407580d4f0c4be234e226d4f51972002adeb1ad718e3cf2ffcd00ea36b6",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-deploy%400.8.27/mgu-deploy%400.8.27.tgz"
+      }
+    },
+    {
+      "id": "mgu-inputgate",
+      "kind": "tool",
+      "title": "旋钮输入组件",
+      "version": "1.2.1",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "optional": false,
+      "uninstallable": true,
+      "requires": {},
+      "mguNeeds": [
+        "renderer"
+      ],
+      "description": "将 iDrive 旋钮事件交给当前应用。",
+      "artifact": {
+        "name": "mgu-inputgate@1.2.1.tgz",
+        "size": 8554,
+        "sha256": "d424e6e7b63351579be3abe675886420f71cbad497c994ab0e6b2aa9583b224a",
+        "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/mgu-inputgate%401.2.1.tgz"
+      }
+    },
+    {
+      "id": "mgu-python",
+      "kind": "tool",
+      "title": "Python 运行组件",
+      "version": "1.0.3",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "description": "为后台服务提供 Python 运行环境。",
+      "artifact": {
+        "name": "mgu-python@1.0.3.tgz",
+        "size": 14441404,
+        "sha256": "98ce27bcee265ba6846446ad7867193fbdc9e0447195dbf22bcfaabf7e2f2533",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-python%401.0.3/mgu-python%401.0.3.tgz"
+      }
+    },
+    {
+      "id": "mgu-render",
+      "kind": "tool",
+      "title": "通用 GPU 渲染器",
+      "version": "0.6.25",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "optional": true,
+      "requires": {
+        "mgu-deploy": "0.6.9"
+      },
+      "mguProvides": "renderer",
+      "description": "为车机应用提供通用图形渲染。",
+      "artifact": {
+        "name": "mgu-render@0.6.25.tgz",
+        "size": 103355,
+        "sha256": "73b5444307aaf7a3a1b519cb14032869f18930749284aef557a2e0bd58d3fd61",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-render%400.6.25/mgu-render%400.6.25.tgz"
+      }
+    },
+    {
+      "id": "mgu-updater",
+      "kind": "tool",
+      "title": "更新组件",
+      "version": "0.8.51",
+      "requires": {
+        "mgu-deploy": "0.8.4",
+        "mgu-python": "1.0.2"
+      },
+      "description": "检查软件源并下载更新。",
+      "artifact": {
+        "name": "mgu-updater@0.8.51.tgz",
+        "size": 143205,
+        "sha256": "e38745a14fad5d34648c101e0d7eadd9a60d53fa1f4cda38462e3f77e08eeb95",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-updater%400.8.51/mgu-updater%400.8.51.tgz"
+      }
+    },
+    {
+      "id": "mgu-uplink",
+      "kind": "tool",
+      "title": "互联网连接组件",
+      "version": "0.7.13",
+      "optional": true,
+      "requires": {
+        "mgu-updater": "0.7.2"
+      },
+      "description": "为获准联网的应用提供网络连接。",
+      "artifact": {
+        "name": "mgu-uplink@0.7.13.tgz",
+        "size": 3605106,
+        "sha256": "077e3200356df726a1e653fd67db9f9a1237e22b548f946b726c6eadd0f48d28",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-uplink%400.7.13/mgu-uplink%400.7.13.tgz"
+      }
+    },
+    {
+      "id": "vehicle-network-observer",
+      "kind": "tool",
+      "title": "车辆网络观测组件",
+      "version": "0.1.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.11",
+        "mgu-python": "1.0.2"
+      },
+      "description": "收集车载网络接口状态。",
+      "artifact": {
+        "name": "vehicle-network-observer@0.1.2.tgz",
+        "size": 5887,
+        "sha256": "216a50ffbe3e5b64524b7a2bb89a752a0f30aea197493455028236f9e690a715",
+        "url": "https://github.com/alexp50/bmw-apps/releases/download/vehicle-network-observer@0.1.2/vehicle-network-observer@0.1.2.tgz"
+      }
+    },
+    {
+      "id": "vizualyse-bus",
+      "kind": "tool",
+      "title": "Vizualyse 协调组件",
+      "version": "0.1.0",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0"
+      },
+      "description": "协调 Vizualyse 后台服务。",
+      "artifact": {
+        "name": "vizualyse-bus@0.1.0.tgz",
+        "size": 122314,
+        "sha256": "37c0ea1f62d208f08f8c12cce310596f8809f4bda926f2d5d5321ad85f0ebb4a",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-bus%400.1.0/vizualyse-bus%400.1.0.tgz"
+      }
+    },
+    {
+      "id": "vizualyse-cast",
+      "kind": "tool",
+      "title": "仪表投射（后台组件）",
+      "version": "0.4.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "cluster-render": "0.4.2",
+        "mgu-python": "1.0.0",
+        "mgu-uplink": "0.7.0",
+        "vizualyse-bus": "0.1.0"
+      },
+      "description": "接收投屏请求并传送画面。",
+      "artifact": {
+        "name": "vizualyse-cast@0.4.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-cast%400.4.1/vizualyse-cast%400.4.1.tgz",
+        "size": 30059154,
+        "sha256": "cc08afd33d7ea50210a022cf0001be9a088331c0d3ce59ee12023a349eee500a"
+      }
+    },
+    {
+      "id": "vizualyse-chromium",
+      "kind": "tool",
+      "title": "浏览器（后台组件）",
+      "version": "0.3.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11",
+        "vizualyse-bus": "0.1.0"
+      },
+      "description": "为 Vizualyse 浏览器提供 Chromium 环境。",
+      "artifact": {
+        "name": "vizualyse-chromium@0.3.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-chromium%400.3.1/vizualyse-chromium%400.3.1.tgz",
+        "size": 188979233,
+        "sha256": "0a5cc143c962357203271ddc938f7311bf4eda8cf584ce363839e56c3992279e"
+      }
+    },
+    {
+      "id": "vizualyse-cluster",
+      "kind": "tool",
+      "title": "仪表主题（后台组件）",
+      "version": "0.4.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11",
+        "cluster-render": "0.5.4"
+      },
+      "description": "绘制 Vizualyse 自定义仪表。",
+      "artifact": {
+        "name": "vizualyse-cluster@0.4.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-cluster%400.4.1/vizualyse-cluster%400.4.1.tgz",
+        "size": 10991905,
+        "sha256": "44516f46fdd41d6bd743d69e8087c7756b52981dc47538b1cc680c90124d10b1"
+      }
+    },
+    {
+      "id": "vizualyse-moonlight",
+      "kind": "tool",
+      "title": "Moonlight 串流（后台组件）",
+      "version": "0.3.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "cluster-render": "0.4.2",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11"
+      },
+      "description": "连接 Sunshine 主机并解码串流。",
+      "artifact": {
+        "name": "vizualyse-moonlight@0.3.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-moonlight%400.3.1/vizualyse-moonlight%400.3.1.tgz",
+        "size": 943274,
+        "sha256": "46f8ea10449243586f2285eca6b108550a9cfbac4daa6d6a7f5597399cd69ee0"
+      }
+    },
+    {
+      "id": "vizualyse-steam",
+      "kind": "tool",
+      "title": "车载 Steam（后台组件）",
+      "version": "0.4.0",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11",
+        "vizualyse-bus": "0.1.0"
+      },
+      "description": "为 Steam 客户端提供运行环境。",
+      "artifact": {
+        "name": "vizualyse-steam@0.4.0.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-steam%400.4.0/vizualyse-steam%400.4.0.tgz",
+        "size": 531211774,
+        "sha256": "3719af147d3d2209f9e5fa93de0993a3c95f8df9ccc2f5f7e990c6d227f5eeb6"
+      }
+    }
+  ]
+}
