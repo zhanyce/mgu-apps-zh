@@ -1046,24 +1046,25 @@
     "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
     "author": "ALMSTRA",
     "project": "https://github.com/ALMSTRA/idv7lol",
-    "source": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/idv7lol-zh-cn-2026-11-23/idv7lol-zh-cn-source.zip",
+    "source": "https://github.com/ALMSTRA/idv7lol/tree/edf648f7a5dd59d95144ec3af544d11264efd500",
     "base": {
-      "name": "idv7lol@0.2.1901.tgz",
-      "size": 2252659,
-      "sha256": "db22e9d9774eb7faaae19e9ac8a6cb9857d4f989e233913542e21657d5311524",
-      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/idv7lol-zh-cn-2026-11-23/idv7lol%400.2.1901.tgz"
+      "name": "idv7lol@0.2.22.tgz",
+      "size": 2280517,
+      "sha256": "943404267a4d9ff65decec87804f53df92d89e2fcaefad5370870cfa485de1cb",
+      "url": "https://github.com/ALMSTRA/idv7lol/releases/download/catalog/idv7lol%400.2.22.tgz"
     },
-    "version": "0.2.1902",
+    "version": "0.2.2201",
     "mguHmi": [
       "ID7"
     ],
     "uninstallable": true,
     "requires": {
-      "cluster-render": "0.6.9",
+      "cluster-render": "0.8.7",
       "mgu-deploy": "0.8.27"
     },
     "license": "GPL-3.0",
-    "notice": "ALMSTRA--idv7lol.txt"
+    "notice": "ALMSTRA--idv7lol.txt",
+    "menuRevision": "2026-11-25"
   },
   {
     "id": "jap_ridetube",
@@ -1392,14 +1393,14 @@
     "description": "管理软件源，安装和更新车机应用与组件。",
     "author": "robertnisipeanu",
     "project": "https://github.com/robertnisipeanu/mgu-store",
-    "source": "https://github.com/robertnisipeanu/mgu-store/tree/robertn_store@0.9.41",
+    "source": "https://github.com/robertnisipeanu/mgu-store/tree/67982e5e9b1cf8b18ed951b6da19a7b365421a39",
     "base": {
-      "name": "robertn_store@0.9.41.tgz",
-      "size": 4340030,
-      "sha256": "d2ae95ab835792b566830326c72923483cd199bb9f590d15e0e7fe5f45fdac8e",
-      "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.41/robertn_store%400.9.41.tgz"
+      "name": "robertn_store@0.9.45.tgz",
+      "size": 4361304,
+      "sha256": "1a0f000b7eb2e4d13bd041a73375bc96831ca02a6d23e17dfb9bd702011192e9",
+      "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.45/robertn_store%400.9.45.tgz"
     },
-    "version": "0.9.41",
+    "version": "0.9.45",
     "mguHmi": [
       "ID7",
       "ID8"
@@ -1481,7 +1482,7 @@
       "sha256": "7c7238d1cf030b765f1de3a63b61f9d2320c5cb3b88484de6ba65669859c42f3",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/hexlay-review-2026-11-23/speed_limit%401.0.1001.tgz"
     },
-    "version": "1.0.1002",
+    "version": "1.0.1003",
     "mguHmi": [
       "ID7"
     ],
@@ -1490,7 +1491,8 @@
     ],
     "uninstallable": true,
     "license": "GPL-3.0",
-    "notice": "hexlay--idrive7-custom-apps.txt"
+    "notice": "hexlay--idrive7-custom-apps.txt",
+    "menuRevision": "2026-11-25"
   },
   {
     "id": "spotify",

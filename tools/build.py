@@ -175,6 +175,60 @@ def translate_settings(files, prefix, translations):
     files[tsv_path] = (("\n".join(rows) + "\n").encode(), files[tsv_path][1])
 
 
+def translate_menus(files, prefix, app_id):
+    kit = prefix + "javascript/kit/"
+    locale = json.loads(files[kit + "locale.json"][0])
+    overrides = read_json(ROOT / "translations/menus" / (app_id + ".json"))
+    words = dict(locale["strings"])
+    dictionary = kit + "locales/zh-CN.json"
+    if dictionary in files:
+        words.update(json.loads(files[dictionary][0]))
+    words.update(overrides)
+    locale.update(language="zh-CN", strings=words)
+    files[kit + "locale.json"] = (encode(locale), 0o644)
+    if dictionary in files:
+        files[dictionary] = (encode(words), files[dictionary][1])
+        tsv = kit + "locales/zh-CN.tsv"
+        if tsv in files:
+            rows = "".join(f"{key}\t{value}\n" for key, value in words.items())
+            files[tsv] = (rows.encode(), files[tsv][1])
+
+    font_path = ROOT / "translations/fonts" / (app_id + ".json")
+    font = kit + "fonts/cjk.json"
+    if font_path.is_file():
+        files[font] = (font_path.read_bytes(), files[font][1])
+    for size in json.loads(files[font][0])["sizes"]:
+        for label in overrides.values():
+            if any(str(ord(c)) not in size["glyphs"] for c in label if ord(c) > 127):
+                raise ValueError(f"{app_id} 的字库缺少译文字形：{label}")
+
+    def tr(text):
+        return words.get(text, text)
+
+    def update_spec(spec):
+        spec["title"] = tr(spec["title"])
+        for item in spec.get("settings", []):
+            item["label"] = tr(item["label"])
+            for option in item.get("options", []):
+                option[1] = tr(option[1])
+        for screen in spec["screens"]:
+            if "title" in screen:
+                screen["title"] = tr(screen["title"])
+            for button in screen.get("buttons", []):
+                button[1] = tr(button[1])
+            for row in screen.get("items", []):
+                if len(row) > 2 and isinstance(row[2], str):
+                    row[2] = tr(row[2])
+                if row[0] == "dropdown" and len(row) > 3 and isinstance(row[3], list):
+                    row[3] = [tr(label) for label in row[3]]
+
+    update_json(files, kit + "app-spec.json", update_spec)
+    for name, (data, mode) in list(files.items()):
+        if "/texts/" in name and name.endswith(".json"):
+            bundle = json.loads(data)
+            files[name] = (encode({sid: tr(value) for sid, value in bundle.items()}), mode)
+
+
 def rebuild(app, cache):
     files = unpack(acquire(app["base"], cache))
     old_name = app["base"]["name"][:-4]
@@ -228,6 +282,10 @@ def rebuild(app, cache):
         translate_settings(files, prefix, read_json(ROOT / translation_file))
         source["translations"] = translation_file.as_posix()
         source["changes"] += " 修订设置项的中文译文。"
+    if "menuRevision" in app:
+        translate_menus(files, prefix, app["id"])
+        source["translations"] = f"translations/menus/{app['id']}.json"
+        source["changes"] = f"{app['menuRevision']}：更新车机菜单、设置项和运行时的简体中文译文。"
     files[prefix + "SOURCE.json"] = (encode(source), 0o644)
     notices = {app["notice"]}
     if "translationNotice" in app:

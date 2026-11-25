@@ -959,21 +959,21 @@
       "title": "idv7lol 仪表",
       "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
       "author": "ALMSTRA",
-      "version": "0.2.1902",
+      "version": "0.2.2201",
       "mguHmi": [
         "ID7"
       ],
       "requires": {
-        "cluster-render": "0.6.9",
+        "cluster-render": "0.8.7",
         "mgu-deploy": "0.8.27"
       },
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "idv7lol@0.2.1902.tgz",
-        "url": "packages/idv7lol@0.2.1902.tgz",
-        "size": 2257079,
-        "sha256": "9a98da3c899ac46ca72a7d52a9576702b419b3a5feabb597f8ecbb538f8b02c7"
+        "name": "idv7lol@0.2.2201.tgz",
+        "url": "packages/idv7lol@0.2.2201.tgz",
+        "size": 2321178,
+        "sha256": "6e9944d7087712d39453da74d6d411aa242314a8d45cbec844bdbb50fe24b17a"
       },
       "icon": "icons/idv7lol.png",
       "iconSha256": "bd5998c4316a0de0488888fcf66b0cfda5e08adf180c3394d033e0151309c7e6"
@@ -1273,7 +1273,7 @@
       "title": "MGU Store",
       "description": "管理软件源，安装和更新车机应用与组件。",
       "author": "robertnisipeanu",
-      "version": "0.9.41",
+      "version": "0.9.45",
       "build": "unit",
       "mguHmi": [
         "ID7",
@@ -1286,10 +1286,10 @@
       },
       "kind": "app",
       "artifact": {
-        "name": "robertn_store@0.9.41.tgz",
-        "size": 4340030,
-        "sha256": "d2ae95ab835792b566830326c72923483cd199bb9f590d15e0e7fe5f45fdac8e",
-        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.41/robertn_store%400.9.41.tgz"
+        "name": "robertn_store@0.9.45.tgz",
+        "size": 4361304,
+        "sha256": "1a0f000b7eb2e4d13bd041a73375bc96831ca02a6d23e17dfb9bd702011192e9",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.45/robertn_store%400.9.45.tgz"
       }
     },
     {
@@ -1346,17 +1346,17 @@
       "title": "格鲁吉亚限速提示",
       "description": "使用格鲁吉亚地区的数据提示道路限速。",
       "author": "hexlay",
-      "version": "1.0.1002",
+      "version": "1.0.1003",
       "mguHmi": [
         "ID7"
       ],
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "speed_limit@1.0.1002.tgz",
-        "url": "packages/speed_limit@1.0.1002.tgz",
-        "size": 10078521,
-        "sha256": "4ab4f70d089ce5b0d93d46a10cfc7880513d90b984115930264d196d5d968205"
+        "name": "speed_limit@1.0.1003.tgz",
+        "url": "packages/speed_limit@1.0.1003.tgz",
+        "size": 10100773,
+        "sha256": "73b915fd45ae72256205422ad9f24f04728b8d42392516e6f5969d0d39839757"
       },
       "icon": "icons/speed_limit.png",
       "iconSha256": "20d1cc5de55ec00dcbfe02298e04fb69f79e1dcbffeb6b87243e3892b5c547ad"
@@ -1777,7 +1777,7 @@
       "id": "cluster-render",
       "kind": "tool",
       "title": "仪表与 HUD 渲染器",
-      "version": "0.6.9",
+      "version": "0.8.12",
       "mguHmi": [
         "ID7",
         "ID8"
@@ -1788,10 +1788,10 @@
       },
       "description": "在兼容的仪表和 HUD 上绘制图像。",
       "artifact": {
-        "name": "cluster-render@0.6.9.tgz",
-        "size": 10442325,
-        "sha256": "68e537c06ad0c6a8cc86e0cb21d364f6f1705715538e2dcc75dcf8bc54eaff7d",
-        "url": "https://github.com/robertnisipeanu/idrive-apps/releases/download/cluster-render%400.6.9/cluster-render%400.6.9.tgz"
+        "name": "cluster-render@0.8.12.tgz",
+        "size": 13368089,
+        "sha256": "c7e2e322f51d051d0b2a69536824aa378099fbd996f24c4c22980c8c252de153",
+        "url": "https://github.com/robertnisipeanu/idrive-apps/releases/download/cluster-render%400.8.12/cluster-render%400.8.12.tgz"
       }
     },
     {

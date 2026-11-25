@@ -3,7 +3,7 @@
     "id": "cluster-render",
     "kind": "tool",
     "title": "仪表与 HUD 渲染器",
-    "version": "0.6.9",
+    "version": "0.8.12",
     "mguHmi": [
       "ID7",
       "ID8"
@@ -14,10 +14,10 @@
     },
     "description": "在兼容的仪表和 HUD 上绘制图像。",
     "artifact": {
-      "name": "cluster-render@0.6.9.tgz",
-      "size": 10442325,
-      "sha256": "68e537c06ad0c6a8cc86e0cb21d364f6f1705715538e2dcc75dcf8bc54eaff7d",
-      "url": "https://github.com/robertnisipeanu/idrive-apps/releases/download/cluster-render%400.6.9/cluster-render%400.6.9.tgz"
+      "name": "cluster-render@0.8.12.tgz",
+      "size": 13368089,
+      "sha256": "c7e2e322f51d051d0b2a69536824aa378099fbd996f24c4c22980c8c252de153",
+      "url": "https://github.com/robertnisipeanu/idrive-apps/releases/download/cluster-render%400.8.12/cluster-render%400.8.12.tgz"
     }
   },
   {

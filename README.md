@@ -42,6 +42,10 @@ python3 tools/build.py rebuild
 python3 tools/build.py check
 ```
 
+菜单和运行时提示的修订保存在 [translations/menus/](translations/menus/)，按应用 ID 分文件维护。设置清单中的 `menuRevision` 为修订日期，并递增 `version`。构建时使用输入包自带的中文词典，再应用本源修订。选项只翻译显示名称，车机保存的选项值保持原样。
+
+格鲁吉亚限速提示的 [中文字库](translations/fonts/) 使用 Noto Sans SC，覆盖原字库和菜单修订中的字符。字体文件的 SHA-256 记录在字库的 `source` 字段，字体许可随字库和安装包提供。
+
 欢迎提交新应用和译文修订。新增应用请附原项目、可再分发的许可证、对应源码、适用的 iDrive 版本及运行依赖。反馈中文显示问题时，请注明应用 ID、版本、界面位置与车机型号。
 
 ## 来源与许可

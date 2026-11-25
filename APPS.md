@@ -62,7 +62,7 @@
 | [仪表摄像头](https://github.com/alexp50/bmw-apps) | 在兼容仪表中查看夜视或泊车摄像头画面。 | `0.2.103` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [G21 加热控制](https://github.com/NamelsMissing/mgu-apps) | 查看方向盘与座椅加热状态，配置兼容设备。 | `0.5.402` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/namels-source.zip) |
 | [HUD 小组件](https://github.com/bimmer-lab/apps) | 在兼容的抬头显示器中组合挡位、温度与换挡灯。 | `0.15.802` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/hud-source.zip) |
-| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.1902` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/idv7lol-zh-cn-2026-11-23/idv7lol-zh-cn-source.zip) |
+| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.2201` | [源码](https://github.com/ALMSTRA/idv7lol/tree/edf648f7a5dd59d95144ec3af544d11264efd500) |
 | [后排舒适控制](https://github.com/alexp50/bmw-apps) | 操作兼容 G12 后排座椅、空调与遮阳设备。 | `0.5.603` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [空气悬架](https://github.com/alexp50/bmw-apps) | 查看并调整兼容车辆的空气悬架高度。 | `0.6.3` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [HUD 挡位显示](https://github.com/RubenRios/GearHUD) | 在仪表和抬头显示中区分常规、运动及手动挡位。 | `1.0.3` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
@@ -75,7 +75,7 @@
 | [养护记录](https://github.com/arefahmad/idrive7-apps) | 记录车辆养护项目和周期，在首页查看提醒。 | `0.2.303` | [源码](https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6) |
 | [预计到达时间](https://github.com/arefahmad/idrive7-apps) | 在车机组件查看 Apple Maps 的预计到达时间。 | `1.20.103` | [源码](https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6) |
 | [仪表导航卡片](https://github.com/tjmodsss/tjm-apps) | 在兼容仪表上查看下一转向、车道和距离。 | `0.9.203` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
-| [格鲁吉亚限速提示](https://github.com/hexlay/idrive7-custom-apps) | 使用格鲁吉亚地区的数据提示道路限速。 | `1.0.1002` | [源码](https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4) |
+| [格鲁吉亚限速提示](https://github.com/hexlay/idrive7-custom-apps) | 使用格鲁吉亚地区的数据提示道路限速。 | `1.0.1003` | [源码](https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4) |
 | [加油记录](https://github.com/dzooky/bmrmodz) | 记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。 | `0.1.4503` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/fuel-source.zip) |
 
 ## 娱乐
@@ -100,7 +100,7 @@
 | [车载热点](https://github.com/alexp50/bmw-apps) | 管理车机热点、网络代理和限时 ENET 转发。 | `0.1.503` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [资源监视器](https://github.com/JustAnotherPU/mgu-apps) | 查看处理器、交换空间、图形频率和应用内存用量。 | `1.0.605` | [源码](https://github.com/JustAnotherPU/mgu-apps/tree/e69a71330b09650c4d21f51af63068799de88ba9) |
 | [车机浏览器](https://github.com/pllanaio/mgu-browser) | 用 iDrive 浏览网页，管理书签和历史记录。 | `0.16.103` | [源码](https://github.com/JackieZ123430/mgu-browser/tree/fcbd6f70341636f3eaa493c363c67c70eeb3f71f) |
-| [MGU Store](https://github.com/robertnisipeanu/mgu-store) | 管理软件源，安装和更新车机应用与组件。 | `0.9.41` | [源码](https://github.com/robertnisipeanu/mgu-store/tree/robertn_store@0.9.41) |
+| [MGU Store](https://github.com/robertnisipeanu/mgu-store) | 管理软件源，安装和更新车机应用与组件。 | `0.9.45` | [源码](https://github.com/robertnisipeanu/mgu-store/tree/67982e5e9b1cf8b18ed951b6da19a7b365421a39) |
 | [车载网络](https://github.com/alexp50/bmw-apps) | 查看车机网络接口、车辆网络设备和 IPv4 配置。 | `0.1.303` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [Vizualyse Chromium](https://github.com/Vizualyse/idrive-apps) | 在车机中使用 Chromium 浏览器。 | `0.3.102` | [源码](https://github.com/JackieZ123430/vizualyse-idrive-apps-cn/tree/f9183801aeeb9fc09c16bd9566ce8b65fe8a644a) |
 | [系统监视器](https://github.com/hexlay/idrive7-system-monitor) | 显示 CPU、内存、温度和进程信息。 | `1.0.806` | [源码](https://github.com/hexlay/idrive7-system-monitor/tree/ace9212e61dc26c0fda2f70a70ca39b1d6b40f2c) |
