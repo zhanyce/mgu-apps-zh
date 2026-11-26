@@ -50,6 +50,8 @@ python3 tools/build.py check
 
 ## 来源与许可
 
-本仓库原创的目录说明和构建工具使用 [MIT 许可证](LICENSE)。应用、字体和运行组件适用各自的许可证。中文界面沿用社区译文，界面和商店列表已移除翻译推广文字。作者信息、版权声明及第三方许可随包保留。[许可证目录](licenses/) · [中文发行包来源](https://github.com/JackieZ123430/MGU-CN-XIAOBAI)
+暖机助手、制动测试等应用的中文安装包基于小白仓库发布的简体中文包整理。各应用的原项目和对应源码见应用目录。[小白仓库（MGU-CN-XIAOBAI）](https://github.com/JackieZ123430/MGU-CN-XIAOBAI) · [应用目录](APPS.md)
+
+本仓库原创的目录说明和构建工具使用 [MIT 许可证](LICENSE)。应用、字体和运行组件适用各自的许可证。中文界面沿用社区译文，界面和商店列表已移除翻译推广文字。作者信息、版权声明及第三方许可随包保留。[许可证目录](licenses/)
 
 每个重建包的 `SOURCE.json` 记录对应源码、修改说明、输入包地址和 SHA-256。Freedoom 所用 WebAssembly 引擎的对应源码和构建脚本也随仓库提供。[Doom 引擎源码](sources/doomgeneric.tar.gz)
