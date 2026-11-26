@@ -1,0 +1,22 @@
+{
+  "SID_CN_STATIC_0019": {
+    "source": "Oil is warm at",
+    "setting": "warmOil",
+    "text": "机油暖机目标温度"
+  },
+  "SID_CN_STATIC_0028": {
+    "source": "Coolant is warm at",
+    "setting": "warmCoolant",
+    "text": "冷却液暖机目标温度"
+  },
+  "SID_CN_STATIC_0082": {
+    "source": "Boost from",
+    "setting": "boostSource",
+    "text": "增压压力来源"
+  },
+  "SID_CN_STATIC_0120": {
+    "source": "Boost target vs actual",
+    "setting": "showBoostCtl",
+    "text": "目标与实际增压压力"
+  }
+}

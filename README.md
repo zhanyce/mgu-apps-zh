@@ -35,16 +35,16 @@ https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json
 python3 tools/build.py check
 ```
 
-修改商店分类、标题或组件说明后，用 `python3 tools/build.py index` 更新索引。修订已有设置项时，可参照 [暖机助手译文](translations/warmup.json) 填写车机字符串 ID、英文原文、设置键和新译文。修改应用界面或包内元数据，需要递增对应应用的 `version` 并重建。首次重建通过 curl 下载校验值匹配的输入包，后续复用本地缓存。
+修改商店分类、标题或组件说明后，用 `python3 tools/build.py index` 更新索引。修订已有设置项时，可参照 [暖机助手译文](translations/warmup.json) 填写车机字符串 ID、英文原文、设置键和新译文。在清单的 `settingsRevision` 中记录设置项译文的修订日期。修改应用界面或包内元数据，需要递增对应应用的 `version` 并重建。首次重建通过 curl 下载校验值匹配的输入包，后续复用本地缓存。
 
 ```sh
 python3 tools/build.py rebuild
 python3 tools/build.py check
 ```
 
-菜单和运行时提示的修订保存在 [translations/menus/](translations/menus/)，按应用 ID 分文件维护。设置清单中的 `menuRevision` 为修订日期，并递增 `version`。构建时使用输入包自带的中文词典，再应用本源修订。选项只翻译显示名称，车机保存的选项值保持原样。
+菜单和运行时提示的修订保存在 [translations/menus/](translations/menus/)，按应用 ID 分文件维护。设置清单中的 `menuRevision` 为修订日期，并递增 `version`。构建时使用输入包自带的中文词典，再应用本源修订。已有简体中文包可在清单设置 `"menuMode": "patch"`，仅替换修订文件列出的词条。选项的显示名称和车机保存的设置值分别维护。
 
-格鲁吉亚限速提示的 [中文字库](translations/fonts/) 使用 Noto Sans SC，覆盖原字库和菜单修订中的字符。字体文件的 SHA-256 记录在字库的 `source` 字段，字体许可随字库和安装包提供。
+格鲁吉亚限速提示、仪表主题和 HUD 小组件的[中文字库](translations/fonts/)使用 Noto Sans SC。两款仪表应用在原字库上补入时区名称所需的汉字。字体文件的 SHA-256 记录在字库的 `source` 字段，字体许可随字库和安装包提供。
 
 欢迎提交新应用和译文修订。新增应用请附原项目、可再分发的许可证、对应源码、适用的 iDrive 版本及运行依赖。反馈中文显示问题时，请注明应用 ID、版本、界面位置与车机型号。
 

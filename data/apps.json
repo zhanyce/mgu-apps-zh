@@ -41,7 +41,7 @@
       "sha256": "257cb6fd756dbcff9ff7f0d5396d4746f1b4acaf995cfcf5793047716e7cbdea",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/adam_shiftlights%400.4.501.tgz"
     },
-    "version": "0.4.502",
+    "version": "0.4.503",
     "mguHmi": [
       "ID7"
     ],
@@ -53,7 +53,9 @@
       "mgu-deploy": "0.8.27"
     },
     "license": "MIT",
-    "notice": "pinguinooo--idrive7-apps.txt"
+    "notice": "pinguinooo--idrive7-apps.txt",
+    "menuRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "adam_vitals",
@@ -69,7 +71,7 @@
       "sha256": "b8a76931d67e9b82b610dff2dafda5fbb2e1bcdecf9ced28b4fb09c8f64acbbf",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/adam_vitals%400.2.1.tgz"
     },
-    "version": "0.2.2",
+    "version": "0.2.3",
     "mguHmi": [
       "ID7"
     ],
@@ -79,7 +81,8 @@
       "mgu-inputgate": "1.0.0"
     },
     "license": "MIT",
-    "notice": "pinguinooo--idrive7-apps.txt"
+    "notice": "pinguinooo--idrive7-apps.txt",
+    "settingsRevision": "2026-11-26"
   },
   {
     "id": "adas_feature_probe",
@@ -174,7 +177,7 @@
       "sha256": "9b4bfff866cbf91801535f64af233b100b70a91a0e1bbe1307640b907c654ae3",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/widget-chinese-r2-2026-11-20/aref_carcare%400.2.302.tgz"
     },
-    "version": "0.2.303",
+    "version": "0.2.304",
     "mguHmi": [
       "ID7"
     ],
@@ -184,7 +187,9 @@
       "mgu-inputgate": "1.0.0"
     },
     "license": "MIT",
-    "notice": "arefahmad--idrive7-apps.txt"
+    "notice": "arefahmad--idrive7-apps.txt",
+    "menuRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "aref_carlyrics",
@@ -333,7 +338,7 @@
       "sha256": "39c5c25d25b7fec293e9539668ce0fa4e8fffbe4efe5596301ed8144356e4bc6",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/benspa_vitals%400.9.602.tgz"
     },
-    "version": "0.9.603",
+    "version": "0.9.604",
     "mguHmi": [
       "ID7"
     ],
@@ -343,7 +348,8 @@
       "mgu-inputgate": "1.0.0"
     },
     "license": "MIT",
-    "notice": "benspa900--mon-vitals-idrive7.txt"
+    "notice": "benspa900--mon-vitals-idrive7.txt",
+    "settingsRevision": "2026-11-26"
   },
   {
     "id": "boostline_cn",
@@ -496,7 +502,7 @@
       "sha256": "e4951de49d24b16a6227ac9bab6c1445d844bd8faa9bb11d07e6d0dd668a1ee9",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/cluster_themes%400.19.1.tgz"
     },
-    "version": "0.19.2",
+    "version": "0.19.3",
     "mguHmi": [
       "ID7"
     ],
@@ -505,7 +511,9 @@
       "cluster-render": "0.5.1"
     },
     "license": "MIT",
-    "notice": "bimmer-lab--apps.txt"
+    "notice": "bimmer-lab--apps.txt",
+    "menuRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "dimon_battery",
@@ -1026,7 +1034,7 @@
       "sha256": "e70bcf5021420f3a77c0c288ba7f21f041dc96179b1b64bfe2fb8776150553b3",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/idrive_hud_widgets%400.15.801.tgz"
     },
-    "version": "0.15.802",
+    "version": "0.15.803",
     "mguHmi": [
       "ID7"
     ],
@@ -1037,7 +1045,10 @@
       "cluster-render": "0.5.1"
     },
     "license": "MIT",
-    "notice": "bimmer-lab--apps.txt"
+    "notice": "bimmer-lab--apps.txt",
+    "menuRevision": "2026-11-26",
+    "settingsRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "idv7lol",
@@ -1046,14 +1057,14 @@
     "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
     "author": "ALMSTRA",
     "project": "https://github.com/ALMSTRA/idv7lol",
-    "source": "https://github.com/ALMSTRA/idv7lol/tree/edf648f7a5dd59d95144ec3af544d11264efd500",
+    "source": "https://github.com/ALMSTRA/idv7lol/tree/c80ee8b015343c78751075c0de6e8471b52bbb6f",
     "base": {
-      "name": "idv7lol@0.2.22.tgz",
-      "size": 2280517,
-      "sha256": "943404267a4d9ff65decec87804f53df92d89e2fcaefad5370870cfa485de1cb",
-      "url": "https://github.com/ALMSTRA/idv7lol/releases/download/catalog/idv7lol%400.2.22.tgz"
+      "name": "idv7lol@0.2.25.tgz",
+      "size": 2287026,
+      "sha256": "af60b1d381a46c588618e4ac61eaa791eef62b70f496542c88d3dd3cfb235703",
+      "url": "https://github.com/ALMSTRA/idv7lol/releases/download/catalog/idv7lol%400.2.25.tgz"
     },
-    "version": "0.2.2201",
+    "version": "0.2.2501",
     "mguHmi": [
       "ID7"
     ],
@@ -1064,7 +1075,7 @@
     },
     "license": "GPL-3.0",
     "notice": "ALMSTRA--idv7lol.txt",
-    "menuRevision": "2026-11-25"
+    "menuRevision": "2026-11-26"
   },
   {
     "id": "jap_ridetube",
@@ -1188,7 +1199,7 @@
       "sha256": "0ab8ae6c90611b70710925576fa8f3f4d94af895c6b30d668dee28f30bc724a2",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/hexlay-review-2026-11-23/m_copilot%401.0.3701.tgz"
     },
-    "version": "1.0.3702",
+    "version": "1.0.3703",
     "mguHmi": [
       "ID7"
     ],
@@ -1202,7 +1213,9 @@
       "mgu-uplink": "0.7.3"
     },
     "license": "GPL-3.0",
-    "notice": "hexlay--idrive7-custom-apps.txt"
+    "notice": "hexlay--idrive7-custom-apps.txt",
+    "menuRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "mgu_browser",
@@ -1321,7 +1334,7 @@
       "sha256": "e1a0d682ffc21377008be66fca309c39b8adcc71fba10f3f98e2f82e5b870dce",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/redline%402.0.4501.tgz"
     },
-    "version": "2.0.4503",
+    "version": "2.0.4504",
     "mguHmi": [
       "ID7"
     ],
@@ -1332,7 +1345,9 @@
     },
     "license": "MIT",
     "notice": "cauliflowermossgrape--idrive7-apps.txt",
-    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+    "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md",
+    "menuRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "ride_height",
@@ -1374,7 +1389,7 @@
       "sha256": "c9c34f9336f2f3079e72369d5cc0fa756b110350bc592c6f8a5ffa16bcabff92",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/road_trip_computer%401.0.3.tgz"
     },
-    "version": "1.0.4",
+    "version": "1.0.5",
     "mguHmi": [
       "ID7"
     ],
@@ -1384,7 +1399,9 @@
       "mgu-inputgate": "1.0.0"
     },
     "license": "MIT",
-    "notice": "alexp50--bmw-apps.txt"
+    "notice": "alexp50--bmw-apps.txt",
+    "menuRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "robertn_store",
@@ -1538,7 +1555,7 @@
       "sha256": "12e726256e9c8f2a7c5b3e4a1a49a2ba7c46660bc17c6f12d14e9c8617250c7c",
       "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-font-coverage-2026-11-23/spritmonitor%400.1.4502.tgz"
     },
-    "version": "0.1.4503",
+    "version": "0.1.4504",
     "mguHmi": [
       "ID7"
     ],
@@ -1549,7 +1566,9 @@
       "mgu-uplink": "0.7.3"
     },
     "license": "MIT",
-    "notice": "dzooky--bmrmodz.txt"
+    "notice": "dzooky--bmrmodz.txt",
+    "menuRevision": "2026-11-26",
+    "menuMode": "patch"
   },
   {
     "id": "start_stop_insight",

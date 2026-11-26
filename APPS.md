@@ -6,17 +6,17 @@
 
 | 应用 | 功能 | 版本 | 来源 |
 | --- | --- | --- | --- |
-| [换挡灯](https://github.com/pinguinooo/idrive7-apps) | 按驾驶模式和发动机温度设置换挡提醒。 | `0.4.502` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip) |
+| [换挡灯](https://github.com/pinguinooo/idrive7-apps) | 按驾驶模式和发动机温度设置换挡提醒。 | `0.4.503` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip) |
 | [制动测试](https://github.com/cauliflowermossgrape/idrive7-apps) | 记录制动距离、峰值减速度和连续制动表现。 | `1.5.2102` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [赛道计圈](https://github.com/DimonPrograms/dimonprograms-apps) | 在封闭赛道记录圈速、分段成绩和实时差值。 | `1.0.3` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
 | [加速计时](https://github.com/cauliflowermossgrape/idrive7-apps) | 记录分段加速用时和四分之一英里成绩。 | `2.6.2` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [虚拟马力机](https://github.com/cauliflowermossgrape/idrive7-apps) | 根据行驶数据估算功率和扭矩，绘制输出曲线。 | `1.6.302` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [加速度仪](https://github.com/cauliflowermossgrape/idrive7-apps) | 显示纵向和横向加速度，记录峰值。 | `1.6.2202` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [绿灯提醒](https://github.com/alexp50/bmw-apps) | 根据前视摄像头识别的信号灯状态提示起步。 | `0.2.503` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
-| [M-Copilot](https://github.com/hexlay/idrive7-custom-apps) | 在行车界面查看驾驶提示与车辆状态。 | `1.0.3702` | [源码](https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4) |
+| [M-Copilot](https://github.com/hexlay/idrive7-custom-apps) | 在行车界面查看驾驶提示与车辆状态。 | `1.0.3703` | [源码](https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4) |
 | [泊车距离](https://github.com/alexp50/bmw-apps) | 显示泊车雷达距离、转向轨迹和车身姿态。 | `0.1.803` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
-| [换挡提示](https://github.com/cauliflowermossgrape/idrive7-apps) | 显示当前转速和挡位，在设定转速提示换挡。 | `2.0.4503` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
-| [行程电脑](https://github.com/alexp50/bmw-apps) | 汇总行程、油耗和燃油费用，显示海拔与续航。 | `1.0.4` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/42f3a2c58ec098d26b2e4f25ab1687b8533e66ea) |
+| [换挡提示](https://github.com/cauliflowermossgrape/idrive7-apps) | 显示当前转速和挡位，在设定转速提示换挡。 | `2.0.4504` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
+| [行程电脑](https://github.com/alexp50/bmw-apps) | 汇总行程、油耗和燃油费用，显示海拔与续航。 | `1.0.5` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/42f3a2c58ec098d26b2e4f25ab1687b8533e66ea) |
 | [加减速计时](https://github.com/giuseppesalatino-boop/mgu-apps) | 使用 DSC 加速度信号补偿坡度影响。 | `1.0.2` | [源码](https://github.com/JackieZ123430/mgu-apps/tree/aff3a09776b9acbef9177decacea73e62583a982) |
 | [暖机助手](https://github.com/cauliflowermossgrape/idrive7-apps) | 根据机油和冷却液温度估算暖机时间。 | `1.9.3` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 
@@ -24,12 +24,12 @@
 
 | 应用 | 功能 | 版本 | 来源 |
 | --- | --- | --- | --- |
-| [动力仪表](https://github.com/pinguinooo/idrive7-apps) | 同时查看油温、变速箱温度、增压与挡位。 | `0.2.2` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip) |
+| [动力仪表](https://github.com/pinguinooo/idrive7-apps) | 同时查看油温、变速箱温度、增压与挡位。 | `0.2.3` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip) |
 | [驾驶辅助状态](https://github.com/alexp50/bmw-apps) | 读取驾驶辅助功能的可用状态与控制单元反馈。 | `0.1.3` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
 | [行车监测](https://github.com/arefahmad/idrive7-apps) | 记录行程、故障和发动机失火事件。 | `0.1.303` | [源码](https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6) |
 | [车机接口目录](https://github.com/arefahmad/idrive7-apps) | 浏览车机公开的导航、媒体、空调和车身服务。 | `0.2.403` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
 | [轮胎设置](https://github.com/arefahmad/idrive7-apps) | 查看已识别轮胎和目标压力，配置变更受驻车条件限制。 | `0.2.103` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
-| [Mon Vitals](https://github.com/benspa900/mon-vitals-idrive7) | 集中显示发动机温度、增压与底盘数据。 | `0.9.603` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
+| [Mon Vitals](https://github.com/benspa900/mon-vitals-idrive7) | 集中显示发动机温度、增压与底盘数据。 | `0.9.604` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
 | [增压仪表](https://github.com/giuseppesalatino-boop/mgu-apps) | 查看 ECU 的增压和发动机实时参数。 | `1.0.102` | [源码](https://github.com/JackieZ123430/mgu-apps/tree/aff3a09776b9acbef9177decacea73e62583a982) |
 | [车辆仪表](https://github.com/cauliflowermossgrape/idrive7-apps) | 查看发动机、进气、燃油和底盘的实时读数。 | `2.27.902` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [12 V 电池](https://github.com/DimonPrograms/dimonprograms-apps) | 查看低压电池的电压、电流、温度与荷电状态。 | `1.0.3` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
@@ -57,12 +57,12 @@
 | [M Track 仪表](https://github.com/pinguinooo/idrive7-apps) | 在兼容仪表上显示 M Track 风格布局，默认关闭覆盖显示。 | `0.1.702` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/pinguinooo-suite-zh-2026-11-23/pinguinooo-idrive7-apps-zh-source.zip) |
 | [氛围灯设置](https://github.com/cauliflowermossgrape/idrive7-apps) | 按驾驶模式选择车内氛围灯颜色和效果。 | `2.7.1302` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [氛围灯工作室](https://github.com/alexp50/bmw-apps) | 在全屏界面编辑驾驶模式配色和灯光提醒。 | `0.1.503` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
-| [仪表主题](https://github.com/bimmer-lab/apps) | 选择仪表布局、配色和换挡提示样式。 | `0.19.2` | [源码](https://github.com/JackieZ123430/bimmer-lab-apps-cn/tree/e9a96c470b9389b827bfc9662e4b37103e36e22d) |
+| [仪表主题](https://github.com/bimmer-lab/apps) | 选择仪表布局、配色和换挡提示样式。 | `0.19.3` | [源码](https://github.com/JackieZ123430/bimmer-lab-apps-cn/tree/e9a96c470b9389b827bfc9662e4b37103e36e22d) |
 | [HUD 显示设置](https://github.com/alexp50/bmw-apps) | 配置抬头显示中的导航提示、挡位与暖机信息。 | `0.1.603` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [仪表摄像头](https://github.com/alexp50/bmw-apps) | 在兼容仪表中查看夜视或泊车摄像头画面。 | `0.2.103` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [G21 加热控制](https://github.com/NamelsMissing/mgu-apps) | 查看方向盘与座椅加热状态，配置兼容设备。 | `0.5.402` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/namels-source.zip) |
-| [HUD 小组件](https://github.com/bimmer-lab/apps) | 在兼容的抬头显示器中组合挡位、温度与换挡灯。 | `0.15.802` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/hud-source.zip) |
-| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.2201` | [源码](https://github.com/ALMSTRA/idv7lol/tree/edf648f7a5dd59d95144ec3af544d11264efd500) |
+| [HUD 小组件](https://github.com/bimmer-lab/apps) | 在兼容的抬头显示器中组合挡位、温度与换挡灯。 | `0.15.803` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/hud-source.zip) |
+| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.2501` | [源码](https://github.com/ALMSTRA/idv7lol/tree/c80ee8b015343c78751075c0de6e8471b52bbb6f) |
 | [后排舒适控制](https://github.com/alexp50/bmw-apps) | 操作兼容 G12 后排座椅、空调与遮阳设备。 | `0.5.603` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [空气悬架](https://github.com/alexp50/bmw-apps) | 查看并调整兼容车辆的空气悬架高度。 | `0.6.3` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [HUD 挡位显示](https://github.com/RubenRios/GearHUD) | 在仪表和抬头显示中区分常规、运动及手动挡位。 | `1.0.3` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
@@ -72,11 +72,11 @@
 
 | 应用 | 功能 | 版本 | 来源 |
 | --- | --- | --- | --- |
-| [养护记录](https://github.com/arefahmad/idrive7-apps) | 记录车辆养护项目和周期，在首页查看提醒。 | `0.2.303` | [源码](https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6) |
+| [养护记录](https://github.com/arefahmad/idrive7-apps) | 记录车辆养护项目和周期，在首页查看提醒。 | `0.2.304` | [源码](https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6) |
 | [预计到达时间](https://github.com/arefahmad/idrive7-apps) | 在车机组件查看 Apple Maps 的预计到达时间。 | `1.20.103` | [源码](https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6) |
 | [仪表导航卡片](https://github.com/tjmodsss/tjm-apps) | 在兼容仪表上查看下一转向、车道和距离。 | `0.9.203` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
 | [格鲁吉亚限速提示](https://github.com/hexlay/idrive7-custom-apps) | 使用格鲁吉亚地区的数据提示道路限速。 | `1.0.1003` | [源码](https://github.com/hexlay/idrive7-custom-apps/tree/b91159bbb0fcec583191cb17cb536a31c1734ba4) |
-| [加油记录](https://github.com/dzooky/bmrmodz) | 记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。 | `0.1.4503` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/fuel-source.zip) |
+| [加油记录](https://github.com/dzooky/bmrmodz) | 记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。 | `0.1.4504` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/fuel-source.zip) |
 
 ## 娱乐
 

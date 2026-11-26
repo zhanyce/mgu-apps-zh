@@ -164,8 +164,10 @@ def translate_settings(files, prefix, translations):
             if any(str(ord(ch)) not in size["glyphs"] for ch in label if ord(ch) > 127):
                 raise ValueError(f"{sid} 的字库缺少译文中的字形")
         setting["label"] = dictionary[english] = locale["strings"][english] = label
-        index = rows.index(english + "\t" + old)
-        rows[index] = english + "\t" + label
+        matching = [i for i, row in enumerate(rows) if row.startswith(english + "\t")]
+        if len(matching) != 1 or rows[matching[0]].split("\t", 1)[1] not in (old, label):
+            raise ValueError(f"{sid} 的 TSV 译文发生变化，请核对后重建")
+        rows[matching[0]] = english + "\t" + label
         for bundle in bundles.values():
             if bundle.get(sid) == old:
                 bundle[sid] = label
@@ -175,22 +177,37 @@ def translate_settings(files, prefix, translations):
     files[tsv_path] = (("\n".join(rows) + "\n").encode(), files[tsv_path][1])
 
 
-def translate_menus(files, prefix, app_id):
+def translate_menus(files, prefix, app_id, patch=False):
     kit = prefix + "javascript/kit/"
     locale = json.loads(files[kit + "locale.json"][0])
+    if patch and locale.get("language") != "zh-CN":
+        raise ValueError(f"{app_id} 的菜单局部修订需要简体中文输入包")
     overrides = read_json(ROOT / "translations/menus" / (app_id + ".json"))
     words = dict(locale["strings"])
     dictionary = kit + "locales/zh-CN.json"
-    if dictionary in files:
+    if dictionary in files and not patch:
         words.update(json.loads(files[dictionary][0]))
     words.update(overrides)
     locale.update(language="zh-CN", strings=words)
     files[kit + "locale.json"] = (encode(locale), 0o644)
     if dictionary in files:
-        files[dictionary] = (encode(words), files[dictionary][1])
+        entries = json.loads(files[dictionary][0]) if patch else words
+        entries.update(overrides)
+        files[dictionary] = (encode(entries), files[dictionary][1])
         tsv = kit + "locales/zh-CN.tsv"
         if tsv in files:
-            rows = "".join(f"{key}\t{value}\n" for key, value in words.items())
+            if patch:
+                pending = dict(overrides)
+                lines = files[tsv][0].decode().splitlines()
+                for i, row in enumerate(lines):
+                    key, sep, _ = row.partition("\t")
+                    if sep and key in overrides:
+                        lines[i] = key + "\t" + overrides[key]
+                        pending.pop(key, None)
+                lines.extend(f"{key}\t{value}" for key, value in pending.items())
+                rows = "\n".join(lines) + "\n"
+            else:
+                rows = "".join(f"{key}\t{value}\n" for key, value in words.items())
             files[tsv] = (rows.encode(), files[tsv][1])
 
     font_path = ROOT / "translations/fonts" / (app_id + ".json")
@@ -202,8 +219,10 @@ def translate_menus(files, prefix, app_id):
             if any(str(ord(c)) not in size["glyphs"] for c in label if ord(c) > 127):
                 raise ValueError(f"{app_id} 的字库缺少译文字形：{label}")
 
+    labels = overrides if patch else words
+
     def tr(text):
-        return words.get(text, text)
+        return labels.get(text, text)
 
     def update_spec(spec):
         spec["title"] = tr(spec["title"])
@@ -281,9 +300,14 @@ def rebuild(app, cache):
     if (ROOT / translation_file).is_file():
         translate_settings(files, prefix, read_json(ROOT / translation_file))
         source["translations"] = translation_file.as_posix()
-        source["changes"] += " 修订设置项的中文译文。"
+        if app.get("settingsRevision"):
+            source["changes"] += f" {app['settingsRevision']}：修订设置项的中文译文。"
+        else:
+            source["changes"] += " 修订设置项的中文译文。"
     if "menuRevision" in app:
-        translate_menus(files, prefix, app["id"])
+        translate_menus(files, prefix, app["id"], patch=app.get("menuMode") == "patch")
+        if "translations" in source:
+            source["settingsTranslations"] = source["translations"]
         source["translations"] = f"translations/menus/{app['id']}.json"
         source["changes"] = f"{app['menuRevision']}：更新车机菜单、设置项和运行时的简体中文译文。"
     files[prefix + "SOURCE.json"] = (encode(source), 0o644)

@@ -32,7 +32,7 @@
       "title": "换挡灯",
       "description": "按驾驶模式和发动机温度设置换挡提醒。",
       "author": "pinguinooo",
-      "version": "0.4.502",
+      "version": "0.4.503",
       "mguHmi": [
         "ID7"
       ],
@@ -45,10 +45,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "adam_shiftlights@0.4.502.tgz",
-        "url": "packages/adam_shiftlights@0.4.502.tgz",
-        "size": 852738,
-        "sha256": "bb1cacd16829ad6f567f50faf02faf7379129a244660aa565f050b0e6b66ac3b"
+        "name": "adam_shiftlights@0.4.503.tgz",
+        "url": "packages/adam_shiftlights@0.4.503.tgz",
+        "size": 854306,
+        "sha256": "e31825ff0d471954dfb55633ff6f62385fadbef5cd68a34f3ff2318d90042add"
       },
       "icon": "icons/adam_shiftlights.png",
       "iconSha256": "b7a24c813d07b4e4f0aadf82d58bb86ea00cb185f63c7fb748aeacdec4752d12"
@@ -58,7 +58,7 @@
       "title": "动力仪表",
       "description": "同时查看油温、变速箱温度、增压与挡位。",
       "author": "pinguinooo",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "mguHmi": [
         "ID7"
       ],
@@ -69,10 +69,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "adam_vitals@0.2.2.tgz",
-        "url": "packages/adam_vitals@0.2.2.tgz",
-        "size": 827656,
-        "sha256": "7433810df5eab73b3195bb574690e3ec1cb1cf76d6d891719f8b23203670d28f"
+        "name": "adam_vitals@0.2.3.tgz",
+        "url": "packages/adam_vitals@0.2.3.tgz",
+        "size": 827822,
+        "sha256": "a02df03153fb5676b339edf3b375de8c5914be6c06bf0737b8d968061aad2760"
       },
       "icon": "icons/adam_vitals.png",
       "iconSha256": "c06845cb5113ee6071e4303461ede61840194c263a1cfebc0c356196c5117242"
@@ -154,7 +154,7 @@
       "title": "养护记录",
       "description": "记录车辆养护项目和周期，在首页查看提醒。",
       "author": "arefahmad",
-      "version": "0.2.303",
+      "version": "0.2.304",
       "mguHmi": [
         "ID7"
       ],
@@ -165,10 +165,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "aref_carcare@0.2.303.tgz",
-        "url": "packages/aref_carcare@0.2.303.tgz",
-        "size": 1227400,
-        "sha256": "d38e4d7328f166380ffdf5f36ce7d530cbf22c3d55ae5ca98deee8d9ea41de1a"
+        "name": "aref_carcare@0.2.304.tgz",
+        "url": "packages/aref_carcare@0.2.304.tgz",
+        "size": 1227347,
+        "sha256": "f5fc969e507a057de0a102c02b7670993780f3b57366e41da94d4adeac599b39"
       },
       "icon": "icons/aref_carcare.png",
       "iconSha256": "d0243aa67d712e69c0bc3eff91fb14c775853b97b4139e0b2a05ec36c48e22c6"
@@ -301,7 +301,7 @@
       "title": "Mon Vitals",
       "description": "集中显示发动机温度、增压与底盘数据。",
       "author": "benspa900",
-      "version": "0.9.603",
+      "version": "0.9.604",
       "mguHmi": [
         "ID7"
       ],
@@ -312,10 +312,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "benspa_vitals@0.9.603.tgz",
-        "url": "packages/benspa_vitals@0.9.603.tgz",
-        "size": 814612,
-        "sha256": "2fc48333f74fc327ac04eb51ca872f353b44cf81097f0c5fa16e4941c04cd09f"
+        "name": "benspa_vitals@0.9.604.tgz",
+        "url": "packages/benspa_vitals@0.9.604.tgz",
+        "size": 814680,
+        "sha256": "a93d6565c5e79caca786c5991996e50fac76d2a33057d60653e8448ccc7f53f3"
       },
       "icon": "icons/benspa_vitals.png",
       "iconSha256": "f4ed2c2cf8f3c7dce5929aadeade8989449e8e5389568e05c0c4f42f1daef37d"
@@ -450,7 +450,7 @@
       "title": "仪表主题",
       "description": "选择仪表布局、配色和换挡提示样式。",
       "author": "bimmer-lab",
-      "version": "0.19.2",
+      "version": "0.19.3",
       "mguHmi": [
         "ID7"
       ],
@@ -460,10 +460,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "cluster_themes@0.19.2.tgz",
-        "url": "packages/cluster_themes@0.19.2.tgz",
-        "size": 2621333,
-        "sha256": "7bf02400595f047704ab6ed7a718928d47399e4565bc52b23a0cab9972571a46"
+        "name": "cluster_themes@0.19.3.tgz",
+        "url": "packages/cluster_themes@0.19.3.tgz",
+        "size": 2633251,
+        "sha256": "84b8cdec6b08ee61bb44b291e63b376a5567fd164311c52803f6e80959245148"
       },
       "icon": "icons/cluster_themes.png",
       "iconSha256": "01689a8688cafb36e95954753f93d7f3f1070ee9d99352756007decae6f4c6c8"
@@ -934,7 +934,7 @@
       "title": "HUD 小组件",
       "description": "在兼容的抬头显示器中组合挡位、温度与换挡灯。",
       "author": "bimmer-lab",
-      "version": "0.15.802",
+      "version": "0.15.803",
       "mguHmi": [
         "ID7"
       ],
@@ -946,10 +946,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "idrive_hud_widgets@0.15.802.tgz",
-        "url": "packages/idrive_hud_widgets@0.15.802.tgz",
-        "size": 1853603,
-        "sha256": "94c899713bfbf2f701e985c966a33af623dfc7afbd125216da3bbcde0a05a0ee"
+        "name": "idrive_hud_widgets@0.15.803.tgz",
+        "url": "packages/idrive_hud_widgets@0.15.803.tgz",
+        "size": 1867775,
+        "sha256": "726ea6c06e5f15137b1971d571c81b03f574b2676a0916a3c816f4783ba23905"
       },
       "icon": "icons/idrive_hud_widgets.png",
       "iconSha256": "dbb8176088bc89d90ea9fbb8e0c4b6f7c79107bb53fb786ecc366a10c52ca476"
@@ -959,7 +959,7 @@
       "title": "idv7lol 仪表",
       "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
       "author": "ALMSTRA",
-      "version": "0.2.2201",
+      "version": "0.2.2501",
       "mguHmi": [
         "ID7"
       ],
@@ -970,10 +970,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "idv7lol@0.2.2201.tgz",
-        "url": "packages/idv7lol@0.2.2201.tgz",
-        "size": 2321178,
-        "sha256": "6e9944d7087712d39453da74d6d411aa242314a8d45cbec844bdbb50fe24b17a"
+        "name": "idv7lol@0.2.2501.tgz",
+        "url": "packages/idv7lol@0.2.2501.tgz",
+        "size": 2326827,
+        "sha256": "277aa5799e8a4d64be634fff93b3ba9bb43def18409c8830ebe9f64a3499681e"
       },
       "icon": "icons/idv7lol.png",
       "iconSha256": "bd5998c4316a0de0488888fcf66b0cfda5e08adf180c3394d033e0151309c7e6"
@@ -1081,7 +1081,7 @@
       "title": "M-Copilot",
       "description": "在行车界面查看驾驶提示与车辆状态。",
       "author": "hexlay",
-      "version": "1.0.3702",
+      "version": "1.0.3703",
       "mguHmi": [
         "ID7"
       ],
@@ -1093,10 +1093,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "m_copilot@1.0.3702.tgz",
-        "url": "packages/m_copilot@1.0.3702.tgz",
-        "size": 4579088,
-        "sha256": "bd9ad6b0587a00ea778e95297367544913df59520f91583dc716dca66eb32a18"
+        "name": "m_copilot@1.0.3703.tgz",
+        "url": "packages/m_copilot@1.0.3703.tgz",
+        "size": 4579152,
+        "sha256": "8a03ef9c9896cc4cb6df1d2129f30ffa16a65549fa5c5a834cd379168ede6c3b"
       },
       "icon": "icons/m_copilot.png",
       "iconSha256": "886356a7110724cae40039e51226177f53c1c37b76bab92e86ac1305db09aa9e"
@@ -1201,7 +1201,7 @@
       "title": "换挡提示",
       "description": "显示当前转速和挡位，在设定转速提示换挡。",
       "author": "cauliflowermossgrape",
-      "version": "2.0.4503",
+      "version": "2.0.4504",
       "mguHmi": [
         "ID7"
       ],
@@ -1212,10 +1212,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "redline@2.0.4503.tgz",
-        "url": "packages/redline@2.0.4503.tgz",
-        "size": 1257117,
-        "sha256": "51eec8d2283b7e8a39e911b9d9e8c0844928c14f7c5706695d1f14219737252b"
+        "name": "redline@2.0.4504.tgz",
+        "url": "packages/redline@2.0.4504.tgz",
+        "size": 1257271,
+        "sha256": "3a54bcbd34560d8e190707b6fae2212bc146804892babd6c2494bd48d10abf24"
       },
       "icon": "icons/redline.png",
       "iconSha256": "9c2a029af517d3542604f40a56189c0ecb59d580ba9968ee63fddde35c02cf1d"
@@ -1249,7 +1249,7 @@
       "title": "行程电脑",
       "description": "汇总行程、油耗和燃油费用，显示海拔与续航。",
       "author": "alexp50",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "mguHmi": [
         "ID7"
       ],
@@ -1260,10 +1260,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "road_trip_computer@1.0.4.tgz",
-        "url": "packages/road_trip_computer@1.0.4.tgz",
-        "size": 1050819,
-        "sha256": "99e009098a907931d38d73c766e5d59a7309f418b227869fcdcdab2b0c52caad"
+        "name": "road_trip_computer@1.0.5.tgz",
+        "url": "packages/road_trip_computer@1.0.5.tgz",
+        "size": 1054471,
+        "sha256": "fbbdd02e86eeb8eac23bd49d3e4fc3cfba6c0b6ece739dc160a2e4b24182ab12"
       },
       "icon": "icons/road_trip_computer.png",
       "iconSha256": "6148be6ea376d61b6cc00e6aabcd09abd7d7a840f6948704b42af14af1704eb8"
@@ -1391,7 +1391,7 @@
       "title": "加油记录",
       "description": "记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。",
       "author": "dzooky",
-      "version": "0.1.4503",
+      "version": "0.1.4504",
       "mguHmi": [
         "ID7"
       ],
@@ -1403,10 +1403,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "spritmonitor@0.1.4503.tgz",
-        "url": "packages/spritmonitor@0.1.4503.tgz",
-        "size": 2879951,
-        "sha256": "36039027d051f7ee38fd946d33f4d974a4afc0f4a2c3e1ee3211d200add9ee69"
+        "name": "spritmonitor@0.1.4504.tgz",
+        "url": "packages/spritmonitor@0.1.4504.tgz",
+        "size": 2880062,
+        "sha256": "e76e14f20e1fce24fc3554d09425d115abb79aaab7309149b625e8bdf14cda46"
       },
       "icon": "icons/spritmonitor.png",
       "iconSha256": "354429fcd0a7ace65ef40aa38adcad66bfa8a3e4df02f91be55099acb59423df"
