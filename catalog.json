@@ -959,7 +959,7 @@
       "title": "idv7lol 仪表",
       "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
       "author": "ALMSTRA",
-      "version": "0.2.2501",
+      "version": "0.2.2701",
       "mguHmi": [
         "ID7"
       ],
@@ -970,10 +970,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "idv7lol@0.2.2501.tgz",
-        "url": "packages/idv7lol@0.2.2501.tgz",
-        "size": 2326827,
-        "sha256": "277aa5799e8a4d64be634fff93b3ba9bb43def18409c8830ebe9f64a3499681e"
+        "name": "idv7lol@0.2.2701.tgz",
+        "url": "packages/idv7lol@0.2.2701.tgz",
+        "size": 2993334,
+        "sha256": "2051c57632ac5c47a8c493dd0bb19c7d3077fa718e05a6ddd6778738d29b6d85"
       },
       "icon": "icons/idv7lol.png",
       "iconSha256": "bd5998c4316a0de0488888fcf66b0cfda5e08adf180c3394d033e0151309c7e6"
@@ -1273,7 +1273,7 @@
       "title": "MGU Store",
       "description": "管理软件源，安装和更新车机应用与组件。",
       "author": "robertnisipeanu",
-      "version": "0.9.45",
+      "version": "0.9.46",
       "build": "unit",
       "mguHmi": [
         "ID7",
@@ -1286,10 +1286,10 @@
       },
       "kind": "app",
       "artifact": {
-        "name": "robertn_store@0.9.45.tgz",
-        "size": 4361304,
-        "sha256": "1a0f000b7eb2e4d13bd041a73375bc96831ca02a6d23e17dfb9bd702011192e9",
-        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.45/robertn_store%400.9.45.tgz"
+        "name": "robertn_store@0.9.46.tgz",
+        "size": 4361404,
+        "sha256": "1cbc3e31e761926194c3132f00eecb2f55a91da5077e75561ebd53198fda410f",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.46/robertn_store%400.9.46.tgz"
       }
     },
     {

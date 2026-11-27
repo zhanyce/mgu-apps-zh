@@ -1057,14 +1057,14 @@
     "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
     "author": "ALMSTRA",
     "project": "https://github.com/ALMSTRA/idv7lol",
-    "source": "https://github.com/ALMSTRA/idv7lol/tree/c80ee8b015343c78751075c0de6e8471b52bbb6f",
+    "source": "https://github.com/ALMSTRA/idv7lol/tree/0dc76e2148354ff95f808d1426a115790be62276",
     "base": {
-      "name": "idv7lol@0.2.25.tgz",
-      "size": 2287026,
-      "sha256": "af60b1d381a46c588618e4ac61eaa791eef62b70f496542c88d3dd3cfb235703",
-      "url": "https://github.com/ALMSTRA/idv7lol/releases/download/catalog/idv7lol%400.2.25.tgz"
+      "name": "idv7lol@0.2.27.tgz",
+      "size": 2953466,
+      "sha256": "5195e77de1d4beb0c9cb259ef8b024adcf0b664b8be16390817861ff06e6b1da",
+      "url": "https://github.com/ALMSTRA/idv7lol/releases/download/catalog/idv7lol%400.2.27.tgz"
     },
-    "version": "0.2.2501",
+    "version": "0.2.2701",
     "mguHmi": [
       "ID7"
     ],
@@ -1075,7 +1075,7 @@
     },
     "license": "GPL-3.0",
     "notice": "ALMSTRA--idv7lol.txt",
-    "menuRevision": "2026-11-26"
+    "menuRevision": "2026-11-27"
   },
   {
     "id": "jap_ridetube",
@@ -1410,14 +1410,14 @@
     "description": "管理软件源，安装和更新车机应用与组件。",
     "author": "robertnisipeanu",
     "project": "https://github.com/robertnisipeanu/mgu-store",
-    "source": "https://github.com/robertnisipeanu/mgu-store/tree/67982e5e9b1cf8b18ed951b6da19a7b365421a39",
+    "source": "https://github.com/robertnisipeanu/mgu-store/tree/554d8072096a860d5c20d19c71062220bc40a2a5",
     "base": {
-      "name": "robertn_store@0.9.45.tgz",
-      "size": 4361304,
-      "sha256": "1a0f000b7eb2e4d13bd041a73375bc96831ca02a6d23e17dfb9bd702011192e9",
-      "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.45/robertn_store%400.9.45.tgz"
+      "name": "robertn_store@0.9.46.tgz",
+      "size": 4361404,
+      "sha256": "1cbc3e31e761926194c3132f00eecb2f55a91da5077e75561ebd53198fda410f",
+      "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/robertn_store%400.9.46/robertn_store%400.9.46.tgz"
     },
-    "version": "0.9.45",
+    "version": "0.9.46",
     "mguHmi": [
       "ID7",
       "ID8"

@@ -62,7 +62,7 @@
 | [仪表摄像头](https://github.com/alexp50/bmw-apps) | 在兼容仪表中查看夜视或泊车摄像头画面。 | `0.2.103` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [G21 加热控制](https://github.com/NamelsMissing/mgu-apps) | 查看方向盘与座椅加热状态，配置兼容设备。 | `0.5.402` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/namels-source.zip) |
 | [HUD 小组件](https://github.com/bimmer-lab/apps) | 在兼容的抬头显示器中组合挡位、温度与换挡灯。 | `0.15.803` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/hud-source.zip) |
-| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.2501` | [源码](https://github.com/ALMSTRA/idv7lol/tree/c80ee8b015343c78751075c0de6e8471b52bbb6f) |
+| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.2701` | [源码](https://github.com/ALMSTRA/idv7lol/tree/0dc76e2148354ff95f808d1426a115790be62276) |
 | [后排舒适控制](https://github.com/alexp50/bmw-apps) | 操作兼容 G12 后排座椅、空调与遮阳设备。 | `0.5.603` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [空气悬架](https://github.com/alexp50/bmw-apps) | 查看并调整兼容车辆的空气悬架高度。 | `0.6.3` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [HUD 挡位显示](https://github.com/RubenRios/GearHUD) | 在仪表和抬头显示中区分常规、运动及手动挡位。 | `1.0.3` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
@@ -100,7 +100,7 @@
 | [车载热点](https://github.com/alexp50/bmw-apps) | 管理车机热点、网络代理和限时 ENET 转发。 | `0.1.503` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [资源监视器](https://github.com/JustAnotherPU/mgu-apps) | 查看处理器、交换空间、图形频率和应用内存用量。 | `1.0.605` | [源码](https://github.com/JustAnotherPU/mgu-apps/tree/e69a71330b09650c4d21f51af63068799de88ba9) |
 | [车机浏览器](https://github.com/pllanaio/mgu-browser) | 用 iDrive 浏览网页，管理书签和历史记录。 | `0.16.103` | [源码](https://github.com/JackieZ123430/mgu-browser/tree/fcbd6f70341636f3eaa493c363c67c70eeb3f71f) |
-| [MGU Store](https://github.com/robertnisipeanu/mgu-store) | 管理软件源，安装和更新车机应用与组件。 | `0.9.45` | [源码](https://github.com/robertnisipeanu/mgu-store/tree/67982e5e9b1cf8b18ed951b6da19a7b365421a39) |
+| [MGU Store](https://github.com/robertnisipeanu/mgu-store) | 管理软件源，安装和更新车机应用与组件。 | `0.9.46` | [源码](https://github.com/robertnisipeanu/mgu-store/tree/554d8072096a860d5c20d19c71062220bc40a2a5) |
 | [车载网络](https://github.com/alexp50/bmw-apps) | 查看车机网络接口、车辆网络设备和 IPv4 配置。 | `0.1.303` | [源码](https://github.com/JackieZ123430/alexp50-bmw-apps-cn/tree/c308de8f79116450285ba2c4edfd4c9853b18cd3) |
 | [Vizualyse Chromium](https://github.com/Vizualyse/idrive-apps) | 在车机中使用 Chromium 浏览器。 | `0.3.102` | [源码](https://github.com/JackieZ123430/vizualyse-idrive-apps-cn/tree/f9183801aeeb9fc09c16bd9566ce8b65fe8a644a) |
 | [系统监视器](https://github.com/hexlay/idrive7-system-monitor) | 显示 CPU、内存、温度和进程信息。 | `1.0.806` | [源码](https://github.com/hexlay/idrive7-system-monitor/tree/ace9212e61dc26c0fda2f70a70ca39b1d6b40f2c) |
