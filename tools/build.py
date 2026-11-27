@@ -1,20 +1,29 @@
-"""从校验过的公开发行包生成 MGU Store 软件源。"""
+"""从原项目源码构建已迁移的组件，并维护 MGU Store 软件源。"""
 
 import argparse
 import gzip
 import hashlib
 import io
 import json
+import os
 import re
 import subprocess
 import tarfile
 import tempfile
 import xml.etree.ElementTree as ET
 from pathlib import Path, PurePosixPath
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = re.compile(r"\d+\.\d+\.\d+")
 LEGAL = ROOT / "licenses"
+TOOL_PACKER = {
+    "repo": "robertnisipeanu/mgu-store",
+    "commit": "554d8072096a860d5c20d19c71062220bc40a2a5",
+    "size": 7828919,
+    "sha256": "f17da98cbe0f0717b3a66ed904bef093024596bfb22d2549c651cd9f7275249a",
+}
+REFERENCE_OWNER = "jackiez123430"
 
 
 def read_json(path):
@@ -38,12 +47,14 @@ def write(path, data):
 
 
 def acquire(artifact, cache):
+    require_build_url(artifact["url"])
     path = cache / artifact["name"]
     if not path.exists():
         cache.mkdir(parents=True, exist_ok=True)
         with tempfile.NamedTemporaryFile(dir=cache) as tmp:
             subprocess.run(["curl", "--fail", "--location", "--silent", "--show-error",
-                            "--retry", "3", "--output", tmp.name, artifact["url"]], check=True)
+                            "--connect-timeout", "10", "--max-time", "120", "--retry", "3",
+                            "--output", tmp.name, artifact["url"]], check=True)
             data = Path(tmp.name).read_bytes()
             check_bytes(data, artifact)
             write(path, data)
@@ -81,6 +92,130 @@ def pack(files):
                 item.size, item.mode = len(data), mode
                 archive.addfile(item, io.BytesIO(data))
     return output.getvalue()
+
+
+def require_build_url(url):
+    parsed = urlsplit(url)
+    parts = unquote(parsed.path).casefold().split("/")
+    if parsed.hostname and (REFERENCE_OWNER in parts or parsed.hostname.split(".")[0] == REFERENCE_OWNER):
+        raise ValueError(f"小白仓库仅供参考，不可作为构建或下载来源：{url}")
+
+
+def source_files(pin, cache):
+    repo, commit = pin["repo"], pin["commit"]
+    if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9-]*/[a-zA-Z0-9][a-zA-Z0-9_.-]*", repo) or not re.fullmatch(
+        r"[a-f0-9]{40}", commit
+    ):
+        raise ValueError("源码必须固定到 GitHub 项目和完整提交号")
+    artifact = {
+        "name": f"{repo.replace('/', '--')}-{commit}.tar.gz",
+        "url": f"https://codeload.github.com/{repo}/tar.gz/{commit}",
+        "size": pin["size"],
+        "sha256": pin["sha256"],
+    }
+    prefix = f"{repo.split('/')[1]}-{commit}/"
+    files = unpack(acquire(artifact, cache))
+    if not files or any(not name.startswith(prefix) for name in files):
+        raise ValueError(f"源码归档目录不符：{repo}@{commit}")
+    return {name[len(prefix):]: item for name, item in files.items()}
+
+
+def source_subdir(files, directory):
+    prefix = PurePosixPath(directory).as_posix() + "/"
+    selected = {name[len(prefix):]: item for name, item in files.items() if name.startswith(prefix)}
+    if not selected:
+        raise ValueError(f"源码归档中没有目录 {directory}")
+    return selected
+
+
+def stage_files(files, root):
+    for name, (content, mode) in files.items():
+        path = root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
+        path.chmod(mode)
+
+
+def unit_files(app, cache):
+    recipe = app["sourceBuild"]
+    if recipe["format"] != "unit" or app.get("build") != "unit":
+        raise ValueError(f"{app['id']} 需要已验证的源码构建方式")
+    if app["project"].casefold() != f"https://github.com/{recipe['repo']}".casefold():
+        raise ValueError(f"源码构建必须使用应用的原项目：{app['id']}")
+    source = source_files(recipe, cache)
+    files = source_subdir(source, recipe["path"])
+    patch = ROOT / "translations/source" / (app["id"] + ".patch")
+    if patch.is_file():
+        with tempfile.TemporaryDirectory() as tmp:
+            stage = Path(tmp)
+            stage_files(files, stage)
+            subprocess.run(["git", "apply", str(patch)], cwd=stage,
+                           env={**os.environ, "GIT_CONFIG_COUNT": "0"}, check=True)
+            files = {path.relative_to(stage).as_posix(): (path.read_bytes(), path.stat().st_mode & 0o777)
+                     for path in stage.rglob("*") if path.is_file()}
+    manifest = json.loads(files["mgu-app.json"][0])
+    tree = manifest["tree"]
+    if (manifest["id"], manifest["version"]) != (app["id"], app["upstreamVersion"]):
+        raise ValueError(f"上游源码包标识或版本不符：{app['id']}")
+    if not tree or PurePosixPath(tree).is_absolute() or ".." in PurePosixPath(tree).parts:
+        raise ValueError(f"上游源码包目录无效：{tree}")
+    modules = set(manifest["modules"])
+    if modules - files.keys():
+        raise ValueError(f"上游源码包缺少模块：{app['id']}")
+    files = {name: item for name, item in files.items()
+             if name == "mgu-app.json" or name in modules or name.startswith(tree + "/")}
+    if any("oap-sdk" in PurePosixPath(name).parts for name in files):
+        raise ValueError(f"源码发布包含有车机 SDK：{app['id']}")
+    for name, content in source.items():
+        if "/" not in name and re.match(r"^(LICENSE|NOTICE|COPYING)", name, re.I):
+            files.setdefault(tree + "/" + name, content)
+    return files
+
+
+def translate_unit(files, prefix, recipe):
+    text = recipe["text"]
+    dynamic = {}
+    for stem, count in recipe.get("dynamic", {}).items():
+        if not isinstance(count, int) or not 1 <= count <= 256:
+            raise ValueError(f"无效的车机字符串数量：{stem}")
+        dynamic.update({stem if count == 1 else f"{stem}{index}": "" for index in range(count)})
+    locale = json.loads(files[prefix + "rhmiData/application.json"][0])["application"]["defaultLanguage"]
+    prefix = prefix + "rhmiData/variantGroups/Common/texts/"
+    bundles = [name for name in files if name.startswith(prefix) and name.endswith(".json")]
+    for name in bundles:
+        table, mode = files[name]
+        strings = json.loads(table)
+        if text.keys() - strings.keys() or dynamic.keys() & strings.keys():
+            raise ValueError(f"上游字符串 ID 已变化：{name}")
+        files[name] = (encode({**strings, **text, **dynamic}), mode)
+    files.setdefault(prefix + "zh_CN.json", files[prefix + locale + ".json"])
+
+
+def rebuild_tool(tool, cache):
+    recipe = tool["sourceBuild"]
+    files = source_subdir(source_files(recipe, cache), recipe["path"])
+    manifest = json.loads(files["component.json"][0])
+    if manifest.get("build") or (manifest["id"], manifest["version"]) != (tool["id"], tool["version"]):
+        raise ValueError(f"组件须使用与清单一致的原项目发布文件：{tool['id']}")
+    for group in ("files", "units", "dropins"):
+        for entry in manifest.get(group, []):
+            name = entry.get("from", entry.get("path", entry.get("name")))
+            if name not in files:
+                raise ValueError(f"组件缺少上游文件：{name}")
+    packer = source_files(TOOL_PACKER, cache)
+    artifact = tool["artifact"]
+    if artifact["url"] != f"packages/components/{artifact['name']}":
+        raise ValueError(f"组件发布路径无效：{tool['id']}")
+    with tempfile.TemporaryDirectory() as tmp:
+        work = Path(tmp)
+        stage_files({name: packer[name] for name in ("deploy/hu", "tools/oap_pack.js")}, work)
+        stage_files(files, work / "input")
+        subprocess.run(["node", str(work / "deploy/hu"), "artifact", str(work / "input"),
+                        "--out", str(work / "output")], cwd=work,
+                       env={**os.environ, "SOURCE_DATE_EPOCH": "1792281600"}, check=True)
+        content = (work / "output" / artifact["name"]).read_bytes()
+        check_bytes(content, artifact)
+        write(ROOT / artifact["url"], content)
 
 
 def update_json(files, path, change):
@@ -249,13 +384,11 @@ def translate_menus(files, prefix, app_id, patch=False):
 
 
 def rebuild(app, cache):
-    files = unpack(acquire(app["base"], cache))
-    old_name = app["base"]["name"][:-4]
+    files = unit_files(app, cache)
+    upstream_version = app["upstreamVersion"]
     new_name = app["id"] + "@" + app["version"]
     if "mgu-app.json" in files:
         old_tree = json.loads(files["mgu-app.json"][0])["tree"]
-        if old_tree != old_name:
-            raise ValueError(f"源码包目录不符：{old_tree}")
         files = {(new_name + n[len(old_tree):] if n.startswith(old_tree + "/") else n): v
                  for n, v in files.items()}
         update_json(files, "mgu-app.json", lambda d: d.update(version=app["version"], tree=new_name))
@@ -263,10 +396,10 @@ def rebuild(app, cache):
     rhmi_path = prefix + "rhmiData/application.json"
     rhmi = json.loads(files[rhmi_path][0])["application"]
     pkg = json.loads(files[prefix + "package.json"][0])
-    if pkg["name"] != app["id"] or old_name != pkg["name"] + "@" + pkg["version"]:
-        raise ValueError(f"应用标识或版本不符：{old_name}")
+    if (pkg["name"], pkg["version"]) != (app["id"], upstream_version):
+        raise ValueError(f"应用标识或版本不符：{app['id']}@{upstream_version}")
     if rhmi["version"] != pkg["version"]:
-        raise ValueError(f"RHMI 版本不符：{old_name}")
+        raise ValueError(f"RHMI 版本不符：{app['id']}@{upstream_version}")
     update_json(files, rhmi_path, lambda d: d["application"].update(version=app["version"]))
     for name, (data, mode) in list(files.items()):
         if name.endswith("/uiDescription.json"):
@@ -289,13 +422,19 @@ def rebuild(app, cache):
             if name == prefix + "package.json":
                 obj["description"] = app["description"]
             files[name] = (encode(obj), mode)
-    # 发行说明记录当前版本；原始包及其校验值可从来源记录取回。
+    # 发布包附原项目提交、归档校验值及本仓库的翻译文件。
     for name in ("SOURCE.zh-CN.json", "FONT-COVERAGE.zh-CN.json"):
         files.pop(name, None)
-    source = {k: app[k] for k in ("id", "version", "project", "source", "base")}
+    source = {k: app[k] for k in ("id", "version", "upstreamVersion", "project", "source", "sourceBuild")}
     if app.get("additionalSources"):
         source["additionalSources"] = app["additionalSources"]
-    source["changes"] = "2026-11-24：更新中文应用说明，移除界面中的翻译推广文字。"
+    source["changes"] = "从原项目源码构建并维护简体中文界面。"
+    unit_translation = Path("translations/source") / (app["id"] + ".json")
+    if (ROOT / unit_translation).is_file():
+        translate_unit(files, prefix, read_json(ROOT / unit_translation))
+        source["translations"] = unit_translation.as_posix()
+        if (ROOT / unit_translation.with_suffix(".patch")).is_file():
+            source["translationPatch"] = unit_translation.with_suffix(".patch").as_posix()
     translation_file = Path("translations") / (app["id"] + ".json")
     if (ROOT / translation_file).is_file():
         translate_settings(files, prefix, read_json(ROOT / translation_file))
@@ -348,6 +487,7 @@ def validate(entries):
     versions = {}
     for entry in entries:
         key, version, a = entry["id"], entry["version"], entry["artifact"]
+        require_build_url(a["url"])
         if key in versions or not VERSION.fullmatch(version) or a["name"] != f"{key}@{version}.tgz":
             raise ValueError(f"组件标识或版本有误 {key}")
         if not re.fullmatch(r"[a-f0-9]{64}", a["sha256"]) or a["size"] <= 0:
@@ -371,7 +511,7 @@ def verify_package(app, entry):
         raise ValueError(f"{archive.name} 的应用标识或内部版本与目录不符")
     if app.get("build") == "unit":
         manifest = json.loads(files["mgu-app.json"][0])
-        if manifest["tree"] + "/" != prefix or manifest["version"] != pkg["version"]:
+        if (manifest["id"], manifest["tree"] + "/", manifest["version"]) != (app["id"], prefix, pkg["version"]):
             raise ValueError(f"{archive.name} 的源码包清单与应用目录不符")
         for name in manifest["modules"]:
             if name not in files:
@@ -389,10 +529,14 @@ def verify_package(app, entry):
                 raise ValueError(f"{archive.name} 的中文界面包含水印")
     if prefix + "licenses/" + app["notice"] not in files:
         raise ValueError(f"{archive.name} 缺少许可证")
+    if "sourceBuild" in app:
+        source = json.loads(files[prefix + "SOURCE.json"][0])
+        if any(source[key] != app[key] for key in ("sourceBuild", "source", "upstreamVersion")):
+            raise ValueError(f"{archive.name} 的源码来源与清单不符")
 
 
 def directory(apps):
-    lines = ["# 应用目录", "", "软件源中的版本见下表。名称链接指向原项目，源码链接指向本版使用的源码或翻译修订。", ""]
+    lines = ["# 应用目录", "", "名称链接指向原项目。源码链接记录当前发行版对应的源码或历史翻译修订。", ""]
     for group in ("驾驶", "诊断", "座舱", "出行", "娱乐", "系统"):
         lines += ["## " + group, "", "| 应用 | 功能 | 版本 | 来源 |", "| --- | --- | --- | --- |"]
         for app in apps:
@@ -407,18 +551,34 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=("rebuild", "index", "check"))
     parser.add_argument("--cache", type=Path, default=ROOT / ".cache")
+    parser.add_argument("--only", metavar="ID", action="append", help="仅重建指定的源码应用或组件，可重复指定")
     args = parser.parse_args()
     apps = read_json(ROOT / "data/apps.json")
+    tools = read_json(ROOT / "data/tools.json")
+    if args.only and args.action != "rebuild":
+        parser.error("--only 仅适用于 rebuild")
     if args.action == "rebuild":
-        for app in apps:
-            if not app.get("external"):
-                rebuild(app, args.cache)
-    entries = [catalog_entry(app) for app in apps] + read_json(ROOT / "data/tools.json")
+        candidates = {app["id"]: (app, rebuild) for app in apps if "sourceBuild" in app}
+        candidates.update({tool["id"]: (tool, rebuild_tool) for tool in tools if "sourceBuild" in tool})
+        selected = args.only or list(candidates)
+        for key in selected:
+            if key not in candidates:
+                parser.error(f"{key} 尚未配置源码构建")
+        for key in selected:
+            entry, action = candidates[key]
+            action(entry, args.cache)
+    entries = [catalog_entry(app) for app in apps] + [
+        {k: v for k, v in tool.items() if k != "sourceBuild"} for tool in tools
+    ]
     validate(entries)
     if args.action == "check":
         for app, entry in zip(apps, entries):
             if not app.get("external"):
                 verify_package(app, entry)
+        for tool in tools:
+            if "sourceBuild" in tool:
+                artifact = tool["artifact"]
+                check_bytes((ROOT / artifact["url"]).read_bytes(), artifact)
     products = {"catalog.json": encode({"schema": 2, "components": entries}), "APPS.md": directory(apps)}
     for name, data in products.items():
         if args.action == "check":

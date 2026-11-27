@@ -83,7 +83,14 @@
       "name": "idrive7-renderd@2.1.19.tgz",
       "size": 96247,
       "sha256": "49a7095cf26718e58ab73ed002cb5bce5bc58e7f1741a30204c0a4604995c866",
-      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/idrive7-renderd%402.1.19.tgz"
+      "url": "packages/components/idrive7-renderd@2.1.19.tgz"
+    },
+    "sourceBuild": {
+      "repo": "cauliflowermossgrape/idrive7-apps",
+      "commit": "f54fc279d309ca12eba129b676d755c6f02f5a06",
+      "size": 34400805,
+      "sha256": "826497ea97e72cdf92f958c4a071aa36c9000b175f4e6b6900e9230befd24394",
+      "path": "kit/renderd/prebuilt"
     }
   },
   {
@@ -205,7 +212,14 @@
       "name": "mgu-inputgate@1.2.1.tgz",
       "size": 8554,
       "sha256": "d424e6e7b63351579be3abe675886420f71cbad497c994ab0e6b2aa9583b224a",
-      "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/mgu-inputgate%401.2.1.tgz"
+      "url": "packages/components/mgu-inputgate@1.2.1.tgz"
+    },
+    "sourceBuild": {
+      "repo": "cauliflowermossgrape/idrive7-apps",
+      "commit": "f54fc279d309ca12eba129b676d755c6f02f5a06",
+      "size": 34400805,
+      "sha256": "826497ea97e72cdf92f958c4a071aa36c9000b175f4e6b6900e9230befd24394",
+      "path": "kit/renderd/inputgate/tool"
     }
   },
   {

@@ -1,0 +1,85 @@
+--- a/src/game.js
++++ b/src/game.js
+@@ -9,7 +9,7 @@
+ Game.prototype.status = function() {
+-    const s=this.state, who = s.player===0 ? 'Белые' : 'Чёрные';
+-    if(s.winner!==null) return (s.winner===0?'Белые':'Чёрные')+' победили · '+s.pointsWon+' очк.';
++    const s=this.state, who = s.player===0 ? '白方' : '黑方';
++    if(s.winner!==null) return (s.winner===0?'白方':'黑方')+'获胜 · '+s.pointsWon+' 分';
+     if(s.opening && this.note) return this.note;
+-    if(s.opening) return 'Первый бросок: каждому по одной кости. При равенстве — переброс.';
+-    return (s.variant==='long'?'Длинные · ':'Короткие · ')+who+' · '+(s.roll.length ? 'кости '+s.roll.join(' : ')+' · осталось '+(s.dice.join(', ')||'—') : 'бросьте кости');
++    if(s.opening) return '开局双方各掷一枚骰子，点数相同则重掷。';
++    return (s.variant==='long'?'长局 · ':'短局 · ')+who+' · '+(s.roll.length ? '点数 '+s.roll.join(' : ')+' · 剩余 '+(s.dice.join(', ')||'—') : '请掷骰子');
+ };
+@@ -17,18 +17,18 @@
+     const s=this.state;
+-    if(this.confirm) return [{label:'Отмена',op:'cancel'}].concat(['short','long'].reduce((all,variant)=>all.concat(['computer','local'].map(mode=>({label:(variant==='long'?'Длинные':'Короткие')+' · '+(mode==='computer'?'с компьютером':'вдвоём'),op:'new',mode,variant}))),[]));
++    if(this.confirm) return [{label:'取消',op:'cancel'}].concat(['short','long'].reduce((all,variant)=>all.concat(['computer','local'].map(mode=>({label:(variant==='long'?'长局':'短局')+' · '+(mode==='computer'?'人机对局':'双人对局'),op:'new',mode,variant}))),[]));
+     const a=[];
+     if(s.winner===null) {
+-        if(s.opening || !s.roll.length) a.push({label:s.opening?'Первый бросок':'Бросить кости',op:'roll'});
++        if(s.opening || !s.roll.length) a.push({label:s.opening?'开局掷骰':'掷骰子',op:'roll'});
+         else {
+             const moves=E.legal(s);
+-            if(this.mode==='computer' && s.player===1 && moves.length) a.push({label:'Ход компьютера',op:'ai'});
+-            else moves.forEach(m=>a.push({label:(m.from===-1?'Бар':m.from+1)+' → '+(m.to===24?'Снять':m.to+1)+'   [ '+m.die+' ]',op:'move',move:m}));
+-            if(!moves.length) a.push({label:s.dice.length?'Нет ходов · передать очередь':'Завершить ход',op:'finish'});
++            if(this.mode==='computer' && s.player===1 && moves.length) a.push({label:'电脑走棋',op:'ai'});
++            else moves.forEach(m=>a.push({label:(m.from===-1?'中栏':m.from+1)+' → '+(m.to===24?'移出':m.to+1)+'   [ '+m.die+' ]',op:'move',move:m}));
++            if(!moves.length) a.push({label:s.dice.length?'无合法走法 · 交给对手':'结束回合',op:'finish'});
+         }
+-        if(this.history.length) a.push({label:'Отменить движение',op:'undo'});
++        if(this.history.length) a.push({label:'悔棋',op:'undo'});
+     }
+-    a.push({label:'Новая партия…',op:'confirm'}); return a;
++    a.push({label:'新开一局…',op:'confirm'}); return a;
+ };
+ Game.prototype.act = function(a,die) {
+-    if(!this.actions().some(x=>JSON.stringify(x)===JSON.stringify(a))) throw new Error('Действие устарело');
++    if(!this.actions().some(x=>JSON.stringify(x)===JSON.stringify(a))) throw new Error('当前操作已失效');
+     if(a.op==='confirm') this.confirm=true;
+@@ -36,3 +36,3 @@
+     else if(a.op==='new') {this.state=E.initial(a.variant);this.mode=a.mode;this.history=[];this.confirm=false;this.note='';}
+-    else if(a.op==='roll') {const rolled=[];this.state=E.roll(this.state,()=>{const d=die();rolled.push(d);return d;});this.note=this.state.opening?'Выпало '+rolled.join(' : ')+' · равенство, бросьте ещё раз':'';this.history=[];}
++    else if(a.op==='roll') {const rolled=[];this.state=E.roll(this.state,()=>{const d=die();rolled.push(d);return d;});this.note=this.state.opening?'点数 '+rolled.join(' : ')+' · 平手，请重掷':'';this.history=[];}
+     else if(a.op==='finish') {this.state=E.finish(this.state);this.history=[];}
+--- a/src/app.js
++++ b/src/app.js
+@@ -7,2 +7,5 @@
+ const DATA=path.join(__dirname,'..','..','data'), SAVE=path.join(DATA,'backgammon.json');
++const STATUS_ID = 'SID_BACKGAMMON_STATUS';
++const MOVE_ID_PREFIX = 'SID_BACKGAMMON_MOVE_';
++const MAX_MOVE_ROWS = 128;
+ function die(){let n;do{n=crypto.randomBytes(1)[0];}while(n>=252);return n%6+1;}
+@@ -23,3 +26,3 @@
+     }
+-    save(){try{if(!fs.existsSync(DATA))fs.mkdirSync(DATA);fs.writeFileSync(SAVE+'.tmp',JSON.stringify(this.game.snapshot()),{mode:0o600});fs.renameSync(SAVE+'.tmp',SAVE);this.saveError='';}catch(e){this.saveError='Не удалось сохранить партию';logger.warn(e.message);}}
++    save(){try{if(!fs.existsSync(DATA))fs.mkdirSync(DATA);fs.writeFileSync(SAVE+'.tmp',JSON.stringify(this.game.snapshot()),{mode:0o600});fs.renameSync(SAVE+'.tmp',SAVE);this.saveError='';}catch(e){this.saveError='保存棋局失败';logger.warn(e.message);}}
+     openGame(uuid){
+@@ -70,2 +73,3 @@
+         const r=this.rhmiApplication,s=this.game.state,rows=this.game.actions();
++        if (rows.length > MAX_MOVE_ROWS) throw new Error('合法走法超出显示行数');
+         if(!this.dir){
+@@ -85,7 +89,18 @@
+         this.rows=[];
++        const strings = {
++            [STATUS_ID]: this.game.status() + ' · 已移出 ' + s.off.join(' / ') +
++                (this.saveError ? ' · ' + this.saveError : ''),
++        };
++        const moveIds = rows.map((action, index) => {
++            const id = MOVE_ID_PREFIX + index;
++            strings[id] = action.label;
++            return id;
++        });
++        // 车机从字符串资源读取 Unicode 文本，行号和走棋操作仍由游戏逻辑管理。
+         return Promise.resolve(bundle.createResourceHandles([file]))
+             .then(()=>this.board.setValue(0,'Graphic',file,'ResourceId'))
+-            .then(()=>this.status.setValue(0,'Text',this.game.status()+' · снято '+s.off.join(' / ')+(this.saveError?' · '+this.saveError:''),'Text'))
+-            .then(()=>this.list.setRowCount(rows.length))
+-            .then(()=>Promise.all(rows.map((a,i)=>this.list.setValue(i,'Text',a.label,'Text'))))
++            .then(() => this.status.getStringBundle().setStrings(strings))
++            .then(() => this.status.setValue(0, 'Text', STATUS_ID, 'StringId'))
++            .then(() => this.list.setRowCount(rows.length))
++            .then(() => Promise.all(moveIds.map((id, row) => this.list.setValue(row, 'Text', id, 'StringId'))))
+             .then(()=>r.flush()).then(()=>{this.rows=rows;this.image=file;return old?this.retire(old):null;})

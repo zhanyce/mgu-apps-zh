@@ -521,7 +521,7 @@
       "title": "西洋双陆棋",
       "description": "选择长局或短局，进行本地双人或人机对局。",
       "author": "mistergahan",
-      "version": "0.1.103",
+      "version": "0.1.104",
       "build": "unit",
       "mguHmi": [
         "ID7"
@@ -532,10 +532,10 @@
       "uninstallable": true,
       "kind": "app",
       "artifact": {
-        "name": "dk_backgammon@0.1.103.tgz",
-        "url": "packages/dk_backgammon@0.1.103.tgz",
-        "size": 35502,
-        "sha256": "7ee20ea4f4332a7fc041e290437173bdc808e11da6d898aebb3d300655f3bd56"
+        "name": "dk_backgammon@0.1.104.tgz",
+        "url": "packages/dk_backgammon@0.1.104.tgz",
+        "size": 35782,
+        "sha256": "a23fa8a20e86d045d4ff1eeb1d7c555874d243dbf84244991f8fa17f8bf44abb"
       },
       "icon": "icons/dk_backgammon.png",
       "iconSha256": "5d658ccfa2060c91fa1bd3a294ab58dc82ea2efcf4f43b5d0ccc5fbb5570a724"
@@ -1857,7 +1857,7 @@
         "name": "idrive7-renderd@2.1.19.tgz",
         "size": 96247,
         "sha256": "49a7095cf26718e58ab73ed002cb5bce5bc58e7f1741a30204c0a4604995c866",
-        "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/idrive7-renderd%402.1.19.tgz"
+        "url": "packages/components/idrive7-renderd@2.1.19.tgz"
       }
     },
     {
@@ -1979,7 +1979,7 @@
         "name": "mgu-inputgate@1.2.1.tgz",
         "size": 8554,
         "sha256": "d424e6e7b63351579be3abe675886420f71cbad497c994ab0e6b2aa9583b224a",
-        "url": "https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/source-refresh-2026-11-20/mgu-inputgate%401.2.1.tgz"
+        "url": "packages/components/mgu-inputgate@1.2.1.tgz"
       }
     },
     {

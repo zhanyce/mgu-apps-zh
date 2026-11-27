@@ -23,11 +23,11 @@ https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json
 
 | 路径 | 内容 |
 | --- | --- |
-| [data/apps.json](data/apps.json) | 分类、中文名称与说明、原项目、对应源码、输入包和校验值 |
-| [translations/](translations/) | 以应用 ID 保存的设置项译文，重建时同步更新车机文字、运行时词典并检查中文字形 |
-| [data/tools.json](data/tools.json) | 运行组件、最低依赖版本和下载地址 |
+| [data/apps.json](data/apps.json) | 中文名称、原项目、上游版本和已验证的源码构建配置 |
+| [translations/](translations/) | 按应用 ID 保存的菜单译文、设置译文、字库和源码补丁 |
+| [data/tools.json](data/tools.json) | 运行组件、依赖、原项目提交及下载地址 |
 | [packages/](packages/) · [icons/](icons/) | 本源发布的中文安装包和应用图标 |
-| [tools/build.py](tools/build.py) | 校验输入包，整理界面资源，生成目录和应用索引 |
+| [tools/build.py](tools/build.py) | 构建已登记的源码项目，生成软件源目录并校验发行包 |
 
 使用 Python 3.9 或更高版本。校验已下载的仓库可离线执行。
 
@@ -35,14 +35,18 @@ https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json
 python3 tools/build.py check
 ```
 
-修改商店分类、标题或组件说明后，用 `python3 tools/build.py index` 更新索引。修订已有设置项时，可参照 [暖机助手译文](translations/warmup.json) 填写车机字符串 ID、英文原文、设置键和新译文。在清单的 `settingsRevision` 中记录设置项译文的修订日期。修改应用界面或包内元数据，需要递增对应应用的 `version` 并重建。首次重建通过 curl 下载校验值匹配的输入包，后续复用本地缓存。
+`rebuild` 构建带 `sourceBuild` 的应用和组件。它按原项目的完整 Git 提交下载源码归档，校验大小和 SHA-256，后续使用 `.cache` 中的同一份归档。未迁移的应用继续用 `packages/` 中的已发布版本。重建运行组件需要 Node.js，已使用 Node.js 22 验证。
 
 ```sh
 python3 tools/build.py rebuild
 python3 tools/build.py check
 ```
 
-菜单和运行时提示的修订保存在 [translations/menus/](translations/menus/)，按应用 ID 分文件维护。设置清单中的 `menuRevision` 为修订日期，并递增 `version`。构建时使用输入包自带的中文词典，再应用本源修订。已有简体中文包可在清单设置 `"menuMode": "patch"`，仅替换修订文件列出的词条。选项的显示名称和车机保存的设置值分别维护。
+单独重建西洋双陆棋可运行 `python3 tools/build.py rebuild --only dk_backgammon`。它使用原项目的 `mgu-app.json` 和源码，由本仓库的[译文与补丁](translations/source/)生成简体中文界面。`idrive7-renderd` 和 `mgu-inputgate` 使用原项目提交中的组件清单、预编译文件和 MGU Store 的标准组件打包工具，发布包的 SHA-256 与迁移前一致。
+
+需要 BMW `oap-sdk` 的应用按各原项目的构建流程验证后再迁移。SDK 只放在有授权的构建环境，公开软件源发布按 MGU Store 规范生成的可分发包。
+
+`upstreamVersion` 记录当前包对应的原项目版本，`version` 用于软件源更新。修改界面或包内元数据时递增 `version`。仅修改分类、标题或商店说明时，运行 `python3 tools/build.py index` 更新索引。
 
 格鲁吉亚限速提示、仪表主题和 HUD 小组件的[中文字库](translations/fonts/)使用 Noto Sans SC。两款仪表应用在原字库上补入时区名称所需的汉字。字体文件的 SHA-256 记录在字库的 `source` 字段，字体许可随字库和安装包提供。
 
@@ -50,8 +54,8 @@ python3 tools/build.py check
 
 ## 来源与许可
 
-暖机助手、制动测试等应用的中文安装包基于小白仓库发布的简体中文包整理。各应用的原项目和对应源码见应用目录。[小白仓库（MGU-CN-XIAOBAI）](https://github.com/JackieZ123430/MGU-CN-XIAOBAI) · [应用目录](APPS.md)
+新版本从各应用的原项目源码构建，译文由本仓库维护。暖机助手、制动测试等应用的历史发布包来自小白仓库的简体中文包。小白仓库供译文参考和历史来源核对。[小白仓库（MGU-CN-XIAOBAI）](https://github.com/JackieZ123430/MGU-CN-XIAOBAI) · [应用目录](APPS.md)
 
 本仓库原创的目录说明和构建工具使用 [MIT 许可证](LICENSE)。应用、字体和运行组件适用各自的许可证。中文界面沿用社区译文，界面和商店列表已移除翻译推广文字。作者信息、版权声明及第三方许可随包保留。[许可证目录](licenses/)
 
-每个重建包的 `SOURCE.json` 记录对应源码、修改说明、输入包地址和 SHA-256。Freedoom 所用 WebAssembly 引擎的对应源码和构建脚本也随仓库提供。[Doom 引擎源码](sources/doomgeneric.tar.gz)
+应用安装包内的 `SOURCE.json` 记录对应源码、构建或修改说明以及输入校验值。Freedoom 所用 WebAssembly 引擎的对应源码和构建脚本也随仓库提供。[Doom 引擎源码](sources/doomgeneric.tar.gz)

@@ -1,0 +1,9 @@
+{
+  "text": {
+    "SID_NARDY": "西洋双陆棋"
+  },
+  "dynamic": {
+    "SID_BACKGAMMON_STATUS": 1,
+    "SID_BACKGAMMON_MOVE_": 128
+  }
+}

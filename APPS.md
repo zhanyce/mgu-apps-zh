@@ -1,6 +1,6 @@
 # 应用目录
 
-软件源中的版本见下表。名称链接指向原项目，源码链接指向本版使用的源码或翻译修订。
+名称链接指向原项目。源码链接记录当前发行版对应的源码或历史翻译修订。
 
 ## 驾驶
 
@@ -84,7 +84,7 @@
 | --- | --- | --- | --- |
 | [车载歌词](https://github.com/arefahmad/idrive7-apps) | 根据当前播放的曲目获取并显示歌词。 | `0.5.703` | [源码](https://github.com/JackieZ123430/aref-idrive7-apps-cn/tree/31283f4035b7065904948699afc913d77c330fb6) |
 | [仪表歌词](https://github.com/NamelsMissing/mgu-apps) | 根据 Spotify 曲目获取同步歌词，在兼容仪表中显示。 | `0.1.402` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/five-cn-apps-2026-11-23/namels-source.zip) |
-| [西洋双陆棋](https://github.com/mistergahan/mgu-backgammon) | 选择长局或短局，进行本地双人或人机对局。 | `0.1.103` | [源码](https://github.com/JackieZ123430/MGU-CN-XIAOBAI/releases/download/zh-translation-credit-2026-11-23/mgu-id7-catalog-100-zh-source.zip) |
+| [西洋双陆棋](https://github.com/mistergahan/mgu-backgammon) | 选择长局或短局，进行本地双人或人机对局。 | `0.1.104` | [源码](https://github.com/mistergahan/mgu-backgammon/tree/24ceba2cdce04dcc31a48ec3590b2412784f7320) |
 | [Freedoom](https://github.com/cauliflowermossgrape/idrive7-apps) | 使用 iDrive 旋钮操控游戏，支持存档。 | `1.7.2202` | [源码](https://github.com/JackieZ123430/idrive7-apps-cn/tree/a148da8f1371b15f91b5a2ccdc34efe96f18e543) |
 | [GIF 首页组件](https://github.com/NamelsMissing/mgu-apps) | 将自选 GIF 动画显示在首页。 | `0.3.103` | [源码](https://github.com/JackieZ123430/namelsmissing-mgu-apps-cn/tree/659245da1b57fa0b44f06001513212d520dd6be0) |
 | [RideTube](https://github.com/JustAnotherPU/ridetube) | 浏览 YouTube 频道和视频，默认在驻车时显示画面。 | `0.4.503` | [源码](https://github.com/JackieZ123430/ridetube-cn/tree/6d19c89c85ac5b3be7cfe86c2f523f211607e434) |
