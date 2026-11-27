@@ -1,61 +1,57 @@
 # MGU 中文应用源
 
-面向 BMW iDrive 7 的免费 MGU Store 软件源。收录 73 款应用和 21 个运行组件，涵盖车辆仪表、诊断、座舱、导航与娱乐。可按用途浏览[应用目录](APPS.md)，每款应用都附原项目、源码和发行版本。
+面向 BMW iDrive 7 的免费 MGU Store 软件源。[应用目录](APPS.md)收录 73 款应用，其中 72 款可由 MGU Store 在车机上从源码构建。RAM 麦克风校准目前仅有历史安装包。
 
 ## 添加软件源
 
-在已安装的 MGU Store 中打开 **设置 → 添加软件源（Add source）**，输入以下完整地址，保存后刷新列表。
+在 MGU Store 打开 **设置 → 添加软件源（Add source）**，输入以下 GitHub 分支地址。
 
 ```text
-https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json
+https://github.com/zhanyce/mgu-apps-zh/tree/main
 ```
 
-例如，搜索「暖机助手」可找到机油和冷却液温度应用，搜索「泊车距离」可找到泊车雷达显示应用。安装界面会列出所需的组件。没有安装商店的车机，请先查阅 [MGU Store 项目说明](https://github.com/robertnisipeanu/mgu-store)。
+选择应用后，商店会读取该应用的源码。需要 BMW `oap-sdk` 时，商店会使用车机已有的 SDK，再构建和安装。安装需要车机能够访问 GitHub。
 
-## 兼容性与版本
+部分应用依赖渲染器、Python、媒体后台等运行组件。商店里缺少依赖时，可用同一个入口添加配套运行组件源。
 
-- 72 款中文应用标注为 ID7，MGU Store 本体沿用上游发布的 ID7 / ID8 包。HUD、柴油颗粒捕集器、空气悬架等功能还需要对应的车辆硬件。
-- 中文包保留应用 ID，并使用独立的三段版本号。已安装同 ID 应用时，请在商店中核对来源和版本。
-- Vizualyse 的车机前台使用简体中文，后台采用原项目发布的对应版本，手机管理页沿用上游语言。联网媒体服务沿用各自的账户与访问条件。
-- 已在电脑上验证目录、安装包结构、版本、依赖和 SHA-256。实车上的文字显示、控制器响应和车型适配仍需按配置验证。
+```text
+https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/runtime/catalog.json
+```
 
-## 维护目录和译文
+旧的 [catalog.json](https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json) 继续提供已发布的版本，包含 RAM 麦克风校准。后续应用更新发布到 GitHub 源码源。
+
+## 兼容性
+
+- 中文应用面向 ID7。MGU Store 本体沿用上游的 ID7 和 ID8 兼容范围。HUD、柴油颗粒捕集器、空气悬架等功能需要对应的车辆硬件。
+- 同一应用沿用既有应用 ID。安装或更新前可在 MGU Store 中核对来源与版本。
+- 浏览器和 Freedoom 首次构建需要下载原项目指定的文件，构建脚本会校验 SHA-256。部分后台服务及手机管理页沿用原项目语言。
+- 源码清单、构建输出和 MGU Store 打包格式已在电脑上验证。车机安装、运行和车型适配待实车验证。
+
+## 维护
 
 | 路径 | 内容 |
 | --- | --- |
-| [data/apps.json](data/apps.json) | 中文名称、原项目、上游版本和已验证的源码构建配置 |
-| [translations/](translations/) | 按应用 ID 保存的菜单译文、设置译文、字库和源码补丁 |
-| [data/tools.json](data/tools.json) | 运行组件、依赖、原项目提交及下载地址 |
-| [packages/](packages/) · [icons/](icons/) | 本源发布的中文安装包和应用图标 |
-| [tools/build.py](tools/build.py) | 构建已登记的源码项目，生成软件源目录并校验发行包 |
+| [mgu-repo.json](mgu-repo.json) | MGU Store 源码入口、构建方式和运行依赖 |
+| [sources/projects/](sources/projects/) | 按原项目归档的源码，`SOURCE.json` 记录原项目提交和归档 SHA-256 |
+| [sources/zh/](sources/zh/) | 共用简体中文词条和字库 |
+| 各应用的 `store-source.json` 或 `mgu-app.json` | 源码版本、中文译文或车机链接所需的模块 |
+| [runtime/catalog.json](runtime/catalog.json) | 配套运行组件的版本、下载地址和 SHA-256 |
+| [data/source-exceptions.json](data/source-exceptions.json) | 仅提供历史安装包的应用及原因 |
 
-使用 Python 3.9 或更高版本。校验已下载的仓库可离线执行。
-
-```sh
-python3 tools/build.py check
-```
-
-`rebuild` 构建带 `sourceBuild` 的应用和组件。它按原项目的完整 Git 提交下载源码归档，校验大小和 SHA-256，后续使用 `.cache` 中的同一份归档。未迁移的应用继续用 `packages/` 中的已发布版本。重建运行组件需要 Node.js，已使用 Node.js 22 验证。
+更新应用时固定到原项目的完整 Git 提交，维护中文界面用词，并核对它需要的运行组件。应用使用独立的三段版本号。更新源码或译文时提高相应版本，再更新目录和检查清单。
 
 ```sh
-python3 tools/build.py rebuild
+python3 tools/build.py index
 python3 tools/build.py check
+python3 tools/check_source_repo.py
 ```
 
-单独重建西洋双陆棋可运行 `python3 tools/build.py rebuild --only dk_backgammon`。它使用原项目的 `mgu-app.json` 和源码，由本仓库的[译文与补丁](translations/source/)生成简体中文界面。`idrive7-renderd` 和 `mgu-inputgate` 使用原项目提交中的组件清单、预编译文件和 MGU Store 的标准组件打包工具，发布包的 SHA-256 与迁移前一致。
-
-需要 BMW `oap-sdk` 的应用按各原项目的构建流程验证后再迁移。SDK 只放在有授权的构建环境，公开软件源发布按 MGU Store 规范生成的可分发包。
-
-`upstreamVersion` 记录当前包对应的原项目版本，`version` 用于软件源更新。修改界面或包内元数据时递增 `version`。仅修改分类、标题或商店说明时，运行 `python3 tools/build.py index` 更新索引。
-
-格鲁吉亚限速提示、仪表主题和 HUD 小组件的[中文字库](translations/fonts/)使用 Noto Sans SC。两款仪表应用在原字库上补入时区名称所需的汉字。字体文件的 SHA-256 记录在字库的 `source` 字段，字体许可随字库和安装包提供。
-
-欢迎提交新应用和译文修订。新增应用请附原项目、可再分发的许可证、对应源码、适用的 iDrive 版本及运行依赖。反馈中文显示问题时，请注明应用 ID、版本、界面位置与车机型号。
+欢迎提交新应用和译文修订。新增应用请附原项目、源码许可证、适用的 iDrive 版本和所需的运行组件。反馈显示问题时，请注明应用 ID、版本、界面位置和车机型号。
 
 ## 来源与许可
 
-新版本从各应用的原项目源码构建，译文由本仓库维护。暖机助手、制动测试等应用的历史发布包来自小白仓库的简体中文包。小白仓库供译文参考和历史来源核对。[小白仓库（MGU-CN-XIAOBAI）](https://github.com/JackieZ123430/MGU-CN-XIAOBAI) · [应用目录](APPS.md)
+应用从各原项目的源码构建，保留上游版权和许可证。已在原项目合入的社区译文与本仓库维护的译文一起使用。暖机助手和制动测试等历史安装包可追溯到小白仓库，该仓库也供历史来源核对。[小白仓库（MGU-CN-XIAOBAI）](https://github.com/JackieZ123430/MGU-CN-XIAOBAI)
 
-本仓库原创的目录说明和构建工具使用 [MIT 许可证](LICENSE)。应用、字体和运行组件适用各自的许可证。中文界面沿用社区译文，界面和商店列表已移除翻译推广文字。作者信息、版权声明及第三方许可随包保留。[许可证目录](licenses/)
+本仓库原创的目录说明和构建工具采用 MIT 许可证。应用、字体和运行组件适用各自的许可证。公开源码包含构建所需的代码、配置和可分发资源。BMW 原厂 SDK 由车机提供。[构建工具许可证](LICENSE) · [上游许可证目录](licenses/)
 
-应用安装包内的 `SOURCE.json` 记录对应源码、构建或修改说明以及输入校验值。Freedoom 所用 WebAssembly 引擎的对应源码和构建脚本也随仓库提供。[Doom 引擎源码](sources/doomgeneric.tar.gz)
+Freedoom 使用的 WebAssembly 引擎及其构建脚本对应的源码随仓库提供。[Doom 引擎源码](sources/doomgeneric.tar.gz)

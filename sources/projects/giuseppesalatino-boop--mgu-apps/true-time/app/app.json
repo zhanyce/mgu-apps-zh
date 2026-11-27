@@ -1,0 +1,121 @@
+{
+  "id": "true_time",
+  "title": "True Time",
+  "description": "Acceleration and braking times corrected for the road's slope (the DSC's acceleration sensor)",
+  "version": "1.0.0",
+  "vendor": "giuseppesalatino-boop",
+  "loggingId": "OAB7",
+  "iconGlyph": "flag",
+  "maxDiskUsage": 67108864,
+  "signals": {
+    "de.bmw.infotainment.vehicle.Vehicle2": {
+      "statusCarSpeed2": "rs"
+    },
+    "de.bmw.infotainment.vehicle.CDS2": {
+      "statusLongitudinalAccelerationMassCenter": "rs"
+    },
+    "de.bmw.chassis.VehicleModel": {
+      "_optional": "the car's own road gradient signal, shown raw on the Setup page for working it out",
+      "LaneSlope": "s"
+    }
+  },
+  "screens": [
+    {
+      "name": "MAIN",
+      "kind": "canvas",
+      "title": "True Time",
+      "buttons": [
+        [
+          "BTN_ARM",
+          "Arm"
+        ],
+        [
+          "BTN_PAGE",
+          "Next page"
+        ],
+        [
+          "BTN_SETTINGS",
+          "Settings"
+        ]
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "key": "theme",
+      "label": "Colour theme",
+      "type": "choice",
+      "default": "m_tricolour",
+      "options": [
+        [
+          "m_red",
+          "Racing Red"
+        ],
+        [
+          "m_tricolour",
+          "Tricolour"
+        ],
+        [
+          "ice",
+          "Ice White"
+        ],
+        [
+          "amber",
+          "Night Amber"
+        ]
+      ]
+    },
+    {
+      "key": "layout",
+      "label": "Screen layout",
+      "type": "choice",
+      "default": "full",
+      "options": [
+        [
+          "full",
+          "Full screen"
+        ],
+        [
+          "standard",
+          "Standard"
+        ]
+      ]
+    },
+    {
+      "key": "renderer",
+      "label": "Renderer",
+      "type": "choice",
+      "default": "auto",
+      "options": [
+        [
+          "auto",
+          "GPU 60 fps (default)"
+        ],
+        [
+          "software",
+          "Software"
+        ]
+      ]
+    },
+    {
+      "key": "demo",
+      "label": "Demo drive",
+      "type": "choice",
+      "default": "auto",
+      "options": [
+        [
+          "auto",
+          "Auto (until the car sends its speed)"
+        ],
+        [
+          "on",
+          "Always"
+        ],
+        [
+          "off",
+          "Never"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "aref_eta",
+  "version": "1.26.0",
+  "upstreamVersion": "1.26.0",
+  "title": "预计到达时间",
+  "description": "在车机组件查看 Apple Maps 的预计到达时间。",
+  "translations": {
+    "Crop it (the picture moves down and right a little)": "裁剪（图片向右下略微移动）",
+    "Music: crop the explicit badge corner (cover and backdrop)": "音乐：裁掉封面和背景上的露骨内容标记",
+    "Show the whole picture": "显示完整图片",
+    "Step aside while another app draws on the cluster (a cluster theme)": "其他应用在仪表绘制时暂停显示",
+    "ETA Bar": "预计到达时间"
+  },
+  "kit": "sources/projects/arefahmad--idrive7-apps",
+  "startType": "autostart"
+}

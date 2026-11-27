@@ -1,0 +1,11 @@
+{
+  "id": "draggy",
+  "version": "2.7.5",
+  "upstreamVersion": "2.7.5",
+  "title": "加速计时",
+  "description": "记录分段加速用时和四分之一英里成绩。",
+  "translations": {
+    "Drag Timer": "加速计时"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

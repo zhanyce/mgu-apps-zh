@@ -1,0 +1,30 @@
+{
+  "id": "adam_vitals",
+  "version": "0.2.4",
+  "upstreamVersion": "0.2.0",
+  "title": "动力仪表",
+  "description": "同时查看油温、变速箱温度、增压与挡位。",
+  "translations": {
+    "Auto (3500 rpm petrol)": "自动（汽油机 3500 rpm）",
+    "Auto (7000 rpm petrol)": "自动（汽油机 7000 rpm）",
+    "Auto (hide when not available)": "自动（无数据时隐藏）",
+    "Cool down": "冷却",
+    "Follow the car's display units": "跟随车辆显示单位",
+    "Hide (no gearbox reads)": "隐藏（不读取变速箱）",
+    "Hide warm-up": "隐藏暖机界面",
+    "Include transmission in warm-up": "暖机时计入变速箱温度",
+    "Main": "主页",
+    "Metric (bar, °C, kW, Nm)": "公制（bar、℃、kW、Nm）",
+    "Show warm-up screen when cold": "发动机冷态时显示暖机界面",
+    "Transmission is warm at": "变速箱暖机完成温度",
+    "Transmission temp (EGS)": "变速箱温度（EGS）",
+    "Turbo cool-down guidance": "涡轮冷却提示",
+    "US (psi, °F, hp, lb-ft)": "美制（psi、℉、hp、lb-ft）",
+    "Oil is warm at": "机油暖机目标温度",
+    "Coolant is warm at": "冷却液暖机目标温度",
+    "Boost from": "增压压力来源",
+    "Boost target vs actual": "目标与实际增压压力",
+    "Engine Vitals": "动力仪表"
+  },
+  "kit": "sources/projects/pinguinooo--idrive7-apps"
+}

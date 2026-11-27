@@ -1,0 +1,24 @@
+{
+  "id": "live_data",
+  "version": "1.2.1",
+  "upstreamVersion": "1.2.1",
+  "title": "实时数据",
+  "description": "从车辆信号中选择需要观察的数据。",
+  "translations": {
+    "Button": "按钮",
+    "Climate": "空调",
+    "Door": "车门",
+    "Light": "灯光",
+    "Mode": "模式",
+    "Other": "其他",
+    "Signal Hunter tab (developer)": "信号筛选选项卡（开发者）",
+    "Signal Hunter: label": "信号筛选：标签",
+    "Signal Hunter: play speed": "信号筛选：回放速度",
+    "Signal Hunter: show noisy values": "信号筛选：显示频繁变化的数值",
+    "Signal Hunter: window length": "信号筛选：时间窗口长度",
+    "Window": "车窗",
+    "Wiper": "雨刷",
+    "Live Data": "实时数据"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

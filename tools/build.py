@@ -536,13 +536,24 @@ def verify_package(app, entry):
 
 
 def directory(apps):
-    lines = ["# 应用目录", "", "名称链接指向原项目。源码链接记录当前发行版对应的源码或历史翻译修订。", ""]
+    entries = read_json(ROOT / "mgu-repo.json")["components"]
+    source = {entry["id"]: entry for entry in entries if entry["kind"] == "app"}
+    lines = ["# 应用目录", "", "应用名称指向原项目。版本列显示源码源中的版本。", ""]
     for group in ("驾驶", "诊断", "座舱", "出行", "娱乐", "系统"):
-        lines += ["## " + group, "", "| 应用 | 功能 | 版本 | 来源 |", "| --- | --- | --- | --- |"]
+        lines += ["## " + group, "", "| 应用 | 功能 | 版本 | 发布方式 |", "| --- | --- | --- | --- |"]
         for app in apps:
-            if app["category"] == group:
-                lines.append(f"| [{app['title']}]({app['project']}) | {app['description']} | "
-                             f"`{app['version']}` | [源码]({app['source']}) |")
+            if app["category"] != group:
+                continue
+            entry = source.get(app["id"])
+            if entry:
+                manifest = entry.get("manifest", "mgu-app.json")
+                version = read_json(ROOT / entry["path"] / manifest)["version"]
+                delivery = f"[车机从源码构建]({entry['path']}/)"
+            else:
+                version = app["version"]
+                delivery = "[历史安装包](data/source-exceptions.json)"
+            lines.append(f"| [{app['title']}]({app['project']}) | {app['description']} | "
+                         f"`{version}` | {delivery} |")
         lines.append("")
     return "\n".join(lines).encode()
 

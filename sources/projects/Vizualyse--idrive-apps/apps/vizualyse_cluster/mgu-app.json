@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "vizualyse_cluster",
+  "version": "0.3.103",
+  "tree": "vizualyse_cluster@0.3.1",
+  "modules": [
+    "src/vizualyse_cluster.js",
+    "src/cluster_control.js",
+    "src/touch_mode.js",
+    "src/vehicle_speed.js",
+    "src/vehicle_signals.js"
+  ],
+  "sdk": [
+    "oap-sdk/src/core/OnlineApp.js",
+    "oap-sdk/src/logging/logging",
+    "oap-sdk/src/someip/someipBuilders"
+  ]
+}

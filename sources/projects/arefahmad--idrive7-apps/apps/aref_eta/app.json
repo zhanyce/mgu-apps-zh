@@ -1,0 +1,691 @@
+{
+  "id": "aref_eta",
+  "title": "ETA Bar",
+  "description": "Apple Maps' arrival time, time left and distance on the instrument cluster while Apple Maps guides on CarPlay. Two presets: the bottom strip's blank space (black, smoked, outline or plain), or an island at the top that pops out of the driver attention camera like iPhone's Dynamic Island, once or every 10 s to 5 min. Updates with every route change. Starts with the car. Needs the Cluster renderer tool from the Store.",
+  "version": "1.26.0",
+  "vendor": "aref",
+  "loggingId": "OAR7",
+  "mguAppStartType": "autostart",
+  "startWidget": {
+    "comment": "Home-screen widget (kit/runtime/homewidget.js): the big size is a 384 x 256 picture main.js draws, the small size two text lines.",
+    "name": "ETA",
+    "layout": "LT_Table_OnlineApps_DriveRecorderWidget",
+    "image": "BackgroundImage1",
+    "size": [
+      384,
+      256
+    ],
+    "safe": [
+      0.09,
+      0.1
+    ],
+    "cells": {
+      "ErrorInfo": [
+        false,
+        "Bool"
+      ],
+      "background": [
+        true,
+        "Bool"
+      ],
+      "Title": [
+        "",
+        "Text"
+      ],
+      "ProgressbarVisible": [
+        false,
+        "Bool"
+      ],
+      "Progress": [
+        0,
+        "Float"
+      ],
+      "TextRecordings": [
+        "",
+        "Text"
+      ],
+      "TextCam": [
+        "",
+        "Text"
+      ],
+      "TimeElapsed": [
+        "",
+        "Text"
+      ],
+      "TimeRemaining": [
+        "",
+        "Text"
+      ]
+    }
+  },
+  "signals": {
+    "de.bmw.infotainment.navigation.projectedmodeguiding.ProjectedModeGuiding": {
+      "_instances": "Main_Instance",
+      "waypoints": "rs",
+      "currentRoad": "rs",
+      "activeRouteChange": "rs"
+    },
+    "de.bmw.infotainment.navigation.guiding.Guidance": {
+      "_instances": "Main_Instance",
+      "finalDestinationInfo": "rs",
+      "nextDestinationInfo": "rs",
+      "allDestinationsInfo": "rs",
+      "guidanceState": "rs",
+      "guidingProvider": "rs",
+      "currentRoad": "rs",
+      "travelledDistance": "rs",
+      "travelledTime": "rs"
+    },
+    "de.bmw.infotainment.a4a.carplay.CarPlayManager": "*",
+    "de.bmw.infotainment.navigation.navigationstatus.NavigationStatus": {
+      "_optional": "the street name under the island",
+      "currentLocation": "rs"
+    },
+    "de.bmw.infotainment.vehicle.CDS": {
+      "_optional": "oil and coolant temperature in the second slot",
+      "statusEngineTemperature": "rs"
+    },
+    "de.bmw.infotainment.vehicle.CDS2": {
+      "_optional": "g in the second slot",
+      "statusLongitudinalAccelerationMassCenter": "rs",
+      "statusLateralAccelerationMassCenter": "rs"
+    },
+    "de.bmw.infrastructure.VehicleInformation": {
+      "_optional": "the gear in the second slot",
+      "statusGearboxDrive": "s",
+      "DataPowerTrain2": "s"
+    },
+    "de.bmw.infotainment.misc.MDrive": {
+      "_optional": "the gearbox program (S / M) in the second slot",
+      "dataDisplayGearbox": "s"
+    },
+    "de.bmw.infotainment.entertainment.mediaplayer.MediaPlayer": "*",
+    "de.bmw.infotainment.hmi.hmimediastate.HmiMediaState": "*",
+    "de.bmw.infotainment.entertainment.dynamicmediaplayer.DynamicMediaPlayer": "*",
+    "de.bmw.infotainment.KombiInterface_2": {
+      "_optional": "hiding the ETA while BMW shows a Check Control message",
+      "newCCMessage": "rs"
+    },
+    "de.bmw.infotainment.drivingexcitement.FES": {
+      "_optional": "the drive mode: ETA Bar steps aside at once in a mode where another app's cluster theme shows",
+      "statusFESVehicleDynamicSwitchHMI": "rs"
+    }
+  },
+  "screens": [
+    {
+      "name": "MAIN",
+      "kind": "canvas",
+      "title": "ETA Bar",
+      "buttons": [
+        [
+          "BTN_TOGGLE",
+          "Turn ETA off"
+        ],
+        [
+          "BTN_PREVIEW",
+          "Preview"
+        ],
+        [
+          "BTN_UP",
+          "Up"
+        ],
+        [
+          "BTN_DOWN",
+          "Down"
+        ],
+        [
+          "BTN_LEFT",
+          "Left"
+        ],
+        [
+          "BTN_RIGHT",
+          "Right"
+        ],
+        [
+          "BTN_BIGGER",
+          "Bigger"
+        ],
+        [
+          "BTN_SMALLER",
+          "Smaller"
+        ],
+        [
+          "BTN_RESET",
+          "Reset"
+        ],
+        [
+          "BTN_TARGET",
+          "Moving: ETA"
+        ],
+        [
+          "BTN_MORE",
+          "Diagnostics"
+        ],
+        [
+          "BTN_SETTINGS",
+          "Settings"
+        ]
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "key": "preset",
+      "label": "Where",
+      "type": "choice",
+      "default": "bottom",
+      "options": [
+        [
+          "bottom",
+          "Bottom strip (BMW's music / trip widgets come back between showings)"
+        ],
+        [
+          "island",
+          "Island at the top (on the cluster map; keeps BMW's widgets)"
+        ]
+      ]
+    },
+    {
+      "key": "island_every",
+      "label": "How often it shows",
+      "type": "choice",
+      "default": "stay",
+      "options": [
+        [
+          "stay",
+          "Always (the whole route)"
+        ],
+        [
+          "10",
+          "Every 10 seconds"
+        ],
+        [
+          "30",
+          "Every 30 seconds"
+        ],
+        [
+          "60",
+          "Every minute"
+        ],
+        [
+          "300",
+          "Every 5 minutes"
+        ],
+        [
+          "change",
+          "When the arrival time changes"
+        ]
+      ]
+    },
+    {
+      "key": "street",
+      "label": "Street name at the bottom (island; hides BMW's music / trip widgets)",
+      "type": "bool",
+      "default": false
+    },
+    {
+      "key": "look",
+      "label": "Look",
+      "type": "choice",
+      "default": "black",
+      "options": [
+        [
+          "black",
+          "Black"
+        ],
+        [
+          "glass",
+          "Glass (Apple dark glass)"
+        ],
+        [
+          "smoked",
+          "Smoked (see-through)"
+        ],
+        [
+          "outline",
+          "Outline"
+        ],
+        [
+          "plain",
+          "Plain text"
+        ]
+      ]
+    },
+    {
+      "key": "font",
+      "label": "Font",
+      "type": "choice",
+      "default": "apple",
+      "options": [
+        [
+          "apple",
+          "Apple (Inter)"
+        ],
+        [
+          "bmw",
+          "BMW style (Barlow)"
+        ]
+      ]
+    },
+    {
+      "key": "layout",
+      "label": "Layout",
+      "type": "choice",
+      "default": "row",
+      "options": [
+        [
+          "row",
+          "One row"
+        ],
+        [
+          "stacked",
+          "Stacked (Apple Maps card)"
+        ]
+      ]
+    },
+    {
+      "key": "second_slot",
+      "label": "Second slot (right gauge, replaces BMW's widget)",
+      "type": "choice",
+      "default": "off",
+      "options": [
+        [
+          "off",
+          "Off"
+        ],
+        [
+          "engine",
+          "Oil temp + gear"
+        ],
+        [
+          "temps",
+          "Oil + coolant temp"
+        ],
+        [
+          "g",
+          "G-force"
+        ],
+        [
+          "clock",
+          "Clock"
+        ],
+        [
+          "music",
+          "Now playing + album cover"
+        ]
+      ]
+    },
+    {
+      "key": "music_cover_size",
+      "label": "Music: cover size",
+      "type": "choice",
+      "default": "medium",
+      "options": [
+        [
+          "small",
+          "Small"
+        ],
+        [
+          "medium",
+          "Medium"
+        ],
+        [
+          "large",
+          "Large"
+        ],
+        [
+          "xl",
+          "Extra large"
+        ]
+      ]
+    },
+    {
+      "key": "music_bar",
+      "label": "Music: progress bar length",
+      "type": "choice",
+      "default": "medium",
+      "options": [
+        [
+          "short",
+          "Short"
+        ],
+        [
+          "medium",
+          "Medium"
+        ],
+        [
+          "long",
+          "Long"
+        ],
+        [
+          "full",
+          "Full width"
+        ]
+      ]
+    },
+    {
+      "key": "music_bar_thick",
+      "label": "Music: progress bar thickness",
+      "type": "choice",
+      "default": "thin",
+      "options": [
+        [
+          "thin",
+          "Thin"
+        ],
+        [
+          "medium",
+          "Medium"
+        ],
+        [
+          "thick",
+          "Thick (like BMW's)"
+        ]
+      ]
+    },
+    {
+      "key": "music_time",
+      "label": "Music: time left",
+      "type": "choice",
+      "default": "right",
+      "options": [
+        [
+          "right",
+          "Right of the bar"
+        ],
+        [
+          "above",
+          "Above the bar's end (like BMW's)"
+        ]
+      ]
+    },
+    {
+      "key": "music_bar_back",
+      "label": "Music: soft black behind the bar",
+      "type": "bool",
+      "default": false
+    },
+    {
+      "key": "music_text_back",
+      "label": "Music: soft black behind the cover and names",
+      "type": "bool",
+      "default": false
+    },
+    {
+      "key": "music_shape",
+      "label": "Music backdrop shape",
+      "type": "choice",
+      "default": "bmw",
+      "options": [
+        [
+          "bmw",
+          "BMW (like the stock widget)"
+        ],
+        [
+          "full",
+          "Full gauge"
+        ],
+        [
+          "circle",
+          "Circle"
+        ],
+        [
+          "half",
+          "Half (D shape)"
+        ],
+        [
+          "diamond",
+          "Diamond"
+        ],
+        [
+          "heart",
+          "Heart"
+        ],
+        [
+          "square",
+          "Square"
+        ],
+        [
+          "off",
+          "No backdrop"
+        ]
+      ]
+    },
+    {
+      "key": "music_edge_top",
+      "label": "Music backdrop: top edge",
+      "type": "choice",
+      "default": "soft",
+      "options": [
+        [
+          "sharp",
+          "Sharp"
+        ],
+        [
+          "soft",
+          "Soft"
+        ],
+        [
+          "softer",
+          "Softer"
+        ],
+        [
+          "fade",
+          "Fade (gradient)"
+        ],
+        [
+          "long",
+          "Long fade"
+        ]
+      ]
+    },
+    {
+      "key": "music_edge_bottom",
+      "label": "Music backdrop: bottom edge",
+      "type": "choice",
+      "default": "fade",
+      "options": [
+        [
+          "sharp",
+          "Sharp"
+        ],
+        [
+          "soft",
+          "Soft"
+        ],
+        [
+          "softer",
+          "Softer"
+        ],
+        [
+          "fade",
+          "Fade (gradient)"
+        ],
+        [
+          "long",
+          "Long fade"
+        ]
+      ]
+    },
+    {
+      "key": "music_edge_left",
+      "label": "Music backdrop: left edge",
+      "type": "choice",
+      "default": "soft",
+      "options": [
+        [
+          "sharp",
+          "Sharp"
+        ],
+        [
+          "soft",
+          "Soft"
+        ],
+        [
+          "softer",
+          "Softer"
+        ],
+        [
+          "fade",
+          "Fade (gradient)"
+        ],
+        [
+          "long",
+          "Long fade"
+        ]
+      ]
+    },
+    {
+      "key": "music_edge_right",
+      "label": "Music backdrop: right edge",
+      "type": "choice",
+      "default": "soft",
+      "options": [
+        [
+          "sharp",
+          "Sharp"
+        ],
+        [
+          "soft",
+          "Soft"
+        ],
+        [
+          "softer",
+          "Softer"
+        ],
+        [
+          "fade",
+          "Fade (gradient)"
+        ],
+        [
+          "long",
+          "Long fade"
+        ]
+      ]
+    },
+    {
+      "key": "music_opacity",
+      "label": "Music backdrop opacity",
+      "type": "choice",
+      "default": "100",
+      "options": [
+        [
+          "100",
+          "100 %"
+        ],
+        [
+          "80",
+          "80 %"
+        ],
+        [
+          "60",
+          "60 %"
+        ],
+        [
+          "40",
+          "40 %"
+        ]
+      ]
+    },
+    {
+      "key": "music_blur",
+      "label": "Music backdrop blur",
+      "type": "choice",
+      "default": "medium",
+      "options": [
+        [
+          "none",
+          "None (the cover, dimmed)"
+        ],
+        [
+          "soft",
+          "Soft"
+        ],
+        [
+          "medium",
+          "Medium"
+        ],
+        [
+          "strong",
+          "Strong"
+        ]
+      ]
+    },
+    {
+      "key": "music_crop",
+      "label": "Music: crop the explicit badge corner (cover and backdrop)",
+      "type": "choice",
+      "default": "badge",
+      "options": [
+        [
+          "badge",
+          "Crop it (the picture moves down and right a little)"
+        ],
+        [
+          "none",
+          "Show the whole picture"
+        ]
+      ]
+    },
+    {
+      "key": "show_arrival",
+      "label": "Show arrival time",
+      "type": "bool",
+      "default": true
+    },
+    {
+      "key": "show_minutes",
+      "label": "Show time left",
+      "type": "bool",
+      "default": true
+    },
+    {
+      "key": "show_distance",
+      "label": "Show distance left",
+      "type": "bool",
+      "default": true
+    },
+    {
+      "key": "traffic",
+      "label": "Traffic colours on time left",
+      "type": "bool",
+      "default": true
+    },
+    {
+      "key": "ampm",
+      "label": "Show AM / PM",
+      "type": "bool",
+      "default": false
+    },
+    {
+      "key": "probe_log",
+      "label": "Save every guidance value to eta-probe.log (diagnostics)",
+      "type": "bool",
+      "default": false
+    },
+    {
+      "key": "design",
+      "label": "Cluster design from Cluster Studio (homelab /cluster page)",
+      "type": "bool",
+      "default": true
+    },
+    {
+      "key": "yield_to_apps",
+      "label": "Step aside while another app draws on the cluster (a cluster theme)",
+      "type": "bool",
+      "default": true
+    }
+  ],
+  "repoCredit": false,
+  "retiredSettings": [
+    "theme"
+  ],
+  "share": [
+    "aref_carlyrics/car/nowplaying.js",
+    "aref_carlyrics/art/artwork.js",
+    "aref_carlyrics/stage/lyrics.js",
+    "aref_carlyrics/vendor/jpeg_decoder.js",
+    "aref_carlyrics/net/http.js"
+  ],
+  "internet": true
+}

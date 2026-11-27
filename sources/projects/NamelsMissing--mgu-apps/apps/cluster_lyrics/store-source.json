@@ -1,0 +1,32 @@
+{
+  "id": "cluster_lyrics",
+  "version": "0.1.403",
+  "upstreamVersion": "0.1.5",
+  "title": "仪表歌词",
+  "description": "根据 Spotify 曲目获取同步歌词，在兼容仪表中显示。",
+  "translations": {
+    "Also replace BMW's own map (not only Waze)": "同时替换 BMW 原厂地图",
+    "Also while driving": "行驶时也显示",
+    "Amber": "琥珀色",
+    "Autostart KOMBI lyrics when iDrive starts": "随 iDrive 启动仪表歌词",
+    "Blue": "蓝色",
+    "Colour of the current line": "当前歌词行颜色",
+    "Green": "绿色",
+    "KOMBI display: lyrics only or together with Waze": "仪表显示：仅歌词或叠加 Waze",
+    "KOMBI lyrics font size": "仪表歌词字号",
+    "KOMBI lyrics: Off": "仪表歌词：关闭",
+    "Lyrics + Waze map (transparent overlay)": "歌词加 Waze 地图（透明叠加）",
+    "Lyrics delay": "歌词延迟",
+    "Lyrics only (replace map)": "仅歌词（替换地图）",
+    "Only at a standstill": "仅驻车时",
+    "Reload lyrics": "重新加载歌词",
+    "Setup": "设置",
+    "Show lyrics in the instrument cluster (works without the menu)": "在仪表显示歌词（退出菜单后可继续显示）",
+    "Show the next line": "显示下一句",
+    "When lyrics may be shown": "歌词显示时机",
+    "White": "白色",
+    "Cluster Lyrics": "仪表歌词"
+  },
+  "kit": "sources/projects/NamelsMissing--mgu-apps",
+  "startType": "autostart"
+}

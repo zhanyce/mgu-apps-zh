@@ -1,0 +1,11 @@
+{
+  "id": "xiaobai_sys_monitor",
+  "version": "1.0.807",
+  "upstreamVersion": "1.0.9",
+  "title": "系统监视器",
+  "description": "显示 CPU、内存、温度和进程信息。",
+  "translations": {
+    "System Monitor": "系统监视器"
+  },
+  "kit": "sources/projects/hexlay--idrive7-system-monitor"
+}

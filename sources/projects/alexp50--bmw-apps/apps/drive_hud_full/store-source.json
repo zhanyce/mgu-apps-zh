@@ -1,0 +1,22 @@
+{
+  "id": "drive_hud_full",
+  "version": "0.1.604",
+  "upstreamVersion": "0.1.6",
+  "title": "HUD 显示设置",
+  "description": "配置抬头显示中的导航提示、挡位与暖机信息。",
+  "translations": {
+    "Added HUD brightness": "HUD 附加亮度",
+    "Coolant warm at": "冷却液暖机完成温度",
+    "Dashboard settings": "仪表设置",
+    "Engine redline": "发动机转速红线",
+    "Engine warm-up": "发动机暖机",
+    "Lane-change arrow hold": "变道箭头显示时长",
+    "Shift-light point": "换挡提示转速",
+    "Sport gear and RPM": "运动模式挡位与转速",
+    "Test / Learn neutral": "测试／学习空挡",
+    "Toggle HUD": "切换 HUD 显示",
+    "Turn arrows": "转向箭头",
+    "Drive HUD": "HUD 显示设置"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

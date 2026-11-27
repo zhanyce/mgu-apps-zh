@@ -1,0 +1,21 @@
+{
+  "id": "ambient_config",
+  "version": "2.8.2",
+  "upstreamVersion": "2.8.2",
+  "title": "氛围灯设置",
+  "description": "按驾驶模式选择车内氛围灯颜色和效果。",
+  "translations": {
+    "Decor lights (dash, under the door trim) with": "饰灯联动（仪表台及车门饰板下方）",
+    "Lower lights (like BMW)": "下方灯带（原厂方式）",
+    "Off by day (on when the car switches to night)": "白天关闭，车辆进入夜间模式时开启",
+    "Stealth minutes": "驻车熄灯时长",
+    "Stealth: headlights dark while parked (only for use on private property)": "驻车时熄灭前照灯（仅限私人场地）",
+    "Turn glow and door red on both strips of a door line (G26: slower blink)": "车门两条灯带同时显示转向和红色警示（G26 闪烁较慢）",
+    "Upper lights": "上方灯带",
+    "1 min": "1 分钟",
+    "10 min": "10 分钟",
+    "5 min": "5 分钟",
+    "Ambient config": "氛围灯设置"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

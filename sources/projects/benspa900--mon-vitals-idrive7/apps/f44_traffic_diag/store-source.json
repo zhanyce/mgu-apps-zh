@@ -1,0 +1,13 @@
+{
+  "id": "f44_traffic_diag",
+  "version": "0.1.4",
+  "upstreamVersion": "0.1.0",
+  "title": "F44 交通标志诊断",
+  "description": "检查本车交通标志和信号灯识别接口。",
+  "translations": {
+    "Actualiser": "刷新",
+    "Suivant": "下一项",
+    "Diagnostic panneaux F44": "F44 交通标志诊断"
+  },
+  "kit": "sources/projects/benspa900--mon-vitals-idrive7"
+}

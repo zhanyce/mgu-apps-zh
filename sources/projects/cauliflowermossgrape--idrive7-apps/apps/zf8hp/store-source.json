@@ -1,0 +1,11 @@
+{
+  "id": "zf8hp",
+  "version": "1.5.803",
+  "upstreamVersion": "1.5.13",
+  "title": "ZF 8HP 变速箱",
+  "description": "查看兼容 8HP 变速箱的数据与可用设置。",
+  "translations": {
+    "Transmission Config": "ZF 8HP 变速箱"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

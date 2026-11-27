@@ -1,0 +1,15 @@
+{
+  "id": "aref_carcare",
+  "version": "0.2.305",
+  "upstreamVersion": "0.2.3",
+  "title": "养护记录",
+  "description": "记录车辆养护项目和周期，在首页查看提醒。",
+  "translations": {
+    "12 months": "12 个月",
+    "24 months": "24 个月",
+    "36 months": "36 个月",
+    "6 months": "6 个月",
+    "Car Care": "养护记录"
+  },
+  "kit": "sources/projects/arefahmad--idrive7-apps"
+}

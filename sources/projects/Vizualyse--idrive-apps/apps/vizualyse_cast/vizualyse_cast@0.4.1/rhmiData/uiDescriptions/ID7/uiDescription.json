@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "1.3.0",
+  "containers": {
+    "1": {
+      "type": "state",
+      "name": "ST_OnlineApps_VizualyseCast",
+      "components": {
+        "10": {
+          "type": "title",
+          "name": "castTitle",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "SID_CAST_TITLE",
+                "type": "StringId"
+              }
+            }
+          ]
+        },
+        "20": {
+          "type": "label",
+          "name": "castStatus",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 0,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Connecting...",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "21": {
+          "type": "label",
+          "name": "castQr",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 0,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {}
+          ]
+        },
+        "22": {
+          "type": "label",
+          "name": "castLink",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 0,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "23": {
+          "type": "label",
+          "name": "castHint",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 0,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Scan with the phone whose hotspot the car is on",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "30": {
+          "type": "button",
+          "name": "castStop",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Stop",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "31": {
+          "type": "button",
+          "name": "castMap",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Play last on the cluster map",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "32": {
+          "type": "button",
+          "name": "castHud",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Play last on the HUD",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "33": {
+          "type": "button",
+          "name": "castConsole",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Play last on this screen",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "34": {
+          "type": "button",
+          "name": "castQrToggle",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "QR code on the cluster: off",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "35": {
+          "type": "button",
+          "name": "castEnable",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Cast to cluster: on",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "36": {
+          "type": "button",
+          "name": "castCarplayMap",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay map on the cluster",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "37": {
+          "type": "button",
+          "name": "castCarplayHud",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay map on the HUD",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "38": {
+          "type": "button",
+          "name": "castCarplayOn",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay second screen: off",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "39": {
+          "type": "button",
+          "name": "castCarplayDirections",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay directions card: on",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "40": {
+          "type": "label",
+          "name": "castInfo",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 0,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "41": {
+          "type": "button",
+          "name": "castCarplayCentre",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay: centre the map: on",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "42": {
+          "type": "button",
+          "name": "castCarplayHudAlt",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay HUD alternate mode: off",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "43": {
+          "type": "button",
+          "name": "castCarplayEta",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay time / distance card: on",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "44": {
+          "type": "button",
+          "name": "castCarplayZoomIn",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay map: zoom in",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "45": {
+          "type": "button",
+          "name": "castCarplayZoomOut",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "CarPlay map: zoom out",
+                "type": "Text"
+              }
+            }
+          ]
+        },
+        "46": {
+          "type": "button",
+          "name": "castTouch",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 3,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "Touch screen",
+                "type": "Text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "2": {
+      "type": "state",
+      "name": "ST_OnlineApps_VizualyseCastScreen",
+      "components": {
+        "50": {
+          "type": "title",
+          "name": "castScreenTitle",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "SID_CAST_TITLE",
+                "type": "StringId"
+              }
+            }
+          ]
+        },
+        "51": {
+          "type": "label",
+          "name": "castScreenNote",
+          "properties": {
+            "Visible": {
+              "value": 1,
+              "type": "UInt"
+            },
+            "Focusable": {
+              "value": 0,
+              "type": "UInt"
+            }
+          },
+          "rows": [
+            {
+              "Text": {
+                "value": "The touch screen is up. List (top right) or Back shows the list.",
+                "type": "Text"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

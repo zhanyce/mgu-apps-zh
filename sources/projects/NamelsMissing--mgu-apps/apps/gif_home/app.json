@@ -1,0 +1,125 @@
+{
+  "id": "gif_home",
+  "title": "GIF Home",
+  "description": "Animated BMW home widget with a local phone GIF library, groups and playlists.",
+  "version": "0.4.0",
+  "maxDiskUsage": 125829120,
+  "vendor": "custom",
+  "loggingId": "GFI1",
+  "iconGlyph": "GIF",
+  "signals": {},
+  "startWidget": {
+    "name": "GIF Home",
+    "layout": "LT_Table_OnlineApps_DriveRecorderWidget",
+    "image": "BackgroundImage1",
+    "size": [384, 256],
+    "safe": [0.07, 0.07],
+    "cells": {
+      "Title": ["", "Text"],
+      "ErrorInfo": [false, "Bool"],
+      "background": [false, "Bool"],
+      "ProgressbarVisible": [false, "Bool"],
+      "TextRecordings": ["", "Text"],
+      "TextCam": ["", "Text"],
+      "TimeElapsed": ["", "Text"],
+      "TimeRemaining": ["", "Text"]
+    }
+  },
+  "screens": [
+    {
+      "name": "MAIN",
+      "kind": "canvas",
+      "title": "GIF Home",
+      "buttons": [
+        ["BTN_PAGE", "Page"],
+        ["BTN_NEXT", "Next item / IP"],
+        ["BTN_SELECT", "Select"],
+        ["BTN_PHONE", "Phone"],
+        ["BTN_DIAG", "Diagnostics"],
+        ["BTN_SETTINGS", "Settings"]
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "key": "renderer",
+      "label": "App display mode",
+      "type": "choice",
+      "default": "software",
+      "options": [
+        ["software", "Native BMW display (recommended)"],
+        ["auto", "GPU renderer (experimental)"]
+      ]
+    },
+    {
+      "key": "source",
+      "hidden": true,
+      "label": "Animation",
+      "type": "choice",
+      "default": "auto",
+      "options": [
+        ["auto", "Custom if available"],
+        ["demo", "Animated BMW logo"],
+        ["drift", "Pixel drift: Night City BMW"],
+        ["sunset", "Pixel drive: Sunset"],
+        ["garage", "Pixel art: Neon Garage"],
+        ["tunnel", "Pixel art: Midnight Run"],
+        ["custom", "Custom GIF only"]
+      ]
+    },
+    {
+      "key": "fit",
+      "label": "Picture fit",
+      "type": "choice",
+      "default": "contain",
+      "options": [
+        ["cover", "Fill / crop edges"],
+        ["contain", "Full picture / bars"]
+      ]
+    },
+    {
+      "key": "speed",
+      "label": "Animation speed",
+      "type": "choice",
+      "default": "normal",
+      "options": [
+        ["slow", "Half speed"],
+        ["normal", "Normal"],
+        ["fast", "1.5x speed"]
+      ]
+    },
+    {
+      "key": "widgetFps",
+      "label": "Widget refresh rate",
+      "type": "number",
+      "unit": "fps",
+      "default": 4,
+      "steps": [1, 2, 3, 4, 5, 6]
+    },
+    {
+      "key": "widgetBackground",
+      "label": "Native widget background",
+      "type": "bool",
+      "default": false
+    },
+    {
+      "key": "widgetTone",
+      "label": "Home widget brightness",
+      "type": "choice",
+      "default": "neutral",
+      "options": [
+        ["original", "Original GIF colours"],
+        ["balanced", "Legacy brightness compensation"],
+        ["strong", "Extended edge compensation"],
+        ["neutral", "Original colours, native background off"]
+      ]
+    },
+    {
+      "key": "pause",
+      "hidden": true,
+      "label": "Pause animation",
+      "type": "bool",
+      "default": false
+    }
+  ]
+}

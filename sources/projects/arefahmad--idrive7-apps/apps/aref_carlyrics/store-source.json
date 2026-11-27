@@ -1,0 +1,13 @@
+{
+  "id": "aref_carlyrics",
+  "version": "0.8.1",
+  "upstreamVersion": "0.8.1",
+  "title": "车载歌词",
+  "description": "根据当前播放的曲目获取并显示歌词。",
+  "translations": {
+    "Full screen: hide BMW's top bar (clock, signal, profile)": "全屏：隐藏 BMW 顶栏（时钟、信号、用户）",
+    "Light up the words as they're sung (like Apple Music)": "随演唱逐字高亮（类似 Apple Music）",
+    "Car Lyrics": "车载歌词"
+  },
+  "kit": "sources/projects/arefahmad--idrive7-apps"
+}

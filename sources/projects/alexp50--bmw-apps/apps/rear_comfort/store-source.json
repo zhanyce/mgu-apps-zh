@@ -1,0 +1,14 @@
+{
+  "id": "rear_comfort",
+  "version": "0.5.604",
+  "upstreamVersion": "0.5.6",
+  "title": "后排舒适控制",
+  "description": "操作兼容 G12 后排座椅、空调与遮阳设备。",
+  "translations": {
+    "Activate": "启用",
+    "Overview": "概览",
+    "Next control": "下一项控制",
+    "Rear Comfort": "后排舒适控制"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

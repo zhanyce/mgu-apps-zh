@@ -1,0 +1,11 @@
+{
+  "id": "dimon_battery",
+  "version": "1.0.4",
+  "upstreamVersion": "1.0.0",
+  "title": "12 V 电池",
+  "description": "查看低压电池的电压、电流、温度与荷电状态。",
+  "translations": {
+    "Battery & Electrical": "12 V 电池"
+  },
+  "kit": "sources/projects/DimonPrograms--dimonprograms-apps"
+}

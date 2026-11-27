@@ -1,0 +1,11 @@
+{
+  "id": "live_adjustments",
+  "version": "0.9.1003",
+  "upstreamVersion": "0.9.16",
+  "title": "发动机配置",
+  "description": "查看并调整兼容发动机标定提供的参数。",
+  "translations": {
+    "Engine Config": "发动机配置"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "vehicle_network",
+  "version": "0.1.304",
+  "upstreamVersion": "0.1.3",
+  "title": "车载网络",
+  "description": "查看车机网络接口、车辆网络设备和 IPv4 配置。",
+  "translations": {
+    "More rows": "更多行",
+    "Next section": "下一节",
+    "Refresh now": "立即刷新",
+    "Vehicle Network": "车载网络"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "dyno",
+  "version": "1.6.303",
+  "upstreamVersion": "1.6.8",
+  "title": "虚拟马力机",
+  "description": "根据行驶数据估算功率和扭矩，绘制输出曲线。",
+  "translations": {
+    "Virtual Dyno": "虚拟马力机"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

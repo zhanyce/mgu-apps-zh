@@ -1,0 +1,21 @@
+{
+  "id": "gforce",
+  "version": "1.7.1",
+  "upstreamVersion": "1.7.1",
+  "title": "加速度仪",
+  "description": "显示纵向和横向加速度，记录峰值。",
+  "translations": {
+    "Back to start": "返回起点",
+    "Hard stop from": "急刹开始时的车速",
+    "Most power seen": "记录的最高功率",
+    "Play / Pause": "播放／暂停",
+    "Record every Sport stretch": "记录每段运动模式行程",
+    "Recordings kept": "保留的记录数",
+    "Replay speed": "回放速度",
+    "Save at full power": "达到满功率时保存",
+    "Save on a hard stop": "急刹时保存",
+    "Save the last minute": "保存最近一分钟",
+    "G-Force": "加速度仪"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

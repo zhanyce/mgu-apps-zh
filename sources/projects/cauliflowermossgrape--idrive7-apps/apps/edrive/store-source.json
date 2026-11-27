@@ -1,0 +1,11 @@
+{
+  "id": "edrive",
+  "version": "2.11.7",
+  "upstreamVersion": "2.11.7",
+  "title": "eDrive 仪表",
+  "description": "查看电驱系统、动力电池和能量流数据。",
+  "translations": {
+    "eDrive": "eDrive 仪表"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

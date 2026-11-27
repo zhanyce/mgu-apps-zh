@@ -1,0 +1,358 @@
+{
+  "id": "idv7lol",
+  "title": "idv7lol",
+  "description": "Your own layout on the whole instrument cluster: themes made with idv7lol Studio, drawn by the cluster itself",
+  "version": "0.2.27",
+  "startType": "autostart",
+  "vendor": "custom",
+  "license": "GPL-3.0-or-later",
+  "loggingId": "IDV7",
+  "iconGlyph": "gauge",
+  "signals": {
+    "de.bmw.infotainment.vehicle.CDS": {
+      "statusEngineSpeed2": "rs",
+      "statusEngineTemperature": "rs",
+      "statusHandBrake": "rs"
+    },
+    "de.bmw.infotainment.vehicle.CDS2": {
+      "statusLongitudinalAccelerationMassCenter": "rs",
+      "statusLateralAccelerationMassCenter": "rs",
+      "statusInjectionVolume": "rs"
+    },
+    "de.bmw.infotainment.vehicle.Vehicle2": {
+      "statusCarSpeed2": "rs",
+      "statusStandstillFunctions": "rs"
+    },
+    "de.bmw.infotainment.drivingexcitement.FES": {
+      "statusSwitchDriveDynamicSport2": "rs",
+      "statusActualValueTorque2": "rs",
+      "statusFESVehicleDynamicSwitchHMI": "rs",
+      "statusDSCSwitchHMI": "rs"
+    },
+    "de.bmw.infrastructure.EnvironmentalInformation": {
+      "ExteriorTemperature": "s"
+    },
+    "de.bmw.infotainment.misc.MDrive": {
+      "_optional": "the gearbox S / M programme (cars without an M/S selector show D) and an M car's engine mode",
+      "dataDisplayGearbox": "s",
+      "controlDisplayMSystems": "rs"
+    },
+    "de.bmw.infrastructure.VehicleInformation": {
+      "statusGearboxDrive": "s",
+      "DataPowerTrain2": "s"
+    },
+    "de.bmw.infrastructure.analytics.BasicDataSet": {
+      "_optional": "gearbox oil temperature",
+      "basicDataSet": "s"
+    },
+    "de.bmw.infrastructure.VehicleCondition": {
+      "_optional": "the car's state, so the engine unit is asked for the fuel percentage only while the car is on",
+      "VehicleCondition": "s"
+    },
+    "de.bmw.infotainment.KombiIF": {
+      "_optional": "the fuel level, the fuel range, the odometer and the trip computer",
+      "statusRangeTankStatus": "rs",
+      "statusBordcomputerTravelData": "rs",
+      "statusBordcomputerAverage": "rs"
+    },
+    "de.bmw.body.Light": {
+      "_optional": "the turn signals, low and high beam and the rear fog light",
+      "StatusFunctionsIndicators": "s",
+      "LowBeam": "rs",
+      "LampExterior": "s",
+      "LampExterior2": "s"
+    },
+    "de.bmw.infotainment.displaydata.DisplayDataServer2": {
+      "_optional": "cruise control: on and its set speed",
+      "functionalLibraryData": "rs"
+    },
+    "de.bmw.infotainment.displaydataserver.DisplayDataServer": {
+      "_optional": "cruise control on cars that fill the older display data",
+      "functionalLibraryData": "rs"
+    },
+    "de.bmw.chassis.VehicleStabilizationManagement": {
+      "_optional": "DSC's raw state on the Signals page and in the log (its values are not decoded yet)",
+      "StabilizationManagement": "s"
+    },
+    "com.harman.infotainment.systemfunctions.tasu.tasu.InternalTasu": {
+      "_optional": "the engine unit's boost and fuel percentage (read only); without it no boost unless the car sends one, and the fuel gauge uses litres over the tank size",
+      "_instances": "SystemFunctionsInternalTasuInst1",
+      "_methods": ["sendTasuRequest"],
+      "_broadcasts": ["sendTasuResponse"]
+    }
+  },
+  "screens": [
+    {
+      "name": "MAIN",
+      "kind": "canvas",
+      "title": "idv7lol",
+      "buttons": [
+        ["BTN_SHOW", "Show"],
+        ["BTN_THEME", "Theme"],
+        ["BTN_PALETTE", "Palette"],
+        ["BTN_PAGE", "Page"],
+        ["BTN_SETTINGS", "Settings"]
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "key": "show",
+      "label": "Show on the cluster",
+      "type": "choice",
+      "default": "off",
+      "options": [
+        ["off", "Off (factory cluster)"],
+        ["on", "On"]
+      ]
+    },
+    {
+      "key": "clusterTheme",
+      "label": "Theme",
+      "type": "choice",
+      "default": "idv7lol-modern",
+      "options": [
+        ["idv7lol-giallo", "IDV7LOL Giallo"],
+        ["idv7lol-lily-pad", "Lily Pad"],
+        ["idv7lol-map-view", "IDV7LOL Map View"],
+        ["idv7lol-modern", "IDV7LOL Modern"],
+        ["idv7lol-neon-drive", "Neon Drive"],
+        ["idv7lol-night-minimal", "Night Minimal"],
+        ["idv7lol-supercar-track", "Supercar Track"],
+        ["vdo-classic-m", "VDO Classic M"],
+        ["analog-sport", "Analog Sport"],
+        ["classic-m-cluster", "Classic Cluster"],
+        ["ct-aero", "Aero"],
+        ["ct-apex", "Apex II"],
+        ["ct-circuit", "Circuit"],
+        ["ct-veloce", "Veloce"],
+        ["ct-vetro", "Vetro"],
+        ["digital-dash", "Digital Dash"],
+        ["gt3", "GT3"],
+        ["kb-live", "Live Cockpit"],
+        ["kb-neon", "Neon City"]
+      ]
+    },
+    {
+      "key": "palette",
+      "label": "Palette",
+      "type": "choice",
+      "default": "auto",
+      "options": [
+        ["auto", "Automatic (driving mode)"],
+        ["giallo", "Palette: giallo"],
+        ["nero", "Palette: nero"],
+        ["pond", "Palette: pond"],
+        ["firefly", "Palette: firefly"],
+        ["toxic", "Palette: toxic"],
+        ["lotus", "Palette: lotus"],
+        ["night", "Palette: night"],
+        ["sport", "Palette: sport"],
+        ["eco", "Palette: eco"],
+        ["neon", "Palette: neon"],
+        ["blood", "Palette: blood"],
+        ["acid", "Palette: acid"],
+        ["amber", "Palette: amber"],
+        ["track", "Palette: track"],
+        ["corsa", "Palette: corsa"],
+        ["comfort", "Palette: comfort"],
+        ["efficient", "Palette: efficient"],
+        ["normal", "Palette: normal"],
+        ["aero", "Palette: aero"],
+        ["apex", "Palette: apex"],
+        ["red", "Palette: red"],
+        ["yellow", "Palette: yellow"],
+        ["blue", "Palette: blue"],
+        ["veloce", "Palette: veloce"],
+        ["rosso", "Palette: rosso"],
+        ["live", "Palette: live"]
+      ]
+    },
+    {
+      "key": "interface",
+      "label": "App screen",
+      "type": "choice",
+      "default": "modern",
+      "options": [
+        ["modern", "Modern (tabs and previews)"],
+        ["classic", "Classic (text pages)"]
+      ]
+    },
+    {
+      "key": "usbRemove",
+      "label": "Theme from USB on show",
+      "type": "choice",
+      "default": "keep",
+      "options": [
+        ["keep", "Keep it"],
+        ["remove", "Remove it from the car"]
+      ]
+    },
+    {
+      "key": "bottomStrip",
+      "label": "Bottom strip",
+      "type": "choice",
+      "default": "car",
+      "options": [
+        ["car", "The car's own (no black boxes)"],
+        ["layout", "Covered by the layout (may leave black boxes)"]
+      ]
+    },
+    {
+      "key": "units",
+      "label": "Units",
+      "type": "choice",
+      "default": "auto",
+      "options": [
+        ["auto", "Auto (the car's own)"],
+        ["metric", "km/h, °C, bar"],
+        ["mph-celsius", "mph, °C, bar"],
+        ["mph-fahrenheit", "mph, °F, psi"]
+      ]
+    },
+    {
+      "key": "sweep",
+      "label": "Start-up sweep",
+      "type": "choice",
+      "default": "on",
+      "options": [
+        ["on", "On"],
+        ["off", "Off"]
+      ]
+    },
+    {
+      "key": "map",
+      "label": "Map in the theme",
+      "type": "choice",
+      "default": "on",
+      "options": [
+        ["on", "On"],
+        ["off", "Off"]
+      ]
+    },
+    {
+      "key": "textLayers",
+      "label": "Texts drawn by the renderer",
+      "type": "choice",
+      "default": "off",
+      "options": [
+        ["off", "Off"],
+        ["on", "On (cluster-render 0.8.11)"]
+      ]
+    },
+    {
+      "key": "timeZone",
+      "label": "Time zone",
+      "type": "choice",
+      "default": "offset",
+      "options": [
+        ["offset", "Fixed offset (Clock: offset from UTC)"],
+        ["melbourne", "Melbourne, Sydney, Canberra, Hobart"],
+        ["brisbane", "Brisbane"],
+        ["adelaide", "Adelaide"],
+        ["darwin", "Darwin"],
+        ["perth", "Perth"],
+        ["auckland", "Auckland"],
+        ["uk", "UK, Ireland, Portugal"],
+        ["cet", "Central Europe"],
+        ["eet", "Eastern Europe"],
+        ["us-eastern", "US Eastern"],
+        ["us-central", "US Central"],
+        ["us-mountain", "US Mountain"],
+        ["arizona", "Arizona"],
+        ["us-pacific", "US Pacific"],
+        ["utc", "UTC"]
+      ]
+    },
+    {
+      "key": "utcOffset",
+      "label": "Clock: offset from UTC (Time zone: Fixed offset)",
+      "type": "choice",
+      "default": "0",
+      "options": [
+        ["-600", "-10:00"],
+        ["-540", "-09:00"],
+        ["-480", "-08:00"],
+        ["-420", "-07:00"],
+        ["-360", "-06:00"],
+        ["-300", "-05:00"],
+        ["-240", "-04:00"],
+        ["-180", "-03:00"],
+        ["-120", "-02:00"],
+        ["-60", "-01:00"],
+        ["0", "UTC"],
+        ["60", "+01:00"],
+        ["120", "+02:00"],
+        ["180", "+03:00"],
+        ["240", "+04:00"],
+        ["300", "+05:00"],
+        ["330", "+05:30"],
+        ["480", "+08:00"],
+        ["540", "+09:00"],
+        ["600", "+10:00"]
+      ]
+    },
+    {
+      "key": "demo",
+      "label": "Demo data",
+      "type": "choice",
+      "default": "auto",
+      "options": [
+        ["auto", "Auto (until the car answers)"],
+        ["on", "On"],
+        ["off", "Off"]
+      ]
+    },
+    {
+      "key": "fuelTank",
+      "label": "Fuel tank size",
+      "type": "number",
+      "unit": "l",
+      "default": 0,
+      "labels": {
+        "0": "Automatic"
+      },
+      "steps": [
+        0, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51,
+        52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74,
+        75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,
+        98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110
+      ]
+    }
+  ],
+  "config": {
+    "scaling": {
+      "rpm": {
+        "factor": 0.25,
+        "offset": 0,
+        "invalid": 65535
+      },
+      "speed": {
+        "factor": 0.015625,
+        "offset": 0,
+        "invalid": 65535,
+        "invalidFrom": 25601
+      },
+      "accel": {
+        "factor": 0.002,
+        "offset": -65,
+        "invalid": 65535
+      },
+      "temp": {
+        "factor": 1,
+        "offset": -48,
+        "invalid": 255
+      },
+      "torque": {
+        "factor": 0.5,
+        "offset": -1023.5,
+        "invalid": 65535,
+        "invalidFrom": 4095
+      }
+    }
+  },
+  "requires": {
+    "cluster-render": "0.8.7",
+    "mgu-deploy": "0.8.27"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ride_height",
+  "version": "0.6.4",
+  "upstreamVersion": "0.6.0",
+  "title": "空气悬架",
+  "description": "查看并调整兼容车辆的空气悬架高度。",
+  "translations": {
+    "Decrease": "降低",
+    "Increase": "升高",
+    "Next corner": "下一车轮位置",
+    "Ride Height Studio": "空气悬架"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

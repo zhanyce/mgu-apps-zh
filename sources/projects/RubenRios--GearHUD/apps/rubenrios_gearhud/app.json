@@ -1,0 +1,123 @@
+{
+  "id": "rubenrios_gearhud",
+  "title": "GearHUD",
+  "description": "La marcha engranada (D3, S4, M2) en el HUD, en el cuadro o en los dos, con el color que quieras y otro para S y M",
+  "version": "1.0.0",
+  "vendor": "rubenrios",
+  "loggingId": "OGH1",
+  "iconGlyph": "D3",
+  "_comment_signals": "Todas opcionales: en un coche cuyo catálogo no tenga una interfaz, el instalador la quita en vez de abortar (kit/missing-interfaces.json). Sin la marcha del cambio, se estima con rpm y velocidad.",
+  "signals": {
+    "de.bmw.infrastructure.VehicleInformation": {
+      "statusGearboxDrive": "s",
+      "DataPowerTrain2": "s",
+      "_optional": "la marcha que envía el cambio: sin ella se estima con las rpm y la velocidad"
+    },
+    "de.bmw.infotainment.misc.MDrive": {
+      "dataDisplayGearbox": "s",
+      "_optional": "el programa S / M de la palanca: sin él se muestra siempre D"
+    },
+    "de.bmw.infotainment.drivingexcitement.FES": {
+      "statusFESVehicleDynamicSwitchHMI": "rs",
+      "_optional": "el modo de conducción: sin él el cuadro usa siempre la posición normal de la D"
+    },
+    "de.bmw.infrastructure.VehicleCondition": {
+      "VehicleCondition": "s",
+      "_optional": "si el coche está listo: sin él no se sabe cuándo se enciende o se apaga"
+    },
+    "de.bmw.infotainment.vehicle.Vehicle2": {
+      "statusCarSpeed2": "rs",
+      "_optional": "la velocidad: sin ella no se estima la marcha ni se calibra"
+    },
+    "de.bmw.infotainment.vehicle.CDS": {
+      "statusEngineSpeed2": "rs",
+      "_optional": "las rpm: sin ellas no se estima la marcha"
+    },
+    "de.bmw.infotainment.vehicle.Vehicle": {
+      "statusDayNightChangeOver": "rs",
+      "_optional": "día o noche: sin él no se usa el brillo de noche"
+    }
+  },
+  "screens": [
+    {
+      "name": "MAIN",
+      "kind": "canvas",
+      "title": "GearHUD",
+      "buttons": [
+        ["BTN_CALIB", "Calibrar"],
+        ["BTN_RELOAD", "Recargar posición"],
+        ["BTN_SETTINGS", "Ajustes"]
+      ]
+    }
+  ],
+  "settings": [
+    { "key": "show", "label": "Dónde mostrar la marcha", "type": "choice", "default": "off",
+      "options": [["off", "En ningún sitio (solo registrar)"], ["hud", "HUD"], ["cluster", "Cuadro"], ["both", "HUD y cuadro"]] },
+
+    { "key": "hudColour", "label": "Color en el HUD", "type": "choice", "default": "softgrey",
+      "options": [["white", "Blanco"], ["softgrey", "Gris suave"], ["grey", "Gris"], ["warm", "Blanco cálido"], ["amber", "Ámbar"],
+                  ["orange", "Naranja"], ["mred", "Rojo M"], ["ice", "Azul hielo"], ["mblue", "Azul M"], ["green", "Verde"], ["custom", "Personalizado"]] },
+    { "key": "hudStyle", "label": "Qué se ve en el HUD", "type": "choice", "default": "full",
+      "options": [["full", "Letra y marcha (D3)"], ["digit", "Solo la marcha (3)"]] },
+    { "key": "hudPRN", "label": "En P, R y N", "type": "choice", "default": "letter",
+      "options": [["letter", "Mostrar la letra"], ["hide", "No mostrar nada"]] },
+    { "key": "hudPos", "label": "Posición en el HUD", "type": "choice", "default": "right",
+      "options": [["top", "Arriba, centrada"], ["left", "A la izquierda"], ["right", "A la derecha"],
+                  ["lowLeft", "Abajo a la izquierda"], ["lowRight", "Abajo a la derecha"]] },
+    { "key": "hudSize", "label": "Tamaño en el HUD", "type": "number", "unit": "%", "default": 100,
+      "steps": [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 175, 200] },
+    { "key": "hudX", "label": "Mover en el HUD: horizontal", "type": "number", "unit": "px", "default": 0,
+      "labels": { "0": "Sin mover" },
+      "steps": [-200, -160, -120, -100, -80, -60, -40, -30, -20, -10, 0, 10, 20, 30, 40, 60, 80, 100, 120, 160, 200] },
+    { "key": "hudY", "label": "Mover en el HUD: vertical", "type": "number", "unit": "px", "default": 0,
+      "labels": { "0": "Sin mover" },
+      "steps": [-120, -100, -80, -60, -40, -30, -20, -10, 0, 10, 20, 30, 40, 60, 80, 100, 120] },
+    { "key": "nightBright", "label": "Brillo de noche", "type": "number", "unit": "%", "default": 100,
+      "labels": { "100": "Igual que de día" },
+      "steps": [100, 80, 70, 60, 50, 40, 30, 20] },
+    { "key": "hudGiveWay", "label": "Dejar el HUD a Redline u otra app que lo use", "type": "bool", "default": true },
+
+    { "key": "modeColours", "label": "Distinguir S y M por el color", "type": "choice", "default": "all",
+      "options": [["all", "Letra y marcha (S3 entero)"], ["letter", "Solo la letra (S)"], ["off", "No: todo del mismo color"]] },
+    { "key": "sColour", "label": "Color en S", "type": "choice", "default": "mred",
+      "options": [["white", "Blanco"], ["softgrey", "Gris suave"], ["grey", "Gris"], ["warm", "Blanco cálido"], ["amber", "Ámbar"],
+                  ["orange", "Naranja"], ["mred", "Rojo M"], ["ice", "Azul hielo"], ["mblue", "Azul M"], ["green", "Verde"], ["custom", "Personalizado"]] },
+    { "key": "mColour", "label": "Color en M (levas)", "type": "choice", "default": "orange",
+      "options": [["white", "Blanco"], ["softgrey", "Gris suave"], ["grey", "Gris"], ["warm", "Blanco cálido"], ["amber", "Ámbar"],
+                  ["orange", "Naranja"], ["mred", "Rojo M"], ["ice", "Azul hielo"], ["mblue", "Azul M"], ["green", "Verde"], ["custom", "Personalizado"]] },
+
+    { "key": "customHue", "label": "Color personalizado: tono", "type": "number", "unit": "°", "default": 210,
+      "steps": [0, 15, 30, 40, 50, 60, 90, 120, 150, 180, 195, 210, 225, 240, 270, 300, 330] },
+    { "key": "customSat", "label": "Color personalizado: saturación", "type": "number", "unit": "%", "default": 10,
+      "steps": [0, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100] },
+    { "key": "customBright", "label": "Color personalizado: brillo", "type": "number", "unit": "%", "default": 70,
+      "steps": [20, 30, 40, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100] },
+
+    { "key": "clusterPlace", "label": "Posición en el cuadro", "type": "choice", "default": "nextToD",
+      "options": [["nextToD", "Junto a la D"], ["centre", "En el centro, sobre el mapa"]] },
+    { "key": "dPlace", "label": "Dónde está la D en el cuadro", "type": "choice", "default": "big",
+      "options": [["big", "Grande, junto al mapa"], ["small", "Pequeña, en la fila de abajo"]] },
+    { "key": "clusterColour", "label": "Color en el cuadro", "type": "choice", "default": "white",
+      "options": [["white", "Blanco"], ["softgrey", "Gris suave"], ["grey", "Gris"], ["warm", "Blanco cálido"], ["amber", "Ámbar"],
+                  ["orange", "Naranja"], ["mred", "Rojo M"], ["ice", "Azul hielo"], ["mblue", "Azul M"], ["green", "Verde"], ["custom", "Personalizado"]] },
+
+    { "key": "guess", "label": "Estimar la marcha si el coche no la envía", "type": "bool", "default": true },
+    { "key": "record", "label": "Registrar señales", "type": "bool", "default": true },
+    { "key": "demo", "label": "Datos de demo", "type": "choice", "default": "auto",
+      "options": [["auto", "Auto"], ["on", "Siempre"], ["off", "Nunca"]] }
+  ],
+  "config": {
+    "comment": "Posiciones del cuadro estimadas de fotos (margen de unos 20 px): la medida buena sale de la rejilla de calibración. data/posicion.json las sustituye sin recompilar. HUD: zona visible del cristal medida por Redline en un G21 (x 120-680, y 120-360 de 800x480), con la velocidad de BMW abajo desde y 325.",
+    "glyph": { "w": 96, "h": 128, "size": 100, "baseline": 108, "font": "gear", "stretch": 1.2,
+      "shadow": { "dx": 3, "dy": 3, "blur": 3, "alpha": 0.75 } },
+    "positions": {
+      "panel": { "big": { "x": 1518, "y": 337, "scale": 1 }, "small": { "x": 1414, "y": 652, "scale": 0.444 } }
+    },
+    "hud": {
+      "cellH": 160, "size": 150, "baseline": 136, "height": 96, "gap": 6,
+      "anchors": { "top": [400, 175], "left": [205, 235], "right": [595, 235], "lowLeft": [205, 300], "lowRight": [595, 300] },
+      "visible": { "x": 120, "y": 120, "w": 560, "h": 240 }
+    },
+    "centre": { "anchor": [544, 240], "height": 150 }
+  }
+}

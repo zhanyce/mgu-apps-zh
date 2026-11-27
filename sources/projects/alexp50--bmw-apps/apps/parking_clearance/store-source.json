@@ -1,0 +1,16 @@
+{
+  "id": "parking_clearance",
+  "version": "0.1.804",
+  "upstreamVersion": "0.1.8",
+  "title": "泊车距离",
+  "description": "显示泊车雷达距离、转向轨迹和车身姿态。",
+  "translations": {
+    "Refresh": "刷新",
+    "Amber distance": "黄色警示距离",
+    "G12 vehicle length": "G12 车长",
+    "G12 wheelbase": "G12 轴距",
+    "Red distance": "红色警示距离",
+    "Parking & Clearance": "泊车距离"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

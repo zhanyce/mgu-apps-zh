@@ -1,0 +1,12 @@
+{
+  "id": "aref_explorer",
+  "version": "0.2.404",
+  "upstreamVersion": "0.2.4",
+  "title": "车机接口目录",
+  "description": "浏览车机公开的导航、媒体、空调和车身服务。",
+  "translations": {
+    "Next topic": "下一主题",
+    "Car Explorer": "车机接口目录"
+  },
+  "kit": "sources/projects/arefahmad--idrive7-apps"
+}

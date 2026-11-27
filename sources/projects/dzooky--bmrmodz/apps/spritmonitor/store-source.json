@@ -1,0 +1,20 @@
+{
+  "id": "spritmonitor",
+  "version": "0.1.4505",
+  "upstreamVersion": "0.1.45",
+  "title": "加油记录",
+  "description": "记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。",
+  "translations": {
+    "Add AdBlue": "添加车用尿素",
+    "Add Fuel": "加油",
+    "Fuel tank capacity": "油箱容量",
+    "Full tank threshold (fuel)": "满箱阈值（燃油）",
+    "Full tank threshold override": "自定义满箱阈值",
+    "Language": "语言",
+    "Reset trip, avg. speed and consumption after fuel upload (experimental)": "上传加油记录后重置行程、平均车速和油耗（实验功能）",
+    "Use percentage": "使用百分比",
+    "Auto (Spritmonitor)": "自动（Spritmonitor）",
+    "Spritmonitor": "加油记录"
+  },
+  "kit": "sources/projects/dzooky--bmrmodz"
+}

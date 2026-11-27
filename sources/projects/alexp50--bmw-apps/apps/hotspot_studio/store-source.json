@@ -1,0 +1,19 @@
+{
+  "id": "hotspot_studio",
+  "version": "0.1.504",
+  "upstreamVersion": "0.1.5",
+  "title": "车载热点",
+  "description": "管理车机热点、网络代理和限时 ENET 转发。",
+  "translations": {
+    "Refresh": "刷新",
+    "10 minutes": "10 分钟",
+    "20 minutes": "20 分钟",
+    "30 minutes": "30 分钟",
+    "60 minutes": "60 分钟",
+    "Coding Gateway timeout": "编码网关超时",
+    "Next client": "下一台客户端",
+    "Primary action": "主要操作",
+    "Hotspot Studio": "车载热点"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "m_copilot",
+  "version": "2.0.0",
+  "upstreamVersion": "2.0.0",
+  "title": "M-Copilot",
+  "description": "在行车界面查看驾驶提示与车辆状态。",
+  "translations": {
+    "Ask Copilot": "询问 Copilot",
+    "Connect": "连接",
+    "M-Copilot": "M-Copilot"
+  },
+  "kit": "sources/projects/hexlay--idrive7-custom-apps"
+}

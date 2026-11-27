@@ -1,0 +1,19 @@
+{
+  "id": "car_vitals",
+  "version": "2.28.0",
+  "upstreamVersion": "2.28.0",
+  "title": "车辆仪表",
+  "description": "查看发动机、进气、燃油和底盘的实时读数。",
+  "translations": {
+    "Cold engine: rpm bar faded yellow from the cold limit to the redline": "发动机冷态：转速条从冷态上限到红线使用淡黄色",
+    "Ethanol in the pump fuel": "加油机燃油乙醇含量",
+    "Ethanol in the station's E85": "加油站 E85 的乙醇含量",
+    "Ethanol in the tank now": "油箱当前乙醇含量",
+    "Fuel mix page: E85 blend calculator": "燃油混配页：E85 配比计算器",
+    "Fuel tank size": "油箱容量",
+    "None (E0)": "无（E0）",
+    "Target ethanol": "目标乙醇比例",
+    "M Vitals": "车辆仪表"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

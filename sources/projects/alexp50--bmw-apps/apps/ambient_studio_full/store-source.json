@@ -1,0 +1,14 @@
+{
+  "id": "ambient_studio_full",
+  "version": "0.1.504",
+  "upstreamVersion": "0.1.5",
+  "title": "氛围灯工作室",
+  "description": "在全屏界面编辑驾驶模式配色和灯光提醒。",
+  "translations": {
+    "Activate": "启用",
+    "Next action": "下一项操作",
+    "Overview": "概览",
+    "Ambient Studio": "氛围灯工作室"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

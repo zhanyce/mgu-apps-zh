@@ -1,0 +1,12 @@
+{
+  "id": "xdrive_studio",
+  "version": "0.1.504",
+  "upstreamVersion": "0.1.5",
+  "title": "xDrive 仪表",
+  "description": "观察扭矩分配、车轮滑差和分动箱状态。",
+  "translations": {
+    "Refresh transfer case": "刷新分动箱数据",
+    "xDrive Studio": "xDrive 仪表"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

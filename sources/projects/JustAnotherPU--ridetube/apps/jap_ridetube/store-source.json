@@ -1,0 +1,11 @@
+{
+  "id": "jap_ridetube",
+  "version": "0.6.7",
+  "upstreamVersion": "0.6.7",
+  "title": "RideTube",
+  "description": "浏览 YouTube 频道和视频，默认在驻车时显示画面。",
+  "translations": {
+    "RideTube": "RideTube"
+  },
+  "kit": "sources/projects/JustAnotherPU--ridetube"
+}

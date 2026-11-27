@@ -1,0 +1,13 @@
+{
+  "id": "dtc_scanner",
+  "version": "2.15.1",
+  "upstreamVersion": "2.15.1",
+  "title": "故障码",
+  "description": "读取控制单元故障记录和车辆检查信息，可执行清除操作。",
+  "translations": {
+    "Fault details": "故障详情",
+    "Plausibility checks": "数据合理性检查",
+    "Fault Scanner": "故障码"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

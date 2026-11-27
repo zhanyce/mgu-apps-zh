@@ -1,0 +1,15 @@
+{
+  "id": "true_time_cn",
+  "version": "1.0.3",
+  "upstreamVersion": "1.0.0",
+  "title": "加减速计时",
+  "description": "使用 DSC 加速度信号补偿坡度影响。",
+  "translations": {
+    "Racing Red": "赛车红",
+    "Tricolour": "三色",
+    "Arm": "待命",
+    "Demo drive": "演示行程",
+    "True Time": "加减速计时"
+  },
+  "kit": "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps"
+}

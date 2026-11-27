@@ -1,0 +1,15 @@
+{
+  "id": "mgu_browser",
+  "version": "0.16.104",
+  "upstreamVersion": "0.16.1",
+  "title": "车机浏览器",
+  "description": "用 iDrive 浏览网页，管理书签和历史记录。",
+  "translations": {
+    "Schließen": "关闭",
+    "Startseite öffnen": "打开主页",
+    "Zurück": "返回",
+    "Browser": "车机浏览器"
+  },
+  "browserBuilder": "sources/projects/pllanaio--mgu-browser/tools/build_store.py",
+  "kit": "sources/projects/pllanaio--mgu-browser"
+}

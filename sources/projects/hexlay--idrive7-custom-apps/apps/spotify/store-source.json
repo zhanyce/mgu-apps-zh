@@ -1,0 +1,15 @@
+{
+  "id": "spotify",
+  "version": "2.0.0",
+  "upstreamVersion": "2.0.0",
+  "title": "Spotify Connect",
+  "description": "与手机上的 Spotify 配对，在车机查看曲目和播放设备。",
+  "translations": {
+    "Demo Mode (Offline)": "演示模式（离线）",
+    "Online Mode (Default)": "在线模式（默认）",
+    "Playback mode": "播放模式",
+    "Playback sync rate": "播放进度同步频率",
+    "Spotify": "Spotify Connect"
+  },
+  "kit": "sources/projects/hexlay--idrive7-custom-apps"
+}

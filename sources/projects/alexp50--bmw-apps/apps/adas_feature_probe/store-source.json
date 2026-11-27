@@ -1,0 +1,13 @@
+{
+  "id": "adas_feature_probe",
+  "version": "0.1.4",
+  "upstreamVersion": "0.1.0",
+  "title": "驾驶辅助状态",
+  "description": "读取驾驶辅助功能的可用状态与控制单元反馈。",
+  "translations": {
+    "Enable selected": "启用所选功能",
+    "Select feature": "选择功能",
+    "ADAS Feature Probe": "驾驶辅助状态"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

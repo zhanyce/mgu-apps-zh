@@ -1,0 +1,16 @@
+{
+  "id": "green_light_alert",
+  "version": "0.2.504",
+  "upstreamVersion": "0.2.5",
+  "title": "绿灯提醒",
+  "description": "根据前视摄像头识别的信号灯状态提示起步。",
+  "translations": {
+    "1 (expected)": "1（预期值）",
+    "3 (expected)": "3（预期值）",
+    "Raw KAFAS green colour code": "KAFAS 原始绿灯色码",
+    "Raw KAFAS red colour code": "KAFAS 原始红灯色码",
+    "Run selected action": "执行所选操作",
+    "Green Light Alert": "绿灯提醒"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

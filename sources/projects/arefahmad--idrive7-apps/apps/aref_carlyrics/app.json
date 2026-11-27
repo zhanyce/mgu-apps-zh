@@ -1,0 +1,275 @@
+{
+  "id": "aref_carlyrics",
+  "title": "Car Lyrics",
+  "description": "Synced lyrics for whatever the car plays: Apple Music over CarPlay, Bluetooth or USB, no Spotify needed. A full-screen page drawn like Apple Music's: the album art blurred behind, the cover and a progress line on the left, and the lyrics gliding line by line on the right, timed to the song from the car's own clock. Lyrics from LRCLIB, artwork from Apple's iTunes search. A Probe tab shows what the car reports. Read-only toward the car. Needs internet through the Store's uplink.",
+  "version": "0.8.1",
+  "vendor": "aref",
+  "loggingId": "OAR1",
+  "internet": true,
+  "startWidget": {
+    "comment": "Home-screen widget (kit/runtime/homewidget.js): the big size is a 384 x 256 picture main.js draws, the small size two text lines.",
+    "name": "Car Lyrics",
+    "layout": "LT_Table_OnlineApps_DriveRecorderWidget",
+    "image": "BackgroundImage1",
+    "size": [
+      384,
+      256
+    ],
+    "safe": [
+      0.09,
+      0.1
+    ],
+    "cells": {
+      "ErrorInfo": [
+        false,
+        "Bool"
+      ],
+      "background": [
+        true,
+        "Bool"
+      ],
+      "Title": [
+        "",
+        "Text"
+      ],
+      "ProgressbarVisible": [
+        false,
+        "Bool"
+      ],
+      "Progress": [
+        0,
+        "Float"
+      ],
+      "TextRecordings": [
+        "",
+        "Text"
+      ],
+      "TextCam": [
+        "",
+        "Text"
+      ],
+      "TimeElapsed": [
+        "",
+        "Text"
+      ],
+      "TimeRemaining": [
+        "",
+        "Text"
+      ]
+    }
+  },
+  "signals": {
+    "de.bmw.infotainment.a4a.carplay.CarPlayManager": "*",
+    "de.bmw.infotainment.entertainment.mediaplayer.MediaPlayer": "*",
+    "de.bmw.infotainment.hmi.hmimediastate.HmiMediaState": "*",
+    "de.bmw.infotainment.entertainment.dynamicmediaplayer.DynamicMediaPlayer": "*",
+    "org.genivi.am.commandinterface.CommandControl": {
+      "_optional": "BMW's volume bar shows over full screen",
+      "_instances": "1",
+      "_broadcasts": [
+        "volumeChanged"
+      ]
+    }
+  },
+  "screens": [
+    {
+      "name": "MAIN",
+      "kind": "canvas",
+      "title": "Car Lyrics",
+      "fullscreen": true,
+      "buttons": [
+        [
+          "BTN_SYNC",
+          "Song just started"
+        ],
+        [
+          "BTN_PROBE",
+          "Probe"
+        ],
+        [
+          "BTN_PAGE",
+          "Next page"
+        ],
+        [
+          "BTN_MORE",
+          "More"
+        ],
+        [
+          "BTN_SAVE",
+          "Save report"
+        ],
+        [
+          "BTN_SETTINGS",
+          "Settings"
+        ]
+      ],
+      "settingsTab": false
+    }
+  ],
+  "settings": [
+    {
+      "key": "arrangement",
+      "label": "Layout",
+      "type": "choice",
+      "default": "full",
+      "options": [
+        [
+          "full",
+          "Lyrics full width, small cover on top"
+        ],
+        [
+          "side",
+          "Big cover, lyrics beside it"
+        ]
+      ]
+    },
+    {
+      "key": "style",
+      "label": "Look",
+      "type": "choice",
+      "default": "glass",
+      "options": [
+        [
+          "glass",
+          "Glass (Apple Music, iOS 26)"
+        ],
+        [
+          "classic",
+          "Classic"
+        ]
+      ]
+    },
+    {
+      "key": "bg_motion",
+      "label": "Background motion",
+      "type": "choice",
+      "default": "still",
+      "options": [
+        [
+          "still",
+          "Still"
+        ],
+        [
+          "drift",
+          "Slow drift (like Apple Music)"
+        ]
+      ]
+    },
+    {
+      "key": "cover_size",
+      "label": "Cover size (big-cover layout)",
+      "type": "choice",
+      "default": "medium",
+      "options": [
+        [
+          "small",
+          "Small"
+        ],
+        [
+          "medium",
+          "Medium"
+        ],
+        [
+          "large",
+          "Large"
+        ]
+      ]
+    },
+    {
+      "key": "lyrics_size",
+      "label": "Lyrics size",
+      "type": "choice",
+      "default": "medium",
+      "options": [
+        [
+          "small",
+          "Small"
+        ],
+        [
+          "medium",
+          "Medium"
+        ],
+        [
+          "large",
+          "Large"
+        ],
+        [
+          "huge",
+          "Huge"
+        ]
+      ]
+    },
+    {
+      "key": "word_highlight",
+      "label": "Light up the words as they're sung (like Apple Music)",
+      "type": "bool",
+      "default": true
+    },
+    {
+      "key": "theme",
+      "label": "Colours",
+      "type": "choice",
+      "default": "m_tricolour",
+      "options": [
+        [
+          "m_red",
+          "M Red"
+        ],
+        [
+          "m_tricolour",
+          "M Tricolour"
+        ],
+        [
+          "ice",
+          "Ice White"
+        ],
+        [
+          "amber",
+          "Night Amber"
+        ]
+      ]
+    },
+    {
+      "key": "offset",
+      "label": "Lyrics timing",
+      "type": "number",
+      "unit": "ms",
+      "default": 0,
+      "steps": [
+        -3000,
+        -2000,
+        -1500,
+        -1000,
+        -750,
+        -500,
+        -250,
+        0,
+        250,
+        500,
+        750,
+        1000,
+        1500,
+        2000,
+        3000
+      ]
+    },
+    {
+      "key": "probe_tab",
+      "label": "Show the Probe tab (what the car reports)",
+      "type": "bool",
+      "default": false
+    },
+    {
+      "key": "hide_back_arrow",
+      "label": "Hide BMW's < tab on the left (the backdrop reaches the edge)",
+      "type": "bool",
+      "default": true
+    },
+    {
+      "key": "hide_status_bar",
+      "label": "Full screen: hide BMW's top bar (clock, signal, profile)",
+      "type": "bool",
+      "default": true
+    }
+  ]
+}

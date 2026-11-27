@@ -1,0 +1,23 @@
+{
+  "id": "aref_tires",
+  "version": "0.2.104",
+  "upstreamVersion": "0.2.1",
+  "title": "轮胎设置",
+  "description": "查看已识别轮胎和目标压力，配置变更受驻车条件限制。",
+  "translations": {
+    "Allow changes to the car": "允许修改车辆设置",
+    "Auto detect": "自动检测",
+    "DSC on": "开启 DSC",
+    "Get list": "获取列表",
+    "Load (targets)": "负载（目标胎压）",
+    "Log": "日志",
+    "Next": "下一项",
+    "Previous": "上一项",
+    "Safe test": "安全测试",
+    "Summer / Winter": "夏季胎／冬季胎",
+    "Tire list": "轮胎列表",
+    "Use this tire": "选用此轮胎",
+    "Tire Setup": "轮胎设置"
+  },
+  "kit": "sources/projects/arefahmad--idrive7-apps"
+}

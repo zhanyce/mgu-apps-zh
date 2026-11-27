@@ -1,0 +1,11 @@
+{
+  "id": "doom",
+  "version": "1.7.2203",
+  "upstreamVersion": "1.7.27",
+  "title": "Freedoom",
+  "description": "使用 iDrive 旋钮操控游戏，支持存档。",
+  "translations": {
+    "Doom": "Freedoom"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

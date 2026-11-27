@@ -1,0 +1,13 @@
+{
+  "id": "dimon_track_mode",
+  "version": "1.0.4",
+  "upstreamVersion": "1.0.0",
+  "title": "赛道计圈",
+  "description": "在封闭赛道记录圈速、分段成绩和实时差值。",
+  "translations": {
+    "Lap": "圈次",
+    "Start first lap on movement": "车辆驶动时开始第一圈",
+    "Track Mode": "赛道计圈"
+  },
+  "kit": "sources/projects/DimonPrograms--dimonprograms-apps"
+}

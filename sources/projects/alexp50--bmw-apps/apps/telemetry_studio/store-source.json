@@ -1,0 +1,14 @@
+{
+  "id": "telemetry_studio",
+  "version": "0.2.4",
+  "upstreamVersion": "0.2.0",
+  "title": "车辆遥测",
+  "description": "按系统查看动力、热管理、空调和底盘数据。",
+  "translations": {
+    "Overview": "概览",
+    "Comfort / electrical": "舒适配置／电气",
+    "Powertrain": "动力总成",
+    "Telemetry Studio": "车辆遥测"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

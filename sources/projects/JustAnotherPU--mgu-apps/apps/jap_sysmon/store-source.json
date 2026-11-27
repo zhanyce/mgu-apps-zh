@@ -1,0 +1,13 @@
+{
+  "id": "jap_sysmon",
+  "version": "1.0.606",
+  "upstreamVersion": "1.0.6",
+  "title": "资源监视器",
+  "description": "查看处理器、交换空间、图形频率和应用内存用量。",
+  "translations": {
+    "Pop-up when the iDrive is short of resources": "iDrive 资源不足时弹窗",
+    "Test pop-up": "测试弹窗",
+    "iDrive Monitor": "资源监视器"
+  },
+  "kit": "sources/projects/JustAnotherPU--mgu-apps"
+}

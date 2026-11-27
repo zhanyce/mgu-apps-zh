@@ -1,0 +1,11 @@
+{
+  "id": "brake_test",
+  "version": "1.5.2103",
+  "upstreamVersion": "1.5.26",
+  "title": "制动测试",
+  "description": "记录制动距离、峰值减速度和连续制动表现。",
+  "translations": {
+    "Brake Test": "制动测试"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

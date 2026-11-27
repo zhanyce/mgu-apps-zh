@@ -1,0 +1,15 @@
+This app incorporates cluster_render_client.js from:
+  https://github.com/robertnisipeanu/idrive-apps
+Copyright (C) 2026 Robert Nisipeanu
+SPDX-License-Identifier: MPL-2.0
+The full Mozilla Public License 2.0 is included as LICENSE.
+
+lyric_font_data.js embeds glyphs of DejaVu Sans (see DEJAVU_LICENSE.txt).
+
+Song information comes from the user's own Spotify account through the
+Spotify Web API. Synchronised lyrics are requested at runtime from LRCLIB
+(https://lrclib.net). No lyrics are part of this repository or package.
+
+Spotify is a trademark of Spotify AB. All BMW names and marks belong to
+their respective owners. Unofficial prototype; not endorsed by Spotify,
+LRCLIB, BMW or the upstream project authors.

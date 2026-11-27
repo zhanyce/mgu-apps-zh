@@ -1,0 +1,15 @@
+{
+  "id": "tyrewatch",
+  "version": "0.1.503",
+  "upstreamVersion": "0.1.5",
+  "title": "胎压仪表",
+  "description": "对照四轮胎压、胎温和目标压力。",
+  "translations": {
+    "Display pressure in": "胎压显示单位",
+    "Newer": "较新的记录",
+    "Next wheel": "下一个车轮",
+    "Older": "较早的记录",
+    "TyreWatch": "胎压仪表"
+  },
+  "kit": "sources/projects/suhailpatel--id7-apps"
+}

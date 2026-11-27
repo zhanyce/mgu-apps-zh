@@ -1,0 +1,18 @@
+{
+  "id": "redline",
+  "version": "2.1.1",
+  "upstreamVersion": "2.1.1",
+  "title": "换挡提示",
+  "description": "显示当前转速和挡位，在设定转速提示换挡。",
+  "translations": {
+    "Shift times: under load from": "换挡时间：负载统计起点",
+    "Learn redline from the limiter": "根据断油转速学习红线转速",
+    "Auto (learns from your shifts)": "自动（根据换挡记录学习）",
+    "Bottom right corner": "右下角",
+    "Centre": "中间",
+    "Default": "默认",
+    "None": "无",
+    "Redline": "换挡提示"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

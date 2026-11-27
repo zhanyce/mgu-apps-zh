@@ -1,0 +1,93 @@
+{
+  "id": "boostline",
+  "title": "ECU Live Data",
+  "description": "Live engine data from the DDE (diesel) or DME (petrol), CSV logs, road dyno and drag timer, read-only",
+  "version": "1.0.1",
+  "vendor": "boostline",
+  "loggingId": "OAB1",
+  "iconGlyph": "ECU",
+  "maxDiskUsage": 134217728,
+  "signals": {
+    "de.bmw.infrastructure.VehicleCondition": {
+      "_optional": "the car's state: no requests to the DDE/DME while it's switched off",
+      "VehicleCondition": "s"
+    },
+    "de.bmw.infotainment.vehicle.CDS": {
+      "_optional": "the engine oil temperature and engine speed the car shows (Oil temp (car bus), the dyno)",
+      "statusEngineTemperature": "rs",
+      "statusEngineSpeed2": "rs"
+    },
+    "de.bmw.infotainment.vehicle.Vehicle2": {
+      "_optional": "the car's speed (the dyno)",
+      "statusCarSpeed2": "rs"
+    },
+    "de.bmw.infotainment.vehicle.CDS2": {
+      "_optional": "the DSC's longitudinal acceleration (the dyno)",
+      "statusLongitudinalAccelerationMassCenter": "rs"
+    },
+    "de.bmw.infrastructure.analytics.BasicDataSet": {
+      "_optional": "the gearbox oil temperature the car sends (Engine page), as M Vitals",
+      "basicDataSet": "s"
+    },
+    "de.bmw.infotainment.drivingexcitement.FES": {
+      "_optional": "torque and power as the car's bus and sport displays give them (Power page)",
+      "statusActualValueTorque2": "rs",
+      "statusVehicleDynamicEngine": "rs"
+    },
+    "com.harman.infotainment.systemfunctions.tasu.tasu.InternalTasu": {
+      "_instances": "SystemFunctionsInternalTasuInst1",
+      "_methods": ["sendTasuRequest"],
+      "_broadcasts": ["sendTasuResponse"]
+    }
+  },
+  "screens": [
+    { "name": "MAIN", "kind": "canvas", "title": "ECU Live Data",
+      "buttons": [["BTN_POWER", "Power on"], ["BTN_REC", "Start capture"], ["BTN_SETUP", "Setup page"], ["BTN_PAGE", "Next page"], ["BTN_SETTINGS", "Settings"]] }
+  ],
+  "settings": [
+    {"key": "pressure", "label": "Pressure unit", "type": "choice", "default": "bar",
+     "options": [["bar", "bar"], ["psi", "psi"], ["kPa", "kPa"]]},
+    {"key": "temperature", "label": "Temperature unit", "type": "choice", "default": "C",
+     "options": [["C", "Celsius"], ["F", "Fahrenheit"]]},
+    {"key": "speed", "label": "Speed unit", "type": "choice", "default": "mph",
+     "options": [["mph", "mph"], ["km/h", "km/h"]]},
+    {"key": "lambda", "label": "Mixture as", "type": "choice", "default": "lambda",
+     "options": [["lambda", "Lambda"], ["afr", "AFR (petrol)"]]},
+    {"key": "power", "label": "Power unit", "type": "choice", "default": "hp",
+     "options": [["hp", "hp"], ["PS", "PS"], ["kW", "kW"]]},
+    {"key": "torque", "label": "Torque unit", "type": "choice", "default": "lb-ft",
+     "options": [["lb-ft", "lb-ft"], ["Nm", "Nm"]]},
+    {"key": "sportMaxTorque", "label": "Sport display: 100% torque", "type": "number", "unit": "Nm", "default": 400,
+     "steps": [300, 320, 350, 380, 400, 420, 450, 480, 500, 550, 600, 650, 700, 760]},
+    {"key": "sportMaxPower", "label": "Sport display: 100% power", "type": "number", "unit": "kW", "default": 140,
+     "steps": [100, 110, 120, 125, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 235, 250, 265, 280, 300]},
+    {"key": "dynoMass", "label": "Dyno: weight with driver + fuel", "type": "number", "unit": "kg", "default": 1950,
+     "steps": [1300, 1400, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1950, 2000, 2100, 2200, 2300, 2400, 2500]},
+    {"key": "dynoBody", "label": "Dyno: body shape (air drag)", "type": "choice", "default": "wagon",
+     "options": [["coupe", "Coupe / sedan"], ["wagon", "Touring / hatch"], ["suv", "SUV"]]},
+    {"key": "dynoLoss", "label": "Dyno: drivetrain loss", "type": "number", "unit": "%", "default": 15, "steps": [0, 10, 12, 15, 18, 20, 25]},
+    {"key": "dynoEcuTorque", "label": "Dyno: overlay ECU torque", "type": "bool", "default": true},
+    {"key": "dynoCorrection", "label": "Dyno: weather correction", "type": "choice", "default": "none",
+     "options": [["none", "None (uncorrected)"], ["SAE", "SAE J1349"], ["DIN", "DIN 70020"]]},
+    {"key": "dragMode", "label": "Drag: run", "type": "choice", "default": "0-60mph",
+     "options": [["0-100", "0-100 km/h"], ["0-200", "0-200 km/h"], ["200m", "0-200 m"], ["400m", "0-400 m"],
+                 ["40-100", "40-100 km/h (roll-on)"], ["70-120", "70-120 km/h (roll-on)"], ["80-120", "80-120 km/h (roll-on)"],
+                 ["60-160", "60-160 km/h (roll-on)"], ["100-200", "100-200 km/h"], ["200-300", "200-300 km/h"],
+                 ["0-60mph", "0-60 mph"], ["60-130mph", "60-130 mph"], ["201m", "1/8 mile"], ["402m", "1/4 mile"]]},
+    {"key": "dragSpeedo", "label": "Drag: true speed vs. the car's", "type": "number", "unit": "%", "default": 0,
+     "steps": [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]},
+    {"key": "autoRecordWot", "label": "Capture every full-throttle pull", "type": "bool", "default": false},
+    {"key": "bmwDme", "label": "BMW DDE/DME data", "type": "choice", "default": "auto",
+     "options": [["auto", "Auto (from the DDE/DME)"], ["off", "Off (OBD-II only)"],
+                 ["d83bx7c0", "Diesel DDE 8.x (G-series B47/B57)"],
+                 ["dme_bx80", "Petrol B58/B48 gen 1 (dme_bx80)"], ["dme_bx81", "Petrol B58/B48 gen 1 (dme_bx81)"],
+                 ["dme_bx82", "Petrol B58/B48 gen 1 (dme_bx82)"],
+                 ["dme8ff_r", "Petrol B58/B48 TU, S58, N63 (dme8ff_r)"], ["dme8ff_l", "Petrol V8 left bank (dme8ff_l)"]]},
+    {"key": "theme", "label": "Colour theme", "type": "choice", "default": "m_tricolour",
+     "options": [["m_red", "Racing Red"], ["m_tricolour", "Tricolour"], ["ice", "Ice White"], ["amber", "Night Amber"]]},
+    {"key": "layout", "label": "Screen layout", "type": "choice", "default": "full",
+     "options": [["full", "Full screen"], ["standard", "Standard"]]},
+    {"key": "renderer", "label": "Renderer", "type": "choice", "default": "auto",
+     "options": [["auto", "GPU 60 fps (default)"], ["software", "Software"]]}
+  ]
+}

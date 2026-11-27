@@ -1,0 +1,29 @@
+{
+  "id": "warmup",
+  "version": "1.12.1",
+  "upstreamVersion": "1.12.1",
+  "title": "暖机助手",
+  "description": "根据机油和冷却液温度估算暖机时间。",
+  "translations": {
+    "Next": "下一项",
+    "Previous": "上一项",
+    "Other": "其他",
+    "All drives": "所有行程",
+    "Before / After compares": "前后对比",
+    "Change to mark": "要标记的变更",
+    "Compare a drive with": "行程对比对象",
+    "Drives of a similar average speed": "平均车速相近的行程",
+    "Drives of a similar length": "里程相近的行程",
+    "Drives view": "行程视图",
+    "Fuel brand": "燃油品牌",
+    "Mark a change": "标记变更",
+    "New part": "新部件",
+    "Record a CSV of each drive": "将每次行程保存为 CSV",
+    "Setting change": "设置变更",
+    "The average of the 10 before it": "之前 10 次行程的平均值",
+    "The drive before": "上一次行程",
+    "Turbo cool-down after hard driving": "高负荷行驶后的涡轮冷却提醒",
+    "Warm-Up": "暖机助手"
+  },
+  "kit": "sources/projects/cauliflowermossgrape--idrive7-apps"
+}

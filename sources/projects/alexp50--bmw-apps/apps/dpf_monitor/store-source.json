@@ -1,0 +1,16 @@
+{
+  "id": "dpf_monitor",
+  "version": "0.4.4",
+  "upstreamVersion": "0.4.0",
+  "title": "柴油颗粒捕集器",
+  "description": "查看颗粒捕集器的积碳、压差、温度和再生记录。",
+  "translations": {
+    "DDE variant": "DDE 型号",
+    "Estimated regeneration end soot": "预计再生结束时的积碳量",
+    "Refresh": "刷新",
+    "Try compatible DDE (unverified)": "尝试兼容的 DDE（未验证）",
+    "Verified D70 / D75 / D83 only": "仅使用已验证的 D70／D75／D83",
+    "DPF Monitor": "柴油颗粒捕集器"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

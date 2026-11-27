@@ -1,0 +1,12 @@
+{
+  "id": "eldrive",
+  "version": "1.1.4",
+  "upstreamVersion": "1.1.0",
+  "title": "elDrive 充电仪表",
+  "description": "查看纯电车型的电量、续航、充电记录和低压电池状态。",
+  "translations": {
+    "Fill the widget (as 1.0)": "填满小组件（与 1.0 版相同）",
+    "elDrive": "elDrive 充电仪表"
+  },
+  "kit": "sources/projects/beele--eldrive"
+}

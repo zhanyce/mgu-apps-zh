@@ -1,0 +1,444 @@
+{
+  "schema": 2,
+  "components": [
+    {
+      "id": "cluster-render",
+      "kind": "tool",
+      "title": "仪表与 HUD 渲染器",
+      "version": "0.8.12",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.4.0"
+      },
+      "description": "在兼容的仪表和 HUD 上绘制图像。",
+      "artifact": {
+        "name": "cluster-render@0.8.12.tgz",
+        "size": 13368089,
+        "sha256": "c7e2e322f51d051d0b2a69536824aa378099fbd996f24c4c22980c8c252de153",
+        "url": "https://github.com/robertnisipeanu/idrive-apps/releases/download/cluster-render%400.8.12/cluster-render%400.8.12.tgz"
+      }
+    },
+    {
+      "id": "front-camera-cluster-helper",
+      "kind": "tool",
+      "title": "仪表夜视与摄像头后台",
+      "version": "0.2.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.11",
+        "cluster-render": "0.3.10"
+      },
+      "description": "连接摄像头画面与仪表。",
+      "artifact": {
+        "name": "front-camera-cluster-helper@0.2.1.tgz",
+        "size": 4006,
+        "sha256": "394076ef83aa204b6902ee20afe9a839f19f67296a6c8b530885df6ae1e07dd4",
+        "url": "https://github.com/alexp50/bmw-apps/releases/download/front-camera-cluster-helper@0.2.1/front-camera-cluster-helper@0.2.1.tgz"
+      }
+    },
+    {
+      "id": "hotspot-studio-helper",
+      "kind": "tool",
+      "title": "热点工作室后台",
+      "version": "0.1.7",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.11",
+        "mgu-python": "1.0.2",
+        "mgu-uplink": "0.7.3"
+      },
+      "description": "管理热点连接及代理服务。",
+      "artifact": {
+        "name": "hotspot-studio-helper@0.1.7.tgz",
+        "size": 9437,
+        "sha256": "a2350a9d330008649f3cbe948f48d018be3a97f5cf179a5ab0305b1198ab135a",
+        "url": "https://github.com/alexp50/bmw-apps/releases/download/hotspot-studio-helper@0.1.7/hotspot-studio-helper@0.1.7.tgz"
+      }
+    },
+    {
+      "id": "idrive7-renderd",
+      "kind": "tool",
+      "title": "应用 GPU 渲染器",
+      "version": "2.1.19",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "optional": true,
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.6.1"
+      },
+      "mguProvides": "renderer",
+      "description": "为车机应用绘制实时图形。",
+      "artifact": {
+        "name": "idrive7-renderd@2.1.19.tgz",
+        "size": 96247,
+        "sha256": "49a7095cf26718e58ab73ed002cb5bce5bc58e7f1741a30204c0a4604995c866",
+        "url": "https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/packages/components/idrive7-renderd@2.1.19.tgz"
+      }
+    },
+    {
+      "id": "jap-node22",
+      "kind": "tool",
+      "title": "Node.js 22 运行组件",
+      "version": "22.23.4",
+      "mguHmi": [
+        "ID7"
+      ],
+      "optional": true,
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0"
+      },
+      "description": "为 RideTube 提供 Node.js 运行环境。",
+      "artifact": {
+        "name": "jap-node22@22.23.4.tgz",
+        "size": 49203293,
+        "sha256": "c62a8e2a3803b858b4d1020cb19746c8bd9ae8b753145f80c5adf7d781692743",
+        "url": "https://github.com/JustAnotherPU/ridetube/releases/download/catalog/jap-node22@22.23.4.tgz"
+      }
+    },
+    {
+      "id": "jap-ridetube-d",
+      "kind": "tool",
+      "title": "RideTube 后台",
+      "version": "0.5.7",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.2",
+        "jap-node22": "22.23.4",
+        "mgu-render": "0.6.11"
+      },
+      "description": "为 RideTube 提供视频服务。",
+      "artifact": {
+        "name": "jap-ridetube-d@0.5.7.tgz",
+        "size": 8901348,
+        "sha256": "67d126522f972ae5c0f3dd9fcc8d69b2efdd93913d83fd9da4440a7ea62ab728",
+        "url": "https://github.com/JustAnotherPU/ridetube/releases/download/catalog/jap-ridetube-d@0.5.7.tgz"
+      }
+    },
+    {
+      "id": "mgu-browser",
+      "kind": "tool",
+      "title": "浏览器运行组件",
+      "version": "0.16.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-browser-engine": "0.1.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-deploy": "0.7.17"
+      },
+      "description": "启动并管理车机浏览器。",
+      "artifact": {
+        "name": "mgu-browser@0.16.1.tgz",
+        "size": 406404,
+        "sha256": "dac91634fe5ff877913b66add4205895a86f90800d48e8a9897c6cd75cf157aa",
+        "url": "https://github.com/pllanaio/mgu-browser/releases/download/v0.16.1/mgu-browser%400.16.1.tgz"
+      }
+    },
+    {
+      "id": "mgu-browser-engine",
+      "kind": "tool",
+      "title": "Chromium 浏览器引擎",
+      "version": "0.1.0",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.17"
+      },
+      "description": "提供 Chromium 浏览器内核。",
+      "artifact": {
+        "name": "mgu-browser-engine@0.1.0.tgz",
+        "size": 181048639,
+        "sha256": "0b6a73c964354214262d01f2d9bec2d0ab253cac8d27de04708912e804ef0874",
+        "url": "https://github.com/pllanaio/mgu-browser/releases/download/v0.10.0/mgu-browser-engine%400.1.0.tgz"
+      }
+    },
+    {
+      "id": "mgu-deploy",
+      "kind": "tool",
+      "title": "安装部署组件",
+      "version": "0.8.27",
+      "description": "在车机上准备和安装软件包。",
+      "artifact": {
+        "name": "mgu-deploy@0.8.27.tgz",
+        "size": 168362,
+        "sha256": "57797407580d4f0c4be234e226d4f51972002adeb1ad718e3cf2ffcd00ea36b6",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-deploy%400.8.27/mgu-deploy%400.8.27.tgz"
+      }
+    },
+    {
+      "id": "mgu-inputgate",
+      "kind": "tool",
+      "title": "旋钮输入组件",
+      "version": "1.2.1",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "optional": false,
+      "uninstallable": true,
+      "requires": {},
+      "mguNeeds": [
+        "renderer"
+      ],
+      "description": "将 iDrive 旋钮事件交给当前应用。",
+      "artifact": {
+        "name": "mgu-inputgate@1.2.1.tgz",
+        "size": 8554,
+        "sha256": "d424e6e7b63351579be3abe675886420f71cbad497c994ab0e6b2aa9583b224a",
+        "url": "https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/packages/components/mgu-inputgate@1.2.1.tgz"
+      }
+    },
+    {
+      "id": "mgu-python",
+      "kind": "tool",
+      "title": "Python 运行组件",
+      "version": "1.0.3",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "description": "为后台服务提供 Python 运行环境。",
+      "artifact": {
+        "name": "mgu-python@1.0.3.tgz",
+        "size": 14441404,
+        "sha256": "98ce27bcee265ba6846446ad7867193fbdc9e0447195dbf22bcfaabf7e2f2533",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-python%401.0.3/mgu-python%401.0.3.tgz"
+      }
+    },
+    {
+      "id": "mgu-render",
+      "kind": "tool",
+      "title": "通用 GPU 渲染器",
+      "version": "0.6.25",
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "optional": true,
+      "requires": {
+        "mgu-deploy": "0.6.9"
+      },
+      "mguProvides": "renderer",
+      "description": "为车机应用提供通用图形渲染。",
+      "artifact": {
+        "name": "mgu-render@0.6.25.tgz",
+        "size": 103355,
+        "sha256": "73b5444307aaf7a3a1b519cb14032869f18930749284aef557a2e0bd58d3fd61",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-render%400.6.25/mgu-render%400.6.25.tgz"
+      }
+    },
+    {
+      "id": "mgu-updater",
+      "kind": "tool",
+      "title": "更新组件",
+      "version": "0.8.51",
+      "requires": {
+        "mgu-deploy": "0.8.4",
+        "mgu-python": "1.0.2"
+      },
+      "description": "检查软件源并下载更新。",
+      "artifact": {
+        "name": "mgu-updater@0.8.51.tgz",
+        "size": 143205,
+        "sha256": "e38745a14fad5d34648c101e0d7eadd9a60d53fa1f4cda38462e3f77e08eeb95",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-updater%400.8.51/mgu-updater%400.8.51.tgz"
+      }
+    },
+    {
+      "id": "mgu-uplink",
+      "kind": "tool",
+      "title": "互联网连接组件",
+      "version": "0.7.13",
+      "optional": true,
+      "requires": {
+        "mgu-updater": "0.7.2"
+      },
+      "description": "为获准联网的应用提供网络连接。",
+      "artifact": {
+        "name": "mgu-uplink@0.7.13.tgz",
+        "size": 3605106,
+        "sha256": "077e3200356df726a1e653fd67db9f9a1237e22b548f946b726c6eadd0f48d28",
+        "url": "https://github.com/robertnisipeanu/mgu-store/releases/download/mgu-uplink%400.7.13/mgu-uplink%400.7.13.tgz"
+      }
+    },
+    {
+      "id": "vehicle-network-observer",
+      "kind": "tool",
+      "title": "车辆网络观测组件",
+      "version": "0.1.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.11",
+        "mgu-python": "1.0.2"
+      },
+      "description": "收集车载网络接口状态。",
+      "artifact": {
+        "name": "vehicle-network-observer@0.1.2.tgz",
+        "size": 5887,
+        "sha256": "216a50ffbe3e5b64524b7a2bb89a752a0f30aea197493455028236f9e690a715",
+        "url": "https://github.com/alexp50/bmw-apps/releases/download/vehicle-network-observer@0.1.2/vehicle-network-observer@0.1.2.tgz"
+      }
+    },
+    {
+      "id": "vizualyse-bus",
+      "kind": "tool",
+      "title": "Vizualyse 协调组件",
+      "version": "0.1.0",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0"
+      },
+      "description": "协调 Vizualyse 后台服务。",
+      "artifact": {
+        "name": "vizualyse-bus@0.1.0.tgz",
+        "size": 122314,
+        "sha256": "37c0ea1f62d208f08f8c12cce310596f8809f4bda926f2d5d5321ad85f0ebb4a",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-bus%400.1.0/vizualyse-bus%400.1.0.tgz"
+      }
+    },
+    {
+      "id": "vizualyse-cast",
+      "kind": "tool",
+      "title": "仪表投射（后台组件）",
+      "version": "0.4.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "cluster-render": "0.4.2",
+        "mgu-python": "1.0.0",
+        "mgu-uplink": "0.7.0",
+        "vizualyse-bus": "0.1.0"
+      },
+      "description": "接收投屏请求并传送画面。",
+      "artifact": {
+        "name": "vizualyse-cast@0.4.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-cast%400.4.1/vizualyse-cast%400.4.1.tgz",
+        "size": 30059154,
+        "sha256": "cc08afd33d7ea50210a022cf0001be9a088331c0d3ce59ee12023a349eee500a"
+      }
+    },
+    {
+      "id": "vizualyse-chromium",
+      "kind": "tool",
+      "title": "浏览器（后台组件）",
+      "version": "0.3.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11",
+        "vizualyse-bus": "0.1.0"
+      },
+      "description": "为 Vizualyse 浏览器提供 Chromium 环境。",
+      "artifact": {
+        "name": "vizualyse-chromium@0.3.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-chromium%400.3.1/vizualyse-chromium%400.3.1.tgz",
+        "size": 188979233,
+        "sha256": "0a5cc143c962357203271ddc938f7311bf4eda8cf584ce363839e56c3992279e"
+      }
+    },
+    {
+      "id": "vizualyse-cluster",
+      "kind": "tool",
+      "title": "仪表主题（后台组件）",
+      "version": "0.4.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11",
+        "cluster-render": "0.5.4"
+      },
+      "description": "绘制 Vizualyse 自定义仪表。",
+      "artifact": {
+        "name": "vizualyse-cluster@0.4.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-cluster%400.4.1/vizualyse-cluster%400.4.1.tgz",
+        "size": 10991905,
+        "sha256": "44516f46fdd41d6bd743d69e8087c7756b52981dc47538b1cc680c90124d10b1"
+      }
+    },
+    {
+      "id": "vizualyse-moonlight",
+      "kind": "tool",
+      "title": "Moonlight 串流（后台组件）",
+      "version": "0.3.1",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "cluster-render": "0.4.2",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11"
+      },
+      "description": "连接 Sunshine 主机并解码串流。",
+      "artifact": {
+        "name": "vizualyse-moonlight@0.3.1.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-moonlight%400.3.1/vizualyse-moonlight%400.3.1.tgz",
+        "size": 943274,
+        "sha256": "46f8ea10449243586f2285eca6b108550a9cfbac4daa6d6a7f5597399cd69ee0"
+      }
+    },
+    {
+      "id": "vizualyse-steam",
+      "kind": "tool",
+      "title": "车载 Steam（后台组件）",
+      "version": "0.4.0",
+      "mguHmi": [
+        "ID7"
+      ],
+      "uninstallable": true,
+      "requires": {
+        "mgu-deploy": "0.7.0",
+        "mgu-python": "1.0.0",
+        "mgu-render": "0.6.11",
+        "vizualyse-bus": "0.1.0"
+      },
+      "description": "为 Steam 客户端提供运行环境。",
+      "artifact": {
+        "name": "vizualyse-steam@0.4.0.tgz",
+        "url": "https://github.com/Vizualyse/idrive-apps/releases/download/vizualyse-steam%400.4.0/vizualyse-steam%400.4.0.tgz",
+        "size": 531211774,
+        "sha256": "3719af147d3d2209f9e5fa93de0993a3c95f8df9ccc2f5f7e990c6d227f5eeb6"
+      }
+    }
+  ]
+}

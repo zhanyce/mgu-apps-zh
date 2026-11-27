@@ -1,0 +1,15 @@
+{
+  "id": "front_camera_cluster",
+  "version": "0.2.104",
+  "upstreamVersion": "0.2.1",
+  "title": "仪表摄像头",
+  "description": "在兼容仪表中查看夜视或泊车摄像头画面。",
+  "translations": {
+    "Night Vision": "夜视",
+    "Parking camera": "泊车摄像头",
+    "Refresh status": "刷新状态",
+    "Stop": "停止",
+    "Night Vision Cluster": "仪表摄像头"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}

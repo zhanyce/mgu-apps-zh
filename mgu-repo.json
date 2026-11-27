@@ -1,0 +1,2499 @@
+{
+  "schema": 1,
+  "components": [
+    {
+      "kind": "tool",
+      "id": "mgu-gif-net",
+      "path": "sources/projects/NamelsMissing--mgu-apps/native/gif-net"
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.1",
+        "mgu-deploy": "0.8.27",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "M Track 仪表",
+      "description": "在兼容仪表上显示 M Track 风格布局，默认关闭覆盖显示。",
+      "uninstallable": true,
+      "id": "adam_mtrack",
+      "kind": "app",
+      "path": "sources/projects/pinguinooo--idrive7-apps/apps/adam_mtrack",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/pinguinooo--idrive7-apps/kit/runtime",
+          "sources/projects/pinguinooo--idrive7-apps/kit/platform",
+          "sources/projects/pinguinooo--idrive7-apps/kit/tools",
+          "sources/projects/pinguinooo--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/pinguinooo--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.1",
+        "mgu-deploy": "0.8.27",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "换挡灯",
+      "description": "按驾驶模式和发动机温度设置换挡提醒。",
+      "uninstallable": true,
+      "id": "adam_shiftlights",
+      "kind": "app",
+      "path": "sources/projects/pinguinooo--idrive7-apps/apps/adam_shiftlights",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/pinguinooo--idrive7-apps/kit/runtime",
+          "sources/projects/pinguinooo--idrive7-apps/kit/platform",
+          "sources/projects/pinguinooo--idrive7-apps/kit/tools",
+          "sources/projects/pinguinooo--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/pinguinooo--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "动力仪表",
+      "description": "同时查看油温、变速箱温度、增压与挡位。",
+      "uninstallable": true,
+      "id": "adam_vitals",
+      "kind": "app",
+      "path": "sources/projects/pinguinooo--idrive7-apps/apps/adam_vitals",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/pinguinooo--idrive7-apps/kit/runtime",
+          "sources/projects/pinguinooo--idrive7-apps/kit/platform",
+          "sources/projects/pinguinooo--idrive7-apps/kit/tools",
+          "sources/projects/pinguinooo--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/pinguinooo--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "驾驶辅助状态",
+      "description": "读取驾驶辅助功能的可用状态与控制单元反馈。",
+      "uninstallable": true,
+      "id": "adas_feature_probe",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/adas_feature_probe",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "氛围灯设置",
+      "description": "按驾驶模式选择车内氛围灯颜色和效果。",
+      "uninstallable": true,
+      "id": "ambient_config",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/ambient_config",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "氛围灯工作室",
+      "description": "在全屏界面编辑驾驶模式配色和灯光提醒。",
+      "uninstallable": true,
+      "id": "ambient_studio_full",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/ambient_studio_full",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "养护记录",
+      "description": "记录车辆养护项目和周期，在首页查看提醒。",
+      "uninstallable": true,
+      "id": "aref_carcare",
+      "kind": "app",
+      "path": "sources/projects/arefahmad--idrive7-apps/apps/aref_carcare",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/arefahmad--idrive7-apps/kit/runtime",
+          "sources/projects/arefahmad--idrive7-apps/kit/platform",
+          "sources/projects/arefahmad--idrive7-apps/kit/tools",
+          "sources/projects/arefahmad--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/arefahmad--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车载歌词",
+      "description": "根据当前播放的曲目获取并显示歌词。",
+      "uninstallable": true,
+      "id": "aref_carlyrics",
+      "kind": "app",
+      "path": "sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/arefahmad--idrive7-apps/kit/runtime",
+          "sources/projects/arefahmad--idrive7-apps/kit/platform",
+          "sources/projects/arefahmad--idrive7-apps/kit/tools",
+          "sources/projects/arefahmad--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/arefahmad--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "行车监测",
+      "description": "记录行程、故障和发动机失火事件。",
+      "uninstallable": true,
+      "id": "aref_carwatch",
+      "kind": "app",
+      "path": "sources/projects/arefahmad--idrive7-apps/apps/aref_carwatch",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/arefahmad--idrive7-apps/kit/runtime",
+          "sources/projects/arefahmad--idrive7-apps/kit/platform",
+          "sources/projects/arefahmad--idrive7-apps/kit/tools",
+          "sources/projects/arefahmad--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/arefahmad--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.2",
+        "mgu-uplink": "0.7.3",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "预计到达时间",
+      "description": "在车机组件查看 Apple Maps 的预计到达时间。",
+      "uninstallable": true,
+      "id": "aref_eta",
+      "kind": "app",
+      "path": "sources/projects/arefahmad--idrive7-apps/apps/aref_eta",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/arefahmad--idrive7-apps/kit/runtime",
+          "sources/projects/arefahmad--idrive7-apps/kit/platform",
+          "sources/projects/arefahmad--idrive7-apps/kit/tools",
+          "sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics/car/nowplaying.js",
+          "sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics/art/artwork.js",
+          "sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics/stage/lyrics.js",
+          "sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics/vendor/jpeg_decoder.js",
+          "sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics/net/http.js",
+          "sources/projects/arefahmad--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/arefahmad--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车机接口目录",
+      "description": "浏览车机公开的导航、媒体、空调和车身服务。",
+      "uninstallable": true,
+      "id": "aref_explorer",
+      "kind": "app",
+      "path": "sources/projects/arefahmad--idrive7-apps/apps/aref_explorer",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/arefahmad--idrive7-apps/kit/runtime",
+          "sources/projects/arefahmad--idrive7-apps/kit/platform",
+          "sources/projects/arefahmad--idrive7-apps/kit/tools",
+          "sources/projects/arefahmad--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/arefahmad--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "轮胎设置",
+      "description": "查看已识别轮胎和目标压力，配置变更受驻车条件限制。",
+      "uninstallable": true,
+      "id": "aref_tires",
+      "kind": "app",
+      "path": "sources/projects/arefahmad--idrive7-apps/apps/aref_tires",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/arefahmad--idrive7-apps/kit/runtime",
+          "sources/projects/arefahmad--idrive7-apps/kit/platform",
+          "sources/projects/arefahmad--idrive7-apps/kit/tools",
+          "sources/projects/arefahmad--idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/arefahmad--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Mon Vitals",
+      "description": "集中显示发动机温度、增压与底盘数据。",
+      "uninstallable": true,
+      "id": "benspa_vitals",
+      "kind": "app",
+      "path": "sources/projects/benspa900--mon-vitals-idrive7/apps/benspa_vitals",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/runtime",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/platform",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/tools",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/localization/fonts",
+          "sources/projects/benspa900--mon-vitals-idrive7/LICENSE"
+        ],
+        "sdk": "sources/projects/benspa900--mon-vitals-idrive7/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.19",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "增压仪表",
+      "description": "查看 ECU 的增压和发动机实时参数。",
+      "uninstallable": true,
+      "id": "boostline_cn",
+      "kind": "app",
+      "path": "sources/projects/giuseppesalatino-boop--mgu-apps/ecu-live-data/app",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/runtime",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/platform",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/tools",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/localization/fonts",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "制动测试",
+      "description": "记录制动距离、峰值减速度和连续制动表现。",
+      "uninstallable": true,
+      "id": "brake_test",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/brake_test",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车辆仪表",
+      "description": "查看发动机、进气、燃油和底盘的实时读数。",
+      "uninstallable": true,
+      "id": "car_vitals",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/car_vitals",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-deploy": "0.8.27",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "仪表歌词",
+      "description": "根据 Spotify 曲目获取同步歌词，在兼容仪表中显示。",
+      "uninstallable": true,
+      "id": "cluster_lyrics",
+      "kind": "app",
+      "path": "sources/projects/NamelsMissing--mgu-apps/apps/cluster_lyrics",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/NamelsMissing--mgu-apps/kit/runtime",
+          "sources/projects/NamelsMissing--mgu-apps/kit/platform",
+          "sources/projects/NamelsMissing--mgu-apps/kit/tools",
+          "sources/projects/NamelsMissing--mgu-apps/LICENSE",
+          "sources/projects/NamelsMissing--mgu-apps/THIRD_PARTY_NOTICES.md"
+        ],
+        "sdk": "sources/projects/NamelsMissing--mgu-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "仪表导航卡片",
+      "description": "在兼容仪表上查看下一转向、车道和距离。",
+      "uninstallable": true,
+      "id": "cluster_nav_card",
+      "kind": "app",
+      "path": "sources/projects/tjmodsss--tjm-apps/apps/cluster_nav_card",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/tjmodsss--tjm-apps/kit/runtime",
+          "sources/projects/tjmodsss--tjm-apps/kit/platform",
+          "sources/projects/tjmodsss--tjm-apps/kit/tools",
+          "sources/projects/tjmodsss--tjm-apps/kit/localization/fonts",
+          "sources/projects/tjmodsss--tjm-apps/LICENSE",
+          "sources/projects/tjmodsss--tjm-apps/NOTICE.zh-CN.md",
+          "sources/projects/tjmodsss--tjm-apps/third_party"
+        ],
+        "sdk": "sources/projects/tjmodsss--tjm-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "cluster-render": "0.5.1",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "仪表主题",
+      "description": "选择仪表布局、配色和换挡提示样式。",
+      "uninstallable": true,
+      "id": "cluster_themes",
+      "kind": "app",
+      "path": "sources/projects/bimmer-lab--apps/apps/cluster_themes",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/bimmer-lab--apps/kit/runtime",
+          "sources/projects/bimmer-lab--apps/kit/platform",
+          "sources/projects/bimmer-lab--apps/kit/tools",
+          "sources/projects/bimmer-lab--apps/shared/hud.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_text.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_data.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_themes.js",
+          "sources/projects/bimmer-lab--apps/shared/layouts.js",
+          "sources/projects/bimmer-lab--apps/shared/shaders.js",
+          "sources/projects/bimmer-lab--apps/shared/icons.js",
+          "sources/projects/bimmer-lab--apps/shared/shift_score.js",
+          "sources/projects/bimmer-lab--apps/shared/demo_script.js",
+          "sources/projects/bimmer-lab--apps/shared/sun.js",
+          "sources/projects/bimmer-lab--apps/shared/cluster_render_client.js",
+          "sources/projects/bimmer-lab--apps/shared/calibration.js",
+          "sources/projects/bimmer-lab--apps/shared/visible.js",
+          "sources/projects/bimmer-lab--apps/shared/page.js",
+          "sources/projects/bimmer-lab--apps/shared/waze.js",
+          "sources/projects/bimmer-lab--apps/shared/previews.js",
+          "sources/projects/bimmer-lab--apps/shared/sensors.js",
+          "sources/projects/bimmer-lab--apps/shared/badges.js",
+          "sources/projects/bimmer-lab--apps/shared/screen.js",
+          "sources/projects/bimmer-lab--apps/shared/runs.js",
+          "sources/projects/bimmer-lab--apps/shared/tz.js",
+          "sources/projects/bimmer-lab--apps/shared/holidays.js",
+          "sources/projects/bimmer-lab--apps/shared/vehicle_state.js",
+          "sources/projects/bimmer-lab--apps/shared/shift_cue.js",
+          "sources/projects/bimmer-lab--apps/shared/smart_temps.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_holiday.js",
+          "sources/projects/bimmer-lab--apps/shared/garland.js",
+          "sources/projects/bimmer-lab--apps/LICENSE"
+        ],
+        "sdk": "sources/projects/bimmer-lab--apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "12 V 电池",
+      "description": "查看低压电池的电压、电流、温度与荷电状态。",
+      "uninstallable": true,
+      "id": "dimon_battery",
+      "kind": "app",
+      "path": "sources/projects/DimonPrograms--dimonprograms-apps/apps/dimon_battery",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/runtime",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/platform",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/tools",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/localization/fonts",
+          "sources/projects/DimonPrograms--dimonprograms-apps/LICENSE",
+          "sources/projects/DimonPrograms--dimonprograms-apps/NOTICE.zh-CN.md",
+          "sources/projects/DimonPrograms--dimonprograms-apps/third_party"
+        ],
+        "sdk": "sources/projects/DimonPrograms--dimonprograms-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "赛道计圈",
+      "description": "在封闭赛道记录圈速、分段成绩和实时差值。",
+      "uninstallable": true,
+      "id": "dimon_track_mode",
+      "kind": "app",
+      "path": "sources/projects/DimonPrograms--dimonprograms-apps/apps/dimon_track_mode",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/runtime",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/platform",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/tools",
+          "sources/projects/DimonPrograms--dimonprograms-apps/kit/localization/fonts",
+          "sources/projects/DimonPrograms--dimonprograms-apps/LICENSE",
+          "sources/projects/DimonPrograms--dimonprograms-apps/NOTICE.zh-CN.md",
+          "sources/projects/DimonPrograms--dimonprograms-apps/third_party"
+        ],
+        "sdk": "sources/projects/DimonPrograms--dimonprograms-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "mgu-deploy": "0.8.27"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "西洋双陆棋",
+      "description": "选择长局或短局，进行本地双人或人机对局。",
+      "uninstallable": true,
+      "id": "dk_backgammon",
+      "kind": "app",
+      "path": "sources/projects/mistergahan--mgu-backgammon/apps/dk_backgammon",
+      "build": "unit"
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Freedoom",
+      "description": "使用 iDrive 旋钮操控游戏，支持存档。",
+      "uninstallable": true,
+      "id": "doom",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/doom",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk",
+        "network": true
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.19",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "DPF 仪表",
+      "description": "查看柴油颗粒捕集器再生状态和相关发动机读数。",
+      "uninstallable": true,
+      "id": "dpf_id7_cn",
+      "kind": "app",
+      "path": "sources/projects/giuseppesalatino-boop--mgu-apps/dpf-monitoring/app",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/runtime",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/platform",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/tools",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/localization/fonts",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "柴油颗粒捕集器",
+      "description": "查看颗粒捕集器的积碳、压差、温度和再生记录。",
+      "uninstallable": true,
+      "id": "dpf_monitor",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/dpf_monitor",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "加速计时",
+      "description": "记录分段加速用时和四分之一英里成绩。",
+      "uninstallable": true,
+      "id": "draggy",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/draggy",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.3.10",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "HUD 显示设置",
+      "description": "配置抬头显示中的导航提示、挡位与暖机信息。",
+      "uninstallable": true,
+      "id": "drive_hud_full",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/drive_hud_full",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "故障码",
+      "description": "读取控制单元故障记录和车辆检查信息，可执行清除操作。",
+      "uninstallable": true,
+      "id": "dtc_scanner",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/dtc_scanner",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/diagnostic-full.zh-CN.json",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/diagnostic-full-manifest.ru.json",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/diagnostic-overrides.ru.json",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/diagnostic-full-manifest.json",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/diagnostic-terms.tsv",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/diagnostic-overrides.zh-CN.json",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/diagnostic-full-terms.tsv",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.15",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "虚拟马力机",
+      "description": "根据行驶数据估算功率和扭矩，绘制输出曲线。",
+      "uninstallable": true,
+      "id": "dyno",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/dyno",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "mgu-deploy": "0.3.2",
+        "idrive7-renderd": "2.1.15",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "eDrive 仪表",
+      "description": "查看电驱系统、动力电池和能量流数据。",
+      "uninstallable": true,
+      "id": "edrive",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/edrive",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "elDrive 充电仪表",
+      "description": "查看纯电车型的电量、续航、充电记录和低压电池状态。",
+      "uninstallable": true,
+      "id": "eldrive",
+      "kind": "app",
+      "path": "sources/projects/beele--eldrive/apps/eldrive",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/beele--eldrive/kit/runtime",
+          "sources/projects/beele--eldrive/kit/platform",
+          "sources/projects/beele--eldrive/kit/tools",
+          "sources/projects/beele--eldrive/kit/localization/fonts",
+          "sources/projects/beele--eldrive/LICENSE"
+        ],
+        "sdk": "sources/projects/beele--eldrive/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "F44 交通标志诊断",
+      "description": "检查本车交通标志和信号灯识别接口。",
+      "uninstallable": true,
+      "id": "f44_traffic_diag",
+      "kind": "app",
+      "path": "sources/projects/benspa900--mon-vitals-idrive7/apps/f44_traffic_diag",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/runtime",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/platform",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/tools",
+          "sources/projects/benspa900--mon-vitals-idrive7/kit/localization/fonts",
+          "sources/projects/benspa900--mon-vitals-idrive7/LICENSE"
+        ],
+        "sdk": "sources/projects/benspa900--mon-vitals-idrive7/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "front-camera-cluster-helper": "0.2.1",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "仪表摄像头",
+      "description": "在兼容仪表中查看夜视或泊车摄像头画面。",
+      "uninstallable": true,
+      "id": "front_camera_cluster",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/front_camera_cluster",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.27",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "G21 加热控制",
+      "description": "查看方向盘与座椅加热状态，配置兼容设备。",
+      "uninstallable": true,
+      "id": "g21_wheelheat",
+      "kind": "app",
+      "path": "sources/projects/NamelsMissing--mgu-apps/apps/g21_wheelheat",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/NamelsMissing--mgu-apps/kit/runtime",
+          "sources/projects/NamelsMissing--mgu-apps/kit/platform",
+          "sources/projects/NamelsMissing--mgu-apps/kit/tools",
+          "sources/projects/NamelsMissing--mgu-apps/LICENSE",
+          "sources/projects/NamelsMissing--mgu-apps/THIRD_PARTY_NOTICES.md"
+        ],
+        "sdk": "sources/projects/NamelsMissing--mgu-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.15",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "加速度仪",
+      "description": "显示纵向和横向加速度，记录峰值。",
+      "uninstallable": true,
+      "id": "gforce",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/gforce",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-gif-net": "0.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "GIF 首页组件",
+      "description": "将自选 GIF 动画显示在首页。",
+      "uninstallable": true,
+      "id": "gif_home",
+      "kind": "app",
+      "path": "sources/projects/NamelsMissing--mgu-apps/apps/gif_home",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/NamelsMissing--mgu-apps/kit/runtime",
+          "sources/projects/NamelsMissing--mgu-apps/kit/platform",
+          "sources/projects/NamelsMissing--mgu-apps/kit/tools",
+          "sources/projects/NamelsMissing--mgu-apps/LICENSE",
+          "sources/projects/NamelsMissing--mgu-apps/THIRD_PARTY_NOTICES.md",
+          "sources/projects/NamelsMissing--mgu-apps/tools/build_gif_home.py"
+        ],
+        "sdk": "sources/projects/NamelsMissing--mgu-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "绿灯提醒",
+      "description": "根据前视摄像头识别的信号灯状态提示起步。",
+      "uninstallable": true,
+      "id": "green_light_alert",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/green_light_alert",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "hotspot-studio-helper": "0.1.7",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车载热点",
+      "description": "管理车机热点、网络代理和限时 ENET 转发。",
+      "uninstallable": true,
+      "id": "hotspot_studio",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/hotspot_studio",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.5.1",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "HUD 小组件",
+      "description": "在兼容的抬头显示器中组合挡位、温度与换挡灯。",
+      "uninstallable": true,
+      "id": "idrive_hud_widgets",
+      "kind": "app",
+      "path": "sources/projects/bimmer-lab--apps/apps/idrive_hud_widgets",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/bimmer-lab--apps/kit/runtime",
+          "sources/projects/bimmer-lab--apps/kit/platform",
+          "sources/projects/bimmer-lab--apps/kit/tools",
+          "sources/projects/bimmer-lab--apps/shared/hud.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_text.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_data.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_themes.js",
+          "sources/projects/bimmer-lab--apps/shared/layouts.js",
+          "sources/projects/bimmer-lab--apps/shared/shaders.js",
+          "sources/projects/bimmer-lab--apps/shared/icons.js",
+          "sources/projects/bimmer-lab--apps/shared/shift_score.js",
+          "sources/projects/bimmer-lab--apps/shared/demo_script.js",
+          "sources/projects/bimmer-lab--apps/shared/sun.js",
+          "sources/projects/bimmer-lab--apps/shared/cluster_render_client.js",
+          "sources/projects/bimmer-lab--apps/shared/calibration.js",
+          "sources/projects/bimmer-lab--apps/shared/visible.js",
+          "sources/projects/bimmer-lab--apps/shared/page.js",
+          "sources/projects/bimmer-lab--apps/shared/previews.js",
+          "sources/projects/bimmer-lab--apps/shared/sensors.js",
+          "sources/projects/bimmer-lab--apps/shared/waze.js",
+          "sources/projects/bimmer-lab--apps/shared/badges.js",
+          "sources/projects/bimmer-lab--apps/shared/screen.js",
+          "sources/projects/bimmer-lab--apps/shared/runs.js",
+          "sources/projects/bimmer-lab--apps/shared/tz.js",
+          "sources/projects/bimmer-lab--apps/shared/holidays.js",
+          "sources/projects/bimmer-lab--apps/shared/nav.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_nav.js",
+          "sources/projects/bimmer-lab--apps/shared/vehicle_state.js",
+          "sources/projects/bimmer-lab--apps/shared/shift_cue.js",
+          "sources/projects/bimmer-lab--apps/shared/smart_temps.js",
+          "sources/projects/bimmer-lab--apps/shared/hud_holiday.js",
+          "sources/projects/bimmer-lab--apps/shared/garland.js",
+          "sources/projects/bimmer-lab--apps/LICENSE"
+        ],
+        "sdk": "sources/projects/bimmer-lab--apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "cluster-render": "0.8.7",
+        "mgu-deploy": "0.8.27",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "idv7lol 仪表",
+      "description": "预览和切换自定义仪表，可从 U 盘导入主题。",
+      "uninstallable": true,
+      "id": "idv7lol",
+      "kind": "app",
+      "path": "sources/projects/ALMSTRA--idv7lol/apps/idv7lol",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/ALMSTRA--idv7lol/kit/runtime",
+          "sources/projects/ALMSTRA--idv7lol/kit/platform",
+          "sources/projects/ALMSTRA--idv7lol/kit/tools",
+          "sources/projects/ALMSTRA--idv7lol/LICENSE",
+          "sources/projects/ALMSTRA--idv7lol/THIRD_PARTY_NOTICES.md"
+        ],
+        "sdk": "sources/projects/ALMSTRA--idv7lol/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "jap-ridetube-d": "0.5.7",
+        "mgu-render": "0.6.11",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "RideTube",
+      "description": "浏览 YouTube 频道和视频，默认在驻车时显示画面。",
+      "uninstallable": true,
+      "id": "jap_ridetube",
+      "kind": "app",
+      "path": "sources/projects/JustAnotherPU--ridetube/apps/jap_ridetube",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/JustAnotherPU--ridetube/kit/runtime",
+          "sources/projects/JustAnotherPU--ridetube/kit/platform",
+          "sources/projects/JustAnotherPU--ridetube/kit/tools",
+          "sources/projects/JustAnotherPU--ridetube/kit/localization/fonts",
+          "sources/projects/JustAnotherPU--ridetube/LICENSE",
+          "sources/projects/JustAnotherPU--ridetube/THIRD_PARTY_LICENSES"
+        ],
+        "sdk": "sources/projects/JustAnotherPU--ridetube/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "mgu-render": "0.6.11",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "资源监视器",
+      "description": "查看处理器、交换空间、图形频率和应用内存用量。",
+      "uninstallable": true,
+      "id": "jap_sysmon",
+      "kind": "app",
+      "path": "sources/projects/JustAnotherPU--mgu-apps/apps/jap_sysmon",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/JustAnotherPU--mgu-apps/kit/runtime",
+          "sources/projects/JustAnotherPU--mgu-apps/kit/platform",
+          "sources/projects/JustAnotherPU--mgu-apps/kit/tools",
+          "sources/projects/JustAnotherPU--mgu-apps/LICENSE",
+          "sources/projects/JustAnotherPU--mgu-apps/THIRD_PARTY_LICENSES"
+        ],
+        "sdk": "sources/projects/JustAnotherPU--mgu-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "发动机配置",
+      "description": "查看并调整兼容发动机标定提供的参数。",
+      "uninstallable": true,
+      "id": "live_adjustments",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/live_adjustments",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "mgu-deploy": "0.3.2",
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "实时数据",
+      "description": "从车辆信号中选择需要观察的数据。",
+      "uninstallable": true,
+      "id": "live_data",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/live_data",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "M-Copilot",
+      "description": "在行车界面查看驾驶提示与车辆状态。",
+      "uninstallable": true,
+      "id": "m_copilot",
+      "kind": "app",
+      "path": "sources/projects/hexlay--idrive7-custom-apps/apps/m_copilot",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/runtime",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/platform",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/tools",
+          "sources/projects/hexlay--idrive7-custom-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/hexlay--idrive7-custom-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "mgu-browser": "0.16.1",
+        "mgu-browser-engine": "0.1.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-render": "0.6.11",
+        "mgu-deploy": "0.7.17",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车机浏览器",
+      "description": "用 iDrive 浏览网页，管理书签和历史记录。",
+      "uninstallable": true,
+      "id": "mgu_browser",
+      "kind": "app",
+      "path": "sources/projects/pllanaio--mgu-browser/apps/mgu_browser",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/pllanaio--mgu-browser/tools",
+          "sources/projects/pllanaio--mgu-browser/src",
+          "sources/projects/pllanaio--mgu-browser/assets/ui-fonts",
+          "sources/projects/pllanaio--mgu-browser/LICENSE",
+          "sources/projects/pllanaio--mgu-browser/THIRD_PARTY_NOTICES.md",
+          "sources/projects/pllanaio--mgu-browser/CREDITS.md",
+          "sources/projects/pllanaio--mgu-browser/licenses"
+        ],
+        "sdk": "sources/projects/pllanaio--mgu-browser/oap-sdk",
+        "network": true
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "泊车距离",
+      "description": "显示泊车雷达距离、转向轨迹和车身姿态。",
+      "uninstallable": true,
+      "id": "parking_clearance",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/parking_clearance",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "后排舒适控制",
+      "description": "操作兼容 G12 后排座椅、空调与遮阳设备。",
+      "uninstallable": true,
+      "id": "rear_comfort",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/rear_comfort",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.15",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "换挡提示",
+      "description": "显示当前转速和挡位，在设定转速提示换挡。",
+      "uninstallable": true,
+      "id": "redline",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/redline",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "空气悬架",
+      "description": "查看并调整兼容车辆的空气悬架高度。",
+      "uninstallable": true,
+      "id": "ride_height",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/ride_height",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "行程电脑",
+      "description": "汇总行程、油耗和燃油费用，显示海拔与续航。",
+      "uninstallable": true,
+      "id": "road_trip_computer",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/road_trip_computer",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE",
+          "sources/projects/NamelsMissing--mgu-apps/tools/build_gif_home.py"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "mgu-deploy": "0.8.12",
+        "mgu-updater": "0.8.28",
+        "mgu-render": "0.3.1"
+      },
+      "mguHmi": [
+        "ID7",
+        "ID8"
+      ],
+      "title": "MGU Store",
+      "description": "管理软件源，安装和更新车机应用与组件。",
+      "id": "robertn_store",
+      "kind": "app",
+      "path": "sources/projects/robertnisipeanu--mgu-store/apps/robertn_store",
+      "build": "unit"
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.6.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "HUD 挡位显示",
+      "description": "在仪表和抬头显示中区分常规、运动及手动挡位。",
+      "uninstallable": true,
+      "id": "rubenrios_gearhud",
+      "kind": "app",
+      "path": "sources/projects/RubenRios--GearHUD/apps/rubenrios_gearhud",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/RubenRios--GearHUD/kit/runtime",
+          "sources/projects/RubenRios--GearHUD/kit/platform",
+          "sources/projects/RubenRios--GearHUD/kit/tools",
+          "sources/projects/RubenRios--GearHUD/kit/localization/fonts",
+          "sources/projects/RubenRios--GearHUD/LICENSE"
+        ],
+        "sdk": "sources/projects/RubenRios--GearHUD/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.15",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "保养信息",
+      "description": "查看车辆的保养项目和到期状态。",
+      "uninstallable": true,
+      "id": "service",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/service",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "格鲁吉亚限速提示",
+      "description": "使用格鲁吉亚地区的数据提示道路限速。",
+      "uninstallable": true,
+      "id": "speed_limit",
+      "kind": "app",
+      "path": "sources/projects/hexlay--idrive7-custom-apps/apps/speed_limit",
+      "requires": {
+        "mgu-python": "1.0.2"
+      },
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/runtime",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/platform",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/tools",
+          "sources/projects/hexlay--idrive7-custom-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/hexlay--idrive7-custom-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-uplink": "0.7.3",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Spotify Connect",
+      "description": "与手机上的 Spotify 配对，在车机查看曲目和播放设备。",
+      "uninstallable": true,
+      "id": "spotify",
+      "kind": "app",
+      "path": "sources/projects/hexlay--idrive7-custom-apps/apps/spotify",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/runtime",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/platform",
+          "sources/projects/hexlay--idrive7-custom-apps/kit/tools",
+          "sources/projects/hexlay--idrive7-custom-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/hexlay--idrive7-custom-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.19",
+        "mgu-inputgate": "1.2.1",
+        "mgu-uplink": "0.7.3",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "加油记录",
+      "description": "记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。",
+      "uninstallable": true,
+      "id": "spritmonitor",
+      "kind": "app",
+      "path": "sources/projects/dzooky--bmrmodz/apps/spritmonitor",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/dzooky--bmrmodz/kit/runtime",
+          "sources/projects/dzooky--bmrmodz/kit/platform",
+          "sources/projects/dzooky--bmrmodz/kit/tools",
+          "sources/projects/dzooky--bmrmodz/kit/localization/fonts",
+          "sources/projects/dzooky--bmrmodz/LICENSE"
+        ],
+        "sdk": "sources/projects/dzooky--bmrmodz/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "自动启停记录",
+      "description": "查看自动启停受限原因与近期记录。",
+      "uninstallable": true,
+      "id": "start_stop_insight",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/start_stop_insight",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车辆遥测",
+      "description": "按系统查看动力、热管理、空调和底盘数据。",
+      "uninstallable": true,
+      "id": "telemetry_studio",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/telemetry_studio",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-deploy": "0.8.19",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "加减速计时",
+      "description": "使用 DSC 加速度信号补偿坡度影响。",
+      "uninstallable": true,
+      "id": "true_time_cn",
+      "kind": "app",
+      "path": "sources/projects/giuseppesalatino-boop--mgu-apps/true-time/app",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/runtime",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/platform",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/tools",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/kit/localization/fonts",
+          "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.6",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "胎压仪表",
+      "description": "对照四轮胎压、胎温和目标压力。",
+      "uninstallable": true,
+      "id": "tyrewatch",
+      "kind": "app",
+      "path": "sources/projects/suhailpatel--id7-apps/apps/tyrewatch",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/suhailpatel--id7-apps/kit/runtime",
+          "sources/projects/suhailpatel--id7-apps/kit/platform",
+          "sources/projects/suhailpatel--id7-apps/kit/tools",
+          "sources/projects/suhailpatel--id7-apps/LICENSE",
+          "sources/projects/suhailpatel--id7-apps/NOTICE.zh-CN.md"
+        ],
+        "sdk": "sources/projects/suhailpatel--id7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车辆健康",
+      "description": "汇总轮胎、油液、保养和故障状态。",
+      "uninstallable": true,
+      "id": "vehicle_health",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/vehicle_health",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "vehicle-network-observer": "0.1.2",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "车载网络",
+      "description": "查看车机网络接口、车辆网络设备和 IPv4 配置。",
+      "uninstallable": true,
+      "id": "vehicle_network",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/vehicle_network",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "vizualyse-cast": "0.4.1"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Vizualyse 投屏",
+      "description": "将手机选择的流媒体投送到兼容车载屏幕。",
+      "uninstallable": true,
+      "id": "vizualyse_cast",
+      "kind": "app",
+      "path": "sources/projects/Vizualyse--idrive-apps/apps/vizualyse_cast",
+      "build": "unit"
+    },
+    {
+      "requires": {
+        "vizualyse-chromium": "0.3.1"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Vizualyse Chromium",
+      "description": "在车机中使用 Chromium 浏览器。",
+      "uninstallable": true,
+      "id": "vizualyse_chromium",
+      "kind": "app",
+      "path": "sources/projects/Vizualyse--idrive-apps/apps/vizualyse_chromium",
+      "build": "unit"
+    },
+    {
+      "requires": {
+        "vizualyse-cluster": "0.4.1"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Vizualyse 仪表",
+      "description": "在兼容仪表上应用自定义主题。",
+      "uninstallable": true,
+      "id": "vizualyse_cluster",
+      "kind": "app",
+      "path": "sources/projects/Vizualyse--idrive-apps/apps/vizualyse_cluster",
+      "build": "unit"
+    },
+    {
+      "requires": {
+        "vizualyse-moonlight": "0.3.1"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Moonlight 串流",
+      "description": "驻车时连接运行 Sunshine 的电脑进行串流。",
+      "uninstallable": true,
+      "id": "vizualyse_moonlight",
+      "kind": "app",
+      "path": "sources/projects/Vizualyse--idrive-apps/apps/vizualyse_moonlight",
+      "build": "unit"
+    },
+    {
+      "requires": {
+        "vizualyse-steam": "0.4.0"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "Steam 客户端",
+      "description": "在兼容车机上启动 Steam 环境。",
+      "uninstallable": true,
+      "id": "vizualyse_steam",
+      "kind": "app",
+      "path": "sources/projects/Vizualyse--idrive-apps/apps/vizualyse_steam",
+      "build": "unit"
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.15",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "暖机助手",
+      "description": "根据机油和冷却液温度估算暖机时间。",
+      "uninstallable": true,
+      "id": "warmup",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/warmup",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "xDrive 仪表",
+      "description": "观察扭矩分配、车轮滑差和分动箱状态。",
+      "uninstallable": true,
+      "id": "xdrive_studio",
+      "kind": "app",
+      "path": "sources/projects/alexp50--bmw-apps/apps/xdrive_studio",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/alexp50--bmw-apps/kit/runtime",
+          "sources/projects/alexp50--bmw-apps/kit/platform",
+          "sources/projects/alexp50--bmw-apps/kit/tools",
+          "sources/projects/alexp50--bmw-apps/LICENSE"
+        ],
+        "sdk": "sources/projects/alexp50--bmw-apps/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "系统监视器",
+      "description": "显示 CPU、内存、温度和进程信息。",
+      "uninstallable": true,
+      "id": "xiaobai_sys_monitor",
+      "kind": "app",
+      "path": "sources/projects/hexlay--idrive7-system-monitor/apps/sys_monitor",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/hexlay--idrive7-system-monitor/kit/runtime",
+          "sources/projects/hexlay--idrive7-system-monitor/kit/platform",
+          "sources/projects/hexlay--idrive7-system-monitor/kit/tools",
+          "sources/projects/hexlay--idrive7-system-monitor/LICENSE"
+        ],
+        "sdk": "sources/projects/hexlay--idrive7-system-monitor/oap-sdk"
+      }
+    },
+    {
+      "requires": {
+        "idrive7-renderd": "2.1.18",
+        "mgu-inputgate": "1.1.0",
+        "mgu-python": "1.0.2"
+      },
+      "mguHmi": [
+        "ID7"
+      ],
+      "title": "ZF 8HP 变速箱",
+      "description": "查看兼容 8HP 变速箱的数据与可用设置。",
+      "uninstallable": true,
+      "id": "zf8hp",
+      "kind": "app",
+      "path": "sources/projects/cauliflowermossgrape--idrive7-apps/apps/zf8hp",
+      "manifest": "store-source.json",
+      "build": {
+        "python": "tools/build_source_app.py",
+        "args": [
+          "{dir}",
+          "{id}",
+          "{version}"
+        ],
+        "shared": [
+          "tools/build.py",
+          "sources/zh",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/runtime",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/platform",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/tools",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/kit/localization/fonts",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/LICENSE",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/NOTICE.zh-CN.md",
+          "sources/projects/cauliflowermossgrape--idrive7-apps/third_party"
+        ],
+        "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
+      }
+    }
+  ]
+}

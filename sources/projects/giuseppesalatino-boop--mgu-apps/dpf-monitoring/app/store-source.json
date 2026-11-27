@@ -1,0 +1,22 @@
+{
+  "id": "dpf_id7_cn",
+  "version": "1.1.103",
+  "upstreamVersion": "1.1.1",
+  "title": "DPF 仪表",
+  "description": "查看柴油颗粒捕集器再生状态和相关发动机读数。",
+  "translations": {
+    "Overview": "概览",
+    "Blue": "蓝色",
+    "Enable regeneration page": "启用再生页面",
+    "Highlight colour": "高亮颜色",
+    "Live data": "实时数据",
+    "Live data: show raw replies": "实时数据：显示原始响应",
+    "Orange": "橙色",
+    "Read the engine unit every": "读取发动机控制单元的间隔",
+    "Red": "红色",
+    "Regeneration starts at": "开始再生的积碳量",
+    "iDrive (title and buttons by the HMI)": "跟随 iDrive（标题和按钮由车机显示）",
+    "DPF Monitoring": "DPF 仪表"
+  },
+  "kit": "sources/projects/giuseppesalatino-boop--mgu-apps/vendor/idrive7-apps"
+}

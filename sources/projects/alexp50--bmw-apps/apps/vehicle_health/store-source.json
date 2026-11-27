@@ -1,0 +1,13 @@
+{
+  "id": "vehicle_health",
+  "version": "0.1.904",
+  "upstreamVersion": "0.1.9",
+  "title": "车辆健康",
+  "description": "汇总轮胎、油液、保养和故障状态。",
+  "translations": {
+    "Scan current faults": "扫描当前故障",
+    "Scan current faults when opened": "打开时扫描当前故障",
+    "Vehicle Health Center": "车辆健康"
+  },
+  "kit": "sources/projects/alexp50--bmw-apps"
+}
