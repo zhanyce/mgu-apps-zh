@@ -67,6 +67,9 @@
 | [空气悬架](https://github.com/alexp50/bmw-apps) | 查看并调整兼容车辆的空气悬架高度。 | `0.6.4` | [车机从源码构建](sources/projects/alexp50--bmw-apps/apps/ride_height/) |
 | [HUD 挡位显示](https://github.com/RubenRios/GearHUD) | 在仪表和抬头显示中区分常规、运动及手动挡位。 | `1.0.4` | [车机从源码构建](sources/projects/RubenRios--GearHUD/apps/rubenrios_gearhud/) |
 | [Vizualyse 仪表](https://github.com/Vizualyse/idrive-apps) | 在兼容仪表上应用自定义主题。 | `0.3.103` | [车机从源码构建](sources/projects/Vizualyse--idrive-apps/apps/vizualyse_cluster/) |
+| [仪表布局](https://github.com/eroobeeroo/idrive7-cluster-info) | 切换全仪表布局、配色和中央显示内容。 | `0.30.0` | [车机从源码构建](sources/projects/eroobeeroo--idrive7-cluster-info/apps/cluster_layouts/) |
+| [仪表中央数据](https://github.com/eroobeeroo/idrive7-cluster-info) | 保留原车仪表外圈，在中央显示动力、温度、暖机和涡轮冷却等数据。 | `0.11.0` | [车机从源码构建](sources/projects/eroobeeroo--idrive7-cluster-info/apps/cluster_centre/) |
+| [仪表信息叠加](https://github.com/eroobeeroo/idrive7-cluster-info) | 在仪表地图或 HUD 上叠加温度、电量等数据及转向灯提示。 | `1.6.8` | [车机从源码构建](sources/projects/eroobeeroo--idrive7-cluster-info/apps/cluster_info/) |
 
 ## 出行
 
@@ -77,6 +80,7 @@
 | [仪表导航卡片](https://github.com/tjmodsss/tjm-apps) | 在兼容仪表上查看下一转向、车道和距离。 | `0.9.204` | [车机从源码构建](sources/projects/tjmodsss--tjm-apps/apps/cluster_nav_card/) |
 | [格鲁吉亚限速提示](https://github.com/hexlay/idrive7-custom-apps) | 使用格鲁吉亚地区的数据提示道路限速。 | `1.0.1004` | [车机从源码构建](sources/projects/hexlay--idrive7-custom-apps/apps/speed_limit/) |
 | [加油记录](https://github.com/dzooky/bmrmodz) | 记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。 | `0.1.4505` | [车机从源码构建](sources/projects/dzooky--bmrmodz/apps/spritmonitor/) |
+| [Cockpit+ 驾驶舱增强](https://github.com/Hyperionism/idrive7-cockpit-plus) | 在兼容的 ID7 仪表和 HUD 上显示全屏导航、转向提示和车辆数据。 | `0.9.15` | [车机从源码构建](sources/projects/Hyperionism--idrive7-cockpit-plus/apps/id7_cockpit_plus/) |
 
 ## 娱乐
 

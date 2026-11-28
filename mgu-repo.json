@@ -2494,6 +2494,150 @@
         ],
         "sdk": "sources/projects/cauliflowermossgrape--idrive7-apps/oap-sdk"
       }
+    },
+    {
+      "id": "id7_cockpit_plus",
+      "title": "Cockpit+ 驾驶舱增强",
+      "description": "在兼容的 ID7 仪表和 HUD 上显示全屏导航、转向提示和车辆数据。",
+      "author": "Hyperionism",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "cluster-render": "2.9.6",
+        "waze-on-cluster": "2.9.2",
+        "cockpit-fullview": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "path": "sources/projects/Hyperionism--idrive7-cockpit-plus/apps/id7_cockpit_plus",
+      "manifest": "app.json",
+      "runtimeCatalog": "runtime/cockpit-plus/catalog.json",
+      "build": {
+        "args": [
+          "--app-root",
+          "sources/projects/Hyperionism--idrive7-cockpit-plus",
+          "--language",
+          "zh-CN",
+          "--omit-sdk",
+          "{id}"
+        ],
+        "output": "sources/projects/Hyperionism--idrive7-cockpit-plus/dist/{id}@{version}.tgz",
+        "python": "sources/projects/Hyperionism--idrive7-cockpit-plus/vendor/cauliflowermossgrape-idrive7-apps/kit/tools/build.py",
+        "shared": [
+          "sources/projects/Hyperionism--idrive7-cockpit-plus/vendor",
+          "sources/projects/Hyperionism--idrive7-cockpit-plus/LICENSE"
+        ]
+      }
+    },
+    {
+      "id": "cluster_layouts",
+      "title": "仪表布局",
+      "description": "切换全仪表布局、配色和中央显示内容。",
+      "author": "eroobeeroo",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.2"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "path": "sources/projects/eroobeeroo--idrive7-cluster-info/apps/cluster_layouts",
+      "manifest": "app.json",
+      "build": {
+        "args": [
+          "--language",
+          "zh-CN",
+          "--store-version",
+          "{id}"
+        ],
+        "output": "sources/projects/eroobeeroo--idrive7-cluster-info/dist/{id}@{version}.tgz",
+        "python": "sources/projects/eroobeeroo--idrive7-cluster-info/kit/tools/build.py",
+        "shared": [
+          "sources/projects/eroobeeroo--idrive7-cluster-info/kit"
+        ],
+        "sdk": "sources/projects/eroobeeroo--idrive7-cluster-info/oap-sdk"
+      }
+    },
+    {
+      "id": "cluster_centre",
+      "title": "仪表中央数据",
+      "description": "保留原车仪表外圈，在中央显示动力、温度、暖机和涡轮冷却等数据。",
+      "author": "eroobeeroo",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0",
+        "cluster-render": "0.4.2"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "path": "sources/projects/eroobeeroo--idrive7-cluster-info/apps/cluster_centre",
+      "manifest": "app.json",
+      "build": {
+        "args": [
+          "--language",
+          "zh-CN",
+          "--store-version",
+          "{id}"
+        ],
+        "output": "sources/projects/eroobeeroo--idrive7-cluster-info/dist/{id}@{version}.tgz",
+        "python": "sources/projects/eroobeeroo--idrive7-cluster-info/kit/tools/build.py",
+        "shared": [
+          "sources/projects/eroobeeroo--idrive7-cluster-info/kit"
+        ],
+        "sdk": "sources/projects/eroobeeroo--idrive7-cluster-info/oap-sdk"
+      }
+    },
+    {
+      "id": "cluster_info",
+      "title": "仪表信息叠加",
+      "description": "在仪表地图或 HUD 上叠加温度、电量等数据及转向灯提示。",
+      "author": "eroobeeroo",
+      "mguHmi": [
+        "ID7"
+      ],
+      "requires": {
+        "idrive7-renderd": "2.1.7",
+        "mgu-inputgate": "1.0.0"
+      },
+      "uninstallable": true,
+      "kind": "app",
+      "path": "sources/projects/eroobeeroo--idrive7-cluster-info/apps/cluster_info",
+      "manifest": "app.json",
+      "build": {
+        "args": [
+          "--language",
+          "zh-CN",
+          "--store-version",
+          "{id}"
+        ],
+        "output": "sources/projects/eroobeeroo--idrive7-cluster-info/dist/{id}@{version}.tgz",
+        "python": "sources/projects/eroobeeroo--idrive7-cluster-info/kit/tools/build.py",
+        "shared": [
+          "sources/projects/eroobeeroo--idrive7-cluster-info/kit"
+        ],
+        "sdk": "sources/projects/eroobeeroo--idrive7-cluster-info/oap-sdk"
+      }
+    },
+    {
+      "id": "cockpit-fullview",
+      "title": "Cockpit+ 全屏地图配套",
+      "description": "适配 Cockpit+ 全屏地图的专用配置组件。",
+      "author": "Hyperionism",
+      "kind": "tool",
+      "path": "sources/projects/Hyperionism--idrive7-cockpit-plus/tools/cockpit-fullview",
+      "mguHmi": [
+        "ID7"
+      ],
+      "optional": true,
+      "uninstallable": true,
+      "runtimeCatalog": "runtime/cockpit-plus/catalog.json"
     }
   ]
 }

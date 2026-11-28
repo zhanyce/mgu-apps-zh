@@ -32,13 +32,24 @@ def check_app(entry, folder):
             if repo_path(path, folder).suffix != ".js":
                 raise ValueError(f"{app_id} 的模块需要 JavaScript 文件")
         return spec
-    if build["args"] != ["{dir}", "{id}", "{version}"] or not build.get("shared"):
-        raise ValueError(f"{app_id} 的构建参数或共享文件缺失")
-    if not repo_path(build["python"]).is_file():
+    if not build.get("shared") or not repo_path(build["python"]).is_file():
         raise ValueError(f"{app_id} 的构建脚本缺失")
     for name in build["shared"]:
         repo_path(name)
     spec = read_json(repo_path(entry["manifest"], folder))
+    if entry["manifest"] == "app.json":
+        output = build["output"].format(id=app_id, version=spec["version"], dir=entry["path"])
+        output_path = PurePosixPath(output)
+        if "{id}" not in build["args"] or output_path.name != f"{app_id}@{spec['version']}.tgz":
+            raise ValueError(f"{app_id} 的构建输出与应用版本不符")
+        repo_path(output_path.parent.parent.as_posix())
+        if "sdk" in build:
+            sdk = PurePosixPath(build["sdk"])
+            if sdk.name != "oap-sdk" or (repo_path(sdk.parent.as_posix()) / sdk.name).exists():
+                raise ValueError(f"{app_id} 的车机 SDK 路径无效")
+        return spec
+    if build["args"] != ["{dir}", "{id}", "{version}"]:
+        raise ValueError(f"{app_id} 的构建参数无效")
     if build["sdk"] != spec["kit"] + "/oap-sdk" or (ROOT / build["sdk"]).exists():
         raise ValueError(f"{app_id} 的车机 SDK 路径无效")
     if spec["upstreamVersion"] != read_json(folder / "app.json")["version"]:
@@ -52,16 +63,25 @@ def check_app(entry, folder):
     return spec
 
 
-def main():
-    doc = read_json(ROOT / "mgu-repo.json")
-    runtime = read_json(ROOT / "runtime/catalog.json")
-    if doc["schema"] != 1 or runtime["schema"] != 2:
-        raise ValueError("软件源格式版本不符")
+def runtime_catalog(path):
+    runtime = read_json(repo_path(path))
+    if runtime["schema"] != 2:
+        raise ValueError(f"{path} 的软件源格式版本不符")
     archives = runtime["components"]
-    validate(archives)
     if any(e["kind"] != "tool" or urlsplit(e["artifact"]["url"]).scheme != "https" for e in archives):
         raise ValueError("运行组件源需要使用 HTTPS 的 tool 条目")
-    versions = {e["id"]: e["version"] for e in archives}
+    if len({e["id"] for e in archives}) != len(archives):
+        raise ValueError(f"{path} 包含重复的运行组件")
+    return {e["id"]: e for e in archives}
+
+
+def main():
+    doc = read_json(ROOT / "mgu-repo.json")
+    if doc["schema"] != 1:
+        raise ValueError("源码源格式版本不符")
+    runtime = runtime_catalog("runtime/catalog.json")
+    validate(list(runtime.values()))
+    versions = {app_id: entry["version"] for app_id, entry in runtime.items()}
     source_apps = set()
     for entry in doc["components"]:
         app_id = entry["id"]
@@ -87,14 +107,26 @@ def main():
         else:
             raise ValueError(f"{app_id} 缺少原项目提交记录")
         entry["requires"] = {**spec.get("requires", {}), **entry.get("requires", {})}
+    runtime_overrides = {}
     for entry in doc["components"]:
+        available = versions
+        path = entry.get("runtimeCatalog")
+        if path:
+            if path not in runtime_overrides:
+                overrides = runtime_catalog(path)
+                validate(list({**runtime, **overrides}.values()))
+                runtime_overrides[path] = {key: tool["version"] for key, tool in overrides.items()}
+            available = {**versions, **runtime_overrides[path]}
         for dep, needed in entry["requires"].items():
-            if dep not in versions or version_tuple(versions[dep]) < version_tuple(needed):
+            if dep not in available or version_tuple(available[dep]) < version_tuple(needed):
                 raise ValueError(f"{entry['id']} 需要 {dep} >= {needed}")
-    apps = {app["id"] for app in read_json(ROOT / "data/apps.json")}
+    app_data = read_json(ROOT / "data/apps.json")
+    apps = {app["id"] for app in app_data}
     exceptions = read_json(ROOT / "data/source-exceptions.json")
     if source_apps & exceptions.keys() or source_apps | exceptions.keys() != apps:
         raise ValueError("源码源与登记的应用范围不符")
+    if any(app.get("sourceOnly") and app["id"] not in source_apps for app in app_data):
+        raise ValueError("仅从源码发布的应用缺少构建清单")
     for file in (ROOT / "sources/projects").rglob("*"):
         parts = file.relative_to(ROOT).parts
         if file.is_symlink() or {"oap-sdk", "node_modules"} & set(parts) or file.suffix in (".tgz", ".mgu"):

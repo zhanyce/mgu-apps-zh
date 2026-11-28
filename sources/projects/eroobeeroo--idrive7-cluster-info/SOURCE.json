@@ -1,0 +1,19 @@
+{
+  "repo": "eroobeeroo/idrive7-cluster-info",
+  "commit": "f9ca76cd4e59b5cdc3b7e9b6dcbec0220c13f8b7",
+  "files": 149,
+  "size": 1939611,
+  "sha256": "7a6668941bc6c82566a058183bd9cca86408c1644a7488520ab52a876fd98826",
+  "excludedSDK": 0,
+  "adaptedOn": "2026-11-28",
+  "changes": "Added --store-version to the build script to publish the Chinese packages at their catalog versions, and included upstream licenses and notices in each package.",
+  "archivePaths": [
+    "LICENSE",
+    "LICENSE-MIT",
+    "NOTICE.md",
+    "NOTICE.zh-CN.md",
+    "apps",
+    "kit",
+    "shared"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "repo": "Hyperionism/idrive7-cockpit-plus",
+  "commit": "0ba2af68b4fe4c4825b2db2f69dab174cc617209",
+  "files": 81,
+  "size": 5140006,
+  "sha256": "ea33433470ba5b9d5a06317fefcab130fa00dc321b279e7a5300f97014468bf2",
+  "excludedSDK": 0,
+  "adaptedOn": "2026-11-28",
+  "changes": "Adapted tools/cockpit-fullview/component.json for the MGU Store source build, declared its upstream runtime dependencies, and included the original GPL license in the package.",
+  "archivePaths": [
+    "LICENSE",
+    "apps/id7_cockpit_plus",
+    "tools/cockpit-fullview",
+    "vendor"
+  ]
+}

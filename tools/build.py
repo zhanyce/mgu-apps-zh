@@ -578,12 +578,13 @@ def main():
         for key in selected:
             entry, action = candidates[key]
             action(entry, args.cache)
-    entries = [catalog_entry(app) for app in apps] + [
+    legacy_apps = [app for app in apps if not app.get("sourceOnly")]
+    entries = [catalog_entry(app) for app in legacy_apps] + [
         {k: v for k, v in tool.items() if k != "sourceBuild"} for tool in tools
     ]
     validate(entries)
     if args.action == "check":
-        for app, entry in zip(apps, entries):
+        for app, entry in zip(legacy_apps, entries):
             if not app.get("external"):
                 verify_package(app, entry)
         for tool in tools:
@@ -597,7 +598,7 @@ def main():
                 raise SystemExit(f"{name} 与当前清单或安装包不一致")
         else:
             write(ROOT / name, data)
-    print(f"{len(apps)} 款应用，{len(entries) - len(apps)} 个运行组件")
+    print(f"{len(apps)} 款应用，历史目录含 {len(legacy_apps)} 款应用和 {len(tools)} 个运行组件")
 
 
 if __name__ == "__main__":

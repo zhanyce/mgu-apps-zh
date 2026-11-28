@@ -1,0 +1,46 @@
+{
+  "schema": 2,
+  "components": [
+    {
+      "id": "cluster-render",
+      "title": "Cockpit+ cluster-render",
+      "description": "Cockpit+ 全屏仪表地图套件专用渲染器。",
+      "version": "2.9.6",
+      "mguHmi": [
+        "ID7"
+      ],
+      "kind": "tool",
+      "requires": {
+        "mgu-deploy": "0.4.0"
+      },
+      "uninstallable": true,
+      "artifact": {
+        "name": "cluster-render@2.9.6.tgz",
+        "size": 13380015,
+        "sha256": "86c1c756a1c28880d8d149abf853b5f47aaa3eaf2eb90dae2cbe4e73de3714e3",
+        "url": "https://github.com/Hyperionism/idrive7-cockpit-plus/releases/download/v0.9.15/cluster-render@2.9.6.tgz"
+      }
+    },
+    {
+      "id": "waze-on-cluster",
+      "title": "Cockpit+ waze-on-cluster",
+      "description": "Cockpit+ 全屏 CarPlay 仪表地图套件专用地图组件。",
+      "version": "2.9.2",
+      "mguHmi": [
+        "ID7"
+      ],
+      "kind": "tool",
+      "requires": {
+        "mgu-deploy": "0.7.17",
+        "cluster-render": "2.9.6"
+      },
+      "uninstallable": true,
+      "artifact": {
+        "name": "waze-on-cluster@2.9.2.tgz",
+        "size": 2890085,
+        "sha256": "2c0b63d2a00d5ea6b8ab5a079ed7c73090c5e6ac823d2a296fb6dad6031828e3",
+        "url": "https://github.com/Hyperionism/idrive7-cockpit-plus/releases/download/v0.9.15/waze-on-cluster@2.9.2.tgz"
+      }
+    }
+  ]
+}

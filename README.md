@@ -1,6 +1,6 @@
 # MGU 中文应用源
 
-面向 BMW iDrive 7 的免费 MGU Store 软件源。[应用目录](APPS.md)收录 73 款应用，其中 72 款可由 MGU Store 在车机上从源码构建。RAM 麦克风校准目前仅有历史安装包。
+面向 BMW iDrive 7 的免费 MGU Store 软件源。[应用目录](APPS.md)收录 77 款应用，其中 76 款可由 MGU Store 在车机上从源码构建。RAM 麦克风校准目前仅有历史安装包。
 
 ## 添加软件源
 
@@ -19,6 +19,16 @@ https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/runtime/catalog.json
 ```
 
 旧的 [catalog.json](https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/catalog.json) 继续提供已发布的版本，包含 RAM 麦克风校准。后续应用更新发布到 GitHub 源码源。
+
+### Cockpit+ 全屏仪表地图
+
+主源提供 Cockpit+ 驾驶舱增强和全屏地图配套组件。安装时还需要原项目发布的专用渲染器 `cluster-render 2.9.6` 和地图组件 `waze-on-cluster 2.9.2`。专用运行组件源适用于准备安装 Cockpit+ 的车辆。
+
+```text
+https://raw.githubusercontent.com/zhanyce/mgu-apps-zh/main/runtime/cockpit-plus/catalog.json
+```
+
+专用组件与通用版本共用组件 ID。车机已安装渲染器或仪表地图时，安装前请核对商店显示的运行组件版本及来源。[Cockpit+ 上游说明](https://github.com/Hyperionism/idrive7-cockpit-plus)
 
 ## 兼容性
 
@@ -53,5 +63,7 @@ python3 tools/check_source_repo.py
 应用从各原项目的源码构建，保留上游版权和许可证。已在原项目合入的社区译文与本仓库维护的译文一起使用。暖机助手和制动测试等历史安装包可追溯到小白仓库，该仓库也供历史来源核对。[小白仓库（MGU-CN-XIAOBAI）](https://github.com/JackieZ123430/MGU-CN-XIAOBAI)
 
 本仓库原创的目录说明和构建工具采用 MIT 许可证。应用、字体和运行组件适用各自的许可证。公开源码包含构建所需的代码、配置和可分发资源。BMW 原厂 SDK 由车机提供。[构建工具许可证](LICENSE) · [上游许可证目录](licenses/)
+
+Cockpit+ 源码保留 GPL-3.0 许可证。仪表布局、仪表中央数据和仪表信息叠加沿用上游的 PolyForm Noncommercial 1.0.0 许可证，供非商业使用，源码和安装包均保留上游许可及署名。[Cockpit+ 许可证](sources/projects/Hyperionism--idrive7-cockpit-plus/LICENSE) · [仪表应用许可证](sources/projects/eroobeeroo--idrive7-cluster-info/LICENSE)
 
 Freedoom 使用的 WebAssembly 引擎及其构建脚本对应的源码随仓库提供。[Doom 引擎源码](sources/doomgeneric.tar.gz)

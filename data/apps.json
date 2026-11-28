@@ -1617,5 +1617,92 @@
     "license": "MIT",
     "notice": "cauliflowermossgrape--idrive7-apps.txt",
     "translationNotice": "JackieZ123430--idrive7-apps-cn--NOTICE.zh-CN.md"
+  },
+  {
+    "id": "id7_cockpit_plus",
+    "title": "Cockpit+ 驾驶舱增强",
+    "description": "在兼容的 ID7 仪表和 HUD 上显示全屏导航、转向提示和车辆数据。",
+    "author": "Hyperionism",
+    "mguHmi": [
+      "ID7"
+    ],
+    "requires": {
+      "cluster-render": "2.9.6",
+      "waze-on-cluster": "2.9.2",
+      "cockpit-fullview": "1.0.0"
+    },
+    "uninstallable": true,
+    "category": "出行",
+    "project": "https://github.com/Hyperionism/idrive7-cockpit-plus",
+    "source": "https://github.com/Hyperionism/idrive7-cockpit-plus/tree/0ba2af68b4fe4c4825b2db2f69dab174cc617209",
+    "version": "0.9.15",
+    "upstreamVersion": "0.9.15",
+    "license": "GPL-3.0-only",
+    "sourceOnly": true
+  },
+  {
+    "id": "cluster_layouts",
+    "title": "仪表布局",
+    "description": "切换全仪表布局、配色和中央显示内容。",
+    "author": "eroobeeroo",
+    "mguHmi": [
+      "ID7"
+    ],
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.4.2"
+    },
+    "uninstallable": true,
+    "category": "座舱",
+    "project": "https://github.com/eroobeeroo/idrive7-cluster-info",
+    "source": "https://github.com/eroobeeroo/idrive7-cluster-info/tree/f9ca76cd4e59b5cdc3b7e9b6dcbec0220c13f8b7",
+    "version": "0.30.0",
+    "upstreamVersion": "0.30.0",
+    "license": "PolyForm-Noncommercial-1.0.0",
+    "sourceOnly": true
+  },
+  {
+    "id": "cluster_centre",
+    "title": "仪表中央数据",
+    "description": "保留原车仪表外圈，在中央显示动力、温度、暖机和涡轮冷却等数据。",
+    "author": "eroobeeroo",
+    "mguHmi": [
+      "ID7"
+    ],
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0",
+      "cluster-render": "0.4.2"
+    },
+    "uninstallable": true,
+    "category": "座舱",
+    "project": "https://github.com/eroobeeroo/idrive7-cluster-info",
+    "source": "https://github.com/eroobeeroo/idrive7-cluster-info/tree/f9ca76cd4e59b5cdc3b7e9b6dcbec0220c13f8b7",
+    "version": "0.11.0",
+    "upstreamVersion": "0.11.0",
+    "license": "PolyForm-Noncommercial-1.0.0",
+    "sourceOnly": true
+  },
+  {
+    "id": "cluster_info",
+    "title": "仪表信息叠加",
+    "description": "在仪表地图或 HUD 上叠加温度、电量等数据及转向灯提示。",
+    "author": "eroobeeroo",
+    "mguHmi": [
+      "ID7"
+    ],
+    "requires": {
+      "idrive7-renderd": "2.1.7",
+      "mgu-inputgate": "1.0.0"
+    },
+    "uninstallable": true,
+    "category": "座舱",
+    "project": "https://github.com/eroobeeroo/idrive7-cluster-info",
+    "source": "https://github.com/eroobeeroo/idrive7-cluster-info/tree/f9ca76cd4e59b5cdc3b7e9b6dcbec0220c13f8b7",
+    "version": "1.6.8",
+    "upstreamVersion": "1.6.8",
+    "license": "PolyForm-Noncommercial-1.0.0",
+    "sourceOnly": true
   }
 ]
