@@ -1,7 +1,7 @@
 {
   "id": "aref_eta",
-  "version": "1.26.0",
-  "upstreamVersion": "1.26.0",
+  "version": "1.27.0",
+  "upstreamVersion": "1.27.0",
   "title": "预计到达时间",
   "description": "在车机组件查看 Apple Maps 的预计到达时间。",
   "translations": {

@@ -33,6 +33,7 @@ const NP = require('./nowplaying');
 const LyricsLib = require('./lyrics');
 const ART = require('./artwork');
 const http = require('./http');
+const TR = require('./translate');
 const HW = require('./kit/homewidget');
 
 const VERSION = '0.8.1';
@@ -45,7 +46,13 @@ const IFACES = [
     { iface: 'de.bmw.infotainment.hmi.hmimediastate.HmiMediaState', instances: [] },
     { iface: 'de.bmw.infotainment.entertainment.dynamicmediaplayer.DynamicMediaPlayer', instances: [] },
 ];
-const ART_ID = 41, BG_ID = 42, BG2_ID = 43;    // pixel picture ids (record.setImage)
+// pixel picture ids (record.setImage): two sets, so the last song's pictures stay while the new ones fade in over them
+const SLOTS = [{ art: 41, bg: 42, bg2: 43, blob: 44 }, { art: 61, bg: 62, bg2: 63, blob: 64 }];   // blobs: 4 ids from blob
+const ids = (a) => (a && a.ids) || SLOTS[0];
+const ART_FADE_MS = 650;          // a new song's cover and background fade in over the last one's
+const LYR_IN_MS = 500;            // the lyrics (or a message) fade in when they arrive
+const SUB_IN_MS = 600;            // a translation fades in under its line
+const SLOW_MS = 1000 / 30;        // nothing moving fast: 30 frames a second (the head unit is busy); 60 in transitions
 const FRAME_MS = 1000 / 60;       // the animation clock's step: up to 60 different frames a second while lines glide (identical frames still aren't sent)
 const LEAD_MS = 250;              // a line lights up this much before its time (reading takes a moment)
 const GLIDE_MS = 620;             // the lyrics glide to the next line over this long
@@ -66,6 +73,7 @@ const BLUR_PX = 1.2, BLUR_MAX = 3.6;                // blur radius per line away
 
 const WHITE = '#ffffff';
 const easeOut = (e) => 1 - Math.pow(1 - Math.max(0, Math.min(1, e)), 3);
+const easeInOut = (e) => { e = Math.max(0, Math.min(1, e)); return e < 0.5 ? 4 * e * e * e : 1 - Math.pow(-2 * e + 2, 3) / 2; };
 const mmss = (ms) => { const s2 = Math.max(0, Math.floor(ms / 1000)); return Math.floor(s2 / 60) + ':' + (s2 % 60 < 10 ? '0' : '') + (s2 % 60); };
 
 /** Cut s to fit width w at size (an ellipsis when cut). */
@@ -112,6 +120,8 @@ mgu.run({
             const request = (m, h, p, hd) => net.request(m, h, p, hd);
             const lyrics = new LyricsLib.Lyrics(request, log, 'CarLyrics/' + VERSION + ' (iDrive 7 head-unit app; ' + HOMEPAGE + ')', path.join(ctx.dataDir, 'lyrics'));   // kept on disk: offline next time
             const artwork = new ART.Artwork(request, log, undefined, { dir: path.join(ctx.dataDir, 'covers') });   // covers kept on disk: replays show at once
+            // songs not in English: the homelab translates them live, lines arriving as they're written (stage/translate.js)
+            const translator = new TR.Translator((m, h, p, hd, b) => net.request(m, h, p, hd, b), log, ctx.dataDir, path.join(ctx.dataDir, 'lyrics'), LyricsLib.Lyrics.diskKey);
             const np = new NP.NowPlaying(ctx.signals, log, IFACES);
             // Inter (OFL), the open look-alike of Apple's SF Pro: data/fonts/, baked by tools/bake_fonts.py
             let F_BOLD = 'bold', F_MED = 'label';
@@ -124,7 +134,7 @@ mgu.run({
             log.info('fonts: ' + F_BOLD + ', ' + F_MED);
             let catalog = { error: 'not read yet', hits: [] };
             let toast = null;
-            const say = (text, ms) => { toast = { text: text, until: Date.now() + (ms || 3000) }; };
+            const say = (text, ms) => { toast = { text: text, at: Date.now(), until: Date.now() + (ms || 3000) }; };
 
             /* ---------- the track, and the clock that follows the car's time in it ---------- */
             let cur = null;           // { key, title, artist, album, duration, playing }
@@ -137,11 +147,18 @@ mgu.run({
                 if (!t) return;
                 const key = t.title + '|' + t.artist;
                 if (!cur || cur.key !== key) {
-                    cur = { key: key, title: t.title, artist: t.artist, album: t.album, duration: t.duration || 0, playing: true };
+                    // the length the car sends with a new title is often still the last song's (Makrehtosh came as 171 s
+                    // after a 171 s song, 221 s after a 224 s one; it is 214 s): it counts once it differs from the last
+                    // song's or comes with this song's first time update (below)
+                    const last = cur ? cur.duration : 0;
+                    cur = { key: key, title: t.title, artist: t.artist, album: t.album, duration: t.duration && t.duration !== last ? t.duration : 0, playing: true, since: Date.now(), lastLen: last };
                     clk = null; startAt = Date.now();
                     log.info('track: "' + t.title + '" by "' + t.artist + '" on "' + (t.album || '') + '" (' + Math.round((t.duration || 0) / 1000) + ' s) from ' + t.from);
                 }
-                if (t.duration) cur.duration = t.duration;
+                if (t.duration && t.duration !== cur.duration) {
+                    const fresh = t.duration !== cur.lastLen || (t.position != null && t.position < 20000 && (t.positionAt || Date.now()) > cur.since);
+                    if (fresh) cur.duration = t.duration;
+                }
                 if (t.album) cur.album = t.album;
                 if (t.cover) cur.cover = t.cover;
                 const playing = t.direct ? !!t.playing : true;
@@ -157,28 +174,67 @@ mgu.run({
                 clk.at = at; clk.playing = playing; clk.last = t.position;
             };
             np.onChange(guard('change', follow));
+            // the song's lyrics: looked up once its real length is known (it picks LRCLIB's version), or after 3 s without one
+            const lyricsNow = () => (!cur.duration && Date.now() - (cur.since || 0) < 3000 ? { state: 'loading' }
+                : lyrics.get({ title: cur.title, artist: cur.artist, album: cur.album, duration: cur.duration }));
             const offset = () => Number(settings.get('offset')) || 0;
             const position = (now) => (clk ? clockAt(now || Date.now()) : (now || Date.now()) - startAt) + offset();
             const sync = () => { startAt = Date.now(); say('Synced: the song starts now'); };
             ui.onClick('BTN_SYNC', guard('sync', sync));
 
             /* ---------- artwork: uploaded to the renderer once per song ---------- */
-            let artShown = 0;         // the artwork version uploaded
             let lastArt = null;
+            const slotVer = [null, null];         // the artwork version in each picture set
             const artFor = () => {
                 if (!cur) return null;
                 const a = artwork.get({ title: cur.title, artist: cur.artist, album: cur.album, cover: cur.cover });   // cover: the car's own file
                 // not ready yet: the song's own colours (cover placeholder and background), never the last song's art
                 if (a.state !== 'ready') return (lastArt = null);
                 lastArt = a;
-                if (a.ver !== artShown) {
-                    record.setImage(ART_ID, ART.ART_PX, ART.ART_PX, a.cover);
-                    record.setImage(BG_ID, ART.BG_W, ART.BG_H, a.blur);
-                    record.setImage(BG2_ID, ART.BG_W, ART.BG_H, a.blur2);
-                    artShown = a.ver;
+                let k = slotVer.indexOf(a.ver);
+                if (k < 0) {
+                    // into the set the picture on screen isn't using (that one stays for the fade)
+                    k = back.a && back.a.ids === SLOTS[0] ? 1 : 0;
+                    const sl = SLOTS[k];
+                    record.setImage(sl.art, ART.ART_PX, ART.ART_PX, a.cover);
+                    record.setImage(sl.bg, ART.BG_W, ART.BG_H, a.blur);
+                    record.setImage(sl.bg2, ART.BG_W, ART.BG_H, a.blur2);
+                    (a.blobs || []).forEach((b, i) => record.setImage(sl.blob + i, ART.BLOB_PX, ART.BLOB_PX, b));
+                    slotVer[k] = a.ver;
                 }
+                a.ids = SLOTS[k];
                 return a;
             };
+
+            /* ---------- smooth changes: what's on screen, what it fades from, and the frame pace ---------- */
+            let back = { a: null, P: null, key: '' }, backPrev = null, backAt = 0;
+            let busyUntil = 0, lastDrawAt = 0;
+            let lyrShown = null, lyrAt = 0;        // the lyrics entry on screen, and when it came
+            const busy = (until) => { if (until > busyUntil) busyUntil = until; };
+            /** the background and cover to show: a change starts a crossfade from the last ones */
+            function setBack(a, P, now) {
+                const key = a ? 'a' + a.ver : 'p' + (cur ? cur.title + '|' + cur.artist : '');
+                if (key === back.key) { back.P = P; return; }
+                backPrev = back.key ? back : null;
+                back = { a: a, P: P, key: key }; backAt = now;
+                busy(now + ART_FADE_MS);
+            }
+            const backFade = (now) => (backPrev ? easeInOut((now - backAt) / ART_FADE_MS) : 1);
+            function backdropX(cv, now, fullH, x0) {
+                const f = backFade(now), base = cv.fade();
+                if (f < 1) { backdrop(cv, backPrev.a, now, backPrev.P, fullH, x0); cv.fade(base * f); }
+                backdrop(cv, back.a, now, back.P, fullH, x0);
+                cv.fade(base);
+            }
+            /** the last song's cover under the new one while they crossfade; returns the level to put back (or null) */
+            function coverFadeFrom(cv, now, draw) {
+                const f = backFade(now);
+                if (f >= 1 || !backPrev || !backPrev.P) return null;
+                const base = cv.fade();
+                draw(backPrev.a, backPrev.P);
+                cv.fade(base * f);
+                return base;
+            }
 
             /* ---------- the page ---------- */
             FS.setup(ctx);                            // where the kit runs the screen: the page's own buttons and tabs
@@ -187,6 +243,8 @@ mgu.run({
 
             /** The layout in the safe area A: the cover centred in the left half, the lyrics in the right half. */
             // 0.5.1-0.5.3 kept the arrangement in 'layout', which is the kit's (full screen or BMW's frame): moved over
+            // 0.9.0: the old drift becomes the stronger Apple Music flow for anyone who had it on (once)
+            try { if (settings.get('bg_motion') === 'drift' && !settings.get('_flowV')) { settings.set('bg_motion', 'flow'); settings.set('_flowV', 1); log.info('settings: drift -> flow'); } } catch (e) { /* */ }
             try { if (settings.get('layout') === 'side') { settings.set('arrangement', 'side'); settings.set('layout', 'full'); log.info('settings: arrangement moved out of layout'); } } catch (e) { /* */ }
             const glassOn = () => settings.get('style') !== 'classic';
             const sideOn = () => settings.get('arrangement') === 'side';   // ('layout' is the kit's own: full screen or not)      // a big cover, the lyrics beside it
@@ -217,8 +275,10 @@ mgu.run({
                 // the capsule: cover, title, artist
                 const s = 76, cx = A.x + 24, cy = A.y + 18, tw = Math.min(620, Math.max(cv.textWidth(LyricsLib.fold(cur.title), 28, B), cv.textWidth(LyricsLib.fold(cur.artist || ''), 22, M)));
                 glassRect(cv, cx, cy, s + tw + 52, s + 16, (s + 16) / 2);
-                if (a) cv.image(ART_ID, cx + 8, cy + 8, s, s);
+                const cf = coverFadeFrom(cv, now, (pa, pP) => { if (pa) cv.image(ids(pa).art, cx + 8, cy + 8, s, s); else cv.card(cx + 8, cy + 8, s, s, 12, [[0, pP.art1], [1, pP.art2]]); });
+                if (a) cv.image(ids(a).art, cx + 8, cy + 8, s, s);
                 else cv.card(cx + 8, cy + 8, s, s, 12, [[0, P.art1], [1, P.art2]]);
+                if (cf !== null) cv.fade(cf);
                 cv.text(fit(cv, cur.title, 28, 620, B), cx + s + 26, cy + 44, 28, WHITE, B);
                 cv.text(fit(cv, cur.artist || '', 22, 620, M), cx + s + 26, cy + 74, 22, G.withAlpha(WHITE, 0.66), M);
                 moreButton(cv, A);
@@ -281,12 +341,50 @@ mgu.run({
             }
 
             const OVER = 160;          // logical px drawn past the page's top and bottom edges
+            // the background's own clock: runs while the song plays, stands still while paused (no jump back)
+            let flowT = 0, flowAt = 0;
+            function flowClock(now) {
+                const dt = flowAt ? Math.min(0.1, Math.max(0, (now - flowAt) / 1000)) : 0;
+                // Settings > Background > Speed
+                const k = ({ slow: 0.5, normal: 1, fast: 1.7, faster: 2.6 })[settings.get('bg_speed')] || 1;
+                if (now !== flowAt) { if (cur && cur.playing) flowT += dt * k; flowAt = now; }
+                return flowT;
+            }
+            /**
+             * Settings > Background motion > Flow, as Apple Music: the blurred cover underneath, and the cover's
+             * colours (artwork.js blobs: four soft round patches, the most different colours in it) swirling over it
+             * on long orbits across the whole screen, each at its own speed, growing and shrinking a little. A blob
+             * crosses the screen in about 10 s (~200 px/s at its fastest), so the colours visibly travel.
+             */
+            const BLOBS = [   // size (x screen height), orbit (x width, x height), speeds (1/s), phases
+                { s: 1.9, ax: 0.36, ay: 0.32, wx: 0.31, wy: 0.43, px: 0, py: 1.1, alpha: 0.95 },
+                { s: 1.7, ax: 0.40, ay: 0.36, wx: 0.23, wy: 0.37, px: 2.2, py: 0.3, alpha: 0.9 },
+                { s: 1.5, ax: 0.33, ay: 0.40, wx: 0.37, wy: 0.27, px: 4.1, py: 2.6, alpha: 0.85 },
+                { s: 1.35, ax: 0.42, ay: 0.30, wx: 0.27, wy: 0.33, px: 5.3, py: 4.4, alpha: 0.8 },
+            ];
+            function flow(cv, a, t, fullH) {
+                // the base: the blurred cover, larger than the screen, drifting slowly the other way
+                const base = (id, sc, ph) => {
+                    const bw = W * sc, bh = (fullH + 2 * OVER) * sc;
+                    cv.image(id, (W - bw) / 2 + Math.sin(t * 0.11 + ph) * 0.1 * W, (fullH - bh) / 2 + Math.cos(t * 0.09 + ph) * 0.1 * fullH, bw, bh);
+                };
+                base(ids(a).bg, 1.35, 0);
+                cv.alpha(0.45); base(ids(a).bg2, 1.5, 2); cv.alpha(1);
+                BLOBS.forEach((b, i) => {
+                    if (i >= a.blobs.length) return;
+                    const size = fullH * b.s * (1 + 0.14 * Math.sin(t * 0.21 + b.px * 1.7));
+                    const cx = W / 2 + Math.sin(t * b.wx + b.px) * b.ax * W, cy = fullH / 2 + Math.sin(t * b.wy + b.py) * b.ay * fullH;
+                    cv.alpha(b.alpha); cv.image(ids(a).blob + i, cx - size / 2, cy - size / 2, size, size);
+                });
+                cv.alpha(1);
+            }
             function backdrop(cv, a, now, P, fullH, x0) {
                 x0 = x0 || 0;      // < 0: the copy for BMW's back column (bgEdge), so its plain fills start there too
                 if (a) {
                     // two blurred layers of the cover drifting past each other, slowly, as Apple Music's background flows
-                    // Settings > Background motion: still (default) or a slow drift, as Apple Music's
-                    const d = settings.get('bg_motion') === 'drift' && cur && cur.playing ? now / 1000 : 0;
+                    // Settings > Background motion: still (default), a gentle drift, or Flow (the cover's colours swirling, below)
+                    const motion = settings.get('bg_motion') || 'still', d = motion === 'drift' ? flowClock(now) : 0;
+                    if (motion === 'flow' && a.blobs && cv.pictures !== 'opaque') { flow(cv, a, flowClock(now), fullH); return dimming(cv, fullH, x0); }
                     // drift: each layer wanders ~14 % of the screen and breathes (zooms 6 % in and out) over 30-50 s, the
                     // two at different speeds, so the colours visibly flow (Nov 21: 7 % over ~1 min read as still)
                     const layer = (id, sc, fx, fy, ph) => {
@@ -294,9 +392,9 @@ mgu.run({
                         const bw = W * z, bh = (fullH + 2 * OVER) * z;   // tall enough to cover past the page (full screen)
                         cv.image(id, (W - bw) / 2 + Math.sin(d / fx + ph) * 0.14 * W, (fullH - bh) / 2 + Math.cos(d / fy + ph) * 0.12 * fullH, bw, bh);
                     };
-                    layer(BG_ID, 1.4, 5, 6.5, 0);
+                    layer(ids(a).bg, 1.4, 5, 6.5, 0);
                     cv.alpha(0.55);
-                    layer(BG2_ID, 1.6, 7.5, 4.5, 2);
+                    layer(ids(a).bg2, 1.6, 7.5, 4.5, 2);
                     cv.alpha(1);
                 } else {
                     cv.gradientRect(x0, 0, W - x0, fullH, [[0, P.top], [1, P.bottom]]);
@@ -304,6 +402,10 @@ mgu.run({
                     for (let r = 340; r > 20; r -= 16) cv.circle(300, 120, r, G.withAlpha(P.glow, 0.016));
                     for (let r = 300; r > 20; r -= 16) cv.circle(1300, fullH - 60, r, G.withAlpha(P.glow, 0.012));
                 }
+                dimming(cv, fullH, x0);
+            }
+            function dimming(cv, fullH, x0) {
+                x0 = x0 || 0;
                 // a little darker at the top and the bottom, as glass over the artwork
                 cv.gradientRect(x0, 0, W - x0, fullH, [[0, G.withAlpha('#000000', 0.3)], [0.45, G.withAlpha('#000000', 0)], [1, G.withAlpha('#000000', 0.4)]]);
                 // the screen reaches past the page at the top and bottom (full screen): the same dimming there, so those
@@ -315,12 +417,14 @@ mgu.run({
                 const x = Q.x0, y = Q.y0, s = Q.S, r = Math.round(s * 0.04);
                 // a soft shadow under the cover
                 for (let k = 1; k <= 6; k++) cv.roundRect(x - k * 3, y + 8 + k, s + k * 6, s + k * 2, r + k * 3, G.withAlpha('#000000', 0.06));
-                if (a) cv.image(ART_ID, x, y, s, s);
+                const cf = coverFadeFrom(cv, now, (pa, pP) => { if (pa) cv.image(ids(pa).art, x, y, s, s); else cv.card(x, y, s, s, r, [[0, pP.art1], [1, pP.art2]]); });
+                if (a) cv.image(ids(a).art, x, y, s, s);
                 else {
                     cv.card(x, y, s, s, r, [[0, P.art1], [1, P.art2]]);
                     const ini = LyricsLib.fold(cur.title).split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
                     cv.text(ini, x + s / 2, y + s / 2 + s * 0.13, Math.round(s * 0.36), G.withAlpha(WHITE, 0.92), { font: F_BOLD, align: 'center', literal: true });
                 }
+                if (cf !== null) cv.fade(cf);
                 const B = { font: F_BOLD, literal: true }, M = { font: F_MED, literal: true };
                 let ty = y + s + 46, size = 30;
                 while (size > 22 && cv.textWidth(LyricsLib.fold(cur.title), size, B) > s) size -= 2;
@@ -350,17 +454,36 @@ mgu.run({
             /* the lyrics' layout for a song: each line wrapped, and where it sits (cached; textWidth isn't free) */
             let laid = null;          // { lines, w, blocks: [{ rows, top, h, gap }] }
             function layout(cv, lines, w) {
-                if (laid && laid.lines === lines && laid.w === w && laid.size === LYR.size) return laid;
-                const opt = { font: F_BOLD, literal: true }, blocks = [];
+                const mode = settings.get('translation') || 'en';
+                if (laid && laid.lines === lines && laid.w === w && laid.size === LYR.size && laid.mode === mode && laid.trv === translator.ver) return laid;
+                const opt = { font: F_BOLD, literal: true }, sopt = { font: F_MED, literal: true }, blocks = [];
+                const SUB = subSize();
                 let y = 0;
                 lines.forEach((l) => {
                     const rows = l.text ? wrap(cv, l.text, LYR.size, w, LYR.max, opt) : [];
-                    const h = rows.length ? rows.length * LYR.lh : LYR.lh;
-                    blocks.push({ rows: rows, top: y, h: h });
+                    let h = rows.length ? rows.length * LYR.lh : LYR.lh;
+                    // under the line, as Apple Music: its pronunciation and / or its English (Settings > Translation)
+                    const subs = [];
+                    if (rows.length && (mode === 'ro' || mode === 'both') && l.ro) wrap(cv, l.ro, SUB.size, w, 2, sopt).forEach((r) => subs.push(r));
+                    if (rows.length && (mode === 'en' || mode === 'both') && l.tr) wrap(cv, l.tr, SUB.size, w, 3, sopt).forEach((r) => subs.push(r));
+                    if (subs.length) h += SUB.pad + subs.length * SUB.lh;
+                    blocks.push({ rows: rows, subs: subs, top: y, h: h, line: l });
                     y += h + LYR.gap;
                 });
-                laid = { lines: lines, w: w, blocks: blocks, size: LYR.size };
+                laid = { lines: lines, w: w, blocks: blocks, size: LYR.size, mode: mode, trv: translator.ver };
                 return laid;
+            }
+            /** The translation under a line: a little over half the lyrics' size, in the medium weight. */
+            function subSize() { const size = Math.round(LYR.size * 0.56); return { size: size, lh: Math.round(size * 1.3), pad: Math.round(LYR.size * 0.22) }; }
+            function drawSubs(cv, b, x, y, a, blur) {
+                if (!b.subs || !b.subs.length) return;
+                const S = subSize(), o = { font: F_MED, literal: true }, y0 = y + b.rows.length * LYR.lh + S.pad;
+                // just arrived (live translation): it fades in
+                if (b.line && b.line.trAt) { const k = easeOut((Date.now() - b.line.trAt) / SUB_IN_MS); a *= k; if (k < 1) busy(Date.now() + 50); }
+                b.subs.forEach((r, k) => {
+                    const by = y0 + k * S.lh + Math.round(S.size * 0.8);
+                    cv.alpha(a * 0.72); cv.text(r, x, by, S.size, WHITE, o); cv.alpha(1);
+                });
             }
             let glide = { i: -2, from: 0, to: 0, at: 0, prev: -1 };    // the scroll to line i
             function drawSynced(cv, Q, lines, now) {
@@ -368,10 +491,15 @@ mgu.run({
                 const target = B[Math.max(0, i)].top;
                 if (i !== glide.i) {
                     const shown = glide.i === -2 ? target : scrollOf(glide, 0, now);
-                    glide = { i: i, from: shown, to: target, at: now, prev: glide.i };
+                    glide = { i: i, from: shown, to: target, at: now, fat: now, prev: glide.i };
+                    busy(now + GLIDE_MS + 6 * STAGGER_MS + FADE_MS);
+                } else if (target !== glide.to) {
+                    // the same line, laid out again (a translation arrived, a size changed): glide there, no jump
+                    glide = { i: i, from: scrollOf(glide, 0, now), to: target, at: now, fat: glide.fat, prev: glide.prev };
+                    busy(now + GLIDE_MS + 6 * STAGGER_MS);
                 }
                 const top = Q.top || Q.A.y, bottom = Q.bottom || Q.A.bottom, anchor = top + Math.round((bottom - top) * (Q.glass ? 0.22 : 0.3));
-                const fadeIn = easeOut((now - glide.at) / FADE_MS);
+                const fadeIn = easeOut((now - (glide.fat || glide.at)) / FADE_MS);
                 cv.clip(Q.LX - 20, top, W - (Q.LX - 20), bottom - top);
                 const first = Math.max(0, i - 3);
                 for (let j = first; j < B.length; j++) {
@@ -387,6 +515,7 @@ mgu.run({
                     a *= Math.max(0, edge);
                     if (a <= 0.01) continue;
                     if (!b.rows.length) { dots(cv, Q.LX, y, j === i ? 1 : a, lines, j, p); continue; }
+                    drawSubs(cv, b, Q.LX, y, a, blur);
                     if (j === i && i >= 0 && settings.get('word_highlight') !== false) { sungWords(cv, b, lines, i, p, Q.LX, y, a, [Q.LX - 20, top, W - (Q.LX - 20), bottom - top]); continue; }
                     b.rows.forEach((row, k) => soft(cv, row, Q.LX, y + k * LYR.lh + Math.round(LYR.size * 0.8), LYR.size, a, blur));
                 }
@@ -497,6 +626,11 @@ mgu.run({
                 if (probe) { await drawProbe(); return; }
                 // one clock for the frame in FRAME_MS steps: a frame like the last one isn't sent again
                 const now = Math.floor(Date.now() / FRAME_MS) * FRAME_MS;
+                // the pace: 60 frames a second while something moves fast (a line gliding, a fade), else 30
+                const t = Date.now(), fadingIn = ctx.display && ctx.display.fadeLevel && ctx.display.fadeLevel() < 1;
+                const quick = t < busyUntil || fadingIn || (toast && t < toast.until + 50 && (t - toast.at < 300 || toast.until - t < 350));
+                if (!quick && t - lastDrawAt < SLOW_MS - 4) return;
+                lastDrawAt = t;
                 const cv = ctx.canvas(W, H), A0 = FS.area(cv), fullH = H + (cv.extra || 0);
                 if (!!A0.own !== ownNow) {
                     ownNow = !!A0.own;
@@ -520,16 +654,21 @@ mgu.run({
                 if (!cur) follow();
                 if (!cur) {
                     const P = nameColours('Car Lyrics');
-                    backdrop(cv, null, now, P, fullH); if (cv.bgEdge) cv.bgEdge(() => backdrop(cv, null, now, P, fullH, -300)); sideBand(null, P); hmiBg(null, P);
+                    setBack(null, P, now); backdropX(cv, now, fullH); if (cv.bgEdge) cv.bgEdge(() => backdropX(cv, now, fullH, -300)); sideBand(null, P); hmiBg(null, P);
                     const cy = A.y + A.h / 2;
                     cv.text('Play a song on your phone', A.x + A.w / 2, cy - 6, 40, WHITE, { font: F_BOLD, align: 'center', literal: true });
                     cv.text('Apple Music over CarPlay, or any app over Bluetooth. The lyrics show up here.', A.x + A.w / 2, cy + 40, 22, G.withAlpha(WHITE, 0.62), { align: 'center', font: F_MED, literal: true });
                 } else {
                     LYR.size = LYR_SIZES[settings.get('lyrics_size')] || 50; LYR.lh = Math.round(LYR.size * 1.2); LYR.gap = Math.round(LYR.size * 0.48);
                     const P = nameColours(cur.title + cur.artist), a = artFor(), Q = sideOn() ? geo(A) : geoGlass(A);
-                    backdrop(cv, a, now, P, fullH); if (cv.bgEdge) cv.bgEdge(() => backdrop(cv, a, now, P, fullH, -300)); sideBand(a, P); hmiBg(a, P);
+                    setBack(a, P, now); backdropX(cv, now, fullH); if (cv.bgEdge) cv.bgEdge(() => backdropX(cv, now, fullH, -300)); sideBand(a, P); hmiBg(a, P);
                     if (Q.glass) glassChrome(cv, Q, a, P, now); else { coverColumn(cv, Q, a, P, now); moreButton(cv, A); }
-                    const lyr = lyrics.get({ title: cur.title, artist: cur.artist, album: cur.album, duration: cur.duration });
+                    const lyr = lyricsNow();
+                    if (settings.get('translation') !== 'off') translator.want(cur, lyr, net.online());
+                    // new lyrics (or a message in their place): they fade in
+                    const lk = lyr.state === 'loading' || lyr.state === 'none' ? lyr.state + '|' + cur.title + '|' + cur.artist : lyr;   // (a new 'loading' object each frame)
+                    if (lk !== lyrShown) { lyrShown = lk; lyrAt = now; busy(now + LYR_IN_MS); glide = { i: -2, from: 0, to: 0, at: 0, prev: -1 }; }   // new lyrics: no glide from the last song's place
+                    const lb = cv.fade(); cv.fade(lb * easeOut((now - lyrAt) / LYR_IN_MS));
                     if (lyr.state === 'synced' && lyr.lines.length) drawSynced(cv, Q, lyr.lines, now);
                     else if (lyr.state === 'plain') drawPlain(cv, Q, lyr.text);
                     else if (lyr.state === 'loading') message(cv, Q, 'Finding the lyrics...', '');
@@ -537,12 +676,17 @@ mgu.run({
                     else if (lyr.state === 'error') message(cv, Q, 'Can\'t reach the lyrics', net.online() ? 'Trying again in a moment.' : 'The car is offline: turn on Wi-Fi in the Store\'s settings, or connect to a phone hotspot.');
                     else if (lyr.state === 'undrawable') message(cv, Q, 'Lyrics in letters this app can\'t draw yet', '');
                     else message(cv, Q, 'No lyrics for this song', 'LRCLIB has no lyrics for this title and artist yet.');
+                    cv.fade(lb);
                 }
                 if (toast && Date.now() < toast.until) {
+                    // fades in, and out at the end
+                    const tb = cv.fade(), tn = Date.now();
+                    cv.fade(tb * Math.min(easeOut((tn - toast.at) / 250), easeOut((toast.until - tn) / 300)));
                     const TO = { font: F_MED, literal: true }, s = fit(cv, toast.text, 22, 1000, TO), w = cv.textWidth(s, 22, TO) + 64, ty = A.bottom - 64;
                     cv.roundRect((W - w) / 2, ty, w, 50, 25, '#000000c0');
                     cv.strokeRoundRect((W - w) / 2, ty, w, 50, 25, 1, G.withAlpha(WHITE, 0.25));
                     cv.text(s, W / 2, ty + 32, 22, WHITE, Object.assign({ align: 'center' }, TO));
+                    cv.fade(tb);
                 }
                 await ui.image('MAIN_GFX', cv);
             }));
@@ -550,7 +694,7 @@ mgu.run({
             /* ---------- home-screen widget: the song and the line playing ---------- */
             HW.start(ctx, () => {
                 if (!cur) return { label: 'Car Lyrics', value: 'Nothing playing', sub: 'Play a song on your phone', small: ['Car Lyrics', 'Nothing playing'] };
-                const lyr = lyrics.get({ title: cur.title, artist: cur.artist, album: cur.album, duration: cur.duration });
+                const lyr = lyricsNow();
                 let line = '';
                 if (lyr.state === 'synced') { const i = LyricsLib.lineAt(lyr.lines, position() + LEAD_MS); line = i >= 0 ? lyr.lines[i].text : ''; }
                 return { label: 'Now playing', value: cur.title, sub: line || cur.artist, sub2: line ? cur.artist : '',

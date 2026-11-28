@@ -26,9 +26,9 @@
 | --- | --- | --- | --- |
 | [动力仪表](https://github.com/pinguinooo/idrive7-apps) | 同时查看油温、变速箱温度、增压与挡位。 | `0.2.4` | [车机从源码构建](sources/projects/pinguinooo--idrive7-apps/apps/adam_vitals/) |
 | [驾驶辅助状态](https://github.com/alexp50/bmw-apps) | 读取驾驶辅助功能的可用状态与控制单元反馈。 | `0.1.4` | [车机从源码构建](sources/projects/alexp50--bmw-apps/apps/adas_feature_probe/) |
-| [行车监测](https://github.com/arefahmad/idrive7-apps) | 记录行程、故障和发动机失火事件。 | `0.1.304` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_carwatch/) |
-| [车机接口目录](https://github.com/arefahmad/idrive7-apps) | 浏览车机公开的导航、媒体、空调和车身服务。 | `0.2.404` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_explorer/) |
-| [轮胎设置](https://github.com/arefahmad/idrive7-apps) | 查看已识别轮胎和目标压力，配置变更受驻车条件限制。 | `0.2.104` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_tires/) |
+| [行车监测](https://github.com/arefahmad/idrive7-apps) | 记录行程、故障和发动机失火事件。 | `0.1.305` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_carwatch/) |
+| [车机接口目录](https://github.com/arefahmad/idrive7-apps) | 浏览车机公开的导航、媒体、空调和车身服务。 | `0.2.405` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_explorer/) |
+| [轮胎设置](https://github.com/arefahmad/idrive7-apps) | 查看已识别轮胎和目标压力，配置变更受驻车条件限制。 | `0.2.105` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_tires/) |
 | [Mon Vitals](https://github.com/benspa900/mon-vitals-idrive7) | 集中显示发动机温度、增压与底盘数据。 | `0.9.605` | [车机从源码构建](sources/projects/benspa900--mon-vitals-idrive7/apps/benspa_vitals/) |
 | [增压仪表](https://github.com/giuseppesalatino-boop/mgu-apps) | 查看 ECU 的增压和发动机实时参数。 | `1.0.103` | [车机从源码构建](sources/projects/giuseppesalatino-boop--mgu-apps/ecu-live-data/app/) |
 | [车辆仪表](https://github.com/cauliflowermossgrape/idrive7-apps) | 查看发动机、进气、燃油和底盘的实时读数。 | `2.28.0` | [车机从源码构建](sources/projects/cauliflowermossgrape--idrive7-apps/apps/car_vitals/) |
@@ -60,9 +60,9 @@
 | [仪表主题](https://github.com/bimmer-lab/apps) | 选择仪表布局、配色和换挡提示样式。 | `0.19.10` | [车机从源码构建](sources/projects/bimmer-lab--apps/apps/cluster_themes/) |
 | [HUD 显示设置](https://github.com/alexp50/bmw-apps) | 配置抬头显示中的导航提示、挡位与暖机信息。 | `0.1.604` | [车机从源码构建](sources/projects/alexp50--bmw-apps/apps/drive_hud_full/) |
 | [仪表摄像头](https://github.com/alexp50/bmw-apps) | 在兼容仪表中查看夜视或泊车摄像头画面。 | `0.2.104` | [车机从源码构建](sources/projects/alexp50--bmw-apps/apps/front_camera_cluster/) |
-| [G21 加热控制](https://github.com/NamelsMissing/mgu-apps) | 查看方向盘与座椅加热状态，配置兼容设备。 | `0.5.403` | [车机从源码构建](sources/projects/NamelsMissing--mgu-apps/apps/g21_wheelheat/) |
+| [G21 加热控制](https://github.com/NamelsMissing/mgu-apps) | 查看方向盘与座椅加热状态，配置兼容设备。 | `0.5.404` | [车机从源码构建](sources/projects/NamelsMissing--mgu-apps/apps/g21_wheelheat/) |
 | [HUD 小组件](https://github.com/bimmer-lab/apps) | 在兼容的抬头显示器中组合挡位、温度与换挡灯。 | `0.15.804` | [车机从源码构建](sources/projects/bimmer-lab--apps/apps/idrive_hud_widgets/) |
-| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.2702` | [车机从源码构建](sources/projects/ALMSTRA--idv7lol/apps/idv7lol/) |
+| [idv7lol 仪表](https://github.com/ALMSTRA/idv7lol) | 预览和切换自定义仪表，可从 U 盘导入主题。 | `0.2.2703` | [车机从源码构建](sources/projects/ALMSTRA--idv7lol/apps/idv7lol/) |
 | [后排舒适控制](https://github.com/alexp50/bmw-apps) | 操作兼容 G12 后排座椅、空调与遮阳设备。 | `0.5.604` | [车机从源码构建](sources/projects/alexp50--bmw-apps/apps/rear_comfort/) |
 | [空气悬架](https://github.com/alexp50/bmw-apps) | 查看并调整兼容车辆的空气悬架高度。 | `0.6.4` | [车机从源码构建](sources/projects/alexp50--bmw-apps/apps/ride_height/) |
 | [HUD 挡位显示](https://github.com/RubenRios/GearHUD) | 在仪表和抬头显示中区分常规、运动及手动挡位。 | `1.0.4` | [车机从源码构建](sources/projects/RubenRios--GearHUD/apps/rubenrios_gearhud/) |
@@ -72,8 +72,8 @@
 
 | 应用 | 功能 | 版本 | 发布方式 |
 | --- | --- | --- | --- |
-| [养护记录](https://github.com/arefahmad/idrive7-apps) | 记录车辆养护项目和周期，在首页查看提醒。 | `0.2.305` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_carcare/) |
-| [预计到达时间](https://github.com/arefahmad/idrive7-apps) | 在车机组件查看 Apple Maps 的预计到达时间。 | `1.26.0` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_eta/) |
+| [养护记录](https://github.com/arefahmad/idrive7-apps) | 记录车辆养护项目和周期，在首页查看提醒。 | `0.2.306` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_carcare/) |
+| [预计到达时间](https://github.com/arefahmad/idrive7-apps) | 在车机组件查看 Apple Maps 的预计到达时间。 | `1.27.0` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_eta/) |
 | [仪表导航卡片](https://github.com/tjmodsss/tjm-apps) | 在兼容仪表上查看下一转向、车道和距离。 | `0.9.204` | [车机从源码构建](sources/projects/tjmodsss--tjm-apps/apps/cluster_nav_card/) |
 | [格鲁吉亚限速提示](https://github.com/hexlay/idrive7-custom-apps) | 使用格鲁吉亚地区的数据提示道路限速。 | `1.0.1004` | [车机从源码构建](sources/projects/hexlay--idrive7-custom-apps/apps/speed_limit/) |
 | [加油记录](https://github.com/dzooky/bmrmodz) | 记录燃油与 AdBlue 加注量，可同步到 Spritmonitor。 | `0.1.4505` | [车机从源码构建](sources/projects/dzooky--bmrmodz/apps/spritmonitor/) |
@@ -82,7 +82,7 @@
 
 | 应用 | 功能 | 版本 | 发布方式 |
 | --- | --- | --- | --- |
-| [车载歌词](https://github.com/arefahmad/idrive7-apps) | 根据当前播放的曲目获取并显示歌词。 | `0.8.1` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics/) |
+| [车载歌词](https://github.com/arefahmad/idrive7-apps) | 根据当前播放的曲目获取并显示歌词。 | `0.13.1` | [车机从源码构建](sources/projects/arefahmad--idrive7-apps/apps/aref_carlyrics/) |
 | [仪表歌词](https://github.com/NamelsMissing/mgu-apps) | 根据 Spotify 曲目获取同步歌词，在兼容仪表中显示。 | `0.1.403` | [车机从源码构建](sources/projects/NamelsMissing--mgu-apps/apps/cluster_lyrics/) |
 | [西洋双陆棋](https://github.com/mistergahan/mgu-backgammon) | 选择长局或短局，进行本地双人或人机对局。 | `0.1.104` | [车机从源码构建](sources/projects/mistergahan--mgu-backgammon/apps/dk_backgammon/) |
 | [Freedoom](https://github.com/cauliflowermossgrape/idrive7-apps) | 使用 iDrive 旋钮操控游戏，支持存档。 | `1.7.2203` | [车机从源码构建](sources/projects/cauliflowermossgrape--idrive7-apps/apps/doom/) |

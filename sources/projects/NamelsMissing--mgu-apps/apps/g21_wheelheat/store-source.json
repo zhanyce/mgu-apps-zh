@@ -1,7 +1,7 @@
 {
   "id": "g21_wheelheat",
-  "version": "0.5.403",
-  "upstreamVersion": "0.5.5",
+  "version": "0.5.404",
+  "upstreamVersion": "0.5.6",
   "title": "G21 加热控制",
   "description": "查看方向盘与座椅加热状态，配置兼容设备。",
   "translations": {
@@ -27,7 +27,8 @@
     "Steering wheel duration": "方向盘加热时长",
     "Steering wheel heating": "方向盘加热",
     "Test next ignition ON (skip parking time once)": "测试下次点火（仅此次跳过熄火时长检查）",
-    "G21 Heating Comfort": "G21 加热控制"
+    "G21 Heating Comfort": "G21 加热控制",
+    "Evaluate AutoHeat now": "立即检查自动加热条件"
   },
   "kit": "sources/projects/NamelsMissing--mgu-apps",
   "startType": "autostart"

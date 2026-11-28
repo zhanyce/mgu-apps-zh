@@ -1,6 +1,6 @@
 {
   "id": "aref_carwatch",
-  "version": "0.1.304",
+  "version": "0.1.305",
   "upstreamVersion": "0.1.3",
   "title": "行车监测",
   "description": "记录行程、故障和发动机失火事件。",

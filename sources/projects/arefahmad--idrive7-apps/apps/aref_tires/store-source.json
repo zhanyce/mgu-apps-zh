@@ -1,6 +1,6 @@
 {
   "id": "aref_tires",
-  "version": "0.2.104",
+  "version": "0.2.105",
   "upstreamVersion": "0.2.1",
   "title": "轮胎设置",
   "description": "查看已识别轮胎和目标压力，配置变更受驻车条件限制。",
